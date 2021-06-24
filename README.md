@@ -1,7 +1,7 @@
 # Proyecto integrador Grupo 2 (ALiMusic) comision 9
 
-- [¿Que productos o servicios ofrecemos?](#servicios)
-- [¿A que publico apuntamos?](#publico)
+- [Que productos o servicios ofrecemos](#servicios)
+- [A que publico apuntamos](#publico)
 - [Logo](#logo)
 - [Inspiracion](#Inspiracion)
 - [About](#about)
