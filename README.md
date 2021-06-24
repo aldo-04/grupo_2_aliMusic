@@ -1,5 +1,11 @@
 # Proyecto integrador Grupo 2 (ALiMusic) comision 9
 
+- [¿Que productos o servicios ofrecemos?](#servicios)
+- [¿A que publico apuntamos?](#publico)
+- [Logo](#logo)
+- [Inspiracion](#Inspiracion)
+- [About](#about)
+
 ### ¿Que productos o servicios ofrecemos?
 
 - Nuestro sitio web brindara la posibilidad de comprar productos del mundo de la musica o tambien en el apartado comunidad podran interactuar entre los usuarios, hacer reseñas sobre los productos que compraron o podran subir sus propios post sobre musica.   
@@ -31,7 +37,7 @@
 - https://www.reddit.com/
      - Nos inspiramos de reddit para hacer nuestro apartado comunidad
 
-### ¿Quienes somos?
+### About
 
 - Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto
 
