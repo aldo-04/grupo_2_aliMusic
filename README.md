@@ -28,6 +28,9 @@
      - Estetica y referencia de los elementos que piden en un formulario de registro
 - https://sinfoniaonline.es/        
      - Inspiracion en el diseño para formular el registro
+- https://www.reddit.com/
+     - Nos inspiramos de reddit para hacer nuestro apartado comunidad
+
 ### ¿Quienes somos?
 
 - Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto
