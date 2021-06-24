@@ -31,5 +31,5 @@
 
 - Hola mi nombre es Lucas Diaz Mouhsen, tengo 24 años, tengo 5 hermanos, toco la guitarra hace 10 años, estudie música por 2 años y desde que era pequeño sabia que iba a estudiar y trabajar haciendo algo en la computadora así que me anote en licenciatura en sistemas y estoy en el primer año de la carrera. [Link a github](https://github.com/LucasMouhsen)
 
-- Mariano Paz tengo 22 años soy de Lanús ,me gusta la música y estoy estudiando programación computer (icono de computadora)
+- Hola mi nombre es Jose Mariano Paz tengo 22 años soy de Lanús Oeste ,soy de Piscis ,me gusta la música y estoy en proceso de ser un futuro programador (icono de computadora)
 
