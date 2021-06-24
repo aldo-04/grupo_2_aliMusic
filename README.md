@@ -1,6 +1,6 @@
 # Proyecto integrador Grupo 2 (ALiMusic) comision 9
 
-###Contents
+### Contents
 
 - [Que productos o servicios ofrecemos](#servicios)
 - [A que publico apuntamos](#publico)
