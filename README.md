@@ -24,7 +24,10 @@
 - https://www.famusic.com.ar/
      - Diseño:
          - Productos del Home
-
+- https://www.sainimusic.com.ar/account/register/
+     - Estetica y referencia de los elementos que piden en un formulario de registro
+- https://sinfoniaonline.es/        
+     - inspiracion del diseño para formular el registro
 ### ¿Quienes somos?
 
 - Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto
