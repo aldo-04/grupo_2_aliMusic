@@ -3,22 +3,29 @@
 - [Que productos o servicios ofrecemos](#servicios)
 - [A que publico apuntamos](#publico)
 - [Logo](#logo)
-- [Inspiracion](#Inspiracion)
+- [Inspiracion](#inspiracion)
 - [About](#about)
 
-### Que productos o servicios ofrecemos
+<div id="servicios">
+
+### Que productos o servicios ofrecemos 
 
 - Nuestro sitio web brindara la posibilidad de comprar productos del mundo de la musica o tambien en el apartado comunidad podran interactuar entre los usuarios, hacer reseñas sobre los productos que compraron o podran subir sus propios post sobre musica.   
 
+<div id="publico">
 
-### A que publico apuntamos
+### A que publico apuntamos 
 
 - En el apartado de **Ecommerce** vamos a apuntar a personas que les interese la musica y quisieran comprar nuestros productos.
 - En el apartado de **comunidad** vamos a apuntar a todo el publico que le interese el mundo de la musica. 
 
+<div id="logo">
+
 ### Logo
 
 ![Logo](/public/design/logo.png)
+
+<div id="inspiracion">
 
 ### Inspiracion
 
@@ -36,6 +43,8 @@
      - Inspiracion en el diseño para formular el registro
 - https://www.reddit.com/
      - Nos inspiramos de reddit para hacer nuestro apartado comunidad
+
+<div id="about">
 
 ### About
 
