@@ -27,12 +27,12 @@
 - https://www.sainimusic.com.ar/account/register/
      - Estetica y referencia de los elementos que piden en un formulario de registro
 - https://sinfoniaonline.es/        
-     - inspiracion del diseño para formular el registro
+     - Inspiracion en el diseño para formular el registro
 ### ¿Quienes somos?
 
 - Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto
 
 - Hola mi nombre es Lucas Diaz Mouhsen, tengo 24 años, tengo 5 hermanos, toco la guitarra hace 10 años, estudie música por 2 años y desde que era pequeño sabia que iba a estudiar y trabajar haciendo algo en la computadora así que me anote en licenciatura en sistemas y estoy en el primer año de la carrera. [Link a github](https://github.com/LucasMouhsen)
 
-- Hola mi nombre es Jose Mariano Paz tengo 22 años soy de Lanús Oeste ,soy de Piscis ,me gusta la música y estoy en proceso de ser un futuro programador (icono de computadora) [Link a github](https://github.com/JoseMarianoPaz)
+- Hola mi nombre es Jose Mariano Paz tengo 22 años soy de Lanús Oeste , Estudie varias cosas en mi vida como ser maestro panadero , Hice muchas veces cursos en la Universidad Tegnologica Nacional (U.T.N) Word , Excel y Power Point nivel medio y avanzado , me gusta la música y estoy en proceso de ser un futuro programador [Link a github](https://github.com/JoseMarianoPaz)
 
