@@ -6,12 +6,12 @@
 - [Inspiracion](#Inspiracion)
 - [About](#about)
 
-### ¿Que productos o servicios ofrecemos?
+### Que productos o servicios ofrecemos
 
 - Nuestro sitio web brindara la posibilidad de comprar productos del mundo de la musica o tambien en el apartado comunidad podran interactuar entre los usuarios, hacer reseñas sobre los productos que compraron o podran subir sus propios post sobre musica.   
 
 
-### ¿A que publico apuntamos?
+### A que publico apuntamos
 
 - En el apartado de **Ecommerce** vamos a apuntar a personas que les interese la musica y quisieran comprar nuestros productos.
 - En el apartado de **comunidad** vamos a apuntar a todo el publico que le interese el mundo de la musica. 
