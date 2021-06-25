@@ -45,12 +45,16 @@
      - Inspiracion en el diseño para formular el registro
 - https://www.reddit.com/
      - Nos inspiramos de reddit para hacer nuestro apartado comunidad
+- https://www.fravega.com/
+     - En el carrito de compras
+         - Posicionamiento de los productos
+         - Formularios para realizar la compra
 
 <div id="about">
 
 ### About
 
-- Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto
+- Hola mi nombre es Aldo Orden tengo 23 años soy de Lanús Este y estoy encantado de formar parte de este proyecto. [Link a github](https://github.com/aldo-04)
 
 - Hola mi nombre es Lucas Diaz Mouhsen, tengo 24 años, tengo 5 hermanos, toco la guitarra hace 10 años, estudie música por 2 años y desde que era pequeño sabia que iba a estudiar y trabajar haciendo algo en la computadora así que me anote en licenciatura en sistemas y estoy en el primer año de la carrera. [Link a github](https://github.com/LucasMouhsen)
 
