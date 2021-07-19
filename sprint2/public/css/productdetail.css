@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.details header{
+    background-color: rgba(9, 60, 114, 0.946);
+}
+
+/* MAIIN */
+
+.details main{
+    margin: 2% 3%;
+}
+
+.details main div.product img{
+    width: 100%;
+}
+
+.details main div.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.details main section.others img{
+    width: 100%;
+}
+
+/* FOOTER */
+
+.details footer{
+    background-color: rgba(9, 60, 114, 0.946);
+}
