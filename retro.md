@@ -30,7 +30,7 @@
 * Detalles Menos Importantes
    -Ir de mas a menos, empezar siempre por lo mas importante y poder dejarlo funcional,y lo menos importante dejar siempre para el final
 
-###**Hacer Menos**
+### **Hacer Menos**
 
 * Playground
   -Tratar de hacer menos playground ,dejarlo siempre completo y actualizado para dar prioridad a los sprint
