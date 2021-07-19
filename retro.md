@@ -10,3 +10,13 @@
 
 * Terminando el sprint antes de la fecha limite:
     * Intentar terminar todo por lo menos 2 días antes de la entrega del sprint, ya que si surge algún problema en nuestro proyecto nos da tiempo a solucionarlo.
+    
+### **Hacer mas**
+  * Estar mas pendientes a discord
+      - Para mejorar la comunicacion del grupo y que todos los integrantes podamos mantener un buen ritmo
+  * Tomar mas la iniciativa
+      - Nos va a ayudar a tener las cosas mas claras y agilizar tiempos
+  
+  ### **Empezar a hacer**  
+  * Reuniones dayli scrum
+      - Implementarlas nos ayudaria a estar al tanto de si alguien tuviese alguna duda o necesitase ayuda y tambien de tener una perspectiva de como va el proyecto
