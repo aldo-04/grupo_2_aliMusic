@@ -33,5 +33,5 @@
 ### **Hacer Menos**
 
  * Playground:
-  - Tratar de hacer menos playground ,dejarlo siempre completo y actualizado para dar prioridad a los sprint
+   - Tratar de hacer menos playground ,dejarlo siempre completo y actualizado para dar prioridad a los sprint
 
