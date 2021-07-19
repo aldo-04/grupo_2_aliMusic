@@ -24,14 +24,14 @@
      
 ### **Dejar de Hacer**
 
- * Posponer Reuniones
+ * Posponer Reuniones:
    - Tratar de cumplir con las reuniones programadas con anterioridad, salvo en algun imprevisto o situacion delicada en ese caso se programara otro dia y horario
 
- * Detalles Menos Importantes
+ * Detalles Menos Importantes:
    - Ir de mas a menos, empezar siempre por lo mas importante y poder dejarlo funcional,y lo menos importante dejar siempre para el final
 
 ### **Hacer Menos**
 
- * Playground
+ * Playground:
   - Tratar de hacer menos playground ,dejarlo siempre completo y actualizado para dar prioridad a los sprint
 
