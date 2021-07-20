@@ -3,6 +3,8 @@ const app = express();
 const port = 3030;
 const path = require('path');
 
+app.use(express.static('public'));
+
 app.listen(port,() => console.log("El servidor esta corriendo en http://localhost:"+ port));
 
 app.get('/',(req, res) => res.sendfile(path.join(__dirname,'views','index.html')))

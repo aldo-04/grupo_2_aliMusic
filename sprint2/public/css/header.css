@@ -1,0 +1,66 @@
+header{
+    background-color: black;
+    padding: 5px 10px;
+}
+
+header .flex-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+
+header .flex-container .div_logo_header{
+    width: 35%;
+}
+
+header .flex-container .div_logo_header img{
+    width: 100%;
+}
+
+header .flex-container .div_cuenta{
+    width: 50%;
+    text-align:right;
+}
+
+header .flex-container .div_cuenta a{
+    color: #fff;
+}
+
+header .flex-container .div_carrito{
+    width: 15%;
+    text-align:right;
+}
+
+header .flex-container .div_carrito a{
+    color: #fff;
+}
+
+header .flex-container .div_burger{
+    text-align: center;
+    width: 30%;
+}
+
+header .flex-container .div_burger a{
+    color: #fff;
+}
+
+header .flex-container .div_barra_de_busqueda{
+    width: 70%;
+    position: relative;
+    max-width: 300px;
+}
+
+header .flex-container .div_barra_de_busqueda input{
+    width: 100%;
+}
+
+header .flex-container .div_barra_de_busqueda a{
+    position: absolute;
+    color: black;
+    right: 5px;
+    top: 1px;
+}
+
+
