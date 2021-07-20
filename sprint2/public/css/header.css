@@ -38,6 +38,7 @@ header .flex-container .div_carrito a{
 }
 
 header .flex-container .div_burger{
+    text-align: center;
     width: 30%;
 }
 
