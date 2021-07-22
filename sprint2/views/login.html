@@ -8,39 +8,106 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/12ce29b062.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<header>
+<body class="login">
+    <header>
+        <div class="flex-container">
+            <div class="div_logo_header">
+                <img src="/images/logo-de-lado.svg" alt="logo aLi Music">
+            </div>
+            
+            <div class="div_cuenta">
+                <a href="">Mi cuenta</a>
+            </div>
+            
+            <div class="div_carrito">
+                <a href="">1</a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            
+            <div class="div_burger">
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+            
+            <div class="div_barra_de_busqueda">
+                <input type="text" name="barra" id="">
+                <a href=""><i class="fas fa-search"></i></a>
+            </div>
+        </div>
 
-</header>
-<main>
+    </header>
+<main class="login">
+    <div class="v">
     <a href="/">volver</a>
-    <h4>Ingresar a ALIC MUSIC</h4>
+</div>
+    <h4>Ingresar a <br> ALI MUSIC</h4>
     <form action="">
+        <section class="datos">
         <div class="box-form">
             <input type="usuario" name="usuario" placeholder="usuario">
         </div>
         <div class="box-form">
             <input type="password" name="password" id="password" placeholder="contraseña">
         </div>
+   
+    <div class="box-remember">
+        <input type="checkbox" name="mostrar contraseña" id="recordar">
+        <label for="recordar">Mostrar Contraseña</label>
+    </div>
         <div class="box-remember">
             <input type="checkbox" name="recordar" id="recordar">
             <label for="recordar">Recordarme</label>
         </div>
-        <div>
+    </section>
+        <div class="recuperar">
             <a href="/">Recuperar contraseña</a>
         </div>
         <div class="box-button">
             <button type="submit">Acceder</button>
         </div>
-        <div>
-         <button type="submit" i class="fab fa-google"></i>Continuar con Google</button>
-         <button type="submit"i class="fab fa-facebook"></i></i>Continuar con Facebook</button>
+        <div class="box-enlace">
+        <button type="submit" i class="fab fa-google"></i>Ingresar con Google</button>
+        <button type="submit" i class="fab fa-facebook"></i>Ingresar con Facebook</button>
         </div>
-        <a href="/register">No tienes cuenta aun:REGISTRATE</a>
+        <div class="no-tienes-cuenta">
+            <a href="/register">No tienes cuenta aun: Registrate</a>
+        </div>
+        
     </form>
 </main>
 <footer>
 
+    <div class="div_grid">
+        <div class="div_logo_footer">
+            <img src="" alt="">
+        </div>
+        
+        <div class="div_navegacion">
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Tienda</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Comunidad</a></li>
+                <li><a href="">Lorem</a></li>
+                <li><a href="">Ipsun</a></li>
+                <li><a href="">Dolor</a></li>
+                <li><a href="">Sit</a></li>
+            </ul>
+        </div>
+        
+        <div class="div_contacto">
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href="">Grupo2@gmail.com</a>
+            <a href=""><i class="fab fa-whatsapp-square"></i></a>
+            <a href="">+54 11-2233-4455</a>
+        </div>
+        
+        <div class="div_redes">
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+    
 </footer>
 </body>
 </html>
