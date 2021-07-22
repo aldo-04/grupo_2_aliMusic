@@ -1,6 +1,6 @@
 header{
-    background-color: black;
-    padding: 5px 10px;
+    background-color: var(--color-header);
+    padding: 5px 5px;
 }
 
 header .flex-container{
@@ -38,7 +38,8 @@ header .flex-container .div_carrito a{
 }
 
 header .flex-container .div_burger{
-    width: 30%;
+    width: 5%;
+    text-align:center;
 }
 
 header .flex-container .div_burger a{
@@ -46,7 +47,7 @@ header .flex-container .div_burger a{
 }
 
 header .flex-container .div_barra_de_busqueda{
-    width: 70%;
+    width: 80%;
     position: relative;
     max-width: 300px;
 }
