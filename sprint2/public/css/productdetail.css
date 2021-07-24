@@ -1,36 +1,106 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* HEADER */
-
-.details header{
-    background-color: rgba(9, 60, 114, 0.946);
-}
-
 /* MAIIN */
 
-.details main{
-    margin: 2% 3%;
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    color: white;
 }
 
-.details main div.product img{
+button{
+    color:initial
+}
+
+i{
+    color:#fbfbfb
+}
+
+.details main{
+    background-image: url(/images/background.jpg);
     width: 100%;
+    background-attachment: fixed;
+    background-repeat: unset;
+    padding:20px
+}
+
+.details main div.product{
+    box-shadow: 0px 0px 13px 2px #180f5f;
+    position: relative;
+    border: solid 3px #180f5f;
+    margin: 20px 20px 0 20px;
+    background-color: #000000c4;
+}
+
+.details main div.img i.fa-heart{
+    border-radius: 24px;
+    padding: 8px;
+    background-color: black;
+    color: #f30000;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 6vw;
+}
+
+.details main div.img img{
+    width: 100%;
+}
+
+.details main div.contain{
+
+}
+
+.details main div.descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.details main div.descripcion a{
+    display: flex;
+    align-items: center;
+}
+
+.details main div.detalles{
+    box-shadow: 0px 0px 13px 2px #180f5f;
+    padding: 4%;
+    margin: 0px 20px 20px 20px;
+    background-color: #000000c4;
 }
 
 .details main div.name{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     text-transform: uppercase;
+    width: 100%;
 }
 
-.details main section.others img{
-    width: 100%;
+.details main section.relacionados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+.details main section.relacionados article{
+    width:35%
+}
+
+.details main section.relacionados img{
+    object-fit: contain;
+    height:80%;
+    width: 100%;
+    padding:10px 10px 0 10px;
+}
+
+.details main section.relacionados h2{
+    padding:10px
+}
+
+.details main section.relacionados div{
+    
+}
+
 
 /* FOOTER */
 
