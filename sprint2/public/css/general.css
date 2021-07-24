@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
 }
 
 li{
@@ -10,4 +13,15 @@ li{
 
 a{
     text-decoration: none;
+}
+
+:root{
+    --color-background: #F1F3F8;
+    --color-header: #393B44;
+    --color-footer: #393B44;
+    --color-a-footer: #fff;
+    --color-art-div: #1f3c88a3;
+    --color-border-art: #1F3C88;
+    --color-h1: #0B0B0D;
+    --font-family: 'Roboto', sans-serif;
 }

@@ -1,9 +1,10 @@
+
 .home{
-    background-image: url(/images/background.jpg);
+    background-color: var(--color-background);
     background-attachment: fixed;
 }
 
-h1{
+.home h1{
     color: var(--color-h1);
     text-align: center;
     padding: 15px 0;
@@ -29,8 +30,8 @@ h1{
 .home main .div_container .art{
     background-color: var(--color-art);
     margin: 5px;
-    box-shadow: 0px 0px 6px 1px var(--color-border-shadow);
     border: 1px solid var(--color-border-art);
+
 }
 
 .home main .div_container .art a{
@@ -48,12 +49,10 @@ h1{
     object-fit: contain;
 }
 
-:root{
-    --color-header: #171717;
-    --color-footer: #171717;
-    --color-a-footer: #fff;
-    --color-art: #ccc;
-    --color-border-art: #DA0037;
-    --color-border-shadow: #fff;
-    --color-h1: #fff
+.home main .div_container .art div{
+    padding: 5px;
+    border-top: 1px solid var(--color-border-art);
+    background-color: var(--color-art-div);
 }
+
+

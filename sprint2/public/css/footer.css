@@ -5,7 +5,7 @@ footer{
     padding-top: 15px;
 }
 footer a{
-    font-size: 12px;
+    font-size: 11px;
     color: var(--color-a-footer);
 }
 footer .div_grid{
@@ -37,16 +37,22 @@ footer .div_grid .div_navegacion li{
 
 footer .div_grid .div_contacto{
     display: grid;
-    grid-template-columns: auto auto;
-    width: 30%;
-    padding-top: 5px;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
 }
 
-footer .div_grid .div_contacto a i{
+footer .div_grid .div_contacto .div_contacto_mail{
+    align-self: center;
+}
+
+footer .div_grid .div_contacto div a i{
     padding-right: 5px;
 }
 
 footer .div_grid .div_redes{
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 15px;
 }
