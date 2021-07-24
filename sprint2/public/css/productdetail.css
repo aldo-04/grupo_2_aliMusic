@@ -27,8 +27,19 @@ i{
     box-shadow: 0px 0px 13px 2px #180f5f;
     position: relative;
     border: solid 3px #180f5f;
-    margin: 20px 20px 0 20px;
     background-color: #000000c4;
+}
+
+.details main div.img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.details main div.img img{
+    width: 60%;
+    object-fit: contain;
 }
 
 .details main div.img i.fa-heart{
@@ -42,10 +53,6 @@ i{
     font-size: 6vw;
 }
 
-.details main div.img img{
-    width: 100%;
-}
-
 .details main div.contain{
 
 }
@@ -54,6 +61,11 @@ i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.details main div.descripcion div.cant{
+    text-align: center;
 }
 
 .details main div.descripcion a{
@@ -64,7 +76,6 @@ i{
 .details main div.detalles{
     box-shadow: 0px 0px 13px 2px #180f5f;
     padding: 4%;
-    margin: 0px 20px 20px 20px;
     background-color: #000000c4;
 }
 
@@ -76,24 +87,36 @@ i{
     width: 100%;
 }
 
+.details main div.name{
+    text-align: center;
+}
+
 .details main section.relacionados{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center ;
+    background-color: #000000c4;
 }
 
 .details main section.relacionados article{
-    width:35%
+    margin: 15px 0px;
+    width: 35%;
+    box-shadow: 0px 0px 13px 2px #180f5f;
+    border: 1px solid #180f5f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .details main section.relacionados img{
     object-fit: contain;
     height:80%;
     width: 100%;
-    padding:10px 10px 0 10px;
 }
 
 .details main section.relacionados h2{
+    width:100%;
     padding:10px
 }
 
