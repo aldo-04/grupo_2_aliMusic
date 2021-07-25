@@ -14,16 +14,22 @@
 
         <div class="flex-container">
             <div class="div_logo_header">
-                <img src="/images/logo-de-lado.svg" alt="logo aLi Music">
+                <a href="/">
+                    <img src="/images/logo-de-lado.svg" alt="logo-aLi-Music">
+                </a>
             </div>
             
             <div class="div_cuenta">
-                <a href="">Mi cuenta</a>
+                <a href="/login">Mi cuenta</a>
+            </div>
+
+            <div class="div_favoritos">
+                <a href=""><i class="far fa-star"></i></a>
             </div>
             
             <div class="div_carrito">
-                <a href="">1</a>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="/productcart">1</a>
+                <a href="/productcart"><i class="fas fa-shopping-cart"></i></a>
             </div>
             
             <div class="div_burger">
@@ -34,17 +40,31 @@
                 <input type="text" name="barra" id="">
                 <a href=""><i class="fas fa-search"></i></a>
             </div>
+            
         </div>
-
+        <div class="div_navegacion_header">
+            <ul class="ul_navegacion_header">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/store">Tienda</a></li>
+                <li><a href="/contact">Contacto</a></li>
+                <li><a href="/comunity">Comunidad</a></li>
+            </ul>
+            <ul class=ul_cuenta>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Acceder</a></li>
+            </ul>
+        </div>
     </header>
     <main>
 
         <div class="div_carrusel">
-            <img src="" alt="">
+            <img src="/images/carrusel.jpg" alt="Carrusel-guitarra-electroAcustica">
+            <a class="right" href=""><i class="fas fa-chevron-right"></i></a>
+            <a class="left" href=""><i class="fas fa-chevron-left"></i></a>
         </div>
 
         <div class="div_banner">
-            <img src="/images/piano.jpg" alt="Banner-notas-musicales">
+            <img src="/images/piano.jpg" alt="Banner-piano">
         </div>
 
         <section class="novedades">
@@ -54,20 +74,38 @@
             <div class="div_container">
                 <article class="art">
                     <a href="">
-                        <img src="/images/guitarra-electrica.webp" alt="guitarra-electrica">
+                        <img src="/images/art1.jpg" alt="guitarra-electrica-stratocaster-22-traster-palanca-cable">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">10% OFF</p>
+                        <p class="precio">$ 13.499</p>
                     </div>
                 </article>
                 <article class="art">
                     <a href="">
-                        <img src="/images/parlante-con-microfono.webp" alt="parlante-con-microfono">
+                        <img src="/images/art2.jpg" alt="parlante-portatil-8w-bluetooth-control-microfono-8-pulgadas">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">8% OFF</p>
+                        <p class="precio">$ 5.499</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art3.jpg" alt="Interface-audio-behringer-U-Phoria-UMC22">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis</p>
+                        <p class="precio">$ 12.267</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art4.jpg" alt="Microfono-behringer-C-3-condesador-cardiode-omnidireccional-plateado">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis <i class="fas fa-bolt"></i> FULL</p>
+                        <p class="precio">14.399</p>
                     </div>
                 </article>
             </div>
@@ -80,20 +118,38 @@
             <div class="div_container">
                 <article class="art">
                     <a href="">
-                        <img src="/images/guitarra-electrica.webp" alt="guitarra-electrica">
+                        <img src="/images/art1.jpg" alt="guitarra-electrica-stratocaster-22-traster-palanca-cable">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">10% OFF</p>
+                        <p class="precio">$ 13.499</p>
                     </div>
                 </article>
                 <article class="art">
                     <a href="">
-                        <img src="/images/parlante-con-microfono.webp" alt="parlante-con-microfono">
+                        <img src="/images/art2.jpg" alt="parlante-portatil-8w-bluetooth-control-microfono-8-pulgadas">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">8% OFF</p>
+                        <p class="precio">$ 5.499</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art3.jpg" alt="Interface-audio-behringer-U-Phoria-UMC22">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis</p>
+                        <p class="precio">$ 12.267</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art4.jpg" alt="Microfono-behringer-C-3-condesador-cardiode-omnidireccional-plateado">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis <i class="fas fa-bolt"></i> FULL</p>
+                        <p class="precio">14.399</p>
                     </div>
                 </article>
             </div>
@@ -106,20 +162,38 @@
             <div class="div_container">
                 <article class="art">
                     <a href="">
-                        <img src="/images/guitarra-electrica.webp" alt="guitarra-electrica">
+                        <img src="/images/art1.jpg" alt="guitarra-electrica-stratocaster-22-traster-palanca-cable">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">10% OFF</p>
+                        <p class="precio">$ 13.499</p>
                     </div>
                 </article>
                 <article class="art">
                     <a href="">
-                        <img src="/images/parlante-con-microfono.webp" alt="parlante-con-microfono">
+                        <img src="/images/art2.jpg" alt="parlante-portatil-8w-bluetooth-control-microfono-8-pulgadas">
                     </a>
                     <div>
-                        <p>*descuento*</p>
-                        <p>precio</p>
+                        <p class="off">8% OFF</p>
+                        <p class="precio">$ 5.499</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art3.jpg" alt="Interface-audio-behringer-U-Phoria-UMC22">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis</p>
+                        <p class="precio">$ 12.267</p>
+                    </div>
+                </article>
+                <article class="art">
+                    <a href="">
+                        <img src="/images/art4.jpg" alt="Microfono-behringer-C-3-condesador-cardiode-omnidireccional-plateado">
+                    </a>
+                    <div>
+                        <p class="off">Envío gratis <i class="fas fa-bolt"></i> FULL</p>
+                        <p class="precio">14.399</p>
                     </div>
                 </article>
             </div>
@@ -133,18 +207,12 @@
                 <img src="/images/logo.svg" alt="Logo-ali-Music">
             </div>
             
-            <div class="div_navegacion">
+            <div class="div_navegacion_footer">
                 <ul>
                     <li><a href="">Inicio</a></li>
                     <li><a href="">Tienda</a></li>
                     <li><a href="">Contacto</a></li>
                     <li><a href="">Comunidad</a></li>
-                </ul>
-                <ul>
-                    <li><a href="">Lorem</a></li>
-                    <li><a href="">Ipsun</a></li>
-                    <li><a href="">Dolor</a></li>
-                    <li><a href="">Sit</a></li>
                 </ul>
             </div>
             

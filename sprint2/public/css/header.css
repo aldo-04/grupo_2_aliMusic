@@ -1,6 +1,10 @@
 header{
     background-color: var(--color-header);
-    padding: 5px 5px;
+    padding-top: 5px;
+}
+
+header a{
+    color: #fff;
 }
 
 header .flex-container{
@@ -13,6 +17,8 @@ header .flex-container{
 
 header .flex-container .div_logo_header{
     width: 35%;
+    padding-left: 5px;
+    grid-area: logo;
 }
 
 header .flex-container .div_logo_header img{
@@ -28,9 +34,16 @@ header .flex-container .div_cuenta a{
     color: #fff;
 }
 
+header .flex-container .div_favoritos{
+    display:none;
+    grid-area: fav;
+}
+
 header .flex-container .div_carrito{
     width: 15%;
     text-align:right;
+    padding-right: 5px;
+    grid-area: carrito;
 }
 
 header .flex-container .div_carrito a{
@@ -40,6 +53,7 @@ header .flex-container .div_carrito a{
 header .flex-container .div_burger{
     width: 5%;
     text-align:center;
+    padding-left: 5px;
 }
 
 header .flex-container .div_burger a{
@@ -47,9 +61,11 @@ header .flex-container .div_burger a{
 }
 
 header .flex-container .div_barra_de_busqueda{
-    width: 80%;
     position: relative;
     max-width: 300px;
+    margin-right: 5px;
+    margin-bottom: 5px ;
+    grid-area: barra;
 }
 
 header .flex-container .div_barra_de_busqueda input{
@@ -63,4 +79,56 @@ header .flex-container .div_barra_de_busqueda a{
     top: 1px;
 }
 
+header .div_navegacion_header{
+    display:none;
+}
 
+@media (min-width: 769px){
+    header .flex-container .div_logo_header{
+        width: 300px;
+    }
+    header .flex-container .div_cuenta{
+        display:none;
+    }
+    header .flex-container .div_favoritos{
+        display: flex;
+        flex-direction:row-reverse;
+        padding-right: 10px;
+    }
+    header .flex-container .div_carrito{
+        display: flex;
+
+    }
+    header .flex-container .div_burger{
+        display:none;
+    }
+    header .flex-container .div_barra_de_busqueda{
+        display:flex;
+        margin: 15px;
+        justify-self: right;
+    }
+    header .div_navegacion_header{
+        width: 100%;
+        display:grid;
+        grid-template-columns: 70% 30%;
+        border: 1px solid #fff;
+    }
+    header .div_navegacion_header ul{
+        display:flex;
+        justify-content: space-around;
+    }
+    header .div_navegacion_header .ul_navegacion_header{
+        border-right: 1px solid #fff;
+    }
+    header .div_navegacion_header a{
+        padding: 0 28px;
+    }
+    header .flex-container{
+        display: grid;
+        grid-template-areas: 
+        "logo fav carrito"
+        "logo barra barra";
+        grid-template-rows: 46% 50px;
+        grid-template-columns: 0.7fr 1.3fr 40px;
+    }
+}
