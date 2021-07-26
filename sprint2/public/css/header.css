@@ -84,6 +84,7 @@ header .div_navegacion_header{
 }
 
 @media (min-width: 769px){
+
     header .flex-container .div_logo_header{
         width: 300px;
     }
@@ -93,11 +94,11 @@ header .div_navegacion_header{
     header .flex-container .div_favoritos{
         display: flex;
         flex-direction:row-reverse;
-        padding-right: 10px;
+        padding-right: 25px;
     }
     header .flex-container .div_carrito{
         display: flex;
-
+        font-size: 22px;
     }
     header .flex-container .div_burger{
         display:none;
@@ -121,7 +122,12 @@ header .div_navegacion_header{
         border-right: 1px solid #fff;
     }
     header .div_navegacion_header a{
-        padding: 0 28px;
+        padding: 0 15px;
+    }
+    header .div_navegacion_header a i{
+        font-size: 20px;
+        margin: 5px 0;
+        margin-right: 7px;
     }
     header .flex-container{
         display: grid;
@@ -129,6 +135,6 @@ header .div_navegacion_header{
         "logo fav carrito"
         "logo barra barra";
         grid-template-rows: 46% 50px;
-        grid-template-columns: 0.7fr 1.3fr 40px;
+        grid-template-columns: 0.7fr 1.3fr 54px;
     }
 }

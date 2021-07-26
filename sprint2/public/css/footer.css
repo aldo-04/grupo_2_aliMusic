@@ -1,5 +1,5 @@
 footer{
-    margin-top: 20px;
+    margin-top: 50px;
     background-color: var(--color-footer);
     padding-top: 15px;
 }
@@ -19,6 +19,10 @@ footer .div_grid .div_logo_footer{
 
 footer .div_grid .div_logo_footer img{
     width: 100%;
+}
+
+footer .div_grid .logo-completo{
+    display:none;
 }
 
 footer .div_grid .div_navegacion_footer{
@@ -53,7 +57,7 @@ footer .div_grid .div_redes{
 
 @media (min-width:415px){
     footer a{
-        font-size: 13px;
+        font-size: 12px;
     }
     footer .div_grid .div_logo_footer{
         width: 100%;
@@ -77,5 +81,28 @@ footer .div_grid .div_redes{
         flex-direction: column;
         justify-content: space-around;
         padding-bottom: 15px;
+    }
+}
+@media (min-width:769px){
+    footer{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    footer a{
+        font-size: 18px;
+    }
+    footer i{
+        font-size: 24px;
+    }
+
+    footer .div_grid .logo-incompleto{
+        display: none;
+    }
+    footer .div_grid .logo-completo{
+        display: block;
+        width: 160px;
+    }
+    footer .div_grid .div_navegacion_footer{
+        padding-left: 29%;
     }
 }
