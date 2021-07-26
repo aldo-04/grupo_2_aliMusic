@@ -1,6 +1,14 @@
 header{
-    background-color: black;
-    padding: 5px 10px;
+    background-color: var(--color-header);
+    padding-top: 5px;
+}
+
+header a{
+    color: var(--color-a-header);
+    transition: color .3s;
+}
+header a:hover{
+    color: var(--color-a-fav);
 }
 
 header .flex-container{
@@ -13,6 +21,8 @@ header .flex-container{
 
 header .flex-container .div_logo_header{
     width: 35%;
+    padding-left: 5px;
+    grid-area: logo;
 }
 
 header .flex-container .div_logo_header img{
@@ -24,32 +34,30 @@ header .flex-container .div_cuenta{
     text-align:right;
 }
 
-header .flex-container .div_cuenta a{
-    color: #fff;
+header .flex-container .div_favoritos{
+    display:none;
+    grid-area: fav;
 }
 
 header .flex-container .div_carrito{
     width: 15%;
     text-align:right;
-}
-
-header .flex-container .div_carrito a{
-    color: #fff;
+    padding-right: 5px;
+    grid-area: carrito;
 }
 
 header .flex-container .div_burger{
-    text-align: center;
-    width: 30%;
-}
-
-header .flex-container .div_burger a{
-    color: #fff;
+    width: 5%;
+    text-align:center;
+    padding-left: 5px;
 }
 
 header .flex-container .div_barra_de_busqueda{
-    width: 70%;
     position: relative;
     max-width: 300px;
+    margin-right: 5px;
+    margin-bottom: 5px ;
+    grid-area: barra;
 }
 
 header .flex-container .div_barra_de_busqueda input{
@@ -59,8 +67,72 @@ header .flex-container .div_barra_de_busqueda input{
 header .flex-container .div_barra_de_busqueda a{
     position: absolute;
     color: black;
-    right: 5px;
-    top: 1px;
+    right: 4px;
+    top: 1.5px;
 }
 
+header .div_navegacion_header{
+    display:none;
+}
 
+@media (min-width: 769px){
+    header .flex-container{
+        display: grid;
+        grid-template-areas: 
+        "logo barra fav carrito"
+        "logo barra fav carrito";
+        grid-template-rows: 25% 30px;
+        grid-template-columns: 0.7fr 1.3fr 54px;
+    }
+
+    header .flex-container .div_logo_header{
+        width: 200px;
+    }
+    header .flex-container .div_cuenta{
+        display:none;
+    }
+    header .flex-container .div_favoritos{
+        display: flex;
+        flex-direction:row-reverse;
+        padding-top: 2px;
+        align-self: center;
+        padding-right: 15px;
+    }
+    header .flex-container .div_carrito{
+        display: flex;
+        font-size: 20px;
+        align-self: center;
+        padding-right: 25px;
+    }
+    header .flex-container .div_burger{
+        display:none;
+    }
+    header .flex-container .div_barra_de_busqueda{
+        margin: 0 15px;
+        margin-top: 10px;
+        justify-self: right;
+    }
+    header .div_navegacion_header{
+        width: 100%;
+        display:grid;
+        grid-template-columns: 70% 30%;
+        border: 1px solid var(--color-border-navegacion);
+        background-color: var(--color-background-footer);
+    }
+    header .div_navegacion_header ul{
+        display:flex;
+        justify-content: space-around;
+    }
+    header .div_navegacion_header .ul_navegacion_header{
+        border-right: 1px solid var(--color-border-navegacion);
+    }
+    header .div_navegacion_header a{
+        padding: 0 15px;
+    }
+    header .div_navegacion_header a i{
+        font-size: 18px;
+        margin: 5px 0;
+        margin-right: 7px;
+    }
+    
+}
