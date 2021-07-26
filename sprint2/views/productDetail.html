@@ -13,16 +13,22 @@
 
         <div class="flex-container">
             <div class="div_logo_header">
-                <img src="/images/logo-de-lado.svg" alt="logo aLi Music">
+                <a href="/">
+                    <img src="/images/logo/logo-de-lado.svg" alt="logo-aLi-Music">
+                </a>
             </div>
             
             <div class="div_cuenta">
-                <a href="">Mi cuenta</a>
+                <a href="/login">Mi cuenta</a>
+            </div>
+
+            <div class="div_favoritos">
+                <a href=""><i class="far fa-star"></i></a>
             </div>
             
             <div class="div_carrito">
-                <a href="">1</a>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="/productcart">1</a>
+                <a href="/productcart"><i class="fas fa-shopping-cart"></i></a>
             </div>
             
             <div class="div_burger">
@@ -33,13 +39,25 @@
                 <input type="text" name="barra" id="">
                 <a href=""><i class="fas fa-search"></i></a>
             </div>
+            
         </div>
-
+        <div class="div_navegacion_header">
+            <ul class="ul_navegacion_header">
+                <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="/store"><i class="fas fa-money-bill-alt"></i>Tienda</a></li>
+                <li><a href="/contact"><i class="fas fa-id-card"></i>Contacto</a></li>
+                <li><a href="/comunity"><i class="fas fa-guitar"></i>Comunidad</a></li>
+            </ul>
+            <ul class=ul_cuenta>
+                <li><a href="/register"><i class="fas fa-save"></i>Register</a></li>
+                <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Acceder</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="product">
             <div class="img">
-                <img src="/images/guitarra-electrica.webp" alt=""><i class="fas fa-heart"></i>
+                <img src="/images/articulos/descuentos/art04-descuentos.jpg" alt=""><i class="fas fa-heart"></i>
             </div>
             <div class="contain">
                 <div class="name">
@@ -84,25 +102,33 @@
         <section class="relacionados">
             <h2>Productos relacionados</h2>
             <article>
-                    <img src="/images/guitarra-electrica.webp" alt="">
+                    <a>
+                        <img src="/images/articulos/descuentos/art03-descuentos.jpg" alt="">
+                    </a>
                     <p>Articulo 1</p>
                     <p>$ 13450</p>
                     <button>Agregar al carrito</button>
             </article>
             <article>
-                    <img src="/images/parlante-con-microfono.webp" alt="">
+                    <a>
+                        <img src="/images/articulos/ofertas/art01-ofertas.jpg" alt="">
+                    </a>
                     <p>Articulo 2</p>
                     <p>$ 40587</p>
                     <button>Agregar al carrito</button>
             </article>
             <article>
-                    <img src="/images/parlante-con-microfono.webp" alt="">
+                    <a>
+                        <img src="/images/articulos/visita/art01-visita.jpg" alt="">
+                    </a>
                     <p>Articulo 3</p>
                     <p>$ 13450</p>
                     <button>Agregar al carrito</button>
             </article>
             <article>
-                    <img src="/images/guitarra-electrica.webp" alt="">
+                    <a>
+                        <img src="/images/articulos/descuentos/art04-descuentos.jpg" alt="">
+                    </a>
                     <p>Articulo 4</p>
                     <p>$ 40587</p>
                     <button>Agregar al carrito</button>
@@ -110,7 +136,42 @@
         </section>
     </main>
     <footer>
-        <h4>contactanos</h4>
+
+        <div class="div_grid">
+            <div class="div_logo_footer logo-incompleto">
+                <img src="/images/logo/logo.svg" alt="Logo-ali-Music">
+            </div>
+            <div class="div_logo_footer logo-completo">
+                <img src="/images/logo/logo-completo.svg" alt="Logo-ali-Music">
+            </div>
+            
+            <div class="div_navegacion_footer">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href=""><i class="fas fa-money-bill-alt"></i> Tienda</a></li>
+                    <li><a href=""><i class="fas fa-id-card"></i> Contacto</i></a></li>
+                    <li><a href=""><i class="fas fa-guitar"></i> Comunidad</i></a></li>
+                </ul>
+            </div>
+            
+            <div class="div_contacto">
+                <div class="div_contacto_mail">
+                    <a href=""><i class="fas fa-envelope"></i></a>
+                    <a href="">Grupo2@gmail.com</a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-whatsapp-square"></i></a>
+                    <a href="">+54 11-2233-4455</a>
+                </div>
+            </div>
+            
+            <div class="div_redes">
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+        
     </footer>
 </body>
 </html>
