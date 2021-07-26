@@ -1,12 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cart</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    
+
+    <header>
+
+        <div class="flex-container">
+            <div class="div_logo_header">
+                <img src="/images/logo-de-lado.svg" alt="logo aLi Music">
+            </div>
+
+            <div class="div_cuenta">
+                <a href="">Mi cuenta</a>
+            </div>
+
+            <div class="div_carrito">
+                <a href="">1</a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <div class="div_burger">
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+
+            <div class="div_barra_de_busqueda">
+                <input type="text" name="barra" id="">
+                <a href=""><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+
+    </header>
+    <main class="cart">
+        <h2>Carrito</h2>
+        <section class="carrito">
+            <div class="compra">
+                <div class="vista">
+                    <img src="/images/parlante-con-microfono.webp" alt="parlante-con-microfono">
+                </div>
+                <div class="product">
+                    <div class="detalles">
+                        <p>proucto:nombre</p>
+                        <p>precio:$2222</p>
+                        <div class="mas">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>01</p>
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <p>cantidad</p>
+                    </div>
+                </div>
+                <div class="descuento">
+                    <h3>codigo de descuento</h3>
+                    <input type="text" name="numero">
+                </div>
+            </div>
+            <div class="total">
+                <p>subtotal: $10000</p>
+                <p>total: $10000</p>
+                <button type="submit">Comprar</button>
+            </div>
+        </section>
+        <section class="entrega">
+            <h2>Entrega</h2>
+            <form action="">
+                <input type="email" name="email" id="email" placeholder="Correo">
+                <input type="text" name="DNI" id="DNI" placeholder="DNI">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="number" name="telefono" id="telefono" placeholder="telefono">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+            </form>
+            <div class="box-button">
+                <button type="submit">continuar</button>
+            </div>
+            <div class="compra">
+                <div class="vista">
+                    <img src="" alt="">
+                </div>
+                <div class="product">
+                    <div class="detalles">
+                        <p>proucto:nombre</p>
+                        <p>precio:$2222</p>
+                        <div class="mas">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>01</p>
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <p>cantidad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="total">
+                <p>subtotal: $10000</p>
+                <p>total: $10000</p>
+            </div>
+        </section>
+        <section class="usuario">
+            <h2>informacion de usuario</h2>
+            <form action="">
+                <input type="number" name="codigo postal" id="codigo postal" placeholder="codigo postal">
+                <input type="text" name="provincia" id="provincia" placeholder="provincia">
+                <input type="text" name="ciudad" id="ciudad" placeholder="ciudad">
+                <input type="text" name="DNI" id="DNI" placeholder="DNI">
+                <input type="number" name="telefono" id="telefono" placeholder="telefono">
+            </form>
+            <select name="metodo de pago" id="metodo de pago">
+                <option value="" selected hidden>Metodo de pago</option>
+                <option value="tar">Tarjeta</option>
+                <option value="efect">Efetivo</option>
+            </select>
+            <div class="box-button">
+                <button type="submit">continuar</button>
+            </div>
+            <div class="compra">
+                <div class="vista">
+                    <img src="" alt="">
+                </div>
+                <div class="product">
+                    <div class="detalles">
+                        <p>proucto:nombre</p>
+                        <p>precio:$2222</p>
+                        <div class="mas">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>01</p>
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <p>cantidad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="total">
+                <p>subtotal: $10000</p>
+                <p>total: $10000</p>
+            </div>
+        </section>
+        <section class="pago">
+            <div class="metodo">
+                <section>
+                    <label for="debito">Tarjeta de debito</label>
+                    <input type="radio" id="debito" name="pago" value="dbto">
+                </section>
+                <section>
+                    <label for="credito">Tarjeta de credito</label>
+                    <input type="radio" id="credito" name="pago" value="credito">
+                </section>
+                <section class="efectivo">
+                    <label for="efectivo">Efetivo</label>
+                    <input type="radio" id="efectivo" name="pago" value="efect">
+                </section>
+            </div>
+            <form action="">
+                <input type="number" name="numero de tarjeta" id="numero de tarjeta" placeholder="numero de tarjeta">
+                <select name="numero de cuotas" id="numero de cuotas">
+                    <option value="" selected hidden>numero de cuotas</option>
+                    <option value="dos">2</option>
+                    <option value="tres">3</option>
+                    <option value="cuatro">4</option>
+                    <option value="cinco">5</option>
+                    <option value="diez">10</option>
+                    <option value="doce">12</option>
+                </select>
+                <input type="name" name="" id="nombre" placeholder="nombre como figura en la tarjeta">
+                <input type="number" name="codigo" id="codigo" placeholder="codigo postal">
+                <input type="number" name="DNI" id="DNI" placeholder="DNI">
+                <div class="box-form-n">
+                    <h4>Fecha de Nacimiento</h4>
+                    <input type="date" name="fecha"></input>
+                </div>
+            </form>
+            <div class="compra">
+                <div class="vista">
+                    <img src="" alt="">
+                </div>
+                <div class="product">
+                    <div class="detalles">
+                        <p>proucto:nombre</p>
+                        <p>precio:$2222</p>
+                        <div class="mas">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>01</p>
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <p>cantidad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="total">
+                <p>subtotal: $10000</p>
+                <p>total: $10000</p>
+            </div>
+        </section>
+        <section class="rsm">
+            <div class="button-pago">
+                <button type="submit">Rapipago</button>
+                <button type="submit">sucursal</button>
+                <button type="submit">Mercado pago</button>
+            </div>
+            <div class="compra">
+                <div class="vista">
+                    <img src="" alt="">
+                </div>
+                <div class="product">
+                    <div class="detalles">
+                        <p>proucto:nombre</p>
+                        <p>precio:$2222</p>
+                        <div class="mas">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>01</p>
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <p>cantidad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="total">
+                <p>subtotal: $10000</p>
+                <p>total: $10000</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>

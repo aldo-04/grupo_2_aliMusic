@@ -1,0 +1,184 @@
+/*carrito*/
+.cart h2{
+    text-align: center;
+    font-size: 25px;
+}
+.cart h3{
+    font-size: 18px;
+}
+.cart section.carrito{
+    display:flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.cart section.carrito div.compra{
+    border: solid 1px black;
+    display:flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.cart section.carrito div.compra div.vista{
+    border: solid 1px black;
+    margin: 5px 0px;
+    flex-grow: 0.50;
+}
+.cart section.carrito div.compra div.vista img{
+    width: 100px;
+}
+.cart section.carrito div.detalles{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    font-size: 20px;
+}
+
+.cart section.carrito div.detalles .mas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    border:solid 1px black
+}
+.cart section.carrito div.product{
+ flex-grow: 0.50;
+}
+.cart section.carrito div.compra div.descuento{
+    display:flex;
+    justify-content:space-between;
+    }
+.cart section.carrito div.total{
+    border: solid 1px black;
+    border-top: none;
+    font-size:  20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-grow: 1;
+}
+.cart section.carrito div.total button{
+   color: white;
+   background-color: blue;
+   width: 90%;
+   height: 40px;
+   font-size:  22px;
+}
+
+.cart section.entrega div.compra,div.total,section.usuario div.compra,div.total,section.pago div.compra ,div.total{
+    display:none
+}
+/*carrito-entrega*/
+.cart section.entrega{
+margin-bottom: 10px;
+}
+.cart section.entrega form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.cart section.entrega form input,section.usuario form input{
+    width: 45%;
+    height: 30px;
+    margin: 15px 6px;
+    margin-bottom: 0px;
+}
+.cart div.box-button button{
+    color: white;
+    background-color: gray;
+    width: 90px;
+    height: 30px;
+    border: transparent;
+}
+.cart div.box-button {
+    display: flex;
+    justify-content:flex-end;
+margin-right: 6px;
+}
+.cart section select{
+        margin: 15px 0px 0px 7px;
+        width: 45%;
+        height: 30px;
+}
+
+/*section-pago*/
+.cart section.pago div.metodo {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 15px;
+}
+.cart section.pago div.metodo section{
+    border:1px solid black;
+    margin:10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width:70%;
+}
+.cart section.pago form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.cart section.pago select{
+    margin: 15px 0px 0px 0px;
+    width: 66%;
+    height: 30px;
+}
+
+.cart form input{
+    width: 66%;
+    height: 30px;
+    margin: 15px 0px;
+    margin-bottom: 0px;
+}
+
+
+
+/*DESCUENTO VERSION ESCRITORIO
+.cart section.carrito div.compra div.descuento{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cart section.carrito div.compra div.descuento{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+*/
+/*<input type="checkbox" id="menu">
+            <label for="menu"> ☰ </label>
+
+            ~
+
+
+            @keyframes rotate{
+    0%{
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25%{
+        -webkit-transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50%{
+        -webkit-transform: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75%{
+        -webkit-transform: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100%{
+        -webkit-transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+*/
