@@ -53,19 +53,24 @@ i{
     font-size: 6vw;
 }
 
-.details main div.contain{
-
-}
-
 .details main div.descripcion{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .details main div.descripcion div.cant{
+    width: 25%;
     text-align: center;
+}
+
+.details main div.descripcion div.cant button{
+    width: 26px;
+    border: 1px solid;
+    border-radius: 112px;
+    padding: 4px;
+    height: 26px;
 }
 
 .details main div.descripcion a{
@@ -99,14 +104,19 @@ i{
     background-color: #000000c4;
 }
 
+.details main section.relacionados h2{
+    text-align: center;
+    width: 100%;
+}
+
 .details main section.relacionados article{
     margin: 15px 0px;
     width: 35%;
     box-shadow: 0px 0px 13px 2px #180f5f;
     border: 1px solid #180f5f;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .details main section.relacionados img{
@@ -115,13 +125,12 @@ i{
     width: 100%;
 }
 
-.details main section.relacionados h2{
-    width:100%;
-    padding:10px
-}
-
-.details main section.relacionados div{
-    
+.details main section.relacionados button{
+    color: white;
+    width: 100%;
+    background-color: #ff000057;
+    border: 1px solid #ff0000;
+    border-radius: 20px;
 }
 
 
@@ -129,4 +138,38 @@ i{
 
 .details footer{
     background-color: rgba(9, 60, 114, 0.946);
+}
+
+
+/* TABLET */
+
+
+@media (min-width:426px) {
+
+    .details main{
+    font-size: 30px;
+    }
+
+    .details main div.product{
+        display: flex;
+    }
+
+    .details main div.contain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;}
+
+    .details main div.descripcion div.cant{
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) {
+    
+    .details main section.relacionados button{
+        font-size: 22px;
+    }
+
+
 }
