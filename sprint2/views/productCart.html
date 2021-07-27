@@ -12,20 +12,27 @@
 
 <body>
 
+
     <header>
 
         <div class="flex-container">
             <div class="div_logo_header">
-                <img src="/images/logo-de-lado.svg" alt="logo aLi Music">
+                <a href="/">
+                    <img src="/images/logo/logo-de-lado.svg" alt="logo-aLi-Music">
+                </a>
             </div>
 
             <div class="div_cuenta">
-                <a href="">Mi cuenta</a>
+                <a href="/login">Mi cuenta</a>
+            </div>
+
+            <div class="div_favoritos">
+                <a href=""><i class="far fa-star"></i></a>
             </div>
 
             <div class="div_carrito">
-                <a href="">1</a>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="/productcart">1</a>
+                <a href="/productcart"><i class="fas fa-shopping-cart"></i></a>
             </div>
 
             <div class="div_burger">
@@ -36,16 +43,29 @@
                 <input type="text" name="barra" id="">
                 <a href=""><i class="fas fa-search"></i></a>
             </div>
-        </div>
 
+        </div>
+        <div class="div_navegacion_header">
+            <ul class="ul_navegacion_header">
+                <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="/store"><i class="fas fa-money-bill-alt"></i>Tienda</a></li>
+                <li><a href="/contact"><i class="fas fa-id-card"></i>Contacto</a></li>
+                <li><a href="/comunity"><i class="fas fa-guitar"></i>Comunidad</a></li>
+            </ul>
+            <ul class=ul_cuenta>
+                <li><a href="/register"><i class="fas fa-save"></i>Register</a></li>
+                <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Acceder</a></li>
+            </ul>
+        </div>
     </header>
     <main class="cart">
         <h2>Carrito</h2>
         <section class="carrito">
             <div class="compra">
-                <div class="vista">
-                    <img src="/images/parlante-con-microfono.webp" alt="parlante-con-microfono">
-                </div>
+                <a class="a_img" href="">
+                    <img src="/images/articulos/ofertas/art03-ofertas.jpg"
+                        alt="Interface-audio-behringer-U-Phoria-UMC22">
+                </a>
                 <div class="product">
                     <div class="detalles">
                         <p>proucto:nombre</p>
@@ -82,9 +102,10 @@
                 <button type="submit">continuar</button>
             </div>
             <div class="compra">
-                <div class="vista">
-                    <img src="" alt="">
-                </div>
+                <a class="a_img" href="">
+                    <img src="/images/articulos/ofertas/art03-ofertas.jpg"
+                        alt="Interface-audio-behringer-U-Phoria-UMC22">
+                </a>
                 <div class="product">
                     <div class="detalles">
                         <p>proucto:nombre</p>
@@ -121,9 +142,10 @@
                 <button type="submit">continuar</button>
             </div>
             <div class="compra">
-                <div class="vista">
-                    <img src="" alt="">
-                </div>
+                <a class="a_img" href="">
+                    <img src="/images/articulos/ofertas/art03-ofertas.jpg"
+                        alt="Interface-audio-behringer-U-Phoria-UMC22">
+                </a>
                 <div class="product">
                     <div class="detalles">
                         <p>proucto:nombre</p>
@@ -159,6 +181,10 @@
             </div>
             <form action="">
                 <input type="number" name="numero de tarjeta" id="numero de tarjeta" placeholder="numero de tarjeta">
+                <div class="box-card">
+                    <button type="submit" i class="fab fa-cc-visa"></i></button>
+                    <button type="submit" i class="fab fa-cc-mastercard"></i></button>
+                </div>
                 <select name="numero de cuotas" id="numero de cuotas">
                     <option value="" selected hidden>numero de cuotas</option>
                     <option value="dos">2</option>
@@ -177,9 +203,10 @@
                 </div>
             </form>
             <div class="compra">
-                <div class="vista">
-                    <img src="" alt="">
-                </div>
+                <a class="a_img" href="">
+                    <img src="/images/articulos/ofertas/art03-ofertas.jpg"
+                        alt="Interface-audio-behringer-U-Phoria-UMC22">
+                </a>
                 <div class="product">
                     <div class="detalles">
                         <p>proucto:nombre</p>
@@ -205,30 +232,68 @@
                 <button type="submit">Mercado pago</button>
             </div>
             <div class="compra">
-                <div class="vista">
-                    <img src="" alt="">
-                </div>
                 <div class="product">
+                    <a class="a_img" href="">
+                        <img src="/images/articulos/ofertas/art03-ofertas.jpg"
+                            alt="Interface-audio-behringer-U-Phoria-UMC22">
+                    </a>
                     <div class="detalles">
-                        <p>proucto:nombre</p>
-                        <p>precio:$2222</p>
+                        <p>Proucto:nombre</p>
+                        <p>Precio:$2222</p>
                         <div class="mas">
                             <i class="fas fa-plus-circle"></i>
                             <p>01</p>
                             <i class="fas fa-minus-circle"></i>
                         </div>
-                        <p>cantidad</p>
+                        <p>Cantidad</p>
                     </div>
                 </div>
+
+                <div class="total">
+                    <p>subtotal: $10000</p>
+                    <p>total: $10000</p>
+                </div>
             </div>
-            <div class="total">
-                <p>subtotal: $10000</p>
-                <p>total: $10000</p>
+            <div class="button-final">
+                <button type="submit">Finalizar Compra</button>
             </div>
         </section>
     </main>
     <footer>
+        <div class="div_grid">
+            <div class="div_logo_footer logo-incompleto">
+                <img src="/images/logo/logo.svg" alt="Logo-ali-Music">
+            </div>
+            <div class="div_logo_footer logo-completo">
+                <img src="/images/logo/logo-completo.svg" alt="Logo-ali-Music">
+            </div>
 
+            <div class="div_navegacion_footer">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href=""><i class="fas fa-money-bill-alt"></i> Tienda</a></li>
+                    <li><a href=""><i class="fas fa-id-card"></i> Contacto</i></a></li>
+                    <li><a href=""><i class="fas fa-guitar"></i> Comunidad</i></a></li>
+                </ul>
+            </div>
+
+            <div class="div_contacto">
+                <div class="div_contacto_mail">
+                    <a href=""><i class="fas fa-envelope"></i></a>
+                    <a href="">Grupo2@gmail.com</a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-whatsapp-square"></i></a>
+                    <a href="">+54 11-2233-4455</a>
+                </div>
+            </div>
+
+            <div class="div_redes">
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 
