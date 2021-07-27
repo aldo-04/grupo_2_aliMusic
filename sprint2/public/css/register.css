@@ -1,0 +1,86 @@
+.register{
+    background-color: var(--color-background);
+}
+
+.register h1{
+    text-align: center;
+    color: var(--color-h1);
+    background-color: var(--color-h1-rgba);
+}
+
+.register div.avatar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register div.avatar i{
+    color: black;
+    padding: 10px;
+}
+
+.register div.avatar input{
+    width: 0%;
+}
+
+.register main div.datos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.register main div.datos input{
+    padding: 5px;
+    margin: 10px;
+    width: 170px;
+}
+
+.register main div.redes{
+    display: flex;
+    justify-content: center;
+
+}
+
+.register main div.redes div{
+    margin: 5px;
+    position: relative;
+}
+
+.register main div.redes input{
+    width: 160PX;
+    text-align: left;
+    padding: 2px;
+}
+
+.register main div.redes i{
+    color: black;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.register main div.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.register main div.buttons input{
+    border-radius: 30px;
+    width: 100px;
+}
+
+.register footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width:769px) {
+    
+    .register main{
+        margin: 0 auto;
+        max-width: 706px;
+    }
+}
