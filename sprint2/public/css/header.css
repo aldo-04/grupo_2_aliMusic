@@ -64,11 +64,14 @@ header .flex-container .div_burger ul{
     z-index: 10;
     left: 0;
     margin-top: 1px;
+    opacity: 0;
+    transition: all 5s;
 }
 header .flex-container .div_burger input:checked ~ ul{
     display: grid;
     grid-template-rows: auto auto auto auto auto auto;
     text-align: left;
+    opacity: 1;
 }
 header .flex-container .div_burger ul li{
     padding-left: 5px;
@@ -140,7 +143,7 @@ header .div_navegacion_header{
         display:grid;
         grid-template-columns: 70% 30%;
         border: 1px solid var(--color-border-navegacion);
-        background-color: var(--color-background-footer);
+        background-color: var(--color-nav-header);
     }
     header .div_navegacion_header ul{
         display:flex;
