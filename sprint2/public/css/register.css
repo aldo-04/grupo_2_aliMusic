@@ -4,6 +4,8 @@
 
 .register h1{
     text-align: center;
+    color: var(--color-h1);
+    background-color: var(--color-h1-rgba);
 }
 
 .register div.avatar{
@@ -67,4 +69,18 @@
 .register main div.buttons input{
     border-radius: 30px;
     width: 100px;
+}
+
+.register footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width:769px) {
+    
+    .register main{
+        margin: 0 auto;
+        max-width: 706px;
+    }
 }
