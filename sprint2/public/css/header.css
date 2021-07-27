@@ -138,6 +138,9 @@ header .div_navegacion_header{
         margin-top: 10px;
         justify-self: right;
     }
+    header .flex-container .div_barra_de_busqueda i{
+        color: #000;
+    }
     header .div_navegacion_header{
         width: 100%;
         display:grid;
