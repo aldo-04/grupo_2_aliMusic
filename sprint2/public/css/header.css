@@ -5,7 +5,7 @@ header{
 
 header a{
     color: var(--color-a-header);
-    transition: color .3s;
+    transition: all .3s;
 }
 header a:hover{
     color: var(--color-a-fav);
@@ -45,13 +45,39 @@ header .flex-container .div_carrito{
     padding-right: 5px;
     grid-area: carrito;
 }
-
+/* Boton */
 header .flex-container .div_burger{
     width: 5%;
     text-align:center;
     padding-left: 5px;
 }
-
+header .flex-container .div_burger input{
+    display:none;
+}
+header .flex-container .div_burger ul{
+    display:none;
+    position: absolute;
+    background-color: #fff;
+    width: 130px;
+    height: 150px;
+    border: 1px solid var(--color-border-navegacion);
+    z-index: 10;
+    left: 0;
+    margin-top: 1px;
+    opacity: 0;
+    transition: all 5s;
+}
+header .flex-container .div_burger input:checked ~ ul{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    text-align: left;
+    opacity: 1;
+}
+header .flex-container .div_burger ul li{
+    padding-left: 5px;
+    border-bottom: 1px solid var(--color-border-navegacion);
+}
+/* Fin del boton */
 header .flex-container .div_barra_de_busqueda{
     position: relative;
     max-width: 300px;
@@ -112,12 +138,15 @@ header .div_navegacion_header{
         margin-top: 10px;
         justify-self: right;
     }
+    header .flex-container .div_barra_de_busqueda i{
+        color: #000;
+    }
     header .div_navegacion_header{
         width: 100%;
         display:grid;
         grid-template-columns: 70% 30%;
         border: 1px solid var(--color-border-navegacion);
-        background-color: var(--color-background-footer);
+        background-color: var(--color-nav-header);
     }
     header .div_navegacion_header ul{
         display:flex;
