@@ -521,9 +521,4 @@ display:none
 .cart section div.div_container{
 width:100%
 }
-.cart section.rsm div.usuario{
-    display: flex;
-    flex-direction: row;
-}
-
 }
