@@ -16,4 +16,9 @@ app.get('/productcart',(req, res) => res.sendfile(path.join(__dirname,'views','p
 app.get('/productdetail',(req, res) => res.sendfile(path.join(__dirname,'views','productDetail.html')));
 
 app.get('/register',(req, res) => res.sendfile(path.join(__dirname,'views','register.html')));
+
 app.get('/comunity',(req, res) => res.sendfile(path.join(__dirname,'views','comunity.html')));
+
+app.get('/contact',(req, res) => res.sendfile(path.join(__dirname,'views','contact.html')));
+
+app.get('/store',(req, res) => res.sendfile(path.join(__dirname,'views','store.html')));

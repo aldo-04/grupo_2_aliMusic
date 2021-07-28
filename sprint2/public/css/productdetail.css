@@ -1,15 +1,16 @@
 /* MAIIN */
 
-button{
-    color:initial
-}
-
-i{
-    color:#fbfbfb
-}
 
 .details{
     background-color: var(--color-background);
+}
+
+.details button{
+    color:initial
+}
+
+.details i{
+    color:initial
 }
 
 .details main{
@@ -44,6 +45,10 @@ i{
     left: 10px;
     top: 10px;
     font-size: 6vw;
+}
+
+.details main div.contain{
+    background-color: rgba(112, 161, 215,0.5);
 }
 
 .details main div.descripcion{
@@ -109,8 +114,6 @@ i{
 .details main section.relacionados article{
     margin: 15px 0px;
     width: 35%;
-   /*  box-shadow: 0px 0px 13px 2px var(--color-border-art); */
-    border: 1px solid var(--color-border-art);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,5 +173,8 @@ i{
         font-size: 22px;
     }
 
+    .details main section.relacionados article:hover{
+        box-shadow: 0px 0px 13px 0px var(--color-border-art);
+    }
 
 }
