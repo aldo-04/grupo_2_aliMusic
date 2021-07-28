@@ -33,7 +33,16 @@
             </div>
             
             <div class="div_burger">
-                <a href=""><i class="fas fa-bars"></i></a>
+                <input type="checkbox" id="menu">
+                <label for="menu"> ☰ </label>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="/store"><i class="fas fa-money-bill-alt"></i>Tienda</a></li>
+                    <li><a href="/contact"><i class="fas fa-id-card"></i>Contacto</a></li>
+                    <li><a href="/comunity"><i class="fas fa-guitar"></i>Comunidad</a></li>
+                    <li><a href="/register"><i class="fas fa-save"></i>Register</a></li>
+                    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Acceder</a></li>
+                </ul>
             </div>
             
             <div class="div_barra_de_busqueda">
@@ -58,9 +67,28 @@
     <main>
 
         <div class="div_carrusel">
-            <img src="/images/carrusel.jpg" alt="Carrusel-guitarra-electroAcustica">
-            <a class="right" href=""><i class="fas fa-chevron-right"></i></a>
-            <a class="left" href=""><i class="fas fa-chevron-left"></i></a>
+            <ul class="slider">
+                <li id="slide1">
+                  <img src="/images/carrusel.jpg" alt="Carrusel-guitarra-electroAcustica">
+                </li>
+                <li id="slide2">
+                    <img src="/images/carrusel2.jpg" alt="Carrusel-guitarra-electroAcustica">
+                </li>
+                <li id="slide3">
+                    <img src="/images/carrusel3.jpg" alt="Carrusel-guitarra-electroAcustica">
+                </li>
+              </ul>
+              <ul class="menu">
+                <li>
+                  <a href="#slide1">1</a>
+                </li>
+                <li>
+                  <a href="#slide2">2</a>
+                </li>
+                 <li>
+                  <a href="#slide3">3</a>
+                </li>
+              </ul>
         </div>
 
         <div class="div_banner">

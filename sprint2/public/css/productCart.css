@@ -1,10 +1,14 @@
 /*carrito*/
+.cart i{
+color: black;
+}
 .cart h2{
     text-align: center;
     font-size: 25px;
+    margin: 15px 0px;
 }
-.cart h3{
-    font-size: 18px;
+.cart p{
+    text-align: center;
 }
 .cart section.carrito{
     display:flex;
@@ -21,32 +25,35 @@
     justify-content: space-around;
     align-items: center;
 }
-.cart section.carrito div.compra a.a_img{
-    width: 40%;
-    display: flex;
-    flex-grow: 0.50;
-    justify-content: center;
-}
-.cart section.carrito div.compra a.a_img img{
+.cart section.carrito div.compra div.img_container img{
     width: 100%;
     height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+.cart section.carrito div.compra div.img_container{
+    width: 50%;
+    height: 120px;
     display: flex;
-    flex-grow: 1;
-    justify-content: center;
+    position: relative;
+    background-color: #fff;
+}
+.cart section.carrito div.compra div.product{
+    width: 50%;
 }
 .cart section.carrito div.detalles{
     display:flex;
     flex-direction: column;
     align-items: center;
     width:100%;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .cart section.carrito div.detalles .mas{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 23px;
+    font-size: 21px;
     border:solid 1px black
 }
 .cart section.carrito div.compra div.descuento{
@@ -121,20 +128,18 @@ width:27%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .cart section.usuario div.box-button {
     display: flex;
     width: 97%;
-    margin: 0px 0px 0px 0px;
     justify-content: flex-end;
+    margin-top: 10px;
 }
 /*section-pago*/
 .cart section.pago div.metodo {
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 15px;
 }
 .cart section.pago div.metodo section{
     border:1px solid black;
@@ -166,12 +171,10 @@ margin-top: 15px;
 }
 .cart section.pago form div.box-card button{
 font-size:  30px;
-margin-right:40px ;
+margin-right:40px;
 margin-top: 6px;
 }
-.cart section.pago form div.box-form-n h4{
-    margin-top: 10px;
-}
+
 /*section rsm*/
 .cart section.rsm div.button-pago{
     display: flex;
@@ -183,28 +186,39 @@ margin-top: 6px;
     height: 30px;
     margin: 15px 0px;
 }
-.cart section.rsm div.product{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 .cart section.rsm .compra{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
 }
-.cart section.rsm div.compra a.a_img{
-    width: 60%;
+.cart section.rsm div.product{
     display: flex;
     justify-content: center;
+    width:90%;
+    background-color:white;
+    border:solid 1px black
 }
-.cart section.rsm div.compra a.a_img img{
-    width: 90%;
+.cart section.rsm div.compra div.img_container{
+    width: 50%;
+    height: 120px;
     display: flex;
-    justify-content: center;
+    position: relative;
+    background-color: #fff;
+}
+.cart section.rsm div.compra div.img_container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
 }
 .cart section.rsm div.detalles{
-    text-align: center;
+    display: flex;
+    font-size: 13px;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
 .cart section.rsm div.detalles .mas{
     display: flex;
@@ -238,32 +252,24 @@ margin-top: 10px;
     .cart section.carrito{
         display:flex;
       flex-wrap: nowrap;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      background-color: rgb(255, 255, 255);
     }
-    .cart section.carrito div.compra{
-        border: solid 1px black;
-        display: flex;
-        width: 100%;
+    .cart section select{
+        margin: 6px 0px 0px 7px;
+    width: 53%;
+    }
+    .cart section.carrito div.compra {
         flex-wrap: nowrap;
     }
-   .cart section.carrito div.compra a.a_img {
-    width: 30%;
-    display: flex;
-     flex-grow: 0.50; 
-    justify-content: center;
-}
+    .cart section.carrito div.compra div.product {
+        width: 30%;
+    }
 .cart section.carrito div.detalles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     font-size: 11px;
 }
 .cart section.carrito div.compra div.descuento {
     display: flex;
-    width: 32%;
+    width: 43%;
+    font-size: 11px;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -271,73 +277,253 @@ margin-top: 10px;
 .cart section.carrito div.compra div.descuento input{
     width:76%
 }
-.cart h3 {
-    font-size: 12px;
-}
 .cart section.carrito div.total {
     width: 35%;
     border: solid 1px black;
     font-size: 16px;
     display: flex;
     text-align: center;
-    align-items: center;
     justify-content: center
 }
-.cart div.box-button button {
+.cart section.entrega div.entrega{
     display: flex;
-    margin-right: 6px;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
 }
-.cart section.entrega form input{
-    width: 45%;
-    height: 30px;
-    margin: 15px 6px;
-    margin-bottom: 0px;
-}
-.cart section div.compra,.cart section.entrega div.compra{
+.cart section.entrega div.compra {
     display: inline-flex;
-    width: 100%;
+    flex-direction: row;
+    border: solid 1px black;
+    width: 47%;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.cart section.entrega div.compra div.img_d{
+    width:100%;
     display: flex;
-    flex-grow: 0.50;
-    justify-content: flex-start;
+}
+.cart section.entrega div.compra div.img_d div.product{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    font-size:  13px;
+}
+.cart section.entrega div.compra div.img_d div.product div.mas{
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.cart section.entrega div.compra div.img_container{
+    width: 70%;
+    height: 120px;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+}
+.cart section.entrega div.compra div.img_container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+.cart section.entrega form {
+    display: flex;
+    width: 76%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .cart section div.total{
     display: inline-flex;
     width: 100%;
     display: flex;
+    border-top: solid 1px black;
     align-items: center;
     flex-direction: column;
-}
-.cart section.entrega div.compra a.a_img img,.cart section.usuario div.compra a.a_img img,.cart section.pago div.compra a.a_img img{
-width:100%;
-}
-.cart section.entrega div.compra a.a_img,.cart section.usuario div.compra a.a_img,.cart section.pago div.compra a.a_img{
-    width:50%;
-}
-.cart section.usuario form input{
-    width: 45%;
-    height: 30px;
-    margin: 15px 6px;
-    margin-bottom: 0px;
-}
-.cart section.rsm div.compra{
-    display:none
-}
+    background-color: white;
 }
 
-
-/*DESCUENTO VERSION ESCRITORIO
-.cart section.carrito div.compra div.descuento{
+.cart section.entrega div.box-button{
+    align-items: flex-start
+    }
+  
+    .cart section.entrega div.entrega{
+    display: flex;
+    flex-direction: row;
+}
+.cart section.entrega div.compra {
+    display: inline-flex;
+    flex-direction: row;
+    border: solid 1px black;
+    width: 47%;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.cart section.entrega div.compra div.img_d{
+    width:100%;
+    display: flex;
+}
+.cart section.entrega div.compra div.img_d div.product{
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
+    font-size:  13px;
 }
-.cart section.carrito div.compra div.descuento{
-display: flex;
-    flex-direction: column;
+.cart section.entrega div.compra div.img_d div.product div.mas{
+    display: flex;
+    font-size: 22px;
     align-items: center;
     justify-content: center;
+}
+.cart section.entrega div.compra div.img_container{
+    width: 70%;
+    height: 120px;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+}
+.cart section.entrega div.compra div.img_container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+.cart section.entrega form {
+    display: flex;
+    width: 76%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart section.entrega form input,section.usuario form input{
+    margin: 0px 6px;
+}
+.cart section div.total{
+    display: inline-flex;
+    width: 100%;
+    display: flex;
+    border-top: solid 1px black;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.cart section.usuario div.usuario{
+    display: flex;
+    flex-direction: row;
+}
+.cart section.usuario div.box-button {
+    width: 28%;
+    margin-right: 6px;
+    margin-top: 0;
+}
+.cart section.usuario div.box-button button {
+    width: 100%;
+}
+.cart section.usuario div.compra {
+    display: inline-flex;
+    flex-direction: row;
+    border: solid 1px black;
+    width: 47%;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.cart section.usuario div.compra div.img_d{
+    width:100%;
+    display: flex;
+}
+.cart section.usuario div.compra div.img_d div.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:  13px;
+}
+.cart section.usuario div.compra div.img_d div.product div.mas{
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.cart section.usuario div.compra div.img_container{
+    width: 70%;
+    height: 120px;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+}
+.cart section.usuario div.compra div.img_container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+.cart section.usuario form {
+    display: flex;
+    width: 76%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart section div.total{
+    display: inline-flex;
+    width: 100%;
+    display: flex;
+    border-top: solid 1px black;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.cart section.pago{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 25px;
     }
+    .cart section.pago div.metodo {
+        width:32%
+    }
+    .cart section.pago div.metodo section{
+        font-size: 12px;
+        border:1px solid black;
+        background-color:white;
+        margin:0px 0px 40px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        width:100%;
+    }
+    .cart section.pago form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 2px;
+        width:37%;
+    }
+    .cart section.pago form input{
+        width: 100%;
+        height: 30px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .cart section.pago div.box-card{
+        display:flex;
+        justify-content:space-around
+    }
+    .cart section.pago form div.box-card button{
+        margin:0px
+    }
+    .cart section.pago select{
+        width:100%;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+.cart section.rsm div.compra{
+display:none
+}
+.cart section div.div_container{
+width:100%
+}
+.cart section.rsm div.usuario{
+    display: flex;
+    flex-direction: row;
+}
+
+}

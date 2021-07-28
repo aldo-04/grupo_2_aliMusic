@@ -59,7 +59,7 @@ footer .div_grid .div_redes{
     align-items: center;
 }
 
-@media (min-width:415px){
+@media (min-width:425px){
     footer a{
         font-size: 12px;
     }
