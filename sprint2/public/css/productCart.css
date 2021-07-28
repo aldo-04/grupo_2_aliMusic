@@ -1,0 +1,367 @@
+/*carrito*/
+.cart i{
+color: black;
+}
+.cart h2{
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0px;
+}
+.cart h3{
+    font-size: 18px;
+}
+.cart section.carrito{
+    display:flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.cart section.carrito div.compra{
+    border: solid 1px black;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart section.carrito div.compra a.a_img{
+    width: 40%;
+    display: flex;
+    flex-grow: 0.50;
+    justify-content: center;
+}
+.cart section.carrito div.compra a.a_img img{
+    width: 100%;
+}
+.cart section.carrito div.detalles{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    font-size: 20px;
+}
+
+.cart section.carrito div.detalles .mas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    border:solid 1px black
+}
+.cart section.carrito div.compra div.descuento{
+    display:flex;
+    justify-content:space-between;
+    flex-grow: 0.30;
+    }
+.cart section.carrito div.total{
+    border: solid 1px black;
+    border-top: none;
+    font-size:  20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-grow: 1;
+}
+.cart section.carrito div.total button{
+   color: white;
+   background-color: blue;
+   width: 90%;
+   height: 40px;
+   font-size:  22px;
+}
+
+.cart section.entrega div.compra,div.total,section.usuario div.compra,div.total,section.pago div.compra ,div.total{
+    display:none
+}
+/*carrito-entrega*/
+.cart section.entrega{
+margin-bottom: 10px;
+}
+.cart section.entrega form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.cart section.entrega form input,section.usuario form input{
+    width: 45%;
+    height: 30px;
+    margin: 15px 6px;
+    margin-bottom: 0px;
+}
+.cart section.entrega div.box-button button{
+    color: white;
+    background-color: gray;
+    width: 100%;
+    height: 35px;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart section.entrega div.box-button {
+    display: flex;
+   align-items: flex-end;
+margin-right: 6px;
+width:27%;
+}
+.cart section select{
+        margin: 15px 0px 0px 7px;
+        width: 45%;
+        height: 30px;
+}
+/*informacion de usuario*/
+.cart section.usuario div.box-button button{
+    color: white;
+    background-color: gray;
+    width: 26%;
+    height: 35px;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart section.usuario div.box-button {
+    display: flex;
+    width: 97%;
+    justify-content: flex-end;
+}
+/*section-pago*/
+.cart section.pago div.metodo {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.cart section.pago div.metodo section{
+    border:1px solid black;
+    background-color:white;
+    margin:10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width:70%;
+}
+.cart section.pago form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 7px;
+}
+.cart section.pago select{
+    margin: 15px 0px 0px 0px;
+    width:70%;
+    height: 30px;
+}
+
+.cart section.pago form input{
+    width: 70%;
+    height: 30px;
+    margin: 15px 0px;
+    margin-bottom: 0px;
+}
+.cart section.pago form div.box-card button{
+font-size:  30px;
+margin-right:40px;
+margin-top: 6px;
+}
+.cart section.pago form div.box-form-n h4{
+    margin-top: 10px;
+}
+/*section rsm*/
+.cart section.rsm div.button-pago{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart section.rsm div.button-pago button{
+    width: 80%;
+    height: 30px;
+    margin: 15px 0px;
+}
+.cart section.rsm div.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cart section.rsm .compra{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+.cart section.rsm div.compra a.a_img{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.cart section.rsm div.compra a.a_img img{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.cart section.rsm div.detalles{
+    text-align: center;
+}
+.cart section.rsm div.detalles .mas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    border:solid 1px black
+}
+.cart section.rsm .total{
+    display:inline-flex;
+    border: solid 1px black;
+    flex-direction: column;
+    margin-top: 20px;
+    padding:15px 20px;
+    background-color: white;
+}
+.cart section.rsm div.button-final button{
+    width: 45%;
+    height: 40px;
+    background-color:gray;
+    color:white
+}
+.cart section.rsm div.button-final{
+display: flex;
+justify-content:center;
+margin-top: 10px;
+
+}
+@media (min-width:426px){
+
+    .cart section.carrito{
+        display:flex;
+      flex-wrap: nowrap;
+    }
+   .cart section.carrito div.compra a.a_img {
+    width: 30%;
+}
+.cart section.carrito div.detalles {
+    font-size: 11px;
+}
+.cart section.carrito div.compra div.descuento {
+    display: flex;
+    width: 32%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.cart section.carrito div.compra div.descuento input{
+    width:76%
+}
+.cart h3 {
+    font-size: 12px;
+}
+.cart section.carrito div.total {
+    width: 35%;
+    border: solid 1px black;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center
+}
+.cart section.entrega div.entrega {
+    display: flex;
+}
+.cart section.entrega div.detalles div.mas,.cart section.usuario div.detalles div.mas,.cart section.pago div.detalles div.mas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.cart section.entrega div.compra,.cart section.usuario div.compra,.cart section.pago div.compra{
+    display: inline-flex;
+    text-align: center;
+    flex-direction: column;
+    border:solid 1px black;
+    background-color:white;
+    width: 30%;
+    height: 100%;
+}
+.cart section.entrega form input,section.usuario form input{
+    width: 45%;
+    height: 30px;
+    margin: 0px 6px;
+}
+.cart section div.total{
+    display: inline-flex;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.cart section.entrega div.compra a.a_img img,.cart section.usuario div.compra a.a_img img,.cart section.pago div.compra a.a_img img{
+width:100%;
+}
+.cart section.entrega div.box-button{
+    align-items: flex-start
+    }
+    .cart section.pago{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 25px;
+        }
+        .cart section.pago div.metodo {
+            width:32%
+        }
+        .cart section.pago div.metodo section{
+            border:1px solid black;
+            background-color:white;
+            margin:0px 0px 40px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 35px;
+            width:100%;
+        }
+        .cart section.pago form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-left: 2px;
+            width:37%;
+        }
+        .cart section.pago form input{
+            width: 100%;
+            height: 30px;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+        .cart section.pago div.box-card{
+            display:flex;
+            justify-content:space-around
+        }
+        .cart section.pago form div.box-card button{
+            margin:0px
+        }
+        .cart section.pago select{
+            width:100%;
+            margin-top: 10px;
+            margin-bottom:10px;
+        }
+.cart section.rsm div.compra{
+    display:none
+}
+}
+
+
+/*DESCUENTO VERSION ESCRITORIO
+.cart section.carrito div.compra div.descuento{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cart section.carrito div.compra div.descuento{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
