@@ -156,7 +156,7 @@ header .div_navegacion_header{
         border-right: 1px solid var(--color-border-navegacion);
     }
     header .div_navegacion_header a{
-        padding: 0 15px;
+        padding: 0 9px;
     }
     header .div_navegacion_header a i{
         font-size: 18px;
