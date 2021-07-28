@@ -3,6 +3,7 @@
 }
 
 .register h1{
+    margin:20px;
     text-align: center;
     color: var(--color-h1);
     background-color: var(--color-h1-rgba);
@@ -71,10 +72,12 @@
     width: 100px;
 }
 
-.register footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+@media (min-width:425px) {
+    .register footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 @media (min-width:769px) {
