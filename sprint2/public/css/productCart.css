@@ -412,7 +412,7 @@ margin-top: 10px;
 .cart section.usuario div.box-button {
     width: 28%;
     margin-right: 6px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 .cart section.usuario div.box-button button {
     width: 100%;
@@ -524,14 +524,6 @@ width:100%
 .cart section.rsm div.usuario{
     display: flex;
     flex-direction: row;
-}
-.cart section.rsm div.compra {
-    display: inline-flex;
-    flex-direction: row;
-    border: solid 1px black;
-    width: 47%;
-    flex-wrap: wrap;
-    background-color: white;
 }
 
 }
