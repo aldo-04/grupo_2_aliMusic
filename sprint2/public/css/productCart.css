@@ -445,7 +445,7 @@ margin-top: 10px;
         justify-content:space-around
     }
     .cart section.pago form div.box-card button{
-        margin:0px
+        margin:0px;
     }
     .cart section.pago select{
         width:100%;
