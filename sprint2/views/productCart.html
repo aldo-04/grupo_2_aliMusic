@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
-
-<body>
-
+<body class="home">
 
     <header>
 
@@ -21,7 +19,7 @@
                     <img src="/images/logo/logo-de-lado.svg" alt="logo-aLi-Music">
                 </a>
             </div>
-
+            
             <div class="div_cuenta">
                 <a href="/login">Mi cuenta</a>
             </div>
@@ -29,21 +27,30 @@
             <div class="div_favoritos">
                 <a href=""><i class="far fa-star"></i></a>
             </div>
-
+            
             <div class="div_carrito">
                 <a href="/productcart">1</a>
                 <a href="/productcart"><i class="fas fa-shopping-cart"></i></a>
             </div>
-
+            
             <div class="div_burger">
-                <a href=""><i class="fas fa-bars"></i></a>
+                <input type="checkbox" id="menu">
+                <label for="menu"> ☰ </label>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="/store"><i class="fas fa-money-bill-alt"></i>Tienda</a></li>
+                    <li><a href="/contact"><i class="fas fa-id-card"></i>Contacto</a></li>
+                    <li><a href="/comunity"><i class="fas fa-guitar"></i>Comunidad</a></li>
+                    <li><a href="/register"><i class="fas fa-save"></i>Register</a></li>
+                    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Acceder</a></li>
+                </ul>
             </div>
-
+            
             <div class="div_barra_de_busqueda">
                 <input type="text" name="barra" id="">
                 <a href=""><i class="fas fa-search"></i></a>
             </div>
-
+            
         </div>
         <div class="div_navegacion_header">
             <ul class="ul_navegacion_header">
@@ -134,8 +141,8 @@
                 <input type="number" name="codigo postal" id="codigo postal" placeholder="codigo postal">
                 <input type="text" name="provincia" id="provincia" placeholder="provincia">
                 <input type="text" name="ciudad" id="ciudad" placeholder="ciudad">
-                <input type="text" name="DNI" id="DNI" placeholder="DNI">
-                <input type="number" name="telefono" id="telefono" placeholder="telefono">
+                <input type="text" name="calle" id="calle" placeholder="calle">
+                <input type="number" name="N.calle" id="N.calle" placeholder="N.calle">
         </form>
             <div class="compra">
                 <div class="img_d">
@@ -257,6 +264,7 @@
         </section>
     </main>
     <footer>
+
         <div class="div_grid">
             <div class="div_logo_footer logo-incompleto">
                 <img src="/images/logo/logo.svg" alt="Logo-ali-Music">
@@ -264,7 +272,7 @@
             <div class="div_logo_footer logo-completo">
                 <img src="/images/logo/logo-completo.svg" alt="Logo-ali-Music">
             </div>
-
+            
             <div class="div_navegacion_footer">
                 <ul>
                     <li><a href=""><i class="fas fa-home"></i> Inicio</a></li>
@@ -273,7 +281,7 @@
                     <li><a href=""><i class="fas fa-guitar"></i> Comunidad</i></a></li>
                 </ul>
             </div>
-
+            
             <div class="div_contacto">
                 <div class="div_contacto_mail">
                     <a href=""><i class="fas fa-envelope"></i></a>
@@ -284,13 +292,14 @@
                     <a href="">+54 11-2233-4455</a>
                 </div>
             </div>
-
+            
             <div class="div_redes">
                 <a href=""><i class="fab fa-instagram-square"></i></a>
                 <a href=""><i class="fab fa-facebook-square"></i></a>
                 <a href=""><i class="fab fa-twitter-square"></i></a>
             </div>
         </div>
+        
     </footer>
 </body>
 
