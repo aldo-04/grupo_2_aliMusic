@@ -64,7 +64,8 @@ color: black;
 .cart section.carrito div.compra div.descuento{
     display:flex;
     justify-content:space-between;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    flex-direction: column;
     }
 .cart section.carrito div.total{
     border: solid 1px var(--color-border-art);
@@ -101,8 +102,8 @@ margin-top: 30px;
 }
 .cart section.entrega form input,section.usuario form input{
     width: 45%;
-    height: 30px;
-    margin: 15px 6px;
+    height: 36px;
+    margin: 15px 7px;
     margin-bottom: 0px;
 }
 .cart section.entrega div.box-button button{
@@ -171,14 +172,14 @@ justify-content: space-evenly;
 }
 .cart section.pago form input{
     width: 100%;
-    height: 30px;
-    margin: 15px 0px;
-    margin-bottom: 0px;
+    height: 33px;
+    margin: 14px 0px;
+    margin-bottom: 1px;
 }
 .cart section.pago form div.box-card button{
 font-size:  30px;
-margin-right:40px;
-margin-top: 6px;
+margin:0px 16px;
+margin-top: 8px;
 }
 .cart section.pago form div.box-form-n p{
     margin-top: 30px;
@@ -320,11 +321,13 @@ margin-top: 10px;
     font-size: 22px;
     align-items: center;
     justify-content: center;
+    border: solid 1px var(--color-border-art);
+    width: 50%;
+    margin:  0 auto;
 }
 .cart section.entrega div.compra div.img_container,
 .cart section.usuario div.compra div.img_container{
     width: 70%;
-    height: 120px;
     display: flex;
     position: relative;
     background-color: #fff;
@@ -345,25 +348,6 @@ margin-top: 10px;
     width:100%;
     display: flex;
 }
-.cart section.entrega div.compra div.img_d div.product{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size:  13px;
-}
-.cart section.entrega div.compra div.img_d div.product div.mas{
-    display: flex;
-    font-size: 22px;
-    align-items: center;
-    justify-content: center;
-}
-.cart section.entrega div.compra div.img_container{
-    width: 70%;
-    height: 120px;
-    display: flex;
-    position: relative;
-    background-color: #fff;
-}
 .cart section.entrega div.compra div.img_container img{
     width: 100%;
     height: 100%;
@@ -378,6 +362,7 @@ margin-top: 10px;
 }
 .cart section.entrega form input,section.usuario form input{
     width:80%;
+    height: 37px;
 }
 
 .cart section div.total{
@@ -388,6 +373,7 @@ margin-top: 10px;
     align-items: center;
     flex-direction: column;
     background-color: white;
+    justify-content: space-evenly;
 }
 .cart section.pago ,
 .cart section.rsm{
@@ -442,7 +428,8 @@ margin-top: 10px;
     }
     .cart section.pago div.box-card{
         display:flex;
-        justify-content:space-around
+        justify-content:space-around;
+        width: 60%;
     }
     .cart section.pago form div.box-card button{
         margin:0px;
