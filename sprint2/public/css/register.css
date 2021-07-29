@@ -7,21 +7,23 @@
     text-align: center;
     color: var(--color-h1);
     background-color: var(--color-h1-rgba);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.register div.avatar{
+.register main div.avatar{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.register div.avatar i{
+.register main div.avatar i{
     color: black;
-    padding: 10px;
+    padding: 11px;
 }
 
-.register div.avatar input{
+.register main div.avatar input{
     width: 0%;
 }
 
@@ -49,9 +51,10 @@
 }
 
 .register main div.redes input{
-    width: 160PX;
+    width: 180PX;
     text-align: left;
     padding: 2px;
+    font-size: 12px
 }
 
 .register main div.redes i{
@@ -74,7 +77,6 @@
 
 @media (min-width:425px) {
     .register footer{
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
