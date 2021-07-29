@@ -50,6 +50,7 @@ header .flex-container .div_burger{
     width: 5%;
     text-align:center;
     padding-left: 5px;
+    color: #fff;
 }
 header .flex-container .div_burger input{
     display:none;
@@ -57,7 +58,7 @@ header .flex-container .div_burger input{
 header .flex-container .div_burger ul{
     display:none;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--color-header);
     width: 130px;
     height: 150px;
     border: 1px solid var(--color-border-navegacion);
@@ -67,15 +68,17 @@ header .flex-container .div_burger ul{
     opacity: 0;
     transition: all 5s;
 }
+header .flex-container .div_burger ul li a i{
+    margin-right: 5px;
+}
 header .flex-container .div_burger input:checked ~ ul{
     display: grid;
     grid-template-rows: auto auto auto auto auto auto;
-    text-align: left;
     opacity: 1;
 }
 header .flex-container .div_burger ul li{
-    padding-left: 5px;
-    border-bottom: 1px solid var(--color-border-navegacion);
+    font-size:12px;
+    align-self: center;
 }
 /* Fin del boton */
 header .flex-container .div_barra_de_busqueda{
@@ -93,8 +96,8 @@ header .flex-container .div_barra_de_busqueda input{
 header .flex-container .div_barra_de_busqueda a{
     position: absolute;
     color: black;
-    right: 4px;
-    top: 1.5px;
+    right: 3px;
+    top: 2.6px;
 }
 
 header .div_navegacion_header{
