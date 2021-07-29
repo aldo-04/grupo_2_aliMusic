@@ -98,9 +98,6 @@
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                 <input type="number" name="telefono" id="telefono" placeholder="telefono">
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <div class="box-button">
-                    <button type="submit">Continuar</button>
-                </div>
             </form>
             <div class="compra">
                 <div class="img_d">
@@ -126,6 +123,9 @@
                 </div>
             </div>
         </div>
+        <div class="box-button">
+            <button type="submit">Continuar</button>
+        </div>
         </section>
         <section class="usuario">
             <h2>Informacion de usuario</h2>
@@ -136,14 +136,6 @@
                 <input type="text" name="ciudad" id="ciudad" placeholder="ciudad">
                 <input type="text" name="DNI" id="DNI" placeholder="DNI">
                 <input type="number" name="telefono" id="telefono" placeholder="telefono">
-            <select name="metodo de pago" id="metodo de pago">
-                <option value="" selected hidden>Metodo de Envio</option>
-                <option value="tar">a</option>
-                <option value="efect">b</option>
-            </select>
-            <div class="box-button">
-                <button type="submit">Continuar</button>
-            </div>
         </form>
             <div class="compra">
                 <div class="img_d">
@@ -169,6 +161,9 @@
                     <p>Total:$****</p>
                 </div>
             </div>
+        </div>
+        <div class="box-button">
+            <button type="submit">Continuar</button>
         </div>
         </section>
         <section class="pago">
@@ -205,7 +200,7 @@
                 <input type="number" name="codigo" id="codigo" placeholder="codigo postal">
                 <input type="number" name="DNI" id="DNI" placeholder="DNI">
                 <div class="box-form-n">
-                    <h4>Fecha de Nacimiento</h4>
+                    <strong><p>Fecha de Nacimiento</p></strong></strong>
                     <input type="date" name="fecha"></input>
                 </div>
             </form>
@@ -235,32 +230,24 @@
             </div>
         </section>
         <section class="rsm">
+            <div class="metodo">
+                <section>
+                    <label for="debito">Tarjeta de debito</label>
+                    <input type="radio" id="debito" name="pago" value="dbto">
+                </section>
+                <section>
+                    <label for="credito">Tarjeta de credito</label>
+                    <input type="radio" id="credito" name="pago" value="credito">
+                </section>
+                <section class="efectivo">
+                    <label for="efectivo">Efetivo</label>
+                    <input type="radio" id="efectivo" name="pago" value="efect">
+                </section>
+            </div>
             <div class="button-pago">
                 <button type="submit">Rapipago</button>
                 <button type="submit">Sucursal</button>
                 <button type="submit">Mercado pago</button>
-            </div>
-            <div class="compra">
-                <div class="product">
-                    <div class="img_container">
-                        <img src="/images/articulos/visita/art02-visita.jpg" alt="Guitarra Electroacustica Criolla Con Funda 3 Puas De Madera">
-                            </div>
-                    <div class="detalles">
-                        <p>Proucto:Audio-Behringer</p>
-                        <p>Precio:$****</p>
-                        <div class="mas">
-                            <i class="fas fa-plus-circle"></i>
-                            <p>01</p>
-                            <i class="fas fa-minus-circle"></i>
-                        </div>
-                        <p>Cantidad</p>
-                    </div>
-                </div>
-
-                <div class="total">
-                    <p>Subtotal:$****</p>
-                    <p>Total:$****</p>
-                </div>
             </div>
             <a href="">
             <div class="button-final">
