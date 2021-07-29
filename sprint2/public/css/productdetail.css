@@ -166,10 +166,22 @@
 
 @media (min-width:769px) {
 
+    .details main{
+        width:100%;
+        margin-top:50px
+    }
+
     .details main div.box-product{
+        width: 55%;
         font-size:20px;
+        margin: 0 auto;
     }
     
+    .details main section.relacionados{
+        width:75%;
+        margin: 50px auto;
+    }
+
     .details main section.relacionados button{
         font-size: 22px;
     }
