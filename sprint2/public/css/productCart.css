@@ -178,9 +178,8 @@ justify-content: space-evenly;
     width:70%;
     height: 30px;
 }
-
 .cart section.pago form input{
-    width: 70%;
+    width: 100%;
     height: 30px;
     margin: 15px 0px;
     margin-bottom: 0px;
