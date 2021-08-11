@@ -18,6 +18,7 @@ color: black;
 .cart main section.carrito{
     display:flex;
   flex-wrap: wrap;
+  box-shadow: 0px 0px 5px 0px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: white;
@@ -87,7 +88,7 @@ color: black;
 }
 
 .cart main section.entrega div.compra,div.total,section.usuario div.compra,div.total,section.pago div.compra ,div.total{
-    display:none
+    display:none;
 }
 /*carrito-entrega*/
 .cart main section.entrega{
@@ -302,6 +303,7 @@ margin-top: 10px;
     width: 100%;
     flex-wrap: wrap;
     background-color: white;
+    box-shadow: 0px 0px 5px 0px;
 }
 .cart main section.entrega div.compra div.img_d,
 .cart main section.usuario div.compra div.img_d{
@@ -318,7 +320,7 @@ margin-top: 10px;
 .cart main section.entrega div.compra div.img_d div.product div.mas,
 .cart main section.usuario div.compra div.img_d div.product div.mas{
     display: flex;
-    font-size: 22px;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
     border: solid 1px var(--color-border-art);
