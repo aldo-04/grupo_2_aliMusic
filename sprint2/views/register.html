@@ -32,7 +32,16 @@
             </div>
             
             <div class="div_burger">
-                <a href=""><i class="fas fa-bars"></i></a>
+                <input type="checkbox" id="menu">
+                <label for="menu"> ☰ </label>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="/store"><i class="fas fa-money-bill-alt"></i>Tienda</a></li>
+                    <li><a href="/contact"><i class="fas fa-id-card"></i>Contacto</a></li>
+                    <li><a href="/comunity"><i class="fas fa-guitar"></i>Comunidad</a></li>
+                    <li><a href="/register"><i class="fas fa-save"></i>Register</a></li>
+                    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Acceder</a></li>
+                </ul>
             </div>
             
             <div class="div_barra_de_busqueda">
@@ -61,18 +70,18 @@
         <form action="/">
 
             <div class="avatar">
-                <i class="far fa-user-circle"></i>
-                <label for="avatar">Foto de perfil</label>
-                <input type="file" name="avatar" id="avatar">
+                
+                <label for="avatar"><i class="far fa-user-circle"></i>Foto de perfil</label>
+                <input type="file" name="avatar" id="avatar" hidden required>
             </div>
             
             <div class="datos">
-                 <input type="text" name="nombre" placeholder="Escribe tu nombre">
-                 <input type="text" name="apellido" placeholder="Escribe tu apellido">
-                 <input type="number" name="numero" placeholder="Tu numero">
-                 <input type="email" name="mail" placeholder="Ingresa tu correo">
-                 <input type="password" name="contraseña" placeholder="Contraseña">
-                 <input type="password" name="contraseña" placeholder="Repite tu contraseña">
+                 <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+                 <input type="text" name="apellido" placeholder="Escribe tu apellido" required>
+                 <input type="number" name="numero" placeholder="Tu numero" required>
+                 <input type="email" name="mail" placeholder="Ingresa tu correo" required>
+                 <input type="password" name="contraseña" placeholder="Contraseña" required>
+                 <input type="password" name="contraseña" placeholder="Repite tu contraseña" required>
             </div>
 
             <div class="redes">
