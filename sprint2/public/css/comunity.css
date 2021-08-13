@@ -3,3 +3,30 @@
     bottom: 0;
     width: 100%;
 }
+.comunity .container-main{
+    width: 95%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px;
+    color: var(--color-header);
+
+}
+.comunity h1{
+    color: var(--color-h1);
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--color-h1-rgba);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 4px;
+    border-radius: 8px 8px 0 0;
+}
+
+.comunity .div_filtrar{
+    display: flex;
+}
+.comunity .div_filtrar a{
+    border: solid 1px var(--color-border-art);
+}
