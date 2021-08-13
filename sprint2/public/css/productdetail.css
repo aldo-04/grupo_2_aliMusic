@@ -5,7 +5,7 @@
 }
 
 .details main{
-    width:80%;
+    width:88%;
     margin:10px auto;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .details main div.contain{
-    background-color: rgba(112, 161, 215,0.5);
+    background-color: var(--color-h1-rgba);
 }
 
 .details main div.descripcion{
@@ -95,7 +95,7 @@
 }
 
 .details main section.relacionados h2{
-    background-color: rgba(112, 161, 215,0.5);
+    background-color: var(--color-h1-rgba);
     padding: 15px;
     text-align: center;
     width: 100%;
@@ -104,11 +104,12 @@
 .details main section.relacionados article{
     border: 1px solid var(--color-border-art);
     margin: 15px 0px;
-    width: 60%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(112, 161, 215,0.5);
+    background-color: var(--color-art-div);
+    color: var(--color-art-off);
 }
 
 
@@ -131,15 +132,17 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    color: var(--color-a-fav)
 }
 
 .details main section.relacionados button{
     color: white;
-    width: 50%;
+    padding: 4px;
+    width: 56%;
     background-color: #0b0b0d;
-    border: 1px solid #002bff;
+    border: 1px solid #ff2f00;
     border-radius: 20px;
-    margin: 5px;
+    margin: 7px;
 }
 
 
