@@ -58,6 +58,11 @@ footer .div_grid .div_redes{
     padding-bottom: 15px;
     align-items: center;
 }
+.login footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
 @media (min-width:425px){
     footer a{
@@ -115,10 +120,8 @@ footer .div_grid .div_redes{
         width: 100%;
         bottom: 0;
     }
+    .login footer{
+        position: relative;
+    }
 }
 
-.login footer{
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
