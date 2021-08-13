@@ -135,6 +135,16 @@
     color: var(--color-a-fav)
 }
 
+.details main section.relacionados article div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .details main section.relacionados button{
     color: white;
     padding: 4px;
@@ -187,6 +197,7 @@
         width:75%;
         margin: 50px auto;
     }
+
 
     .details main section.relacionados button{
         font-size: 22px;
