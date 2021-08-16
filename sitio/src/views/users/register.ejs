@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %> 
+<body class="register">
+    <%- include('../partials/header') %> 
+    <main>
+
+        <h1>Nuevo registro</h1>
+
+        <form action="/">
+
+            <div class="avatar">
+                <p>Foto de perfil</p>
+                <label for="avatar"><i class="far fa-user-circle"></i></label>
+                <input type="file" name="avatar" id="avatar" hidden required>
+            </div>
+            
+            <div class="datos">
+                 <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+                 <input type="text" name="apellido" placeholder="Escribe tu apellido" required>
+                 <input type="number" name="numero" placeholder="Tu numero" required>
+                 <input type="email" name="mail" placeholder="Ingresa tu correo" required>
+                 <input type="password" name="contraseña" placeholder="Contraseña" required>
+                 <input type="password" name="contraseña" placeholder="Repite tu contraseña" required>
+            </div>
+
+            <div class="redes">
+                <div>
+                    <input type="button" value="Ingresa con Google"><i class="fab fa-google"></i>
+                </div>
+                <div>
+                    <input type="button" value="Ingresa con Facebook"><i class="fab fa-facebook"></i>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Crear">
+                <input type="reset" value="Borrar">
+            </div>
+
+        </form>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

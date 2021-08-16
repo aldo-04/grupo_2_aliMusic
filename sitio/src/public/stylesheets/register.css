@@ -1,0 +1,102 @@
+.register h1{
+    margin:20px;
+    text-align: center;
+    color: var(--color-h1);
+    background-color: var(--color-h1-rgba);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.register main div.avatar{
+    font-size: 170%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+
+.register main div.avatar i{
+    color: black;
+    padding: 11px;
+}
+
+.register main div.datos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.register main div.datos input{
+    padding: 10px;
+    margin: 20px;
+    width: 75%;
+}
+
+.register main div.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register main div.redes div{
+    margin: 5px;
+    position: relative;
+}
+
+.register main div.redes input{
+    margin: 10px 0px;
+    width: 220PX;
+    text-align: left;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+.register main div.redes i{
+    color: black;
+    position: absolute;
+    right: 6px;
+    top: 20px;
+}
+
+.register main div.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.register main div.buttons input{
+    border-radius: 30px;
+    width: 100px;
+}
+
+@media (min-width:426px) {
+
+    .register main div.redes{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 30px;
+    }
+
+    .register main div.datos input{
+        padding: 10px;
+        margin: 10px;
+        width: 45%;
+    }
+
+    .register footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) {
+    
+    .register main{
+        margin: 0 auto;
+        max-width: 706px;
+    }
+
+}
