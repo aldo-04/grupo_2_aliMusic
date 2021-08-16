@@ -16,9 +16,8 @@ module.exports = {
         })
     },
     detail: (req, res) => {
-        /* const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8')); */
         let product = products.find(product => product.id === +req.params.id);
-
+ 
         return res.render('products/detail',{
             title: 'Product', /* Aca se ve el detalle de producto */
             products: products,
