@@ -5,9 +5,10 @@
     <%- include('../partials/header') %> 
     <main>
        <div class="box-product">
+             
             <div class="product">
                 <div class="img">
-                    <img src="/images/articulos/descuentos/art04-descuentos.jpg" alt="">
+                    <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
                     <a href="">
                         <i class="far fa-star"></i>
                     </a>
@@ -15,14 +16,14 @@
                 <div class="contain">
                     <div class="name">
                         <i class="fas fa-angle-double-left"></i>
-                        <h2>Nombre del producto</h2>
+                        <h2><%= product.name %> </h2>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                     <div class="descripcion">
                         
-                        <p>$ 40587</p>
+                        <p>$ <%= product.price %> </p>
                     
-                        <a href="/productCart">
+                        <a href="/products/cart">
                             <i class="fas fa-shopping-cart"></i><p>Comprar</p>
                         </a>
            
@@ -34,19 +35,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="detalles">
+                    <h3>Detalles del producto</h3>
+                    <p><%= product.descripcion %> </p>
+                </div>
+                </div>
             </div>
-            <div class="detalles">
-                <h3>Detalles del producto</h3>
-                <ul>
-                    <li>Marca: Squier by Fender</li>
-                    <li>Linea: Bullet</li>
-                    <li>Modelo: Telecaster</li>
-                    <li>Año de lanzamiento: 2020</li>
-                    <li>Origen: Indonesia</li>
-                    <li>Orientacion de la mano: Diestro</li>
-                </ul>
-            </div>
-       </div>
+            
         <section class="relacionados">
             <h2>Productos relacionados</h2>
             <article>

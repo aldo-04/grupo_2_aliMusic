@@ -5,7 +5,7 @@ const {store, search, detail, add, edit, update, destroy, cart} = require('../co
 
 router.get('/', store);
 router.get('/', search);
-router.get('/detail:id', detail);
+router.get('/detail/:id', detail);
 
 router.get('/add', add);
 router.post('/add', add);

@@ -5,8 +5,33 @@
     <%- include('../partials/header') %> 
 
     <main>
+        <%- include('../partials/carrusel') %> 
 
-        <h1>Tienda</h1>
+        <%- include('../partials/banner') %> 
+
+        <section>
+
+            <h1>Todos los productos</h1>
+
+            <% products.forEach(product => { %>
+             
+            <div class="div_container">
+                <article class="art">
+                    <a class="a_img" href="/products/detail/:<%= product.id %> ">
+                        <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
+                    </a>
+                    <div>
+                        <p class="off"><%= product.discount>0 ? product.discount + '% OFF' : null %> </p>
+                        <p class="precio">$<%= product.price %> </p>
+                    </div>
+                    <nav class="nav_fav">
+                        <a href=""><i class="far fa-star"></i></a>
+                    </nav>
+                </article>
+            </div>
+            
+            <% }) %>
+        </section>
 
     </main>
 

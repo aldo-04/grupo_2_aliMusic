@@ -1,7 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+
 module.exports = {
     store: (req, res) => {
         return res.render('products/store',{
-            title: 'Store' /* Aca se ven todos los productos */
+            title: 'Store', /* Aca se ven todos los productos */
+            products: products,
         })
     },
     search: (req, res) => {
@@ -11,8 +16,17 @@ module.exports = {
         })
     },
     detail: (req, res) => {
+        let producto = []
+        products.forEach(product => {
+            if (product.id == +req.params.id) {    
+                producto.push(product)
+            }
+        });
+        return res.send(producto)
         return res.render('products/detail',{
-            title: 'Product' /* Aca se ve el detalel de producto */
+            title: 'Product', /* Aca se ve el detalle de producto */
+            products: products,
+            product
         })
     },
     add: (req, res) => {
