@@ -11,7 +11,8 @@
         "category": "cuerdas",
         "fav": false,
         "image": "art-guitarra-electrica-stratocaster-EG001.jpg",
-        "sold": false
+        "sold": false,
+        "status": "visited"
     },
     {
         "id": 2,
@@ -25,6 +26,21 @@
         "category": "otros",
         "fav": false,
         "image": "art-behringer-u-phoria.jpg",
-        "sold": false
+        "sold": false,
+        "status": "on-sale"
+    },
+    {
+        "id": 3,
+        "name": "cajon peruano",
+        "brand": "",
+        "price": 14030,
+        "discount": 0,
+        "model": "C&P",
+        "type": "",
+        "category": "",
+        "fav": false,
+        "image": "art-cajon-peruano-cyp.jpg",
+        "sold": false,
+        "status": "on-sale"
     }
 ]

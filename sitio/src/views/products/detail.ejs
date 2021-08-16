@@ -24,7 +24,7 @@
                         <p>$ <%= product.price %> </p>
                     
                         <a href="/products/cart">
-                            <i class="fas fa-shopping-cart"></i><p>Comprar</p>
+                            <p><i class="fas fa-shopping-cart"></i> Comprar</p>
                         </a>
            
                         <div class="cant">
@@ -35,12 +35,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="detalles">
-                    <h3>Detalles del producto</h3>
-                    <p><%= product.descripcion %> </p>
-                </div>
-                </div>
+                
             </div>
+            <div class="detalles">
+                <h3>Detalles del producto</h3>
+                <p><%= product.description %> </p>
+            </div>
+        </div>
             
         <section class="relacionados">
             <h2>Productos relacionados</h2>
