@@ -16,13 +16,9 @@ module.exports = {
         })
     },
     detail: (req, res) => {
-        let producto = []
-        products.forEach(product => {
-            if (product.id == +req.params.id) {    
-                producto.push(product)
-            }
-        });
-        return res.send(producto)
+        /* const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8')); */
+        let product = products.find(product => product.id === +req.params.id);
+
         return res.render('products/detail',{
             title: 'Product', /* Aca se ve el detalle de producto */
             products: products,
