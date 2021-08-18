@@ -40,14 +40,20 @@ module.exports = {
         res.redirect("/admin")
     },
     edit: (req, res) => {
+        let product = products.find(product => product.id === +req.params.id);
         return res.render('admin/edit',{
-            title: 'Edit product' /* Aca editamos un producto */
+            title: 'Edit product', /* Aca editamos un producto */
+            products,
+            product,
+            categories
         })
     },
     update: (req, res) => {
-        return res.render('admin/update',{
-            title: 'Update product'/* Aca editamos el producto */
-        })
+        
+        /* if (product.image !== req.file.filename) {
+            product.image = req.file.filename
+        } */
+        
     },
     destroy: (req, res) => {
         return res.render('admin/destroy',{
