@@ -19,10 +19,9 @@ router.get('/', index)
 router.get('/add', add);
 router.post('/add', upload.single('image') ,store);
 
-router.get('/edit:id', edit);
+router.get('/edit/:id', edit);
+router.put('/edit/:id', update);
 
-router.put('/update:id', update);
-
-router.delete('/delete:id', destroy);
+router.delete('/delete/:id', destroy);
 
 module.exports = router;
