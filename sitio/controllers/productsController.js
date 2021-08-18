@@ -24,26 +24,6 @@ module.exports = {
             product
         })
     },
-    add: (req, res) => {
-        return res.render('products/add',{
-            title: 'add product' /* Aca agregamos un producto */
-        })
-    },
-    edit: (req, res) => {
-        return res.render('products/edit',{
-            title: 'Edit product' /* Aca editamos un producto */
-        })
-    },
-    update: (req, res) => {
-        return res.render('products/update',{
-            title: 'Update product'/* Aca editamos el producto */
-        })
-    },
-    destroy: (req, res) => {
-        return res.render('products/destroy',{
-            title: 'delete product' /* Aca deletamos un producto */
-        })
-    },
     /* Puede que lo movamos*/
     cart: (req, res) => {
         return res.render('products/cart',{

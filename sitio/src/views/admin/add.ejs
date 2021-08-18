@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="add">
+    <%- include('./partials/header') %> 
+
+    <main>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <section class="datos">
+                <div class="box-form">
+                    <label for="name" >Nombre del producto:</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre del producto">
+                </div>
+                <div class="box-form">
+                    <label for="price">Precio:</label>
+                    <input type="number" name="price" id="price" placeholder="Precio del producto">
+                </div>
+                <div class="box-form">
+                    <label for="discount">Descuento:</label>
+                    <input type="number" name="discount" id="discount" placeholder="Descuento">
+                </div>
+                <div class="box-form">
+                    <label for="category">Categorias: </label>
+                    <select name="category" id="category">
+                        <option value="" hidden selected>Seleccione el categoria</option>
+                      <% categories.forEach(category => { %>
+                        <option value="<%= category %>"><%= capitalizarPrimeraLetra(category) %></option>
+                      <% }) %>
+                    </select>
+                </div>
+                <div class="box-form">
+                    <label for="description"> Descipción:</label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea> 
+                </div>
+                <div class="box-form">
+                    <label for="image">Agregar imagen:</label>
+                    <input type="file" name="image" id="image" >
+                </div>
+            </section>
+            <div class="box-button">
+                <button type="submit">Agregar</button>
+            </div>
+
+        
+        </form>
+    </main>
+    
+</body>
+</html>

@@ -13,9 +13,10 @@
 
             <h1>Todos los productos</h1>
 
-            <% products.forEach(product => { %>
+            
              
             <div class="div_container">
+                <% products.forEach(product => { %>
                 <article class="art">
                     <a class="a_img" href="/products/detail/<%= product.id %>">
                         <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
@@ -28,9 +29,10 @@
                         <a href=""><i class="far fa-star"></i></a>
                     </nav>
                 </article>
+                <% }) %>
             </div>
             
-            <% }) %>
+           
         </section>
 
     </main>
