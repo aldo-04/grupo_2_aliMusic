@@ -89,3 +89,25 @@
 .store main .div_container .art .nav_fav a{
     color: var(--color-a-fav);
 }
+
+@media (min-width: 769px){
+    .store main section{
+        width: 80%;
+        padding: 40px 10px;
+        margin: 20px auto;
+        box-shadow: 0px 0px 8px 0px;
+    }
+    .store h1{
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .store main .div_container{  
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .store main .div_container .art{
+        width: 100%;
+    }
+}

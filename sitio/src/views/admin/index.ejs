@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="admin">
+    <%- include('./partials/header') %> 
+
+    <main>
+        <table role="table">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th role="columnheader">Imagen</th>
+                <th role="columnheader">Id</th>
+                <th role="columnheader">Nombre</th>
+                <th role="columnheader">Precio</th>
+                <th role="columnheader">Estado</th>
+                <th role="columnheader">Acciones</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+                <% products.forEach(product => { %>
+                    <tr role="  ">
+                        <td role="cell"><img src="/images/articulos/<%= product.image %>" alt=""></td>
+                        <td role="cell"><%= product.id %></td>
+                        <td role="cell"><%= product.name %></td>
+                        <td role="cell">$ <%= product.price %></td>
+                        <td role="cell"><%= product.sold ? "Vendido" : "En venta" %></td>
+                        <td role="cell">
+                            <a href="">
+                                Editar<i class="fas fa-edit"></i>
+                            </a>
+                            <a href="">
+                                Borrar<i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% }) %>
+              
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
