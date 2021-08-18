@@ -1,15 +1,14 @@
 /* INDEX */
+
 .admin table{
     width: 90%;
     margin: 15px auto;
-    background-color: var(--color-nav-header);
-    border: solid 1px var(--color-border-art);
+    background-color: #c6c6c6;
     text-align: center;
 }
-.admin table tbody,
-.admin table tbody tr td{
-    border: solid 1px var(--color-border-art);
-    
+.admin table th,
+.admin table td{
+    background-color: bisque;
 }
 .admin table tbody tr td{
     height: 80px;
@@ -18,21 +17,24 @@
     width: 30px;
 }
 /* ADD */
-
+.edit main form,
 .add main form{
     width: 85%;
     margin: 15px auto;
 }
+.edit main form section,
 .add main form section{
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
 }
+.edit main form section .box-form,
 .add main form section .box-form{
     margin-top: 30px;
     display: flex;
     flex-direction: column
 }
+.edit main form .box-button button,
 .add main form .box-button button{
     padding: 5px 15px;
 }
