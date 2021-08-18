@@ -163,7 +163,8 @@
 }
 
 
-.details main section.relacionados button{
+.details main section.relacionados input{
+    font-size: 20px;
     color: white;
     padding: 4px;
     width: 56%;
@@ -172,6 +173,8 @@
     border-radius: 20px;
     margin: 7px;
 }
+
+
 
 
 /* TABLET */
