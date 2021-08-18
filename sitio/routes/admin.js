@@ -20,7 +20,7 @@ router.get('/add', add);
 router.post('/add', upload.single('image') ,store);
 
 router.get('/edit/:id', edit);
-router.put('/edit/:id', update);
+router.put('/edit/:id', upload.single("image"), update);
 
 router.delete('/delete/:id', destroy);
 
