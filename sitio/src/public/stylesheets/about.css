@@ -12,8 +12,8 @@ body.contact main.about div.about h1{
     background-color: var(--color-h1-rgba);
     max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 10px;
-    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 body.contact main.about div.about section article img{
 width: 100%;
@@ -39,7 +39,7 @@ body.contact main.about div.about section p{
     font-size: 12px;
     padding: 10px 5px;
     line-height: 22px;
-  
+  margin: 10px 0;
 }
 body.contact main.about div.about section ul{
 font-size: 10px;
@@ -55,25 +55,30 @@ body.contact main.about div.about section article div.lista{
     justify-content: center;
     justify-content: space-around;
 }
-body.contact main.about div.about section article div.lista div.img-i{
-    display: none
-    }
 @media (min-width:426px){
     body.contact main.about div.about section ul li{
         padding:15px 0px;
+        margin: 0 10px;
         }
     body.contact main.about div.about section article div.lista div.img-i{
         display: inline-flex;
-        max-width: 500px;
+        max-width: 950px;
         }
-        @media (min-width:769px){
+       
+ @media (min-width:769px){
             body.contact main.about div.about section p{
-                font-size: 15px;
+                font-size: 17px;
+                line-height: 30px;
                 }
-      
+                body.contact main.about div.about section article div.lista{
+                    flex-wrap: wrap;
+                }
         body.contact main.about div.about section ul{
-            font-size: 10px;
+            font-size: 15px;
             text-transform: uppercase;
+            display: inline-flex;
+           align-items: center;
+    
             }
         }
 }
