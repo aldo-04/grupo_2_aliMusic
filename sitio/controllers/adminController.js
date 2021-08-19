@@ -33,7 +33,7 @@ module.exports = {
             fav: false,
             image : req.file ? req.file.filename : 'art-default.png',
             sold: false,
-            status : discount>0 ? "in-sale" : "new"
+            status : discount>0 ? "discount" : "new"
         }
         products.push(product),
         fs.writeFileSync(path.join(__dirname, '../data/products.json'),JSON.stringify(products,null,2),"utf-8")
@@ -52,13 +52,15 @@ module.exports = {
          const {name,description, price, discount, category} = req.body;
          products.find(product=>{
             if(product.id === +req.params.id){
-              
-                        product.name = name
-                        product.price = +price
-                        product.description = description.trim(),
-                        product.price = +price,
-                        product.discount = +discount,
-                        product.category = category
+                product.name = name
+                product.price = +price
+                product.description = description.trim(),
+                product.price = +price,
+                product.discount = +discount,
+                product.category = category
+                if (req.file) {
+                    product.image = req.file.filename
+                    }
                 } 
          })
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
