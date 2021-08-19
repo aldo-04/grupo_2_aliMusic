@@ -1,0 +1,32 @@
+
+body.contact main.about div.about h1{
+    color: var(--color-h1);
+    width: 90%;
+    font-size:20px ;
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--color-h1-rgba);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+body.contact main.about div.about section{
+    background-color:white;
+    border: 1px solid var(--color-border-art);
+    margin: 0px 10px;
+    margin-top: 20px;
+}
+
+body.contact main.about div.about section article img{
+width: 100%;
+padding: 10px 5px;
+}
+body.contact main.about div.about section h2{
+    font-size: 25px;
+    text-align: center;
+}
+body.contact main.about div.about section p{
+    font-size: 15px;
+    padding: 10px 5px;
+}

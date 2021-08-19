@@ -4,9 +4,9 @@ module.exports = {
             title: 'Ali Music',
         });
     },
-    contact: (req, res) => {
-        return res.render('index/contact',{
-            title: 'Contact'
+    about: (req, res) => {
+        return res.render('index/about',{
+            title: 'about',
         })
     },
     
