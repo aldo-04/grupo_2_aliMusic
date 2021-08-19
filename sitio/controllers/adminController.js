@@ -50,16 +50,19 @@ module.exports = {
     },
     update: (req, res) => {
          const {name,description, price, discount, category} = req.body;
-         products.map(product=>{
-
-                 product.name = name
-                 product.price = +price
-                 product.description = description.trim(),
-                 product.price = +price,
-                 product.discount = +discount,
-                 product.category = category
-                 res.send(product)
-         }) 
+         products.find(product=>{
+            if(product.id === +req.params.id){
+              
+                        product.name = name
+                        product.price = +price
+                        product.description = description.trim(),
+                        product.price = +price,
+                        product.discount = +discount,
+                        product.category = category
+                } 
+         })
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
+        res.redirect("/admin")
          
         },
     destroy: (req, res) => {
