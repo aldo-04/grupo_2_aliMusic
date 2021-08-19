@@ -1,4 +1,8 @@
-
+body.contact main.about div.about div.container_seccion{
+    border: 1px solid var(--color-border-art);
+    background-color:white;
+    margin: 0px 10px;
+   }
 body.contact main.about div.about h1{
     color: var(--color-h1);
     width: 90%;
@@ -11,22 +15,54 @@ body.contact main.about div.about h1{
     margin-bottom: 10px;
     margin-top: 15px;
 }
-body.contact main.about div.about section{
-    background-color:white;
-    border: 1px solid var(--color-border-art);
-    margin: 0px 10px;
-    margin-top: 20px;
-}
-
 body.contact main.about div.about section article img{
 width: 100%;
 padding: 10px 5px;
+text-align: center;
+}
+body.contact main.about div.about section article div.img{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 5px;
+text-align: center;
 }
 body.contact main.about div.about section h2{
     font-size: 25px;
     text-align: center;
+    background-color: var(--color-h1-rgba);
+    color: var(--color-h1);
+    margin-top: 10px;
+    padding: 5px 0px;
 }
 body.contact main.about div.about section p{
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px 5px;
+  
+}
+body.contact main.about div.about section ul{
+font-size: 10px;
+text-transform: uppercase;
+}
+body.contact main.about div.about section ul li{
+padding:6px 0px;
+margin-left: 5px; 
+}
+body.contact main.about div.about section article div.lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+body.contact main.about div.about section article div.lista div.img-i{
+    display: none
+    }
+@media (min-width:426px){
+    body.contact main.about div.about section ul li{
+        padding:15px 0px;
+        }
+    body.contact main.about div.about section article div.lista div.img-i{
+        display: inline-flex;
+        max-width: 500px;
+        }
 }
