@@ -68,8 +68,10 @@ module.exports = {
          
         },
     destroy: (req, res) => {
-        return res.render('admin/destroy',{
-            title: 'delete product' /* Aca deletamos un producto */
+        var productosModificados = products.filter(product => {
+            product.id !== +req.params.id
         })
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productosModificados,null,2),'utf-8');
+        res.redirect("/admin")
     },
 }

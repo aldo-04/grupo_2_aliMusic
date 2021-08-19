@@ -25,12 +25,10 @@
                         <td role="cell">$ <%= product.price %></td>
                         <td role="cell"><%= product.sold ? "Vendido" : "En venta" %></td>
                         <td role="cell">
-                            <a href="/admin/edit/<%= product.id %> ">
-                                Editar<i class="fas fa-edit"></i>
-                            </a>
-                            <a href="">
-                                Borrar<i class="fas fa-trash"></i>
-                            </a>
+                            <button><a href="/admin/edit/<%= product.id %> "><i class="fas fa-edit"></i></a></button>
+                            <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                <button type='submit'><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 <% }) %>
