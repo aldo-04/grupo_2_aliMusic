@@ -63,14 +63,16 @@ module.exports = {
                     }
                 } 
          })
+         return res.send(products)
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
         res.redirect("/admin")
          
         },
     destroy: (req, res) => {
         var productosModificados = products.filter(product => {
-            product.id !== +req.params.id
+            return product.id !== +req.params.id
         })
+        return res.send(productosModificados)
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productosModificados,null,2),'utf-8');
         res.redirect("/admin")
     },
