@@ -38,6 +38,7 @@ body.contact main.about div.about section h2{
 body.contact main.about div.about section p{
     font-size: 12px;
     padding: 10px 5px;
+    line-height: 22px;
   
 }
 body.contact main.about div.about section ul{
@@ -64,5 +65,15 @@ body.contact main.about div.about section article div.lista div.img-i{
     body.contact main.about div.about section article div.lista div.img-i{
         display: inline-flex;
         max-width: 500px;
+        }
+        @media (min-width:769px){
+            body.contact main.about div.about section p{
+                font-size: 15px;
+                }
+      
+        body.contact main.about div.about section ul{
+            font-size: 10px;
+            text-transform: uppercase;
+            }
         }
 }
