@@ -49,12 +49,19 @@ module.exports = {
         })
     },
     update: (req, res) => {
-        
-        /* if (product.image !== req.file.filename) {
-            product.image = req.file.filename
-        } */
-        
-    },
+         const {name,description, price, discount, category} = req.body;
+         products.map(product=>{
+
+                 product.name = name
+                 product.price = +price
+                 product.description = description.trim(),
+                 product.price = +price,
+                 product.discount = +discount,
+                 product.category = category
+                 res.send(product)
+         }) 
+         
+        },
     destroy: (req, res) => {
         return res.render('admin/destroy',{
             title: 'delete product' /* Aca deletamos un producto */

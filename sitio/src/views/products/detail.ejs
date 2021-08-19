@@ -45,46 +45,23 @@
             
         <section class="relacionados">
             <h2>Productos relacionados</h2>
-            <article>
+            <% products.forEach(producto => { %>
+
+                <article>
                     <a href="">
-                        <i class="far fa-star"></i><img src="/images/articulos/visita/art03-visita.jpg" alt="">
+                        <i class="far fa-star"></i><img src="/images/articulos/<%= producto.image %> " alt="">
                     </a>
                     <div>
-                        <p>Articulo 1</p>
-                        <p>$ 13450</p>
-                        <button>Ver Más</button>
+                        <p><%= producto.name %> </p>
+                        <p>$ <%= producto.price %> </p>
+                        <input type="button" value="Ver más"></button>
+                        <p><%= producto.description %> </p>
                     </div>
             </article>
-            <article>
-                    <a href="">
-                        <i class="far fa-star"></i><img src="/images/articulos/visita/art01-visita.jpg" alt="">
-                    </a>
-                    <div>
-                        <p>Articulo 1</p>
-                        <p>$ 13450</p>
-                        <button>Ver Más</button>
-                    </div>
-            </article>
-            <article>
-                    <a href="">
-                        <i class="far fa-star"></i><img src="/images/articulos/visita/art02-visita.jpg" alt="">
-                    </a>
-                    <div>
-                        <p>Articulo 1</p>
-                        <p>$ 13450</p>
-                        <button>Ver Más</button>
-                    </div>
-            </article>
-            <article>
-                    <a href="">
-                        <i class="far fa-star"></i><img src="/images/articulos/visita/art04-visita.jpg" alt="">
-                    </a>
-                    <div>
-                        <p>Articulo 1</p>
-                        <p>$ 13450</p>
-                        <button>Ver Más</button>
-                    </div>
-            </article>
+
+            <% }) %>
+            
+    
         </section>
     </main>
     <%- include('../partials/footer') %> 
