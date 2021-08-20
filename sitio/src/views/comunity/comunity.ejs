@@ -21,17 +21,32 @@
             </div>
             
             <section class="section_post">
-                <article class="art">
-                    <h4>Passenger Fall Away</h3>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-ChG3jlgoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" autoplay></iframe>
-                    <div class="div_p">
-                        <p> Written by Mike Rosenberg  </p>
-                        <p>Performed by Mike Rosenberg & Stu Larsen</p> 
-                        <p>Recorded by Chris Vallejo</p> 
-                        <p>Mixed by Chris Vallejo</p>
-                        <p>Edited & Graded by Nic Minns</p>
-                    </div>
-                </article>
+                <% posts.forEach(post => { %>
+                    <% if (post.type === "iframe") { %>
+                        <article class="art">
+                            <h4><%= post.name %> </h4>
+                                <iframe src="<%= post.media %>"></iframe>
+                            <div class="div_p">
+                                <%= post.description %>
+                            </div>
+                        </article>
+                    <% } else if (post.type === "image") { %>
+                        <article class="art">
+                            <h4><%= post.name %> </h4>
+                                <img src="<%= post.media %>" width="100%">
+                            <div class="div_p">
+                                <%= post.description %>
+                            </div>
+                        </article>
+                    <% } else { %>
+                        <article class="art">
+                            <h4><%= post.name %> </h4>
+                            <div class="div_p">
+                                <%= post.description %>
+                            </div>
+                        </article>
+                        <% } %>
+                <% }) %>
             </section>
         </div>
 
