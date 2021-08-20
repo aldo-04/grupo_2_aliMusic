@@ -8,8 +8,6 @@ router.get('/', search);
 router.get('/detail/:id', detail);
 router.get('/cart', cart);
 router.get('/infoUser', info);
-router.post('/infoUser', info);
-
 
 
 module.exports = router;

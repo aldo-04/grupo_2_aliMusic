@@ -9,35 +9,45 @@
             <main>
                 <h2>Carrito</h2>
                 <section class="carrito">
-                    <div class="compra">
-                        <div class="img_container">
-                            <img src="/images/articulos/ofertas/art03-ofertas.jpg"
-                                alt="Interface-audio-behringer-U-Phoria-UMC22">
-                        </div>
-                        <div class="product">
-                            <div class="detalles">
-                                <p>Precio:$****</p>
-                                <p>Precio:$****</p>
-                                <div class="mas">
-                                    <i class="fas fa-plus-circle"></i>
-                                    <p>01</p>
-                                    <i class="fas fa-minus-circle"></i>
+                    <% products.forEach(product => { %>
+                        <% if (product.carrito === true) { %>
+                            <div class="compra">
+                        
+                                <div class="img_container">
+                                    <img src="/images/articulos/<%= product.image %>"
+                                        alt="Interface-audio-behringer-U-Phoria-UMC22">
                                 </div>
-                                <p>Cantidad</p>
+                             
+                                <div class=" product">
+                                    <div class="detalles">
+                                        <p>
+                                            <%= product.name %>
+                                                <p>
+                                                <p>Precio:$<%= product.price %>
+                                                <div class="mas">
+                                                    <i class="fas fa-plus-circle"></i>
+                                                    <p>01</p>
+                                                    <i class="fas fa-minus-circle"></i>
+                                                </div>
+                                                <p>Cantidad</p>
+                                    </div>
+                                </div>
+                               
                             </div>
-                        </div>
+                        <% } %>
+                        <% }) %>
                         <div class="descuento">
                             <strong>
                                 <p>Codigo de Descuento</p>
                             </strong>
                             <input type="text" name="numero">
                             <a href="/products/infoUser">
-                                <button type="submit">Enviar</button>
+                                <button type="submit"></button>
                             </a>
                         </div>
-                    </div>
                     <div class="total">
-                        <p>Subtotal:$****</p>
+                        <p>Subtotal:$
+                        </p>
                         <p>Total:$****</p>
                         <a href="/products/infoUser">
                             <button type="submit">Comprar</button>
