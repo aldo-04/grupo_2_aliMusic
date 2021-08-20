@@ -10,5 +10,4 @@ router.get('/cart', cart);
 router.get('/infoUser', info);
 
 
-
 module.exports = router;
