@@ -1,23 +1,13 @@
 body.contact main.about div.about div.container_seccion{
-    border: 1px solid var(--color-border-art);
+    box-shadow: 0px 0px 5px 0px;
     background-color:white;
-    margin: 0px 10px;
+    margin: 30px 15px 0px 15px;
+    border-radius: 5px;
    }
-body.contact main.about div.about h1{
-    color: var(--color-h1);
-    width: 90%;
-    font-size:20px ;
-    text-align: center;
-    padding: 5px 0;
-    background-color: var(--color-h1-rgba);
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
+
 body.contact main.about div.about section article img{
 width: 100%;
-padding: 10px 5px;
+padding: 20px 10px;
 text-align: center;
 }
 body.contact main.about div.about section article div.img{
@@ -28,7 +18,7 @@ padding: 10px 5px;
 text-align: center;
 }
 body.contact main.about div.about section h2{
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     background-color: var(--color-h1-rgba);
     color: var(--color-h1);
@@ -37,7 +27,7 @@ body.contact main.about div.about section h2{
 }
 body.contact main.about div.about section p{
     font-size: 12px;
-    padding: 10px 5px;
+    padding: 10px 25px;
     line-height: 22px;
   margin: 10px 0;
 }
@@ -56,6 +46,9 @@ body.contact main.about div.about section article div.lista{
     justify-content: space-around;
 }
 @media (min-width:426px){
+    body.contact main.about div.about section h2{
+        font-size: 25px;
+    }
     body.contact main.about div.about section ul li{
         padding:15px 0px;
         margin: 0 10px;
