@@ -5,8 +5,6 @@
     <%- include('../partials/header') %> 
     <main>
         <div class="container-main">
-            <h1>Comunidad</h1>
-            
             <div class="div_publicar">
                 <img src="/images/logo/logo-de-lado.svg" width="50px" alt="">
                 <input type="text" placeholder="Publicar" >
@@ -25,18 +23,22 @@
                     <% if (post.type === "iframe") { %>
                         <article class="art">
                             <h4><%= post.name %> </h4>
-                                <iframe src="<%= post.media %>"></iframe>
-                            <div class="div_p">
-                                <%= post.description %>
-                            </div>
+                            <iframe src="<%= post.media %>"></iframe>
+                            <% if (post.description !== "") { %>
+                                <div class="div_p">
+                                    <%= post.description %>
+                                </div>
+                            <% } %>
                         </article>
                     <% } else if (post.type === "image") { %>
                         <article class="art">
                             <h4><%= post.name %> </h4>
-                                <img src="/images/comunity/<%= post.media %>" width="100%">
-                            <div class="div_p">
-                                <%= post.description %>
-                            </div>
+                            <img src="/images/comunity/<%= post.media %>" width="100%">
+                            <% if (post.description !== "") { %>
+                                <div class="div_p">
+                                    <%= post.description %>
+                                </div>
+                            <% } %>
                         </article>
                     <% } else { %>
                         <article class="art">

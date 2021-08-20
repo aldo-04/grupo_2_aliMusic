@@ -1,21 +1,10 @@
 
 .comunity .container-main{
     width: 95%;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 8px;
     color: var(--color-header);
 
-}
-.comunity h1{
-    color: var(--color-h1);
-    text-align: center;
-    padding: 5px 0;
-    background-color: var(--color-h1-rgba);
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 4px;
-    border-radius: 3px;
 }
 .comunity .div_publicar{
     background-color: #fff;
@@ -44,23 +33,28 @@
 }
 .comunity section .art{
     background-color: #fff;
-    margin-bottom: 20px;
     box-shadow: 0 3px 3px 0px;
     border-radius: 3px;
-    padding: 5px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
 }
 .comunity section .art h4{
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #696969;
 }
 .comunity section .art iframe{
     width: 100%;
-    overflow: hidden;
+    height: 250px;
+}
+.comunity section .art img{
+    height: 250px;
+    object-fit: contain;
 }
 .comunity section .art .div_p{
     font-size: 11px;
     padding: 10px;
+    background-color: #c6c6c6;
 }
 
 @media (min-width: 425px){
