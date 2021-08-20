@@ -28,13 +28,13 @@ module.exports = {
     cart: (req, res) => {
         return res.render('products/cart',{
             title: 'Cart', /* Vista carrito */
-            products
+            products: products,
         })
     },
     info: (req, res) => {
         return res.render('products/infoUser',{
             title: 'informacion de usuario', /* Vista carrito */
-
-        })
-    },
-}
+            products: products,
+            })
+        },
+        }

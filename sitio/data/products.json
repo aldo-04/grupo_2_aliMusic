@@ -9,7 +9,8 @@
     "fav": false,
     "image": "art-guitarra-electrica-stratocaster-EG001.jpg",
     "sold": false,
-    "status": "visited"
+    "status": "visited",
+    "carrito" : false
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "fav": false,
     "image": "art-1629406461144.jpg",
     "sold": false,
-    "status": "discount"
+    "status": "discount",
+    "carrito" : true
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "fav": false,
     "image": "art-cajon-peruano-cyp.jpg",
     "sold": false,
-    "status": "new"
+    "status": "new",
+    "carrito" : true
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "fav": false,
     "image": "art-1629248009248.jpg",
     "sold": false,
-    "status": "new"
+    "status": "new",
+    "carrito" : true
   },
   {
     "id": 5,
@@ -57,6 +61,7 @@
     "fav": false,
     "image": "art-1629248176739.jpg",
     "sold": false,
-    "status": "discount"
+    "status": "discount",
+    "carrito" : true
   }
 ]
