@@ -63,7 +63,6 @@ module.exports = {
                     }
                 } 
          })
-         return res.send(products)
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
         res.redirect("/admin")
          
@@ -72,8 +71,7 @@ module.exports = {
         var productosModificados = products.filter(product => {
             return product.id !== +req.params.id
         })
-        return res.send(productosModificados)
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productosModificados,null,2),'utf-8');
-        res.redirect("/admin")
+        res.redirect('/products')
     },
 }
