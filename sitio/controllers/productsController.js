@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
-
+const capitalizarPrimeraLetra = require("../src/public/javascripts/capitalizeOneLetter.js")
 module.exports = {
     store: (req, res) => {
         return res.render('products/store',{
@@ -19,7 +19,7 @@ module.exports = {
         let product = products.find(product => product.id === +req.params.id);
  
         return res.render('products/detail',{
-            title: 'Product', /* Aca se ve el detalle de producto */
+            title: capitalizarPrimeraLetra(product.name), /* Aca se ve el detalle de producto */
             products: products,
             product
         })

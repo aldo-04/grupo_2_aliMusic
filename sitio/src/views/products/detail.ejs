@@ -48,15 +48,16 @@
             <% products.forEach(producto => { %>
 
                 <article>
-                    <a href="">
-                        <i class="far fa-star"></i><img src="/images/articulos/<%= producto.image %> " alt="">
+                    <a href="/products/detail/<%= producto.id %>">
+                        <div class="imageContain">
+                            <i class="far fa-star"></i><img src="/images/articulos/<%= producto.image %> " alt="">
+                        </div>
+                        <div>
+                            <p><%= producto.name %> </p>
+                            <p>$ <%= producto.price %> </p>
+                            <input type="button" value="Agregar al carrito">
+                        </div>
                     </a>
-                    <div>
-                        <p><%= producto.name %> </p>
-                        <p>$ <%= producto.price %> </p>
-                        <input type="button" value="Ver más"></button>
-                        <p><%= producto.description %> </p>
-                    </div>
             </article>
 
             <% }) %>
