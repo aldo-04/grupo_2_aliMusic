@@ -50,7 +50,6 @@
     text-align: left;
     padding: 8px;
     font-size: 15px;
-    border-radius: 15px;
 }
 
 .register main div.redes i{
@@ -67,8 +66,13 @@
 }
 
 .register main div.buttons input{
-    border-radius: 30px;
     width: 100px;
+    height: 30px;
+}
+
+.register main div.buttons input.crear{
+    background-color: #0000ff;
+    color: white;
 }
 
 @media (min-width:426px) {

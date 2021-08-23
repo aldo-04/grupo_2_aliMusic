@@ -1,6 +1,5 @@
 /*carrito*/
 .cart main {
-    padding: 15px 0px;
     width:90%;
     margin:  0 auto;
     max-width: 800px;
@@ -11,7 +10,7 @@ color: black;
 .cart main h2{
     text-align: center;
     font-size: 25px;
-    margin: 15px 0px;
+    margin: 30px 0px;
 }
 .cart main p{
     text-align: center;
@@ -19,10 +18,11 @@ color: black;
 .cart main section.carrito{
     display:flex;
   flex-wrap: wrap;
-  box-shadow: 0px 0px 5px 0px;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: white;
+}
+.cart main section.carrito div.product{
+width: 100%;
 }
 .cart main section.carrito div.compra{
     border: solid 1px var(--color-border-art);
@@ -31,6 +31,10 @@ color: black;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin : 10px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px;
+    background-color: #fff;
 }
 .cart main section.carrito div.compra div.img_container img{
     width: 100%;
@@ -63,41 +67,47 @@ color: black;
     font-size: 21px;
     border:solid 1px var(--color-border-art);
 }
-.cart main section.carrito div.compra div.descuento{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom: 9px;
+.cart main section.carrito div.pago{
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    }
-    
-.cart main section.carrito div.compra div.descuento a{
-    text-align : center;
-    margin-top: 10px;
+    align-items: center;
+    margin: 10px 0px;
+    box-shadow: 0px 0px 5px 0px;
+    background-color: white;
+    border: 1px solid var(--color-border-art);
 }
-.cart main section.carrito div.compra div.descuento a button{
-    padding: 3px 15px;
+.cart main section.carrito div.pago div.descuento{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.cart main section.carrito div.pago div.descuento div.i-descuento{
+display: flex;
+padding: 0px 6px;
+}
+.cart main section.carrito div.pago div.descuento div.i-descuento button{
+    padding: 2px;
 }
 .cart main section.carrito div.total{
-    border: solid 1px var(--color-border-art);
-    border-top: none;
-    font-size: 20px;
+    font-size: 20px; 
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
+    align-items: stretch;
+    /* flex-grow: 1; */
 }
 .cart main section.carrito div.total button{
    color: white;
    background-color: blue;
    width: 100%;
-   height: 40px;
+   height: 50px;
    font-size:  22px;
-}
-
-.cart main section.entrega div.compra,div.total,section.usuario div.compra,div.total,section.pago div.compra ,div.total{
-    display:none;
 }
 /*carrito-entrega*/
 .cart main section.entrega{
@@ -116,50 +126,13 @@ margin-top: 30px;
     margin: 15px 7px;
     margin-bottom: 0px;
 }
-.cart main section.entrega div.box-button button{
-    color: white;
-    background-color: gray;
-    width: 100%;
-    height: 35px;
-    border: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cart main div.box-button button{
+padding: 15px;
 }
-.cart main section.entrega div.box-button {
-margin: 15px auto;
-width:27%;
-}
-.cart main section select{
-        margin: 15px 0px 0px 7px;
-        width: 45%;
-        height: 30px;
-}
-/*informacion de usuario*/
-.cart main section.usuario{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.cart main section.usuario form {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-between;
-}
-.cart main section.usuario div.box-button button{
-    color: white;
-    background-color: gray;
-    width: 26%;
-    height: 35px;
-    border: transparent;
-    margin:auto
-}
-.cart main section.usuario div.box-button {
-    display: flex;
-    width: 97%;
-    justify-content: flex-end;
-    margin: 20px 10px;
-}
+.cart main  div.box-button {
+  margin: 40px 0px;
+  text-align: center;
+    }
 /*section-pago*/
 .cart main section.pago div.metodo {
 display: flex;
@@ -261,11 +234,6 @@ margin-top: 10px;
         width:100%;
     }
 @media (min-width:426px){
-
-    .cart main section.carrito{
-        display:flex;
-      flex-wrap: nowrap;
-    }
     .cart main section select{
         margin: 6px 0px 0px 7px;
     width: 53%;
@@ -279,112 +247,14 @@ margin-top: 10px;
 .cart main section.carrito div.detalles {
     font-size: 11px;
 }
-.cart main section.carrito div.compra div.descuento {
-    display: flex;
-    width: 43%;
-    font-size: 10px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
+
 .cart main section.carrito div.compra div.descuento input{
     width:76%
 }
-.cart main section.carrito div.total {
-    width: 35%;
-    border: solid 1px var(--color-border-art);
-    font-size: 16px;
+.cart main section.carrito div.pago{
     display: flex;
-    text-align: center;
-    justify-content: center
-}
-.cart main section.entrega div.entrega,
-.cart main section.usuario div.usuario{
-    display: grid;
-    grid-template-rows:  1fr;
-    grid-template-columns:1fr 1fr ;
-}
-.cart main section.entrega div.compra,
-.cart main section.usuario div.compra{
-    display: inline-flex;
     flex-direction: row;
-    border: solid 1px var(--color-border-art);
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: white;
-    box-shadow: 0px 0px 5px 0px;
-}
-.cart main section.entrega div.compra div.img_d,
-.cart main section.usuario div.compra div.img_d{
-    width:100%;
-    display: flex;
-}
-.cart main section.entrega div.compra div.img_d div.product,
-.cart main section.usuario div.compra div.img_d div.product{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size:  13px;
-}
-.cart main section.entrega div.compra div.img_d div.product div.mas,
-.cart main section.usuario div.compra div.img_d div.product div.mas{
-    display: flex;
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px var(--color-border-art);
-    width: 50%;
-    margin:  0 auto;
-}
-.cart main section.entrega div.compra div.img_container,
-.cart main section.usuario div.compra div.img_container{
-    width: 70%;
-    display: flex;
-    position: relative;
-    background-color: #fff;
-}
-.cart main section.entrega div.compra div.img_container img,
-.cart main section.usuario div.compra div.img_container img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: contain;
-}
-
-.cart main section.entrega div.box-button{
-    align-items: flex-start
-    }
-
-.cart main section.entrega div.compra div.img_d{
-    width:100%;
-    display: flex;
-}
-.cart main section.entrega div.compra div.img_container img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: contain;
-}
-.cart main section.entrega form {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.cart main section.entrega form input,section.usuario form input{
-    width:80%;
-    height: 37px;
-}
-
-.cart main section div.total{
-    display: inline-flex;
-    width: 100%;
-    display: flex;
-    border-top: solid 1px var(--color-border-art);
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    justify-content: space-evenly;
+   justify-content: space-evenly;
 }
 .cart main section.pago ,
 .cart main section.rsm{
@@ -453,4 +323,25 @@ margin-top: 10px;
 .cart main section div.div_container,.cart main div.box-form-n{
     width:100%;
     }
+    @media (min-width:769px){
+    .cart main section.carrito{
+        display:flex;
+      flex-wrap: nowrap;
+    }
+    
+    .cart main section.carrito div.pago {   
+        margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    }
+    .cart main section.carrito div.pago div.descuento{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
 }
