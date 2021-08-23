@@ -9,6 +9,7 @@
             <main>
                 <h2>Carrito</h2>
                 <section class="carrito">
+                    <div class="product">
                     <% products.forEach(product => { %>
                         <% if (product.carrito === true) { %>
                             <div class="compra">
@@ -36,14 +37,17 @@
                             </div>
                         <% } %>
                         <% }) %>
+                    </div>
+                    <div class="pago">
                         <div class="descuento">
                             <strong>
                                 <p>Codigo de Descuento</p>
                             </strong>
-                            <input type="text" name="numero">
-                            <a href="/products/infoUser">
-                                <button type="submit"></button>
+                            <div class="i-descuento">
+                            <input type="text" name="numero"><a href="/products/infoUser">
+                                <button type="submit"><i class="fas fa-percent"></i></button>
                             </a>
+                        </div>
                         </div>
                     <div class="total">
                         <p>Subtotal:$
@@ -53,6 +57,7 @@
                             <button type="submit">Comprar</button>
                         </a>
                     </div>
+                </div>
                 </section>
 
             </main>
