@@ -20,11 +20,11 @@
                 <% products.forEach(product => { %>
                     <tr role="  ">
                         <td role="cell"><%= product.id %></td>
-                        <td role="cell"><img src="/images/articulos/<%= product.image %>" alt=""></td>
+                        <td role="cell" class="td_img" ><img src="/images/articulos/<%= product.image %>" alt=""></td>
                         <td role="cell"><%= product.name %></td>
                         <td role="cell">$ <%= product.price %></td>
                         <td role="cell"><%= product.sold ? "Vendido" : "En venta" %></td>
-                        <td role="cell">
+                        <td role="cell" class="td_botton">
                             <button><a href="/admin/edit/<%= product.id %> "><i class="fas fa-edit"></i></a></button>
                             <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
                                 <button type='submit'><i class="fas fa-trash"></i></button>

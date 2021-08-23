@@ -17,6 +17,10 @@ a{
 }
 body{
     background-color: var(--color-background);
+    /* background-image: url("/images/asd.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-position:fixed; */
 }
 
 :root{
