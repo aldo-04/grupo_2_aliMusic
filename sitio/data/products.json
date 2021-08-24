@@ -7,10 +7,10 @@
     "discount": 15,
     "category": "Instrumentos de cuerdas",
     "fav": false,
-    "image": "art-guitarra-electrica-stratocaster-EG001.jpg",
+    "image": "art-1629763015642.jpg",
     "sold": false,
     "status": "visited",
-    "carrito" : false
+    "carrito": false
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "image": "art-1629406461144.jpg",
     "sold": false,
     "status": "discount",
-    "carrito" : true
+    "carrito": true
   },
   {
     "id": 3,
@@ -33,10 +33,10 @@
     "discount": 0,
     "category": "instrumentos de percusión",
     "fav": false,
-    "image": "art-cajon-peruano-cyp.jpg",
+    "image": "art-1629762992088.jpg",
     "sold": false,
     "status": "new",
-    "carrito" : true
+    "carrito": true
   },
   {
     "id": 4,
@@ -48,8 +48,8 @@
     "fav": false,
     "image": "art-1629248009248.jpg",
     "sold": false,
-    "status": "new",
-    "carrito" : true
+    "status": "visited",
+    "carrito": true
   },
   {
     "id": 5,
@@ -62,6 +62,90 @@
     "image": "art-1629248176739.jpg",
     "sold": false,
     "status": "discount",
-    "carrito" : true
+    "carrito": true
+  },
+  {
+    "id": 6,
+    "name": "Soporte Pared Guitarra Electrica",
+    "description": "Instrumento: SOPORTE DE PARED\r\nModelo: Standard\r\nINDUSTRIA NACIONAL ARGENTINA\r\n\r\nSoporte de pared metálico revestido en goma. Apto para Guitarra Criolla / acústica, Eléctrica / Bajo, Ukelele / Mandolina.\r\n\r\nEl cuerpo hecho completamente de metal provee de un soporte firme y seguro, adaptable a todo tipo de instrumento.",
+    "price": 350,
+    "discount": 0,
+    "category": "Otros",
+    "fav": false,
+    "image": "art-1629762706020.jpg",
+    "sold": false,
+    "status": "new"
+  },
+  {
+    "id": 7,
+    "name": "Guitarra Electroacustica Criolla",
+    "description": "Nuestra GUITARRA CRIOLLA ELECTROACÚSTICA construida en madera de alta calidad, viene con un ecualizador-amplificador que funciona con una batería 9V.\r\nSe encuentra integrado en la guitarra, te permite graduar el sonido a la hora de conectarla a un parlante. Lo bueno es que la podes usar con o sin la batería, ya que tiene cuerdas de acero y un puente de madera sólida.",
+    "price": 8999,
+    "discount": 15,
+    "category": "Instrumentos de cuerdas",
+    "fav": false,
+    "image": "art-1629762825697.webp",
+    "sold": false,
+    "status": "discount"
+  },
+  {
+    "id": 8,
+    "name": "Ukelele Soprano Dy Uk Músicos",
+    "description": "DY CLASSIC\r\n» Tamaño: Soprano\r\n» Longitud de escala: 35,5 cm.\r\n» Longitud total: 54 cm.\r\n» Puente: Rosewood (palo rosa)\r\n» Tapa Mango: Rosewood\r\n» Abalone Inlay dots: Trastes 5-7-10\r\n» Cuerdas: Nylon\r\n» Caja resonancia: 60 mm",
+    "price": 4099,
+    "discount": 0,
+    "category": "Instrumentos de cuerdas",
+    "fav": false,
+    "image": "art-1629762925965.jpg",
+    "sold": false,
+    "status": "visited"
+  },
+  {
+    "id": 9,
+    "name": "Guitarra Electrica Leonard Le362 Tipo Stratocaster",
+    "description": "Características:\r\nCuerpo: Alder\r\nForma del cuerpo: Stratocaster\r\nNúmero de trastes: 21\r\nMarcadores de posición: Incrustaciones de posición de punto blanco\r\nDiapasón: Rosewood\r\nMaterial del mástil: Maple\r\nPlaca de mástil: Estándar de 4 tornillos\r\nConfiguración de Micrófonos: S/S/S\r\nSelector de cápsulas: 5-Position Blade: Position 1. Bridge Pickup, Position 2. Bridge and Middle Pickup, Position 3. Middle Pickup, Position 4. Middle and Neck Pickup, Position 5. Neck Pickup\r\nControles: Volumen Master, Tono 1. (Pastilla del mástil), Tono 2. (Pastilla central)\r\nHerrajes: Cromo\r\nPuente: Trémolo\r\nClavijeros: Diecast\r\nPalanca de tremolo: Palanca de trémolo tipo Vintage",
+    "price": 19084,
+    "discount": 10,
+    "category": "Instrumentos de cuerdas",
+    "fav": false,
+    "image": "art-1629763078176.jpg",
+    "sold": false,
+    "status": "discount"
+  },
+  {
+    "id": 10,
+    "name": "Parlante Karaoke Bluetooth Potente 3000wts Luces + Micrófono",
+    "description": "CARACTERÍSTICAS\r\n• Gran potencia y fidelidad de sonido.\r\n• Potencia : 3000Wts P.M.P.O\r\n• Parlante de 8 Pulgadas.\r\n• Batería interna recargable.\r\n• Juego de Luces Led.\r\n• Conexión Bluetooth 3.0.\r\n• Entradas: Soporte USB / Tarjeta Micro SD / Radio FM / Aux-in / Bluetooth.\r\n• Entrada para Micrófono ó Guitarra.\r\n• Radio FM con Antena.\r\n• Light Switch para prender o apagar las Luces Led.\r\n• Control Remoto.\r\n• Conexión TWS que te permite emparejar y conectar dos parlantes iguales.\r\n• Medidas : 35cm Alto x 24cm de Ancho x 19cm de Profundidad, 40cm alto con manija extendida.\r\n• Batería recargable.\r\n• Incluye cargador a 220v.",
+    "price": 6999,
+    "discount": 0,
+    "category": "Micrófonos y amplificadores",
+    "fav": false,
+    "image": "art-1629763272284.webp",
+    "sold": false,
+    "status": "new"
+  },
+  {
+    "id": 11,
+    "name": "Pedalera Multiefectos Para Guitarra Line 6 Pod Go",
+    "description": "Entrada para pedales de expresión o pulsadores externos\r\nBucle de efectos estéreo compatible con el método de los 4 cables\r\nSalidas generales estéreo sin balancear y balanceadas usando jacks TRS\r\nSalida de amplificador con opción de desconectar la simulación de altavoz\r\nSalida de auriculares\r\nPuerto USB",
+    "price": 102816,
+    "discount": 0,
+    "category": "Otros",
+    "fav": false,
+    "image": "art-1629763427293.webp",
+    "sold": false,
+    "status": "visited"
+  },
+  {
+    "id": 12,
+    "name": "Armonica Stagg 20 Voces Con Estuche Tono C",
+    "description": "Detalle del Producto:\r\n\r\n• Armonica Stagg\r\n• 20 Voces\r\n• Tono C\r\n• Estuche",
+    "price": 849,
+    "discount": 0,
+    "category": "Instrumentos de viento",
+    "fav": false,
+    "image": "art-1629763655655.webp",
+    "sold": false,
+    "status": "new"
   }
 ]
