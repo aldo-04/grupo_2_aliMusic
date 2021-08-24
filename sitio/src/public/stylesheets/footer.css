@@ -2,7 +2,11 @@ footer{
     margin-top: 50px;
     background-color: var(--color-footer);
     padding-top: 15px; 
-}
+}/*
+.login footer{ 
+    margin-top: 0px;
+    padding-top: 0px;
+}*//*le saco el espacio entre el fondo del login y el footer */
 footer a{
     font-size: 11px;
     color: var(--color-a-footer);
