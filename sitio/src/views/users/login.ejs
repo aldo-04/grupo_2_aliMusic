@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
-<body class="login">
-    <%- include('../partials/header') %> 
-    <main class="login">
-        <div class="v">
-            <a href="/">volver</a>
-        </div>
-        <h4>Ingresar a <br>ALI MUSIC</h4>
-        <form action="">
-            <section class="datos">
-                <div class="box-form">
-                    <input type="usuario" name="usuario" placeholder="usuario">
+    <body class="login">
+        <%- include('../partials/header') %>
+            <main class="login">
+                <div class="v">
+                    <a href="/">volver</a>
                 </div>
-                <div class="box-form">
-                    <input type="password" name="password" id="password" placeholder="contraseña">
-                </div>
+                <h4>Ingresar a <br>ALI MUSIC</h4>
+                <form action="">
+                    <section class="datos">
+                        <div class="box-form">
+                            <input type="usuario" name="usuario" placeholder="usuario">
+                        </div>
+                        <div class="box-form">
+                            <input type="password" name="password" id="password" placeholder="contraseña">
+                        </div>
 
-                <div class="box-remember">
-                    <input type="checkbox" name="mostrar contraseña" id="recordar">
-                    <label for="recordar">Mostrar Contraseña</label>
-                </div>
-                <div class="box-remember">
-                    <input type="checkbox" name="recordar" id="recordar">
-                    <label for="recordar">Recordarme</label>
-                </div>
-            </section>
-            <div class="recuperar">
-                <a href="/">Recuperar contraseña</a>
-            </div>
-            <div class="box-button">
-                <button type="submit">Acceder</button>
-            </div>
-            <div class="box-enlace">
-                <button type="submit" i class="fab fa-google"></i>Ingresar con Google</button>
-                <button type="submit" i class="fab fa-facebook"></i>Ingresar con Facebook</button>
-            </div>
-            <div class="no-tienes-cuenta">
-                <p>No tienes cuenta aun:
-                    <a href="/register">Registrate</a>
-                </p>
-            </div>
+                        <div class="box-remember">
+                            <input type="checkbox" name="mostrar contraseña" id="recordar">
+                            <label for="recordar">Mostrar Contraseña</label>
+                        </div>
+                        <div class="box-remember">
+                            <input type="checkbox" name="recordar" id="recordar">
+                            <label for="recordar">Recordarme</label>
+                        </div>
+                    </section>
+                    <div class="recuperar">
+                        <a href="/">Recuperar contraseña</a>
+                    </div>
+                    <div class="box-button">
+                        <button type="submit">Acceder</button>
+                    </div>
+                    <div class="box-enlace">
+                        <button type="submit" i class="fab fa-google"></i>Ingresar con Google</button>
+                        <button type="submit" i class="fab fa-facebook"></i>Ingresar con Facebook</button>
+                    </div>
+                    <div class="no-tienes-cuenta">
+                        <p>No tienes cuenta aun:
+                            <a href="/register">Registrate</a>
+                        </p>
+                    </div>
 
-        </form>
-    </main>
-    <%- include('../partials/footer') %> 
-</body>
+                </form>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>
