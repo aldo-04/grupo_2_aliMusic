@@ -59,7 +59,7 @@ footer .div_grid .div_redes{
     align-items: center;
 }
 .login footer{
-    position: fixed;
+  /*  position: fixed;*/
     width: 100%;
     bottom: 0;
 }

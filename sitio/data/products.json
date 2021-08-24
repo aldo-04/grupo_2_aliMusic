@@ -74,7 +74,8 @@
     "fav": false,
     "image": "art-1629762706020.jpg",
     "sold": false,
-    "status": "new"
+    "status": "new",
+    "carrito": true
   },
   {
     "id": 7,
@@ -86,7 +87,8 @@
     "fav": false,
     "image": "art-1629762825697.webp",
     "sold": false,
-    "status": "discount"
+    "status": "discount",
+    "carrito": true
   },
   {
     "id": 8,
@@ -98,7 +100,8 @@
     "fav": false,
     "image": "art-1629762925965.jpg",
     "sold": false,
-    "status": "visited"
+    "status": "visited",
+    "carrito": true
   },
   {
     "id": 9,
@@ -110,7 +113,8 @@
     "fav": false,
     "image": "art-1629763078176.jpg",
     "sold": false,
-    "status": "discount"
+    "status": "discount",
+    "carrito": true
   },
   {
     "id": 10,
@@ -122,7 +126,8 @@
     "fav": false,
     "image": "art-1629763272284.webp",
     "sold": false,
-    "status": "new"
+    "status": "new",
+    "carrito": true
   },
   {
     "id": 11,
@@ -134,7 +139,8 @@
     "fav": false,
     "image": "art-1629763427293.webp",
     "sold": false,
-    "status": "visited"
+    "status": "visited",
+    "carrito": false
   },
   {
     "id": 12,
@@ -146,6 +152,7 @@
     "fav": false,
     "image": "art-1629763655655.webp",
     "sold": false,
-    "status": "new"
+    "status": "new",
+    "carrito": false
   }
 ]
