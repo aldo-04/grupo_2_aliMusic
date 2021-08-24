@@ -7,10 +7,10 @@ padding-top: 7px;
     /* background-size: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2px;
 }
 .login main label, .login main p{
     color: #fff;
+    padding: 2px;
 }
 .login main a{
     color: #ff4500;
