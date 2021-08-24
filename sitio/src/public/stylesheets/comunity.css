@@ -1,10 +1,12 @@
-
+.comunity header{
+    margin-left: 50px;
+}
 .comunity .container-main{
     width: 95%;
     margin: 10px auto;
     border-radius: 8px;
     color: var(--color-header);
-
+    
 }
 .comunity .div_publicar{
     background-color: #fff;
