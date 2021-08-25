@@ -1,4 +1,10 @@
 /*carrito*/
+body.cart{
+   background-image: url("/images/f-c.jpg");
+    /* background-size: 100%;*/ 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .cart main {
     width:90%;
     margin:  0 auto;
@@ -11,6 +17,7 @@ color: black;
     text-align: center;
     font-size: 25px;
     margin: 30px 0px;
+    color: #fff;
 }
 .cart main p{
     text-align: center;
