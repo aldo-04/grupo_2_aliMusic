@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *{
     padding: 0;
@@ -38,5 +39,5 @@ body{
     --color-art-precio: #ebebeb;
     --color-h1-rgba: #474a5680;
     --color-a-fav: #ff4500;
-    --font-family: 'Courier Prime', monospace;
+    --font-family: 'Montserrat', sans-serif;
 }
