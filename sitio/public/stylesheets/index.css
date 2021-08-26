@@ -47,6 +47,7 @@
     height: 100vh;
     transition: transform .5s;
 }
+
 .home main .div_container .art .a_img:hover{
     transform: scale(1.2);
     z-index: 10;
