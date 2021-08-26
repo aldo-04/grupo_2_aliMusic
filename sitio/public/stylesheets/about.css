@@ -44,7 +44,7 @@ body.contact main.about div.about section article div.lista{
     justify-content: center;
     justify-content: space-around;
 }
-@media (min-width:426px){
+@media (min-width:425px){
     body.contact main.about div.about section h2{
         font-size: 25px;
     }

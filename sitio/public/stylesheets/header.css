@@ -1,6 +1,7 @@
 header{
     background-color: var(--color-header);
     padding-top: 5px;
+    display: none;
 }
 
 header a{
@@ -105,6 +106,10 @@ header .div_navegacion_header{
 }
 
 @media (min-width: 769px){
+    header{
+        display:block;
+    }
+    
     header .flex-container{
         display: grid;
         grid-template-areas: 

@@ -241,7 +241,7 @@ margin-top: 10px;
     .cart main section.rsm div.button-final button{
         width:100%;
     }
-@media (min-width:426px){
+@media (min-width:425px){
     .cart main section select{
         margin: 6px 0px 0px 7px;
     width: 53%;

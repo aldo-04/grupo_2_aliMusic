@@ -18,10 +18,24 @@ a{
 }
 body{
     background-color: var(--color-background);
-    /* background-image: url("/images/asd.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    background-position:fixed; */
+}
+
+/* sidebar */
+main{
+    width: calc(100% - 40px);
+    position: absolute;
+    right:0
+}
+@media (min-width: 425px){
+    main{
+        width: calc(100% - 55px);
+    }
+}
+
+@media (min-width: 769px){
+    main{
+        width: 100%;
+    }
 }
 
 :root{

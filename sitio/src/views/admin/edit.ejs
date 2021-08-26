@@ -3,6 +3,7 @@
 <%- include('../partials/head') %> 
 <body class="edit">
     <%- include('./partials/header') %> 
+    <%- include('../partials/sidebar') %> 
 
     <main>
         <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
