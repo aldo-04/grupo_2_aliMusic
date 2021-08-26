@@ -1,4 +1,6 @@
 .home h1{
+    display: none;
+    position: absolute;
     color: var(--color-h1);
     text-align: center;
     padding: 15px 0;
@@ -16,67 +18,61 @@
 
 
 .home main .div_banner img{
+    display: none;
     width: 100%;
     height: 90px;
 }
 .home main section{
-    width: 90%;
-    margin: 25px auto;
-    background-color: #fff;
-    box-shadow: 0 3px 3px 0px;
+    width: 100%;
     color: var(--color-header);
-    border-radius: 8px;
 }
 
 .home main .div_container{
     display: grid;    
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
     justify-content: space-around;  
 }
 
 .home main .div_container .art{
     background-color: var(--color-art);
-    border: 1px solid var(--color-border-art);
-    margin: 10px 0;
     position: relative;
-    transition: transform .5s;
-    background-color: var(--color-art-div);
-    border-radius: 8px;
+    background-color: #000;
 }
-.home main .div_container .art:hover{
-    transform: scale(1.2);
-    z-index: 10;
-}
-
 .home main .div_container .art .a_img{
     width: 100%;
     height: 150px;
     display : flex;
     position: relative;
     background-color: #fff;
-    border-radius: 8px 8px 0px 0px;
+    height: 100vh;
+    transition: transform .5s;
 }
-
+.home main .div_container .art .a_img:hover{
+    transform: scale(1.2);
+    z-index: 10;
+}
 .home main section .art a img{
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: contain;
-    border-radius: 8px;
+    background-color: #000;
 }
 
 .home main .div_container .art div{
+    border-top: 1px solid #fff;
     padding: 5px;
-    border-top: 1px solid var(--color-border-art);
+    display: flex;
+    justify-content: space-evenly
 }
 
 .home main .div_container .art div .off{
     font-size: 10px;
-    color: var(--color-art-off);
+    color: #fff;
 }
 .home main .div_container .art div .precio{
     font-size: 12px;
-    color: var(--color-art-precio);
+    color: #fff;
 }
 .home main .div_container .art .nav_fav{
     position: absolute;
@@ -86,7 +82,7 @@
     height:20px;
 }
 .home main .div_container .art .nav_fav a{
-    color: var(--color-a-fav);
+    color: #fff;
 }
 
 
