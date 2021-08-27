@@ -19,13 +19,19 @@
                                     <% if (product.status==="visited" ) { %>
                                         <article class="art">
                                             <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <a class="a_img" href="/products/detail/<%= product.id %>">
+                                            <!-- href="/products/detail/<%= product.id %>" -->
+                                            <div class="div_img">
                                                 <img src="/images/articulos/<%= product.image %>" alt="">
-                                            </a>
-                                            <div>
-                                                <p class="off">
-                                                    <%= product.discount>0 ? product.discount + '% OFF' : null %>
+                                                <p class="name">
+                                                    <%= product.name %>
                                                 </p>
+                                            </div>
+                                            <div class="div_price">
+                                                <% if (product.discount>0) { %>
+                                                    <p class="off">
+                                                        <%=product.discount + '% OFF'%>
+                                                    </p>
+                                                <% } %> 
                                                 <p class="precio">$<%= product.price %>
                                                 </p>
                                             </div>
@@ -46,13 +52,18 @@
                                     <% if (product.status==="new" ) { %>
                                         <article class="art">
                                             <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <a class="a_img" href="/products/detail/<%= product.id %>">
+                                            <div class="div_img">
                                                 <img src="/images/articulos/<%= product.image %>" alt="">
-                                            </a>
-                                            <div>
-                                                <p class="off">
-                                                    <%= product.discount>0 ? product.discount + '% OFF' : null %>
+                                            </div>
+                                            <div class="div_price">
+                                                <p class="name">
+                                                    <%= product.name %>
                                                 </p>
+                                                <% if (product.discount>0) { %>
+                                                    <p class="off">
+                                                        <%=product.discount + '% OFF'%>
+                                                    </p>
+                                                <% } %> 
                                                 <p class="precio">$<%= product.price %>
                                                 </p>
                                             </div>
@@ -74,13 +85,15 @@
                                     <% if (product.status==="discount" ) { %>
                                         <article class="art">
                                             <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <a class="a_img" href="/products/detail/<%= product.id %>">
+                                            <div class="div_img">   
                                                 <img src="/images/articulos/<%= product.image %>" alt="">
-                                            </a>
-                                            <div>
-                                                <p class="off">
-                                                    <%= product.discount>0 ? product.discount + '% OFF' : null %>
-                                                </p>
+                                            </div>
+                                            <div class="div_price">
+                                                <% if (product.discount>0) { %>
+                                                    <p class="off">
+                                                        <%=product.discount + '% OFF'%>
+                                                    </p>
+                                                <% } %> 
                                                 <p class="precio">$<%= product.price %>
                                                 </p>
                                             </div>

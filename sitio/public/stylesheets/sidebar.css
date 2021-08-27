@@ -6,10 +6,11 @@
     left: 0;
     height: 100vh;
     width: 40px;
-    background-color: #11101d;
+    background-color: #000;
     padding: 6px 0;
     z-index: 20;
     transition: all 0.5s ease;
+    border-right: 1px solid #fff;
 }
 
 .sidebar.active{
@@ -31,7 +32,7 @@
     opacity: 1;
 }
 .sidebar .logo_content{
-    margin-left: 6px;
+    border-bottom: 1px solid #fff;  
 }
 .sidebar .logo_content .logo{
     color: #fff;
@@ -51,6 +52,7 @@
 .sidebar .logo_content .logo i{
     font-size:25px;
     margin-right: 5px;
+    margin-left: 5px;
 }
 .sidebar .logo_content .logo .logo_name{
     font-weight: 400;
@@ -105,6 +107,10 @@
     text-indent: 5px;
     font-size: 14px;
     color: #fff;
+}
+.sidebar.active ul li input{
+    width: 96%;
+    left: 4px;
 }
 
 .sidebar ul li .fa-search{
@@ -184,7 +190,6 @@
     font-size: 20px;
     border-radius: 12px;
 }
-
 @media (min-width: 425px){
     .sidebar{
         width: 55px;
