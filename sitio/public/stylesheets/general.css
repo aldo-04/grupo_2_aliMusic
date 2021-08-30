@@ -18,24 +18,24 @@ a{
 }
 body{
     background-color: var(--color-background);
+    max-height: 715px;
 }
 
 /* sidebar */
-main{
+body{
     width: calc(100% - 40px);
     height: 100%;
     position: absolute;
     right:0;
-    background-color: #fff;
 }
 @media (min-width: 425px){
-    main{
+    body{
         width: calc(100% - 55px);
     }
 }
 
 @media (min-width: 769px){
-    main{
+    body{
         width: 100%;
     }
 }

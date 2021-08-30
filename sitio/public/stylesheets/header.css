@@ -1,7 +1,8 @@
 header{
-    background-color: var(--color-header);
-    padding-top: 5px;
-    display: none;
+    padding: 1.1% 10px;
+    color: #fff;
+    font-size: 28px;
+    border-right: 1px solid #fff;
 }
 
 header a{

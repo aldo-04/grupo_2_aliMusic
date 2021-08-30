@@ -3,46 +3,52 @@
 <%- include('../partials/head') %>
 
     <body class="home">
-        <%- include('../partials/header') %>
         <%- include('../partials/sidebar') %> 
+        <%- include('../partials/header') %> 
             <main>
                 <%- include('../partials/carrusel') %>
 
-                    <%- include('../partials/banner') %>
+                <%- include('../partials/banner') %>
 
-                        <section class="novedades">
+                <div>
+                    <img src="" alt="">
+                </div>
 
-                            <div class="div_container">
-                                <% products.forEach(product=> { %>
-                                    <% if (product.status==="visited" ) { %>
-                                        <article class="art">
-                                            <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <!-- href="/products/detail/<%= product.id %>" -->
-                                            <div class="div_img">
-                                                <img src="/images/articulos/<%= product.image %>" alt="">
-                                                <p class="name">
-                                                    <%= product.name %>
-                                                </p>
-                                                <div class="box_description">
-                                                    <p class="description">
-                                                        <%= product.description %> 
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="div_price">
-                                                <% if (product.discount>0) { %>
-                                                    <p class="off">
-                                                        <%=product.discount + '% OFF'%>
-                                                    </p>
-                                                <% } %> 
-                                                <p class="precio">$<%= product.price %>
-                                                </p>
-                                            </div>
-                                        </article>
-                                        <% } %>
-                                            <% }) %>
-                            </div>
-                        </section>
+                <section class="novedades">
+
+                    <div class="div_container">
+                        <% products.forEach(product=> { %>
+                            <% if (product.status==="visited" ) { %>
+                                <article class="art">
+                                    <!-- INTENTAR PONERLO EN PARTIALS -->
+                                    <!-- href="/products/detail/<%= product.id %>" -->
+                                    <div class="div_img">
+                                        <a href="/products/detail/<%= product.id %>">
+                                            <img src="/images/articulos/<%= product.image %>" alt="">
+                                        </a>
+                                        <p class="name">
+                                            <%= product.name %>
+                                        </p>
+                                        <div class="box_description">
+                                            <p class="description">
+                                                <%= product.description %> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="div_price">
+                                        <% if (product.discount>0) { %>
+                                            <p class="off">
+                                                <%=product.discount + '% OFF'%>
+                                            </p>
+                                        <% } %> 
+                                        <p class="precio">$<%= product.price %>
+                                        </p>
+                                    </div>
+                                </article>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </section>
             </main>
             <%- include('../partials/footer') %>
     </body>

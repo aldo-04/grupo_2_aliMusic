@@ -1,5 +1,7 @@
+
 .home{
-    height: 100%
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
 }
 .home main .div_carrusel{
     display : none;
@@ -10,18 +12,23 @@
     width: 100%;
     height: 90px;
 }
+.home header .logo_header{
+    
+}
 .home main section{
     color: var(--color-header);
 }
 
 .home main .div_container{
     height: 100%;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
 }
 
 .home main .div_container .art{
     background-color: var(--color-art);
     position: relative;
-    background-color: #000;
+    background-color: transparent;
     height: 100vh;
     border-bottom: 1px solid #fff;
 }
@@ -29,13 +36,13 @@
     width: 100%;
     height: 90vh;
     position: relative;
-    background-color: #000;
+    background-color: transparent;
 }
 .home main section .art .div_img img{
     height: 65%;
     position: absolute;
     object-fit: contain;
-    background-color: #000;
+    background-color: transparent;
     align-self: center;
     left: 42%;
     top: 30%;
