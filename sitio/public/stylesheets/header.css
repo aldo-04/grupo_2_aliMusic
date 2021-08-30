@@ -2,7 +2,8 @@ header{
     padding: 1.1% 10px;
     color: #fff;
     font-size: 28px;
-    border-right: 1px solid #fff;
+    height: 10.3vh;
+    background-color: #000;
 }
 
 header a{

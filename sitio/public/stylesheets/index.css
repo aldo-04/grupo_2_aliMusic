@@ -10,10 +10,11 @@
 .home main .div_banner img{
     display: none;
     width: 100%;
-    height: 90px;
+    height: 90vh;
 }
-.home header .logo_header{
-    
+.home .div_banner_carrusel img{
+    width: 100%;
+    height: 90vh;
 }
 .home main section{
     color: var(--color-header);
