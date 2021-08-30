@@ -23,6 +23,7 @@ body{
 /* sidebar */
 main{
     width: calc(100% - 40px);
+    height: 100%;
     position: absolute;
     right:0;
     background-color: #fff;

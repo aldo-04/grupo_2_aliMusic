@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "THE SO4",
+        "description": "Body style: S Back & Sides: Figured walnut",
+        "price": 14999,
+        "discount": 15,
+        "category": "Instrumentos de cuerdas",
+        "fav": false,
+        "image": "S-04-guitar.png",
+        "sold": false,
+        "status": "visited",
+        "carrito": false
+    },
+    {
+        "id": 2,
+        "name": "THE SO1",
+        "description": "Body style: S Back & Sides: Figured walnut",
+        "price": 14999,
+        "discount": 15,
+        "category": "Instrumentos de cuerdas",
+        "fav": false,
+        "image": "S-01-guitar.png",
+        "sold": false,
+        "status": "visited",
+        "carrito": false
+    }
+]

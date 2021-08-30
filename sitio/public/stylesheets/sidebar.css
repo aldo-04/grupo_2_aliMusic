@@ -192,7 +192,7 @@
 }
 @media (min-width: 425px){
     .sidebar{
-        width: 55px;
+        width: 65px;
     }
     .sidebar.active{
         width: 250px;
@@ -205,19 +205,25 @@
         font-size: 28px;
     }
     .sidebar .logo_content #btn{
+        left: 5px;
         font-size: 22px;
         min-width: 65px;
     }
     .sidebar ul li .fa-search{
         font-size: 22px;
-        left: 17px;
-        top: 37%;
+        left: 28px;
+        top: 31%;
     }
     .sidebar ul li input{
         font-size: 22px;
-        height: 40px;
-        padding-left: 52px;
-        height: 50px;
+        padding-left: 45px;
+        height: 45px;
+        width: 70%;
+        left: 15px;
+    }
+    .sidebar.active ul li input{
+        width: 92%;
+        left: 15px;
     }
     .sidebar ul li{
         height: 40px;
@@ -227,7 +233,10 @@
         font-size: 16px;
     }
     .sidebar ul li a i{ 
-        min-width: 55px;
+        min-width: 75px;
+    }
+    .sidebar .profile_content{
+        left: 9px;
     }
     .sidebar .profile_content .profile_details img{
         height: 65px;

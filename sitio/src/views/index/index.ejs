@@ -12,8 +12,6 @@
 
                         <section class="novedades">
 
-                            <h1>Basado en tu última visita</h1>
-
                             <div class="div_container">
                                 <% products.forEach(product=> { %>
                                     <% if (product.status==="visited" ) { %>
@@ -25,6 +23,11 @@
                                                 <p class="name">
                                                     <%= product.name %>
                                                 </p>
+                                                <div class="box_description">
+                                                    <p class="description">
+                                                        <%= product.description %> 
+                                                    </p>
+                                                </div>
                                             </div>
                                             <div class="div_price">
                                                 <% if (product.discount>0) { %>
@@ -35,71 +38,6 @@
                                                 <p class="precio">$<%= product.price %>
                                                 </p>
                                             </div>
-                                            <nav class="nav_fav">
-                                                <a href=""><i class="far fa-star"></i></a>
-                                            </nav>
-                                        </article>
-                                        <% } %>
-                                            <% }) %>
-                            </div>
-                        </section>
-                        <section class="ofertas">
-
-                            <h1>Nuevos articulos</h1>
-
-                            <div class="div_container">
-                                <% products.forEach(product=> { %>
-                                    <% if (product.status==="new" ) { %>
-                                        <article class="art">
-                                            <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <div class="div_img">
-                                                <img src="/images/articulos/<%= product.image %>" alt="">
-                                            </div>
-                                            <div class="div_price">
-                                                <p class="name">
-                                                    <%= product.name %>
-                                                </p>
-                                                <% if (product.discount>0) { %>
-                                                    <p class="off">
-                                                        <%=product.discount + '% OFF'%>
-                                                    </p>
-                                                <% } %> 
-                                                <p class="precio">$<%= product.price %>
-                                                </p>
-                                            </div>
-                                            <nav class="nav_fav">
-                                                <a href=""><i class="far fa-star"></i></a>
-                                            </nav>
-                                        </article>
-                                        <% } %>
-                                            <% }) %>
-                            </div>
-                        </section>
-
-                        <section class="descuentos">
-
-                            <h1>descuentos</h1>
-
-                            <div class="div_container">
-                                <% products.forEach(product=> { %>
-                                    <% if (product.status==="discount" ) { %>
-                                        <article class="art">
-                                            <!-- INTENTAR PONERLO EN PARTIALS -->
-                                            <div class="div_img">   
-                                                <img src="/images/articulos/<%= product.image %>" alt="">
-                                            </div>
-                                            <div class="div_price">
-                                                <% if (product.discount>0) { %>
-                                                    <p class="off">
-                                                        <%=product.discount + '% OFF'%>
-                                                    </p>
-                                                <% } %> 
-                                                <p class="precio">$<%= product.price %>
-                                                </p>
-                                            </div>
-                                            <nav class="nav_fav">
-                                                <a href=""><i class="far fa-star"></i></a>
-                                            </nav>
                                         </article>
                                         <% } %>
                                             <% }) %>
