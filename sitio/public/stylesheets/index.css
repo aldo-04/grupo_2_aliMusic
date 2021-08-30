@@ -32,28 +32,28 @@
     background-color: #000;
 }
 .home main section .art .div_img img{
-    width: 75%;
-    height: 75%;
+    height: 65%;
     position: absolute;
     object-fit: contain;
     background-color: #000;
     align-self: center;
-    left: 50%;
-    top: 25%;
+    left: 42%;
+    top: 30%;
 }
 .home main .div_container .art .name{
     position: absolute;
     color: #fff;
     left: 4%;
-    top: 10%;
+    top: 5%;
     font-size: 26px;
     text-transform: uppercase;
+    width: 100px;
 }
 .home main .div_container .art .box_description{
     position: absolute;
     left: 4%;
     top: 40%;
-    width: 150px;
+    width: 125px;
 }
 .home main .div_container .art .description{
     position: absolute;

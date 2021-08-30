@@ -6,7 +6,7 @@
     left: 0;
     height: 100vh;
     width: 40px;
-    background-color: #000;
+    background-color: #583420;
     padding: 6px 0;
     z-index: 20;
     transition: all 0.5s ease;
@@ -102,7 +102,7 @@
     border-radius: 12px;
     outline: none;
     border: none;
-    background: #1b1b31;
+    background: #000;
     padding-left: 35px;
     text-indent: 5px;
     font-size: 14px;
