@@ -1,11 +1,4 @@
-.comunity{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-}
-.comunity header{
-    margin-left: 50px;
-}
+
 .comunity .container-main{
     width: 95%;
     margin: 10px auto;

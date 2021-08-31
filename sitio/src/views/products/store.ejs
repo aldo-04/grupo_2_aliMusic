@@ -8,8 +8,6 @@
     <main>
         <%- include('../partials/carrusel') %> 
 
-        <%- include('../partials/banner') %> 
-
         <section>
 
             <h1>Todos los productos</h1>
@@ -17,21 +15,51 @@
             
              
             <div class="div_container">
-                <% products.forEach(product => { %>
-                <article class="art">
-                    <a class="a_img" href="/products/detail/<%= product.id %>">
-                        <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
-                    </a>
-                    <div>
-                        <p class="off"><%= product.discount>0 ? product.discount + '% OFF' : null %> </p>
-                        <p class="precio">$<%= product.price %> </p>
-                    </div>
-                    <nav class="nav_fav">
-                        <a href=""><i class="far fa-star"></i></a>
-                    </nav>
-                </article>
+                <% products.forEach(product=> { %>
+                        <article class="art">
+                            <!-- INTENTAR PONERLO EN PARTIALS -->
+                            <!-- href="/products/detail/<%= product.id %>" -->
+                            <div class="div_img">
+                                <a href="/products/detail/<%= product.id %>">
+                                    <img src="/images/articulos/<%= product.image %>" alt="">
+                                </a>
+                                <p class="name">
+                                    <%= product.name %>
+                                </p>
+                                <div class="box_description">
+                                    <p class="description">
+                                        <%= product.description %> 
+                                    </p>
+                                </div>
+                                <a class="a_buy" href="/products/detail/<%= product.id %>">Comprar</a>
+                            </div>
+                            <div class="div_price">
+                                <% if (product.discount>0) { %>
+                                    <p class="off">
+                                        <%=product.discount + '% OFF'%>
+                                    </p>
+                                <% } %> 
+                                <p class="precio">$<%= product.price %>
+                                </p>
+                            </div>
+                        </article>
                 <% }) %>
-            </div>
+            <!-- <div class="div_container">
+                <% products.forEach(product => { %>
+                    <article class="art">
+                        <a class="a_img" href="/products/detail/<%= product.id %>">
+                            <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
+                        </a>
+                        <div>
+                            <p class="off"><%= product.discount>0 ? product.discount + '% OFF' : null %> </p>
+                            <p class="precio">$<%= product.price %> </p>
+                        </div>
+                        <nav class="nav_fav">
+                            <a href=""><i class="far fa-star"></i></a>
+                        </nav>
+                    </article>
+                    <% }) %>
+                </div> -->
             
            
         </section>

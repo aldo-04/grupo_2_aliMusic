@@ -1,5 +1,6 @@
 
 .store h1{
+    display: none;
     color: var(--color-h1);
     text-align: center;
     padding: 15px 0;
@@ -14,82 +15,181 @@
     display : none;
 }
 
-.store main .div_banner img{
-    width: 100%;
-    height: 90px;
+.store .div_banner_carrusel{
+    height: 90vh;
 }
-
+.store .div_banner_carrusel img{
+    width: 100%;
+    height: 100%;
+}
 .store main section{
-    width: 90%;
-    margin: 25px auto;
-    background-color: #fff;
-    box-shadow: 0 3px 3px 0px;
     color: var(--color-header);
-    border-radius: 8px;
 }
 
 .store main .div_container{
-    display: grid;    
-    grid-template-columns: 80%;
-    justify-content: space-around;  
+    height: 100%;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
 }
 
 .store main .div_container .art{
     background-color: var(--color-art);
-    border: 1px solid var(--color-border-art);
-    margin: 10px 0;
     position: relative;
-    transition: transform .5s;
-    background-color: var(--color-art-div);
-    border-radius: 8px;
+    background-color: transparent;
+    height: 100vh;
+    border-bottom: 1px solid #fff;
 }
-.store main .div_container .art:hover{
-    transform: scale(1.2);
-    z-index: 10;
-}
-
-.store main .div_container .art .a_img{
+.store main .div_container .art .div_img{
     width: 100%;
-    height: 150px;
-    display : flex;
+    height: 90vh;
     position: relative;
-    background-color: #fff;
-    border-radius: 8px 8px 0px 0px;
+    background-color: transparent;
 }
-
-.store main section .art a img{
-    width: 100%;
-    height: 100%;
+.store main section .art .div_img img{
+    max-height: 45%;
+    width: 90%;
     position: absolute;
     object-fit: contain;
-    border-radius: 8px;
+    background-color: transparent;
+    align-self: center;
+    left: 5%;
+    top: 35%;
 }
-
-.store main .div_container .art div{
-    padding: 5px;
-    border-top: 1px solid var(--color-border-art);
-}
-
-.store main .div_container .art div .off{
-    font-size: 10px;
-    color: var(--color-art-off);
-}
-.store main .div_container .art div .precio{
-    font-size: 12px;
-    color: var(--color-art-precio);
-}
-.store main .div_container .art .nav_fav{
+.store main .div_container .art .name{
     position: absolute;
-    right: 5px;
-    top: 5px;
-    z-index: 10;
-    height:20px;
+    color: #fff;
+    left: 4%;
+    top: 5%;
+    font-size: 26px;
+    text-transform: uppercase;
 }
-.store main .div_container .art .nav_fav a{
-    color: var(--color-a-fav);
+.store main .div_container .art .box_description{
+    position: absolute;
+    left: 4%;
+    top: 40%;
+    width: 125px;
+    display: none;
+}
+.store main .div_container .art .description{
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.store main .div_container .art .a_buy{
+    position: absolute;
+    color: #fff;
+    left: 37%;
+    bottom: 0%;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 4px;
+}
+.store main .div_container .art .div_price{
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly
+}
+.store main .div_container .art .div_price .off{
+    font-size: 10px;
+    color: #fff;
+}
+.store main .div_container .art .div_price .precio{
+    font-size: 12px;
+    color: #fff;
 }
 
-@media (min-width: 769px){
+
+@media (min-width: 425px) {
+    .store h1{
+        width: 97%;
+    }
+    .store main .div_carrusel{
+        display: block;
+        position: relative;
+    }
+    .store main .div_banner{
+        display: none;
+    }
+    .store main .div_carrusel img{
+        width: 100%;
+        height: 276px;
+        object-fit: cover;
+    }
+    .store main .div_carrusel a{
+        position: absolute;
+        color: #fff;
+    }
+    .store main .div_carrusel a.right{
+        right: 5px;
+        top: 47%;
+    }
+    .store main .div_carrusel a.left{
+        left: 5px;
+        top: 50%;
+    }
+    .store main section{
+        padding-top: 1px;
+    }
+    /* carrusel */
+    .store main .div_carrusel .slider{
+        position: relative;
+        width: 100%;
+        height: 276px;
+      }
+      
+    .store main .div_carrusel ul.slider li {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        transition: opacity .5s;
+    }
+    
+    .store main .div_carrusel ul.slider li img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+    
+    .store main .div_carrusel ul.slider li:first-child {
+        opacity: 1;
+    }
+    
+    .store main .div_carrusel ul.slider li:target {
+        opacity: 1;
+    }
+    .store main .div_carrusel .menu{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .store main .div_carrusel .menu li{
+        margin: 0 auto;
+        background-color: grey;
+        padding: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        position: relative;
+    }
+    .store main .div_carrusel .menu li a{
+        position: absolute;
+        left: 15px;
+        top: 12px;
+    }
+    .store main .div_container{ 
+        grid-template-columns: 45% 45%; 
+    }
+}
+
+@media (min-width:769px){
     .store main section{
         width: 80%;
         padding: 40px 10px;
@@ -101,12 +201,17 @@
         margin-bottom: 30px;
     }
     .store main .div_container{  
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 23% 23% 23% 23%;
         max-width: 1000px;
         margin: 0 auto;
     }
-    .store main .div_container .art{
-        width: 100%;
+    .store main .div_container .art .div_price .off{
+        font-size: 12px;
     }
+    .store main .div_container .art .div_price .precio{
+        font-size: 14px;
+    }
+    .store   main .descuentos{
+    padding-bottom: 50px;
+}
 }

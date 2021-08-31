@@ -1,16 +1,29 @@
 [
   {
-    "id": 2,
-    "name": "Interfaz de audio behringer u-phoria",
-    "description": "interfaz de ultra baja latencia de 2 x 2 con conectividad USB. MIDAS diseñado preamplificador con alimentación Phantom + 48V.  Compatible con equipos Windows y Mac OS X. Pefecto para grabación de voz e instrumentos. Libre de grabación, edición y Podcasting Software",
-    "price": 14030,
-    "discount": 0,
-    "category": "otros",
+    "id": 1,
+    "name": "THE SO4",
+    "description": "Body style: S Back & Sides: Figured walnut",
+    "price": 14999,
+    "discount": 15,
+    "category": "Instrumentos de cuerdas",
     "fav": false,
-    "image": "art-1629406461144.jpg",
+    "image": "S-04-guitar.png",
     "sold": false,
-    "status": "discount",
-    "carrito": true
+    "status": "visited",
+    "carrito": false
+  },
+  {
+    "id": 2,
+    "name": "THE SO1",
+    "description": "Body style: S Back & Sides: Figured walnut",
+    "price": 14999,
+    "discount": 15,
+    "category": "Instrumentos de cuerdas",
+    "fav": false,
+    "image": "S-01-guitar.png",
+    "sold": false,
+    "status": "visited",
+    "carrito": false
   },
   {
     "id": 3,
@@ -35,7 +48,7 @@
     "fav": false,
     "image": "art-1629248009248.jpg",
     "sold": false,
-    "status": "visited",
+    "status": "new",
     "carrito": true
   },
   {
@@ -87,7 +100,7 @@
     "fav": false,
     "image": "art-1629762925965.jpg",
     "sold": false,
-    "status": "visited",
+    "status": "new",
     "carrito": true
   },
   {
@@ -126,7 +139,7 @@
     "fav": false,
     "image": "art-1629763427293.webp",
     "sold": false,
-    "status": "visited",
+    "status": "new",
     "carrito": false
   },
   {
@@ -141,5 +154,18 @@
     "sold": false,
     "status": "new",
     "carrito": false
+  },
+  {
+    "id": 13,
+    "name": "Interfaz de audio behringer u-phoria",
+    "description": "interfaz de ultra baja latencia de 2 x 2 con conectividad USB. MIDAS diseñado preamplificador con alimentación Phantom + 48V.  Compatible con equipos Windows y Mac OS X. Pefecto para grabación de voz e instrumentos. Libre de grabación, edición y Podcasting Software",
+    "price": 14030,
+    "discount": 0,
+    "category": "otros",
+    "fav": false,
+    "image": "art-1629406461144.jpg",
+    "sold": false,
+    "status": "discount",
+    "carrito": true
   }
 ]
