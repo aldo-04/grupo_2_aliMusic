@@ -1,5 +1,9 @@
 /* INDEX */
 
+.admin div.contain{
+    overflow-x:auto;
+}
+
 .admin table{
     width: 90%;
     margin: 30px auto;
@@ -26,6 +30,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
+    height:120px
 }
 .admin table tbody .td_botton i{
     padding: 5px 10px;
