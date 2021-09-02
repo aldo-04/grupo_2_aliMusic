@@ -33,6 +33,7 @@ module.exports = {
             password,
             passworConfirm,
             rol: "user"
+            
         }
         return res.send(userRegister)
         users.push(userRegister);
