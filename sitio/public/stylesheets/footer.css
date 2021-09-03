@@ -1,6 +1,7 @@
 footer{
     background-color: #000;
     padding: 5px 0; 
+    height: 90vh;
 }/*
 .login footer{ 
     margin-top: 0px;
@@ -8,41 +9,59 @@ footer{
 }*//*le saco el espacio entre el fondo del login y el footer */
 footer a{
     font-size: 11px;
-    color: var(--color-a-footer);
+    color: #fff;
     transition: color .3s;
+    padding: 5px 10px;
 }
 footer a:hover{
     color: var(--color-a-fav);
 }
 footer .div_grid{
     display:grid;
-    grid-template-columns: auto auto 30px;
+    grid-template-rows: auto auto 50px;
+    height: 60%;
+    margin: 5px;
+    border: 1px solid #fff;
 }
 footer .div_grid .div_navegacion_footer ul{
-    padding-left: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    text-align: center;
+    align-content: space-around;
+    height: 100%
 }
 
 footer .div_grid .div_contacto{
     display: grid;
-    grid-template-rows: auto auto;
-    justify-self: center;
-}
-
-footer .div_grid .div_contacto .div_contacto_mail{
+    grid-template-columns: auto auto;
+    justify-content: space-around;
     align-self: center;
 }
 
-footer .div_grid .div_contacto div a i{
-    padding-right: 5px;
+footer .div_grid .div_redes{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    text-align: center;
 }
-
-footer .div_grid .div_redes{
+footer .div_grid2,
+footer .div_grid2 .div_terminos{
+    width: 100vw;
+    height: 50vw;
+}
+footer .div_grid2 .div_terminos ul{
+    height: 50vw;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    text-align: center;
+}
+footer .div_grid2 .div_terminos ul li{
+    border: 1px solid #fff;
+    height: 10vh;
+    width: 45vw;
 }
 .login footer{
   /*  position: fixed;*/

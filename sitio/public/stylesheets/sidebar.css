@@ -1,33 +1,21 @@
 /* Menu desplegable */
- 
-.i_sidebar #btn2{
-    color: #fff;
-    position: fixed;
-    left: -5px;
-    top: 6px;
-    font-size: 16px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transition: all 0.5s ease;
-}   
+  
 .sidebar{
     opacity: 0;
     transition: all 0.5s ease;
+    transform:matrix()
 }
 
 .sidebar.active{
     opacity: 1;
+    transition: all 0.5s ease;
     position: fixed;
     top: 0;
     left: 0;
     width: 200px;
     height: 100vh;
     z-index: 20;
-    transition: all 0.5s ease;
     background-color: #11101d;
-    border-right: 1px solid #fff;
 }
 .sidebar p{
     display: none;
@@ -67,8 +55,8 @@
 .sidebar.active .logo_content #btn{
     color: #fff;
     position: absolute;
-    left: 75%;
-    top: 6px;
+    left: 135%;
+    top: 1px;
     font-size: 16px;
     height: 50px;
     width: 50px;

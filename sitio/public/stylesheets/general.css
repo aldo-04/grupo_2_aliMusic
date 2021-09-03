@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");/* 'roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap'); /* font-family: 'Rajdhani', sans-serif; */
 
 *{
     padding: 0;
@@ -17,12 +18,15 @@ a{
     text-decoration: none;
 }
 body{
-    height: 100%;
     background-image: url(https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
     max-height: 715px;
     width: 100%;
+    height: 100%;
     position: absolute;
     right:0;
+}
+main{
+    margin-top: 10vh;
 }
 
 :root{
@@ -40,5 +44,5 @@ body{
     --color-art-precio: #ebebeb;
     --color-h1-rgba: #474a5680;
     --color-a-fav: #ff4500;
-    --font-family: 'roboto', sans-serif;
+    --font-family: 'Rajdhani', sans-serif;
 }
