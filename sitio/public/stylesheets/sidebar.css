@@ -1,17 +1,30 @@
 /* Menu desplegable */
-    
+ 
+.i_sidebar #btn2{
+    color: #fff;
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    font-size: 16px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s ease;
+}   
 .sidebar{
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 40px;
     z-index: 20;
     transition: all 0.5s ease;
     border-right: 1px solid #fff;
 }
 
 .sidebar.active{
+    opacity: 1;
     width: 200px;
     transition: all 0.5s ease;
     background-color: #11101d;

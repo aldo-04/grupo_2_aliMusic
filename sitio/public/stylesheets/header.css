@@ -4,7 +4,10 @@ header{
     font-size: 28px;
     height: 10vh;
     background-color: #000;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+header .logo_header{
+    margin-left: 20% 
 }
 
 header a{

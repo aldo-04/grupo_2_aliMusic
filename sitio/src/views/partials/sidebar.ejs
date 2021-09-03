@@ -1,3 +1,6 @@
+<div class="i_sidebar">
+    <i class="fas fa-bars" id="btn2"></i>
+</div>
 <div class="sidebar">
     <div class="logo_content">
         <a href="/">
@@ -37,10 +40,14 @@
 </div>
 <script>
     let btn = document.querySelector('#btn');
+    let btn2 = document.querySelector('#btn2');
     let searchBtn = document.querySelector('#fa-search');
     let sidebar = document.querySelector('.sidebar');
 
     btn.onclick = () =>{
+        sidebar.classList.toggle('active')
+    }
+    btn2.onclick = () =>{
         sidebar.classList.toggle('active')
     }
     searchBtn.onclick = () =>{

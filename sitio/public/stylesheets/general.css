@@ -20,8 +20,7 @@ body{
     height: 100%;
     background-image: url(https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
     max-height: 715px;
-    width: calc(100% - 40px);
-    height: 100%;
+    width: 100%;
     position: absolute;
     right:0;
 }
