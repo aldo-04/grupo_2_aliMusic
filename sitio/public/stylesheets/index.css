@@ -22,8 +22,7 @@
 .home main section{
     width: 90%;
     margin: 25px auto;
-    background: linear-gradient(to top, #686868,#FEFEFE);
-/*     background-color: #fff; */
+    background-color: #fff;
     box-shadow: 0 3px 3px 0px;
     color: var(--color-header);
     border-radius: 8px;
@@ -37,7 +36,7 @@
 
 .home main .div_container .art{
     background-color: var(--color-art);
-    /* border: 1px solid var(--color-border-art); */
+    border: 1px solid var(--color-border-art);
     margin: 10px 0;
     position: relative;
     transition: transform .5s;
