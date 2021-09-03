@@ -27,6 +27,7 @@
     background-color: transparent;
     height: 100vh;
     border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
 }
 .home main .div_container .art .div_img{
     width: 100%;
@@ -86,7 +87,6 @@
         width: 97%;
     }
     .home main .div_carrusel{
-        display: block;
         position: relative;
     }
     .home main .div_banner{

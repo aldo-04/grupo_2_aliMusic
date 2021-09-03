@@ -2,7 +2,7 @@
  
 .i_sidebar #btn2{
     color: #fff;
-    position: absolute;
+    position: fixed;
     left: -5px;
     top: 6px;
     font-size: 16px;
@@ -14,69 +14,60 @@
 }   
 .sidebar{
     opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 20;
     transition: all 0.5s ease;
-    border-right: 1px solid #fff;
 }
 
 .sidebar.active{
     opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 200px;
+    height: 100vh;
+    z-index: 20;
     transition: all 0.5s ease;
     background-color: #11101d;
+    border-right: 1px solid #fff;
 }
 .sidebar p{
     display: none;
     font-size: 11px;
-    opacity: 0;
-    transition: all .4s ease;
 }
 .sidebar.active p{
     display: inline-block;
-    opacity: 1;
     transition: all .4s ease;
 }
-.sidebar.active p:hover{
-    opacity: 1;
-}
 .sidebar .logo_content{
+    display: none;
+}
+.sidebar.active .logo_content{
+    display: block;
     border-bottom: 1px solid #fff;  
     height: 10vh;
 }
-.sidebar .logo_content .logo{
+.sidebar.active .logo_content .logo{
     color: #fff;
     display: flex;
     height: 53px;
     width: 100%;
     align-items: center;
-    opacity: 0;
     pointer-events: none;
 }
-
-.sidebar.active .logo_content .logo{
-    opacity: 1;
-    pointer-events: none;
-}
-
-.sidebar .logo_content .logo i{
+.sidebar.active .logo_content .logo i{
     font-size:25px;
     margin-right: 5px;
     margin-left: 5px;
 }
-.sidebar .logo_content .logo .logo_name{
+.sidebar.active .logo_content .logo .logo_name{
     font-weight: 400;
 }
-.sidebar .logo_content .logo .logo_name p{
+.sidebar.active .logo_content .logo .logo_name p{
     font-size: 20px;
 }
-.sidebar .logo_content #btn{
+.sidebar.active .logo_content #btn{
     color: #fff;
     position: absolute;
-    left: -5px;
+    left: 75%;
     top: 6px;
     font-size: 16px;
     height: 50px;
@@ -84,21 +75,17 @@
     text-align: center;
     line-height: 50px;
 }
-
-.sidebar.active .logo_content #btn{
-    left: 75%;
-}
 .sidebar ul{
+    display: none;
+}
+.sidebar.active ul{
+    display: block;
     position: relative;
     margin-top: 20px;
-    z-index: -1;
-}
-
-.sidebar.active ul {
     z-index: 10;
 }
 
-.sidebar ul li{
+.sidebar.active ul li{
     height: 30px;
     width: 100%;
     position: relative;
@@ -106,28 +93,22 @@
     line-height: 50px;
 }
 
-.sidebar ul li input{
+.sidebar.active ul li input{
     position: absolute;
     height: 33px;
-    width: 90%;
-    left: 2px;
+    width: 96%;
+    left: 4px;
     top: 0;
     border-radius: 12px;
     outline: none;
     border: none;
-    background: transparent;
     padding-left: 35px;
     text-indent: 5px;
     font-size: 14px;
     color: #fff;
-}
-.sidebar.active ul li input{
-    width: 96%;
-    left: 4px;
     background: #000;
 }
-
-.sidebar ul li .fa-search{
+.sidebar.active ul li .fa-search{
     position: absolute;
     z-index: 11;
     color: #fff;
@@ -135,18 +116,18 @@
     top: 30%;
     left: 13px;
 }
-.sidebar ul li a{
+.sidebar.active ul li a{
     color: #fff;
     display: flex;
     align-items: center;
     transition: all .4s ease;
     border-radius: 12px;
 }
-.sidebar ul li a:hover{
+.sidebar.active ul li a:hover{
     color: #11101d;
     background: #fff
 }
-.sidebar ul li a i{
+.sidebar.active ul li a i{
     height: 50px;
     min-width: 40px;
     border-radius: 12px;
@@ -154,48 +135,47 @@
     text-align: center;
     margin-right: 5px;
 }
-.sidebar .profile_content{
+.sidebar.active .profile_content{
     position: absolute;
     color: #fff;
     bottom: 0;
     left: 0;
 }
-.sidebar .profile_content .profile{
+.sidebar.active .profile_content .profile{
     position: relative;
     padding: 10px 7px;
     width: 75%;
     height: 70px;
 }
 
-.sidebar .profile_content .profile_details{
+.sidebar.active .profile_content .profile_details{
     display: flex;
     align-items: center;
 }
 .sidebar .profile_content .profile_details img{
+    display: none;
+}
+.sidebar.active .profile_content .profile_details img{
+    display: block;
     height: 45px;
     width: 45px;
     object-fit: cover;
     border-radius: 12px;
 }
-.sidebar .profile_content .profile_details .name_job{
-    margin-left: 10px;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
 .sidebar.active .profile_content .profile_details .name_job{
     width: 160px;
-    opacity: 1;
+    margin-left: 10px;
     transition: all 0.5s ease;
 }
-.sidebar .profile_content .profile_details .name{
+.sidebar.active .profile_content .profile_details .name{
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 10px;
 }
-.sidebar .profile_content .profile_details .job{
+.sidebar.active .profile_content .profile_details .job{
     font-size: 12px;
 }
-.sidebar .profile_content .profile #log_out{
+.sidebar.active .profile_content .profile #log_out{
     position: absolute;
     left: 100%;
     bottom: 0px;

@@ -24,17 +24,6 @@ body{
     position: absolute;
     right:0;
 }
-@media (min-width: 425px){
-    body{
-        width: calc(100% - 55px);
-    }
-}
-
-@media (min-width: 769px){
-    body{
-        width: 100%;
-    }
-}
 
 :root{
     --color-background: #fff;
