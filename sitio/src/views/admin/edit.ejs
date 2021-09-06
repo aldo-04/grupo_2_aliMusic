@@ -5,47 +5,60 @@
     <%- include('./partials/header') %> 
     <%- include('../partials/sidebar') %> 
 
-    <main>
-        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <section class="section-add">
-                <div class="box-form">
-                    <label for="name" >Nombre del producto:</label>
-                    <input type="text" name="name" id="name"  value="<%= product.name %>">
-                </div>
-                <div class="box-form">
-                    <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price"  value="<%= product.price %>">
-                </div>
-                <div class="box-form">
-                    <label for="discount">Descuento:</label>
-                    <input type="number" name="discount" id="discount" value="<%= product.discount %>">
-                </div>
-                <div class="box-form">
-                    <label for="category">Categorias: </label>
-                    <select name="category" id="category">
-                        <option value="<%= product.category %>" hidden selected><%= product.category %></option>
-                      <% categories.forEach(category => { %>
-                        <option value="<%= category %>"><%= capitalizarPrimeraLetra(category) %></option>
-                      <% }) %>
-                    </select>
-                </div>
-                <div class="box-form">
-                    <label for="description"> Descipción:</label>
-                    <textarea name="description" id="description" cols="30" rows="10"><%= product.description %> </textarea> 
-                </div>
-                <div class="box-form">
-                    <img src="/images/articulos/<%= product.image %> " alt="" width="65px">
-                    <label for="image">Agregar imagen:</label>
-                    <input type="file" name="image" id="image">
-                </div>
-            </section>
-            <div class="box-button">
-                <button type="submit">Agregar</button>
-            </div>
+    <body class="edit">
+        <%- include('./partials/header') %>
 
-        
-        </form>
-    </main>
+            <main>
+                <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <section class="section-add">
+                        <div class="box-form">
+                            <label for="name">Nombre del producto:</label>
+                            <input type="text" name="name" id="name" value="<%= product.name %>">
+                        </div>
+                        <div class="box-form">
+                            <label for="price">Precio:</label>
+                            <input type="number" name="price" id="price" value="<%= product.price %>">
+                        </div>
+                        <div class="box-form">
+                            <label for="discount">Descuento:</label>
+                            <input type="number" name="discount" id="discount" value="<%= product.discount %>">
+                        </div>
+                        <div class="box-form">
+                            <label for="category">Categorias: </label>
+                            <select name="category" id="category">
+                                <option value="<%= product.category %>" hidden selected>
+                                    <%= product.category %>
+                                </option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category %>">
+                                        <%= capitalizarPrimeraLetra(category) %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                        </div>
+                        <div class="box-form">
+                            <label for="description"> Descipción:</label>
+                            <textarea name="description" id="description" cols="30"
+                                rows="10"><%= product.description %> </textarea>
+                        </div>
+                        <div class="box-form">
+                            <div class="box-i">
+                            <div class="img-subir">
+                                <label for="image">Agregar imagen:</label>
+                                <input type="file" name="image" id="image">
+                            </div>
+                            <img src="/images/articulos/<%= product.image %> " alt="" width="65px">
+                        </div>
+                    </div>
+                    </section>
+                    <div class="box-button">
+                        <button type="submit">Agregar</button>
+                    </div>
 
-</body>
+
+                </form>
+            </main>
+
+    </body>
+
 </html>
