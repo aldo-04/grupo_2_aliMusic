@@ -2,11 +2,7 @@ footer{
     background-color: #000;
     padding: 5px 0; 
     height: 90vh;
-}/*
-.login footer{ 
-    margin-top: 0px;
-    padding-top: 0px;
-}*//*le saco el espacio entre el fondo del login y el footer */
+}
 footer a{
     font-size: 11px;
     color: #fff;
@@ -71,62 +67,34 @@ footer .div_grid2 .div_terminos ul li{
 
 @media (min-width:425px){
     footer a{
-        font-size: 12px;
     }
     footer .div_grid .div_logo_footer{
-        width: 100%;
-        margin: 5px
     }
     footer .div_grid .div_navegacion_footer{
-        padding-left: 15% ;
-        align-self: center;
     }
     footer .div_grid .div_navegacion_footer ul{
-        display: grid;
-        grid-template-columns: auto auto;
-        align-self: center;
     }
     footer .div_grid .div_navegacion_footer ul li{
-        padding-bottom: 15px;
     }
     footer .div_grid .div_redes{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-around;
-        padding-bottom: 15px;
     }
     
 }
 @media (min-width:769px){
     footer{
-        padding-left: 25px;
-        padding-right: 25px;
     }
     footer a{
-        font-size: 18px;
     }
     footer i{
-        font-size: 24px;
     }
 
     footer .div_grid .logo-incompleto{
-        display: none;
     }
     footer .div_grid .logo-completo{
-        display: block;
-        width: 160px;
-    }
-    footer .div_grid .div_navegacion_footer{
-        padding-left: 29%;
     }
     .register footer{
-        position: fixed;
-        width: 100%;
-        bottom: 0;
     }
     .login footer{
-        position: relative;
     }
 }
 
