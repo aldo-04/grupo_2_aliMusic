@@ -38,6 +38,7 @@
     background-color: transparent;
     height: 100vh;
     border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
 }
 .store main .div_container .art .div_img{
     width: 100%;
@@ -130,9 +131,6 @@
         left: 5px;
         top: 50%;
     }
-    .store main section{
-        padding-top: 1px;
-    }
     /* carrusel */
     .store main .div_carrusel .slider{
         position: relative;
@@ -191,7 +189,6 @@
 
 @media (min-width:769px){
     .store main section{
-        width: 80%;
         padding: 40px 10px;
         margin: 20px auto;
         box-shadow: 0px 0px 8px 0px;
