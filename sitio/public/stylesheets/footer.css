@@ -16,7 +16,6 @@ footer .div_grid{
     display:grid;
     grid-template-rows: auto auto 50px;
     height: 60%;
-    margin: 5px;
     border: 1px solid #fff;
 }
 footer .div_grid .div_navegacion_footer ul{
@@ -43,8 +42,7 @@ footer .div_grid .div_redes{
 }
 footer .div_grid2,
 footer .div_grid2 .div_terminos{
-    width: 100vw;
-    height: 50vw;
+    height: 40%;
 }
 footer .div_grid2 .div_terminos ul{
     height: 50vw;
@@ -67,34 +65,21 @@ footer .div_grid2 .div_terminos ul li{
 
 @media (min-width:425px){
     footer a{
+        font-size: 16px;
+    }/* 
+    header .i_sidebar #btn2{
+        font-size: 20px;
+    } */
+    footer{
+        height: 90vw;
     }
-    footer .div_grid .div_logo_footer{
+    footer .div_grid{
+        height: 40vw;
     }
-    footer .div_grid .div_navegacion_footer{
-    }
-    footer .div_grid .div_navegacion_footer ul{
-    }
-    footer .div_grid .div_navegacion_footer ul li{
-    }
-    footer .div_grid .div_redes{
-    }
-    
 }
 @media (min-width:769px){
-    footer{
-    }
-    footer a{
-    }
-    footer i{
-    }
-
-    footer .div_grid .logo-incompleto{
-    }
-    footer .div_grid .logo-completo{
-    }
-    .register footer{
-    }
-    .login footer{
+    header .i_sidebar #btn2{
+        font-size: 25px;
     }
 }
 

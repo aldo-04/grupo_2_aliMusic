@@ -27,6 +27,9 @@ header .logo_header{
     align-self: center;
 }
 
+@media (min-width: 425px){
+}
+
 /* header a{
     color: var(--color-a-header);
     transition: all .3s;
