@@ -1,8 +1,5 @@
 /*carrito*/
 body.cart{
-   background-image: url("/images/f-c.jpg");
-    /* background-size: 100%;*/ 
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .cart main {

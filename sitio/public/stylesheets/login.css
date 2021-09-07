@@ -2,12 +2,7 @@
 padding-left: 7px;
 padding-top: 7px;
 }
-.login main {
-    background-image: url(../images/Guitar-musical.jpg);
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .login main label, .login main p{
     color: #fff;
     padding: 2px;
