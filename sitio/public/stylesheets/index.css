@@ -1,10 +1,15 @@
-
+.home main{
+    margin-top: 0;
+}
+.home header{
+    background-color: transparent;
+}
 .home main .div_carrusel{
     display : none;
 }
 
 .home .div_banner_carrusel{
-    height: 90vh;
+    height: 100vh;
 }
 .home .div_banner_carrusel img{
     width: 100%;

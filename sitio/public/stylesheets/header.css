@@ -7,7 +7,6 @@ header{
     height: 10vh;
     z-index: 10;
     background-color: #11101d;
-    border-bottom: 1px solid #fff;
     display: grid;
     grid-template-columns: 15% auto;
 }

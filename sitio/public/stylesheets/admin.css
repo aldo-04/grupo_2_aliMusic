@@ -65,7 +65,8 @@ body.add section.section-add{
     margin-top: 30px;
     display: flex;
     width: 100%;
-    flex-direction: column
+    flex-direction: column;
+    color: #fff;
 }
 .edit main form section .box-form select,
 .add main form section .box-form select{
