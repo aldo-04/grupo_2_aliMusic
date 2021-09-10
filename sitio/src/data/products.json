@@ -9,7 +9,7 @@
     "fav": false,
     "image": "S-04-guitar.png",
     "sold": false,
-    "status": "visited",
+    "status": "discount",
     "carrito": false
   },
   {
@@ -22,7 +22,7 @@
     "fav": false,
     "image": "S-01-guitar.png",
     "sold": false,
-    "status": "visited",
+    "status": "discount",
     "carrito": false
   },
   {
@@ -35,7 +35,7 @@
     "fav": false,
     "image": "art-1629762992088.jpg",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": true
   },
   {
@@ -48,14 +48,14 @@
     "fav": false,
     "image": "art-1629248009248.jpg",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": true
   },
   {
     "id": 5,
     "name": "Teclado Organo Casio Ctk3500",
-    "description": "El CTK-3500 dispone del modo de música dance y la opción de conexión con la innovadora aplicación Chordana Play. Gracias a estas funciones se pueden crear geniales canciones de dance. El CTK-3500 se convierte en una potente herramienta de aprendizaje a través de la conexión con la aplicación.",
-    "price": 30512,
+    "description": "El CTK-3500 dispone del modo de música dance y la opción de conexión con la innovadora aplicación Chordana Play. Gracias a estas funciones se pueden crear geniales canciones de dance. El CTK-3500 se convierte en una potente herramienta de aprendizaje a través",
+    "price": 12399,
     "discount": 15,
     "category": "Teclados y pianos",
     "fav": false,
@@ -74,7 +74,7 @@
     "fav": false,
     "image": "art-1629762706020.jpg",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": true
   },
   {
@@ -100,7 +100,7 @@
     "fav": false,
     "image": "art-1629762925965.jpg",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": true
   },
   {
@@ -126,7 +126,7 @@
     "fav": false,
     "image": "art-1629763272284.webp",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": true
   },
   {
@@ -139,7 +139,7 @@
     "fav": false,
     "image": "art-1629763427293.webp",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": false
   },
   {
@@ -152,7 +152,7 @@
     "fav": false,
     "image": "art-1629763655655.webp",
     "sold": false,
-    "status": "new",
+    "status": "discount",
     "carrito": false
   },
   {
@@ -165,7 +165,7 @@
     "fav": false,
     "image": "art-1629406461144.jpg",
     "sold": false,
-    "status": "discount",
+    "status": "visited",
     "carrito": true
   }
 ]

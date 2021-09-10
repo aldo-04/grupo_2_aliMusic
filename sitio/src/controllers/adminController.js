@@ -62,6 +62,11 @@ module.exports = {
                     product.image = req.file.filename
                     }
                 } 
+            if (product.status === "discount" && product.discount <= 0) {
+                product.status = "visited"
+            }else{
+                product.status = "discount"
+            }
          })
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
         res.redirect("/admin")
