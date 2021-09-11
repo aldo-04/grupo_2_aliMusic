@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "nombre": "Lucas",
-    "apellido": "Diaz Mouhsen",
+    "name": "Lucas",
+    "last_name": "Diaz Mouhsen",
     "email": "lucasmouhsen@gmail.com",
-    "numero": 123,
+    "number": 123,
     "password": "123123",
     "rol": "admin",
     "image": "user-1630626558324.png"
   },
   {
     "id": 2,
-    "nombre": "aldo",
-    "apellido": "Orden",
+    "name": "aldo",
+    "last_name": "Orden",
     "email": "alulolima@hotmail.com",
-    "numero": 123,
+    "number": 123,
     "password": "123123",
     "rol": "admin",
     "image": "avatar_default.png"
   },
   {
     "id": 3,
-    "nombre": "marian",
-    "apellido": "paz",
+    "name": "marian",
+    "last_name": "paz",
     "email": "jorge.kehoe@yahoo.com.ar",
-    "numero": 123,
+    "number": 123,
     "password": "123123",
     "rol": "admin",
     "image": "avatar_default.png"

@@ -36,11 +36,23 @@
     <div class="profile_content">
         <div class="profile">
             <div class="profile_details">
-                <img src="/images/profile.jpg" alt="">
-                <div class="name_job">
-                    <div class="name"><p>Lucas Diaz Mouhsen</p></div>
-                    <div class="job"><p>Web Designer</p></div>
-                </div>
+                <% if (false) { %> <!-- Cambiar por req.session cuando este configurado -->
+                    <a href="/users/profile/<%= user.id %>">
+                        <img src="/images/profile.jpg" alt="">
+                    </a>
+                    <div class="name_job">
+                        <a href="/users/profile/<%= user.id %>" class="name"><p><%= user.name %> </p></a>
+                        <!-- <div class="job"><p>Web Designer</p></div> -->
+                    </div>
+                <% } else { %>
+                    <a href="/users/login">
+                        <img src="/images/profile.jpg" alt="">
+                    </a>
+                    <div class="name_job">
+                        <a href="/users/login" class="name"><p>Iniciar sesion</p></a>
+                        <!-- <div class="job"><p>Web Designer</p></div> -->
+                    </div>
+                <% } %>
             </div>
             <p><i class="fas fa-sign-out-alt" id="log_out"></i></p>
         </div>

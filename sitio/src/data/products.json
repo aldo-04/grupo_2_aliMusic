@@ -9,8 +9,8 @@
     "fav": false,
     "image": "S-04-guitar.png",
     "sold": false,
-    "status": "discount",
-    "carrito": false
+    "status": "visited",
+    "carrito": true
   },
   {
     "id": 2,
@@ -22,8 +22,8 @@
     "fav": false,
     "image": "S-01-guitar.png",
     "sold": false,
-    "status": "discount",
-    "carrito": false
+    "status": "visited",
+    "carrito": true
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "image": "art-1629762992088.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "image": "art-1629248009248.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "image": "art-1629248176739.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "image": "art-1629762706020.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
     "image": "art-1629762825697.webp",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 8,
@@ -101,7 +101,7 @@
     "image": "art-1629762925965.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 9,
@@ -114,7 +114,7 @@
     "image": "art-1629763078176.jpg",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 10,
@@ -127,7 +127,7 @@
     "image": "art-1629763272284.webp",
     "sold": false,
     "status": "discount",
-    "carrito": true
+    "carrito": false
   },
   {
     "id": 11,
@@ -165,7 +165,7 @@
     "fav": false,
     "image": "art-1629406461144.jpg",
     "sold": false,
-    "status": "visited",
-    "carrito": true
+    "status": "new",
+    "carrito": false
   }
 ]

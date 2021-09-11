@@ -2,17 +2,22 @@ const fs = require("fs");
 const path = require("path");
 
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'),'utf-8'));
-
 const saveUser = dato =>fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'),JSON.stringify(users,null,2),'utf-8');
 
 module.exports = {
-    user: (req, res) => {
-        res.render('users/user',{
-            title: 'user'
+    profile: (req, res) => {
+        users.find(user =>{
+            if (user.id === +req.params.id) {
+                res.render('users/user',{
+                    title: 'user',
+                    user
+                })
+            }
         })
+        
     },
     login: (req, res) => {
-        res.render('users/login',{
+        return res.render('users/login',{
             title: 'login'
         })
     },
