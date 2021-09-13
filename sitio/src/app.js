@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var method = require('method-override');
 
+//middlewares
+const recordame = require('./Middleware/cookie');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
@@ -26,6 +30,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+
+//app para recordame usuario
+app.use(recordame);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

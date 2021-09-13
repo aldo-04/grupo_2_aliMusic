@@ -1,3 +1,4 @@
+const {validationResult} = require('express-validator');
 const fs = require("fs");
 const path = require("path");
 
@@ -16,10 +17,32 @@ module.exports = {
         })
         
     },
-    login: (req, res) => {
-        return res.render('users/login',{
-            title: 'login'
-        })
+    login : (req,res) => res.render('users/login',{
+        title: 'login'
+    }),
+    processLogin : (req,res) => {
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
+            let user = users.find(user => user.email === req.body.email.trim());
+
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
+
+            if(req.body.recordar){
+                res.cookie("recordarme", req.session.userLogin, {maxAge:1000 * 60})
+            }
+            res.redirect('/')
+
+        }else{
+            return res.render('users/login',{
+                errors : errors.mapped()
+            })
+        }
     },
     register: (req, res) => {
         res.render('users/register',{
