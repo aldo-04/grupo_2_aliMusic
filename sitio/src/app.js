@@ -33,7 +33,9 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //app para recordame usuario
 app.use(recordame);
-
+//
+app.use(localsUser);
+//
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
