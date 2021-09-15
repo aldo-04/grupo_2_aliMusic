@@ -1,9 +1,9 @@
 .register h1{
     margin:20px;
     text-align: center;
-    color: var(--color-h1);
+    color: #fff;
     background-color: var(--color-h1-rgba);
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .register main div.avatar i{
-    color: black;
-    padding: 11px;
+    color: #fff;
+    padding: 15px;
 }
 
 .register main div.datos{
