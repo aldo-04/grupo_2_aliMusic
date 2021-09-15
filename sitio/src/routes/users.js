@@ -26,7 +26,7 @@ router.get('/profile/:id', profile);
 router.get('/login',loginCheck, login);
 router.post('/login',loginValidation, processLogin);
 router.get('/register',register);
-router.post('/register',upload.single('avatar'),proccesRegister)
+router.post('/register',upload.single('avatar'), registerValidation ,proccesRegister)
 router.get('fav', fav)
 
 module.exports = router;
