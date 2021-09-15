@@ -1,6 +1,7 @@
 const {validationResult} = require('express-validator');
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcryptjs")
 
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'),'utf-8'));
 const saveUser = dato =>fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'),JSON.stringify(users,null,2),'utf-8');
@@ -50,7 +51,10 @@ module.exports = {
         })
     },
     proccesRegister:(req,res)=>{
-        const{nombre,apellido,email,numero,password,passworConfirm}=req.body
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+        const{nombre,apellido,email,numero,password}=req.body
 
         userRegister={
             id: users[users.length -1] ? users[users.length -1].id +1 : 1,
@@ -58,15 +62,21 @@ module.exports = {
             apellido : apellido.trim(),
             email: email.trim(),
             numero: +numero,
-            password: password.trim(),
-            passworConfirm,
+            password: bcrypt.hashSync(password.trim(),10),
             rol: nombre.trim() === 'aldo' || nombre.trim() === 'marian' ? "admin": "user",
             image: req.file ? req.file.filename : 'avatar_default.png',
         }
         users.push(userRegister);
         saveUser(users);
         res.redirect("/");
-    },
+    }else{
+        return  res.render('users/register',{
+            title: "Register",
+            old : req.body,
+            errors : errors.mapped()
+        })
+    }
+},
 
     fav: (req, res) => {
         res.render('users/fav',{

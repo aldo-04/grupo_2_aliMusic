@@ -5,6 +5,7 @@ var {profile, login, register,proccesRegister ,fav, processLogin} = require('../
 const multer = require('multer');
 const path = require('path')
 
+
 const storage = multer.diskStorage({
     destination : (req,file,cb) =>{
         cb(null, "./public/images/fotoUser/")
@@ -15,12 +16,16 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage })
+
+const registerValidation = require("../validations/registerValidation")
+
+
 /* GET users listing. */
 router.get('/profile/:id', profile);
 router.get('/login', login);
 router.post('/login',processLogin ,login);
 router.get('/register', register);
-router.post('/register',upload.single('avatar'),proccesRegister)
+router.post('/register',upload.single('avatar'), registerValidation ,proccesRegister)
 router.get('fav', fav)
 
 module.exports = router;

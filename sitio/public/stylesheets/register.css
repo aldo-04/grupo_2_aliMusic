@@ -28,10 +28,18 @@
     justify-content: space-evenly;
 }
 
-.register main div.datos input{
+.register div.datos div {
     padding: 10px;
     margin: 20px;
-    width: 75%;
+    width: 75%;}
+
+.register main div.datos input{
+    padding: 10px;
+    width: 100%;
+}
+
+.register main div.datos span{
+    color : red
 }
 
 .register main div.redes{
@@ -86,10 +94,16 @@
         margin: 30px;
     }
 
-    .register main div.datos input{
+    .register div.datos div {
         padding: 10px;
         margin: 10px;
         width: 45%;
+    }
+
+    .register main div.datos input{
+        padding: 10px;
+        /* margin: 10px; */
+        width: 100%;
     }
 
     .register footer{
