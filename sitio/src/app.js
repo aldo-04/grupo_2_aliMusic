@@ -4,10 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var method = require('method-override');
+const session = require('express-session');
+const localUser = require('./middleware/localUser');
+
 
 //middlewares
 const recordame = require('./Middleware/cookie');
-
+const loginCheck = require('./Middleware/loginCheck');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -30,10 +33,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(session({
+  secret : 'mi secreto',
+  saveUninitialized : true,
+  resave : false,
+}));
+
 
 //app para recordame usuario
 app.use(recordame);
 
+//
+app.use(localUser);
+//
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

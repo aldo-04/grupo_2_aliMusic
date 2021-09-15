@@ -38,7 +38,6 @@ module.exports = {
                 res.cookie("recordarme", req.session.userLogin, {maxAge:1000 * 60})
             }
             res.redirect('/')
-
         }else{
             return res.render('users/login',{
                 errors : errors.mapped()

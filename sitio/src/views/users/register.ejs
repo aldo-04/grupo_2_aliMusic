@@ -14,35 +14,12 @@
             </div>
 
             <div class="datos">
-                <div>
-                    <input type="text" name="nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>" placeholder="Escribe tu nombre">
-                    <span> <%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </span>
-                </div>
-
-                <div>
-                    <input type="text" name="apellido" value="<%= locals.old && old.apellido ? old.apellido : null %>" placeholder="Escribe tu apellido" >
-                    <span> <%= locals.errors && errors.apellido ? errors.apellido.msg : null %> </span>
-                </div>
-
-                <div>
-                    <input type="number" name="numero" value="<%= locals.old && old.numero ? old.numero : null %>" placeholder="Tu numero" >
-                    <span> <%= locals.errors && errors.numero ? errors.numero.msg : null %> </span>
-                </div>
-
-                <div>
-                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : null %>" placeholder="Ingresa tu correo" >
-                    <span> <%= locals.errors && errors.email ? errors.email.msg : null %> </span>
-                </div>
-
-                <div>
-                    <input type="password" name="password" placeholder="Contraseña" >
-                    <span> <%= locals.errors && errors.password ? errors.password.msg : null %> </span>
-                </div>
-
-                <div>
-                    <input type="password" name="password2" placeholder="Repite tu contraseña" >
-                    <span> <%= locals.errors && errors.password2 ? errors.password2.msg : null %> </span>
-                </div>
+                 <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+                 <input type="text" name="apellido" placeholder="Escribe tu apellido" required>
+                 <input type="number" name="numero" placeholder="Tu numero" required>
+                 <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                 <input type="password" name="contraseña" placeholder="Contraseña" required>
+                 <input type="password" name="contraseña" placeholder="Repite tu contraseña" required>
             </div>
 
             <div class="redes">
