@@ -40,6 +40,7 @@ module.exports = {
             res.redirect('/')
         }else{
             return res.render('users/login',{
+                title: "login",
                 errors : errors.mapped()
             })
         }
