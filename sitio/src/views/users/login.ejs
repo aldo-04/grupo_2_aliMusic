@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %> 
 
     <body class="login">
         <%- include('../partials/sidebar') %> 
@@ -10,13 +10,15 @@
                     <a href="/">volver</a>
                 </div>
                 <h4>Ingresar a <br>ALI MUSIC</h4>
-                <form action="">
+             <form action="" method="POST"> 
                     <section class="datos">
                         <div class="box-form">
-                            <input type="usuario" name="usuario" placeholder="usuario">
+                            <input type="email" name="email" placeholder="email">
+                            <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
                         </div>
                         <div class="box-form">
                             <input type="password" name="password" id="password" placeholder="contraseña">
+                            <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
                         </div>
 
                         <div class="box-remember">

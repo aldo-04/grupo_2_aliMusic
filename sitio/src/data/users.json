@@ -2,31 +2,21 @@
   {
     "id": 1,
     "name": "Lucas",
-    "last_name": "Diaz Mouhsen",
+    "lastName": "Diaz Mouhsen",
     "email": "lucasmouhsen@gmail.com",
-    "number": 123,
-    "password": "123123",
+    "numero": 1131890767,
+    "password": "$2a$10$y4ZJtUJ20Z2AU7VfeTvYi.ty1My08LIiAM4LaZ0M72ZHsznhP9Tve",
     "rol": "admin",
-    "image": "user-1630626558324.png"
+    "avatar": "avatar_default.png"
   },
   {
     "id": 2,
-    "name": "aldo",
-    "last_name": "Orden",
-    "email": "alulolima@hotmail.com",
-    "number": 123,
-    "password": "123123",
-    "rol": "admin",
-    "image": "avatar_default.png"
-  },
-  {
-    "id": 3,
-    "name": "marian",
-    "last_name": "paz",
-    "email": "jorge.kehoe@yahoo.com.ar",
-    "number": 123,
-    "password": "123123",
-    "rol": "admin",
-    "image": "avatar_default.png"
+    "name": "Aldo",
+    "lastName": "Orden",
+    "email": "aldoorder@gmail.com",
+    "numero": 123456789,
+    "password": "$2a$10$odhKeE.f6PnWATH4vHdLTO6ozLhJ9LR4kHw0IObtLTWSNkoM7r5K2",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
 ]
