@@ -31,7 +31,7 @@
 .sidebar.active .logo_content{
     display: block;
     border-bottom: 1px solid #fff;  
-    height: 10vh;
+    height: 10.2vh;
 }
 .sidebar.active .logo_content .logo{
     color: #fff;
@@ -159,6 +159,7 @@
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 10px;
+    color: #fff;
 }
 .sidebar.active .profile_content .profile_details .job{
     font-size: 12px;

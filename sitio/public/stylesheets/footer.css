@@ -17,6 +17,7 @@ footer .div_grid{
     grid-template-rows: auto auto 50px;
     height: 60%;
     border: 1px solid #fff;
+    margin: 1px;
 }
 footer .div_grid .div_navegacion_footer ul{
     display: grid;
@@ -45,7 +46,7 @@ footer .div_grid2 .div_terminos{
     height: 40%;
 }
 footer .div_grid2 .div_terminos ul{
-    height: 50vw;
+    height: 49vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -54,7 +55,6 @@ footer .div_grid2 .div_terminos ul{
 }
 footer .div_grid2 .div_terminos ul li{
     border: 1px solid #fff;
-    height: 10vh;
     width: 45vw;
 }
 .login footer{
@@ -71,10 +71,22 @@ footer .div_grid2 .div_terminos ul li{
         font-size: 20px;
     } */
     footer{
-        height: 90vw;
+        height: 50vh;
     }
     footer .div_grid{
-        height: 40vw;
+        height: 25vh;
+    }
+    footer .div_grid2{
+        height: 25vh;
+    }
+    footer .div_grid2 .div_terminos{
+        height: 100%;
+    }
+    footer .div_grid2 .div_terminos ul{
+        height: 100%;
+    }
+    footer a{
+        font-size: 22px;
     }
 }
 @media (min-width:769px){
