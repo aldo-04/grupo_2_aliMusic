@@ -24,6 +24,7 @@
 .sidebar.active p{
     display: inline-block;
     transition: all .4s ease;
+    color: #fff;
 }
 .sidebar .logo_content{
     display: none;

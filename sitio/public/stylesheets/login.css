@@ -3,6 +3,10 @@ padding-left: 7px;
 padding-top: 7px;
 }
 
+.login span{
+    color: red
+}
+
 .login main label, .login main p{
     color: #fff;
     padding: 2px;

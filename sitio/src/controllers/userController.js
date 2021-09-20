@@ -30,6 +30,7 @@ module.exports = {
             req.session.userLogin = {
                 id : user.id,
                 name : user.name,
+                lastName : user.lastName,
                 avatar : user.avatar,
                 rol : user.rol
             }
@@ -54,21 +55,21 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
-        const{nombre,apellido,email,numero,password}=req.body
+        const{name,lastName,email,numero,password}=req.body
 
         userRegister={
             id: users[users.length -1] ? users[users.length -1].id +1 : 1,
-            nombre : nombre.trim(),
-            apellido : apellido.trim(),
+            name : name.trim(),
+            lastName : lastName.trim(),
             email: email.trim(),
             numero: +numero,
             password: bcrypt.hashSync(password.trim(),10),
-            rol: nombre.trim() === 'aldo' || nombre.trim() === 'marian' ? "admin": "user",
-            image: req.file ? req.file.filename : 'avatar_default.png',
+            rol: name.trim() === 'aldo' || name.trim() === 'marian' ? "admin": "user",
+            avatar: req.file ? req.file.filename : 'avatar_default.png',
         }
         users.push(userRegister);
         saveUser(users);
-        res.redirect("/");
+        res.redirect("/users/login");
     }else{
         return  res.render('users/register',{
             title: "Register",
@@ -76,8 +77,12 @@ module.exports = {
             errors : errors.mapped()
         })
     }
-},
-
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.cookie("recordarme", null, {MaxAge: -1});
+        res.redirect('/')
+    },
     fav: (req, res) => {
         res.render('users/fav',{
             title: 'fav' 
