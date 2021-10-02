@@ -91,6 +91,12 @@
 
 ### Sprint 4
 
-* En el sprint 4 no tuvimos mucho que hacer ya que habiamos adelantado un 90% del sprint en el anterior, nos juntamos algunas veces para hacer eso que nso faltaba y la retrospectiva, estuvo bien haber adelantado trabajo para poder hacer otras cosas que queriamos como remodelar el css del sitio web.
+* En el sprint 4 no tuvimos mucho que hacer ya que habiamos adelantado un 90% del sprint en el anterior, nos juntamos algunas veces para hacer eso que nos faltaba, estuvo bien haber adelantado trabajo para poder hacer otras cosas que queriamos como remodelar el css del sitio web.
 
+### Sprint 5
 
+* El sprint 5 fue el mas flojo que tuvimos, ya que no pudimos terminar a tiempo todo lo que teniamos, porque fue complicado coordinar nuestros tiempos, con relacion a cuando nos juntabamos a trabajar fue perfecto, el problema fue no poder juntarnos solamente
+
+#### **Hacer mas**
+
+* Organizar mejor los tiempos
