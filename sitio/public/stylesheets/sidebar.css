@@ -113,8 +113,8 @@
     border-radius: 12px;
 }
 .sidebar.active ul li a:hover{
-    color: #11101d;
-    background: #fff
+    background: rgba(255, 255,255, 0.5);
+    
 }
 .sidebar.active ul li a i{
     height: 50px;

@@ -9,7 +9,7 @@ const saveUser = dato =>fs.writeFileSync(path.join(__dirname, '..', 'data', 'use
 module.exports = {
     profile: (req, res) => {
         users.find(user =>{
-            if (user.id === +req.params.id) {
+            if (user.id === res.locals.userLogin.id) {
                 res.render('users/user',{
                     title: 'user',
                     user

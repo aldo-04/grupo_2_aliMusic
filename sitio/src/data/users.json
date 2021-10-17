@@ -18,5 +18,15 @@
     "password": "$2a$10$odhKeE.f6PnWATH4vHdLTO6ozLhJ9LR4kHw0IObtLTWSNkoM7r5K2",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 3,
+    "name": "lucas",
+    "lastName": "diaz",
+    "email": "lucas@gmail.com",
+    "number": null,
+    "password": "$2a$10$SHrUPA2VOruLfO.cSvWGbeevbGjeX3RBOY0ASApyGnNDWIXQXzWHG",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
 ]

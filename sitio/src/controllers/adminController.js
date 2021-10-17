@@ -3,7 +3,7 @@ const path = require('path');
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
 const categories = require('../data/categories.json');
 const capitalizarPrimeraLetra = require('../utils/capitalizeOneLetter.js');
-
+const db = require('../database/models')
 
 
 module.exports = {
@@ -14,11 +14,22 @@ module.exports = {
         })
     },
     add: (req, res) => {
-        return res.render('admin/add',{
-            title: 'add product', /* Aca agregamos un producto */
+        db.Category.findAll({
+            order : [
+                ['name','ASC']
+            ]
+        })
+            .then(categories => res.render('admin/add', {
+                title: 'add product',
+                categories,
+                capitalizarPrimeraLetra,
+            }))
+            .catch(error => console.log(error))
+        /* return res.render('admin/add',{
+            title: 'add product',
             categories,
             capitalizarPrimeraLetra,
-        })
+        }) */
         
     },
     store: (req, res) => {
