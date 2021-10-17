@@ -11,6 +11,16 @@ module.exports = {
       image: {
         type: Sequelize.STRING(500)
       },
+      productId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references : {
+          model : {
+            tableName : 'Products',
+          },
+          key : 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

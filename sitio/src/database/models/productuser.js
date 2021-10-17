@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      ProductUser.belongsToMany(models.Product)
-      ProductUser.belongsToMany(models.User)
+      /* ProductUser.belongsToMany(models.Product) */
+      /* ProductUser.belongsToMany(models.User) */
     }
   };
   ProductUser.init({

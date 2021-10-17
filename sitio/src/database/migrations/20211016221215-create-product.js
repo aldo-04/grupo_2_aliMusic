@@ -45,16 +45,6 @@ module.exports = {
           key : 'id'
         }
       },
-      imageId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references : {
-          model : {
-            tableName : 'imageProducts',
-          },
-          key : 'id'
-        }
-      },
       statusId: {
         type: Sequelize.INTEGER,
         allowNull: false,

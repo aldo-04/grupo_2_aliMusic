@@ -24,7 +24,7 @@
                     <select name="category" id="category">
                         <option value="" hidden selected>Seleccione el categoria</option>
                       <% categories.forEach(category => { %>
-                        <option value="<%= category %>"><%= capitalizarPrimeraLetra(category) %></option>
+                        <option value="<%= category.id %>"><%= capitalizarPrimeraLetra(category.category) %></option>
                       <% }) %>
                     </select>
                 </div>
