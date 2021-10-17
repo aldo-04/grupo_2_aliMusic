@@ -49,6 +49,7 @@ module.exports = {
                     fav: 0,
                     sold: 0,
                     cart: 0,
+                    statusId:1
                 }
             )
                 .then(product => {
