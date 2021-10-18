@@ -9,10 +9,20 @@ const db = require('../database/models')
 
 module.exports = {
     index: (req, res) => {
-        return res.render('admin/index',{
+        db.Product.findAll({
+            include : ['images','productStates']
+        })
+        .then(products =>{
+            res.render('admin/index',{
+                title: 'admin',
+                products
+            })
+        })
+        .catch(err=>console.log(err))
+        /* res.render('admin/index',{
             title: 'admin',
             products
-        })
+        }) */
     },
     add: (req, res) => {
         db.Category.findAll({
