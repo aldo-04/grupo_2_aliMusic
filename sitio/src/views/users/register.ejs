@@ -15,18 +15,18 @@
 
             <div class="datos">
                 <div>
-                    <input type="text" name="name" value="<%= locals.old && old.nombre ? old.nombre : null %>" placeholder="Escribe tu nombre">
-                    <span> <%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </span>
+                    <input type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>" placeholder="Escribe tu nombre">
+                    <span> <%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 </div>
 
                 <div>
-                    <input type="text" name="lastName" value="<%= locals.old && old.apellido ? old.apellido : null %>" placeholder="Escribe tu apellido" >
-                    <span> <%= locals.errors && errors.apellido ? errors.apellido.msg : null %> </span>
+                    <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>" placeholder="Escribe tu apellido" >
+                    <span> <%= locals.errors && errors.lastName ? errors.lastName.msg : null %> </span>
                 </div>
 
                 <div>
-                    <input type="number" name="number" value="<%= locals.old && old.numero ? old.numero : null %>" placeholder="Tu numero" >
-                    <span> <%= locals.errors && errors.numero ? errors.numero.msg : null %> </span>
+                    <input type="number" name="number" value="<%= locals.old && old.number ? old.number : null %>" placeholder="Tu numero" >
+                    <span> <%= locals.errors && errors.number ? errors.number.msg : null %> </span>
                 </div>
 
                 <div>

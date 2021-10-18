@@ -18,10 +18,10 @@ const upload = multer({ storage })
 
 router.get('/', adminCheck, index)
 router.get('/add', adminCheck, add);
-router.post('/add', upload.single('image') ,store);
+router.post('/add', upload.array('image') ,store);
 
 router.get('/edit/:id', adminCheck, edit);
-router.put('/edit/:id', upload.single("image"), update);
+router.put('/edit/:id', upload.array("image"), update);
 
 router.delete('/delete/:id', destroy);
 

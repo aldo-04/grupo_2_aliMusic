@@ -28,5 +28,15 @@
     "password": "$2a$10$SHrUPA2VOruLfO.cSvWGbeevbGjeX3RBOY0ASApyGnNDWIXQXzWHG",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 4,
+    "name": "aldo",
+    "lastName": "orden",
+    "email": "aldo@gmail.com",
+    "number": null,
+    "password": "$2a$10$xEayb5s2tF7YNVB6swkjG.7PBpL1C9nIL5Vbk8347eKpL90Xddi5S",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   }
 ]

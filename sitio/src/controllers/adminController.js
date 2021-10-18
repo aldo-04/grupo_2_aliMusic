@@ -37,7 +37,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()){
             const {name, price, discount,category,description } = req.body
-            const image = req.file
+            const status = 1
             
             db.Product.create(
                 {
@@ -49,7 +49,7 @@ module.exports = {
                     fav: 0,
                     sold: 0,
                     cart: 0,
-                    statusId:1
+                    statusId: status
                 }
             )
                 .then(product => {
@@ -57,12 +57,12 @@ module.exports = {
                     if (req.files.length != 0) {
                         let images = req.files.map(image =>{
                             let item = {
-                                file: image.filename,
+                                image: image.filename,
                                 productId: product.id
                             }
                             return item
                         })
-                        db.Image.bulkCreate(images,{validate: true})
+                        db.ImageProduct.bulkCreate(images,{validate: true})
                             .then( () => console.log('imagenes guardadas satisfactoriamente'))
                     }
                     return res.redirect('/admin')
