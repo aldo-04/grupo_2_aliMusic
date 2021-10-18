@@ -97,17 +97,63 @@ module.exports = {
         res.redirect("/admin") */
     },
     edit: (req, res) => {
-        let product = products.find(product => product.id === +req.params.id);
+        let product = db.Product.findByPk(req.params.id,{
+            include : ['images','productStates','category']
+        })
+
+        let categories = db.Category.findAll({
+            order : [["id","ASC"]]
+        })
+
+        Promise.all([categories,product])
+
+        .then(([categories,product])=>{
+            res.render('admin/edit',{
+                title: 'Edit product',
+                product,
+                categories
+            })
+        })
+        .catch(err=>{console.log(err)})
+        /* let product = products.find(product => product.id === +req.params.id);
         return res.render('admin/edit',{
-            title: 'Edit product', /* Aca editamos un producto */
+            title: 'Edit product',
             products,
             product,
             categories
-        })
+        }) */
     },
     update: (req, res) => {
          const {name,description, price, discount, category} = req.body;
-         products.find(product=>{
+         db.Product.update(
+            {
+                name: name.trim(),
+                price,
+                discount,
+                categoryId: category,
+                description: description.trim(),
+            },
+            {
+                where: {id:req.params.id}
+            }
+        )
+            .then(product => {
+                if (req.files.length != 0) {
+                    let images = req.files.map(image =>{
+                        let item = {
+                            image: image.filename,
+                            productId: product.id
+                        }
+                        return item
+                    })
+                    db.ImageProduct.bulkCreate(images,{validate: true, updateOnDuplicate: ["productId"] })
+                        .then( () => console.log('imagenes guardadas satisfactoriamente'))
+                }
+                return res.redirect('/admin')
+            })
+            .catch(error => console.log(error))
+
+         /* products.find(product=>{
             if(product.id === +req.params.id){
                 product.name = name
                 product.price = +price
@@ -126,7 +172,7 @@ module.exports = {
             }
          })
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(products,null,2),'utf-8');
-        res.redirect("/admin")
+        res.redirect("/admin") */
          
         },
     destroy: (req, res) => {

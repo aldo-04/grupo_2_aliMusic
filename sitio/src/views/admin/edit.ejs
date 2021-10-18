@@ -24,12 +24,12 @@
                         <div class="box-form">
                             <label for="category">Categorias: </label>
                             <select name="category" id="category">
-                                <option value="<%= product.category %>" hidden selected>
-                                    <%= product.category %>
+                                <option value="<%= product.category.id %>" hidden selected>
+                                    <%= product.category.category %>
                                 </option>
-                                <% categories.forEach(category=> { %>
-                                    <option value="<%= category %>">
-                                        <%= capitalizarPrimeraLetra(category) %>
+                                <% categories.forEach(category=> { %> 
+                                    <option value="<%= category.id %>">
+                                        <%= capitalizarPrimeraLetra(category.category) %>
                                     </option>
                                     <% }) %>
                             </select>
@@ -43,9 +43,13 @@
                             <div class="box-i">
                             <div class="img-subir">
                                 <label for="image">Agregar imagen:</label>
-                                <input type="file" name="image" id="image">
+                                <input type="file" name="image" id="image" multiple>
                             </div>
-                            <img src="/images/articulos/<%= product.image %> " alt="" width="65px">
+                            <% if (product.images.length != 0) { %>
+                                <% product.images.forEach(image => { %>
+                                    <img src="/images/articulos/<%=image.image%>" alt="" width="80px">
+                                <% }) %>  
+                            <% } %>                     
                         </div>
                     </div>
                     </section>

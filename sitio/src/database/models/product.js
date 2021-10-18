@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       Product.hasMany(models.ImageProduct,{
         as:"images"
       })
-      Product.belongsTo(models.Category)
+      Product.belongsTo(models.Category,{
+        as:"category",
+        foreignKey:"categoryId"
+      })
       Product.belongsTo(models.ProductState,{
         as:"productStates",
         foreignKey:"statusId"
