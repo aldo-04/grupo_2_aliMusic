@@ -5,17 +5,14 @@ const bcrypt = require("bcryptjs")
 
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'),'utf-8'));
 const saveUser = dato =>fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'),JSON.stringify(users,null,2),'utf-8');
+const db = require('../database/models')
 
 module.exports = {
     profile: (req, res) => {
-        users.find(user =>{
-            if (user.id === res.locals.userLogin.id) {
-                res.render('users/user',{
-                    title: 'user',
-                    user
-                })
-            }
-        })
+        db.User.findByPk(req.session.userLogin.id)
+            .then(user => {
+                res.send(user)
+            })
         
     },
     login : (req,res) => res.render('users/login',{
@@ -24,27 +21,36 @@ module.exports = {
     processLogin : (req,res) => {
         let errors = validationResult(req);
         
-        if(errors.isEmpty()){
-            let user = users.find(user => user.email === req.body.email.trim());
-
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                lastName : user.lastName,
-                avatar : user.avatar,
-                rol : user.rol
-            }
-
-            if(req.body.recordar){
-                res.cookie("recordarme", req.session.userLogin, {maxAge:1000 * 60})
-            }
-            res.redirect('/')
+        console.log(errors)
+        if (errors.isEmpty()) {
+            const{email, recordar} = req.body
+            db.User.findOne({
+                where: {
+                    email
+                }
+            })
+                .then(user => {
+                    req.session.userLogin = {
+                        id : user.id,
+                        fistName : user.firstName,
+                        lastName : user.lastName,
+                        avatar : user.avatar,
+                        rol : user.rol
+                    }
+                    if (recordar) {
+                        res.cookie("recordarme", req.session.userLogin, {maxAge:1000 * 60})
+                    }
+                    return res.redirect('/')
+                })
+                .catch(error => console.log(error))
+            
         }else{
-            return res.render('users/login',{
-                title: "login",
-                errors : errors.mapped()
+            return  res.render('users/login',{
+                title:'Login',
+                errores: errors.mapped()
             })
         }
+        
     },
     register: (req, res) => {
         res.render('users/register',{
@@ -55,26 +61,31 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
-        const{name,lastName,email,numero,password}=req.body
-
-        userRegister={
-            id: users[users.length -1] ? users[users.length -1].id +1 : 1,
-            name : name.trim(),
+        const{firstName,lastName,email,numero,password}=req.body
+        db.User.create({
+            userName : 'sherlock',
+            firstName : firstName.trim(),
             lastName : lastName.trim(),
             email: email.trim(),
             number: +numero,
             password: bcrypt.hashSync(password.trim(),10),
-            rol: name.trim() === 'aldo' || name.trim() === 'marian' ? "admin": "user",
+            rolId: firstName.trim() === 'aldo' || firstName.trim() === 'marian' ? 1: 1,
             avatar: req.file ? req.file.filename : 'avatar_default.png',
-        }
-        users.push(userRegister);
-        saveUser(users);
-        res.redirect("/users/login");
+        })
+            .then(user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    firstName: user.firstName,
+                    avatar: user.avatar,
+                    rolId: user.rolId
+                }
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
     }else{
-        return  res.render('users/register',{
-            title: "Register",
-            old : req.body,
-            errors : errors.mapped()
+        return res.render('user/register',{
+            title : 'Register',
+            errores : errors.mapped()
         })
     }
     },

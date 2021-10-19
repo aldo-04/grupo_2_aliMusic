@@ -6,7 +6,7 @@
 
 .details main{
     width:88%;
-    margin:10px auto;
+    margin:75px auto;
 }
 
 .details main div.box-product{
@@ -82,6 +82,8 @@
 
 .details main div.detalles{
     padding: 3%;
+    background-color: #070707;
+    color: #fff;
 }
 
 .details main div.detalles ul li{
@@ -209,7 +211,7 @@
 
     .details main{
         width:100%;
-        margin-top:50px
+        margin-top:150px
     }
 
     .details main div.box-product{
