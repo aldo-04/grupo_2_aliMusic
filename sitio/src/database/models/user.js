@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.belongsTo(models.Rol)
       /* User.belongsToMany(models.ProductUser) */
     }
   };
@@ -23,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     number: DataTypes.INTEGER,
     password: DataTypes.STRING,
     avatar: DataTypes.STRING,
-    rolId: DataTypes.INTEGER
+    rol: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',

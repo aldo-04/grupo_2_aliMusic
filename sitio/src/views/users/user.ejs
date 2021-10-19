@@ -4,6 +4,41 @@
 <body class="user">
     <%- include('../partials/sidebar') %> 
     <main>
+        <div>
+            <form action="/users/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                <div >
+                    <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>">
+                </div>
+                <div >
+                    <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">
+                </div>
+                <div >
+                    <input type="number" name="number" id="number" value="<%= user.number %>">
+                </div>
+                <div >
+                    <input type="email" name="email" id="email" value="<%= user.email %>">
+                </div>
+    
+                <div >
+                    <input type="password" name="password" id="password" value="<%= locals.userLogin.password %>">
+                </div>
+                <div >
+                    <input type="Password" name="newPassword" id="newPassword" value="">
+                </div>
+    
+                <div >
+                    <img src="/images/fotoUser/<%= user.avatar %>" alt="avatar">
+                    <label class="img-perfil" for="avatar">Imagen De Perfil</label>
+                    <input class="img-input" type="file" name="avatar" id="avatar">
+                </div>
+    
+                <div>
+                    <button type="submit">Editar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+    
+            </form>
+        </div>
         <div class="contain">
             <table role="table">
                 <thead role="rowgroup">

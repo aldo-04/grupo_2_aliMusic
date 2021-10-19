@@ -51,6 +51,7 @@ module.exports = {
                     fav: 0,
                     sold: 0,
                     cart: 0,
+                    userId: req.session.userLogin.id,
                     statusId: status
                 }
             )

@@ -7,19 +7,32 @@ module.exports = [
     /* check('email')
     .isEmail().withMessage('Debe ingresar un email ').bail()
     .custom((value,{req}) => {
+        
         return db.User.findOne({
-            where: {
-                email
+            where : {
+                email : value,
             }
         })
             .then(user => {
-                if(!user || !bcryptjs.compareSync(req.body.password, user.password)){
+                if(!user){
                     return Promise.reject()
                 }
-            }).catch( () => Promise.reject('Credenciales inválidas'))
-            
-    }).withMessage('Credenciales inválidas'),
+            }).catch( () => Promise.reject('Credenciales inválidas(email)'))
+    }),
     
     check('password')
-    .notEmpty().withMessage('El campo de contraseña no puede estar vacío') */
+    .notEmpty().withMessage('El campo de contraseña no puede estar vacío')
+    .custom((value,{req}) => {
+        
+        return db.User.findOne({
+            where : {
+                email : value,
+            }
+        })
+            .then(User => {
+                if(!bcrypt.compareSync(req.body.password, User.password)){
+                    return Promise.reject()
+                }
+            }).catch( () => Promise.reject('Credenciales inválidas(pass)'))
+    }) */
 ]

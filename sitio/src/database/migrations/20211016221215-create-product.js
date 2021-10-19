@@ -35,6 +35,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
