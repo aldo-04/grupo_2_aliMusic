@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/models')
 
 module.exports = [
-    /* check('email')
+     check('email')
     .isEmail().withMessage('Debe ingresar un email ').bail()
     .custom((value,{req}) => {
         
@@ -17,7 +17,7 @@ module.exports = [
                 if(!user){
                     return Promise.reject()
                 }
-            }).catch( () => Promise.reject('Credenciales inválidas(email)'))
+            }).catch( () => Promise.reject('Credenciales inválidas'))
     }),
     
     check('password')
@@ -26,13 +26,13 @@ module.exports = [
         
         return db.User.findOne({
             where : {
-                email : value,
+                email : req.body.email,
             }
         })
             .then(User => {
                 if(!bcrypt.compareSync(req.body.password, User.password)){
                     return Promise.reject()
                 }
-            }).catch( () => Promise.reject('Credenciales inválidas(pass)'))
-    }) */
+            }).catch( () => Promise.reject('Credenciales inválidas'))
+    })
 ]

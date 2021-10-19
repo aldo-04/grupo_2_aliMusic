@@ -60,7 +60,7 @@ module.exports = {
         }else{
             return  res.render('users/login',{
                 title:'Login',
-                errores: errors.mapped()
+                errors: errors.mapped()
             })
         }
         
@@ -98,7 +98,7 @@ module.exports = {
     }else{
         return res.render('user/register',{
             title : 'Register',
-            errores : errors.mapped()
+            errors : errors.mapped()
         })
     }
     },
