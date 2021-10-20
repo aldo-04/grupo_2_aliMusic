@@ -39,7 +39,7 @@
 }
 
 .details main div.img img{
-    width: 100%;
+    width: 50%;
     object-fit: contain;
     border-radius: 8px 8px 0px 0px;
 }

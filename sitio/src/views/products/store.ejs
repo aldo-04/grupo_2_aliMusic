@@ -11,8 +11,6 @@
 
             <h1>Todos los productos</h1>
 
-            
-             
             <div class="div_container">
                 <% products.forEach(product=> { %>
                         <article class="art">
@@ -20,7 +18,7 @@
                             <!-- href="/products/detail/<%= product.id %>" -->
                             <div class="div_img">
                                 <a href="/products/detail/<%= product.id %>">
-                                    <img src="/images/articulos/<%= product.image %>" alt="">
+                                    <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
                                 </a>
                                 <p class="name">
                                     <%= product.name %>

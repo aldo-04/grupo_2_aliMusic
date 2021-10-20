@@ -9,7 +9,7 @@
              
             <div class="product">
                 <div class="img">
-                    <img src="/images/articulos/<%= product.image %> " alt="<%= product.name + product.model %> ">
+                    <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>"  alt="<%= product.name + product.model %> ">
                     <a href="">
                         <i class="far fa-star"></i>
                     </a>
@@ -51,7 +51,7 @@
                 <article>
                     <a href="/products/detail/<%= producto.id %>">
                         <div class="imageContain">
-                            <i class="far fa-star"></i><img src="/images/articulos/<%= producto.image %> " alt="">
+                            <i class="far fa-star"></i><img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
                         </div>
                         <div>
                             <p><%= producto.name %> </p>
