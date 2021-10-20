@@ -24,9 +24,13 @@
                         
                         <p>$ <%= product.price %> </p>
                     
-                        <a href="/products/cart">
-                            <p><i class="fas fa-shopping-cart"></i> Comprar</p>
-                        </a>
+                        <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
+                            
+                            <a href="">
+                                <button class="fas fa-shopping-cart" type="submit">Comprar</button>
+                                
+                            </a>
+                        </form>
            
                         <div class="cant">
                             <button type="button">-</button>

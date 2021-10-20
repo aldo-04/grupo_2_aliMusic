@@ -49,6 +49,22 @@ module.exports = {
         })
         .catch(err=>console.log(err))
     },
+    addCart: (req, res) => {
+        db.Product.update(
+            {
+                cart: 1
+            },
+            {
+                where: {id: req.params.id}
+            }
+        ).then(product =>{
+            product.cart = 1
+            console.log(product)
+            return res.redirect('/products/cart')
+        })
+        .catch(err=>console.log(err))
+            
+    },
     info: (req, res) => {
         db.Product.findAll({
             include : ['images','productStates']
@@ -60,5 +76,5 @@ module.exports = {
             })
         })
         .catch(err=>console.log(err))
-        },
+    },
 }

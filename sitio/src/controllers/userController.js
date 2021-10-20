@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs")
 /* const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'),'utf-8'));
 const saveUser = dato =>fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'),JSON.stringify(users,null,2),'utf-8'); */
 const db = require('../database/models')
+const queryInterface = db.sequelize.getQueryInterface();
 
 module.exports = {
     profile: (req, res) => {
@@ -127,5 +128,132 @@ module.exports = {
                 where: {id: req.session.userLogin.id}
             }
         )   .then(() => res.redirect('/user/profile')).catch(error => console.log(error))
-    }
+    },
+    add: (req, res) => {
+        db.Category.findAll({
+            order : [
+                ['category','ASC']
+            ]
+        })
+            .then(categories => res.render('users/add', {
+                title: 'add product',
+                categories,
+                capitalizarPrimeraLetra,
+            }))
+            .catch(error => console.log(error))
+        
+    },
+    store: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            const {name, price, discount,category,description } = req.body
+            const status = 1
+            
+            db.Product.create(
+                {
+                    name: name.trim(),
+                    price,
+                    discount,
+                    categoryId: category,
+                    description: description.trim(),
+                    fav: 0,
+                    sold: 0,
+                    cart: 0,
+                    userId: req.session.userLogin.id,
+                    statusId: status
+                }
+            )
+                .then(product => {
+                    console.log(product)
+                    if (req.files.length != 0) {
+                        let images = req.files.map(image =>{
+                            let item = {
+                                image: image.filename,
+                                productId: product.id
+                            }
+                            return item
+                        })
+                        db.ImageProduct.bulkCreate(images,{validate: true})
+                            .then( () => console.log('imagenes guardadas satisfactoriamente'))
+                    }
+                    return res.redirect('/users/profile/'+ req.session.userLogin.id)
+                })
+                .catch(error => console.log(error))
+        }
+    },
+    edit: (req, res) => {
+        let product = db.Product.findByPk(req.params.id,{
+            include : ['images','productStates','category']
+        })
+
+        let categories = db.Category.findAll({
+            order : [["id","ASC"]]
+        })
+
+        Promise.all([categories,product])
+
+        .then(([categories,product])=>{
+            res.render('users/edit',{
+                title: 'Edit product',
+                product,
+                categories
+            })
+        })
+        .catch(err=>{console.log(err)})
+    },
+    update: (req, res) => {
+        const {name,description, price, discount, category} = req.body;
+        db.Product.update(
+           {
+               name: name.trim(),
+               price,
+               discount,
+               categoryId: category,
+               description: description.trim(),
+           },
+           {
+               where: {id:req.params.id}
+           }
+       )   .then(()=>{
+               db.ImageProduct.findByPk(req.params.id,{
+                   include : ['product']
+               })
+               .then(async () => {
+                   if (req.files.length != 0) {
+                       let images = req.files.map(image =>{
+                           let item = {
+                               image: image.filename,
+                               productId: req.params.id
+                           }
+                           return item
+                       })
+                       await queryInterface.bulkDelete('imageproducts', {
+                           productId : req.params.id
+                       });
+                       db.ImageProduct.bulkCreate(images,{validate: true, updateOnDuplicate: ["productId"] })
+                           .then( () => console.log('imagenes guardadas satisfactoriamente'))
+                   }
+                   return res.redirect('/users/profile/'+ req.session.userLogin.id)
+               })
+               .catch(error => console.log(error))
+           })      
+       },
+       destroy: (req, res) => {
+        db.Product.findByPk(req.params.id,{
+            include: ['images']
+        })
+            .then(() => {
+                db.ImageProduct.destroy({
+                    where: {
+                        productId: +req.params.id 
+                    }
+                })
+                db.Product.destroy({
+                    where: {
+                        id: +req.params.id
+                    }
+                })
+                return res.redirect('/users/profile/'+req.session.userLogin.id)
+            })
+},
 }

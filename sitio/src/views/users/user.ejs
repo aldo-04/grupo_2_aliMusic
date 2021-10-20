@@ -60,8 +60,8 @@
                             <td role="cell" class="oculto">$ <%= product.price %></td>
                             <td role="cell" class="oculto"><%= product.productStates.state %></td>
                             <td role="cell" class="td_botton">
-                                <button><a href="/admin/edit/<%= product.id %>"><i class="fas fa-edit"></i></a></button>
-                                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                <button><a href="/users/edit/<%= product.id %>"><i class="fas fa-edit"></i></a></button>
+                                <form action="/users/delete/<%= product.id %>?_method=DELETE" method="POST">
                                     <button type='submit'><i class="fas fa-trash"></i></button>
                                 </form>
                             </td>

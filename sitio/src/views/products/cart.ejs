@@ -13,26 +13,25 @@
                 <section class="carrito">
                     <div class="product">
                         <% products.forEach(product=> { %>
-                            <% if (product.carrito===true) { %>
+                            <% if (product.cart===1) { %>
                                 <div class="compra">
 
                                     <div class="img_container">
-                                        <img src="/images/articulos/<%= product.image %>"
-                                            alt="Interface-audio-behringer-U-Phoria-UMC22">
+                                        <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
                                     </div>
 
                                     <div class=" product">
                                         <div class="detalles">
                                             <p>
                                                 <%= product.name %>
-                                                    <p>
+                                                <p>
                                                     <p>Precio:$<%= product.price %>
                                                             <div class="mas">
                                                                 <i class="fas fa-plus-circle"></i>
                                                                 <p>01</p>
                                                                 <i class="fas fa-minus-circle"></i>
                                                             </div>
-                                                            <p>Cantidad</p>
+                                                <p>Cantidad</p>
                                         </div>
                                     </div>
 
