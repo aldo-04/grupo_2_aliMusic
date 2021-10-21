@@ -97,7 +97,7 @@ module.exports = {
             })
             .catch(error => console.log(error))
     }else{
-        return res.render('user/register',{
+        return res.render('users/register',{
             title : 'Register',
             errors : errors.mapped()
         })
