@@ -38,6 +38,20 @@ module.exports = {
             .catch(err=>console.log(err))
     },
     cart: (req, res) => {
+        
+        /* db.Cart.findAll({
+            where : {
+                userid: req.session.userLogin.id
+            },
+            include: ['products','images', 'productStates']
+        })
+        .then(products =>{
+            return res.render('products/cart',{
+                title: 'Cart',
+                products : products
+            })
+        }) */
+        
         db.Product.findAll({
             include : ['images','productStates']
         })
@@ -58,8 +72,14 @@ module.exports = {
                 where: {id: req.params.id}
             }
         ).then(product =>{
+            let producto = product
             product.cart = 1
-            console.log(product)
+            db.Cart.create(
+                {
+                    cartProductId: 1,
+                    cartUserId: req.session.userLogin.id
+                }
+            )
             return res.redirect('/products/cart')
         })
         .catch(err=>console.log(err))

@@ -6,10 +6,11 @@
     <%- include('../partials/sidebar') %> 
     <main>
 
+        <form action="" method="post">
         
         <div class="container-main">
             <div class="div_publicar">
-                <img src="/images/logo/logo-de-lado.svg" width="50px" alt="">
+                <a href="/">Ali Music</a>
                 <input type="text" placeholder="Publicar" >
                 <a href=""><i class="far fa-images"></i></a>
                 <a href=""><i class="fas fa-link"></i></a>
@@ -20,23 +21,23 @@
                 <a href=""><i class="fas fa-tags"></i> Nuevo</a>
                 <a href=""><i class="fas fa-tags"></i> Mas votado</a>
             </div>
-            
+        </form>
             <section class="section_post">
                 <% posts.forEach(post => { %>
-                    <% if (post.type === "iframe") { %>
+                    <% if (post.typeId === "iframe") { %>
                         <article class="art">
-                            <h4><%= post.name %> </h4>
-                            <iframe src="<%= post.media %>"></iframe>
+                            <h4><%= post.postName %> </h4>
+                            <iframe src="<%= post.video %>"></iframe>
                             <% if (post.description !== "") { %>
                                 <div class="div_p">
                                     <%= post.description %>
                                 </div>
                             <% } %>
                         </article>
-                    <% } else if (post.type === "image") { %>
+                    <% } else if (post.typeId === "image") { %>
                         <article class="art">
-                            <h4><%= post.name %> </h4>
-                            <img src="/images/comunity/<%= post.media %>" width="100%">
+                            <h4><%= post.postName %> </h4>
+                            <img src="/images/comunity/<%= post.image %>" width="100%">
                             <% if (post.description !== "") { %>
                                 <div class="div_p">
                                     <%= post.description %>
@@ -45,7 +46,7 @@
                         </article>
                     <% } else { %>
                         <article class="art">
-                            <h4><%= post.name %> </h4>
+                            <h4><%= post.postName %> </h4>
                             <div class="div_p">
                                 <%= post.description %>
                             </div>

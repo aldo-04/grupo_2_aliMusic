@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Post.belongsTo(models.User)
-      Post.belongsTo(models.Type)
+      Post.hasMany(models.Type,{
+        as : 'types'
+      })
     }
   };
   Post.init({
@@ -20,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING,
     video: DataTypes.STRING,
     description: DataTypes.STRING,
-    userNameId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     typeId: DataTypes.INTEGER
   }, {
     sequelize,

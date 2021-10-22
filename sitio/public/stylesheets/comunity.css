@@ -14,9 +14,10 @@
     box-shadow: 0 3px 3px 0px;
     height: 35px;
     border-radius: 3px;
-    display:flex;
+    display:grid;
     align-items: center;
     justify-content: space-around;
+    grid-template-columns: auto 70% auto auto;
 }
 .comunity .div_publicar input{
     text-indent: 3px;
