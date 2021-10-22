@@ -97,7 +97,7 @@ module.exports = {
             })
             .catch(error => console.log(error))
     }else{
-        return res.render('user/register',{
+        return res.render('users/register',{
             title : 'Register',
             errors : errors.mapped()
         })
@@ -127,7 +127,7 @@ module.exports = {
             {
                 where: {id: req.session.userLogin.id}
             }
-        )   .then(() => res.redirect('/user/profile')).catch(error => console.log(error))
+        )   .then(() => res.redirect('/users/profile')).catch(error => console.log(error))
     },
     add: (req, res) => {
         db.Category.findAll({

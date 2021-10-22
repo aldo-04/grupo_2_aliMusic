@@ -2,7 +2,7 @@ module.exports = [
     {
         autor: 'Lucas Diaz Mouhsen',
         name: 'Passenger Fall Away',
-        media: 'https://www.youtube.com/embed/Q-ChG3jlgoc',
+        media: 'https://www.youtube.com/embed/cY1JjnLGfuw',
         description: 'Written by Mike Rosenberg\r\nPerformed by Mike Rosenberg & Stu Larsen\r\nRecorded by Chris Vallejo\r\nMixed by Chris Vallejo\r\nEdited & Graded by Nic Minns',
         type : 'iframe'
     },
