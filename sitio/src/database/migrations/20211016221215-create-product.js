@@ -9,11 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(500),
         allowNull: false,
       },
       description: {
-        type: Sequelize.STRING(500),
+        type: Sequelize.STRING(10000),
         allowNull: false,
       },
       price: {
