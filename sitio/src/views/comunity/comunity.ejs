@@ -6,14 +6,21 @@
     <%- include('../partials/sidebar') %> 
     <main>
 
-        <form action="" method="post">
+        
         
         <div class="container-main">
+        <a href="/">Ali Music</a>
             <div class="div_publicar">
-                <a href="/">Ali Music</a>
-                <input type="text" placeholder="Publicar" >
-                <a href=""><i class="far fa-images"></i></a>
-                <a href=""><i class="fas fa-link"></i></a>
+                <form action="/comunity" method="POST" enctype="multipart/form-data">
+
+                    <input type="text" name="name" placeholder="Nombre" >
+                    <input type="text" name="description" placeholder="Publicar" >
+                    <input type="text" name="media"placeholder="link" >
+                    <input type="file" name="image" >
+
+                    <button type="submit">Publicar</button>
+                
+                </form>
             </div>
             <div class="div_filtrar">
                 <a href=""><i class="fas fa-guitar"></i> Mejores</a>
@@ -21,23 +28,22 @@
                 <a href=""><i class="fas fa-tags"></i> Nuevo</a>
                 <a href=""><i class="fas fa-tags"></i> Mas votado</a>
             </div>
-        </form>
             <section class="section_post">
                 <% posts.forEach(post => { %>
-                    <% if (post.typeId === "iframe") { %>
+                    <% if (post.type === "iframe") { %>
                         <article class="art">
                             <h4><%= post.postName %> </h4>
-                            <iframe src="<%= post.video %>"></iframe>
+                            <iframe src="<%= post.media %>"></iframe>
                             <% if (post.description !== "") { %>
                                 <div class="div_p">
                                     <%= post.description %>
                                 </div>
                             <% } %>
                         </article>
-                    <% } else if (post.typeId === "image") { %>
+                    <% } else if (post.type === "image") { %>
                         <article class="art">
                             <h4><%= post.postName %> </h4>
-                            <img src="/images/comunity/<%= post.image %>" width="100%">
+                            <img src="/images/comunity/<%= post.media %>" width="100%">
                             <% if (post.description !== "") { %>
                                 <div class="div_p">
                                     <%= post.description %>

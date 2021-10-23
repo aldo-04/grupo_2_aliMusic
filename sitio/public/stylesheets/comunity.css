@@ -3,31 +3,30 @@
 }
 .comunity .container-main{
     width: 95%;
-    margin: 10px auto;
-    border-radius: 8px;
+    margin: 20px auto;
     color: var(--color-header);
-    
+    background-color: #fff;
 }
 .comunity .div_publicar{
-    background-color: #fff;
     margin-bottom: 20px;
     box-shadow: 0 3px 3px 0px;
-    height: 35px;
     border-radius: 3px;
     display:grid;
     align-items: center;
     justify-content: space-around;
-    grid-template-columns: auto 70% auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    padding: 10px 0;
 }
 .comunity .div_publicar input{
     text-indent: 3px;
+    margin: 10px 0;
 }
 
 .comunity .div_filtrar{
     background-color: #fff;
     margin-bottom: 20px;
     box-shadow: 0 3px 3px 0px;
-    height: 35px;
     border-radius: 3px;
     font-size: 11px;
     display:flex;
@@ -48,7 +47,7 @@
 }
 .comunity section .art iframe{
     width: 100%;
-    height: 250px;
+    height: 50vh;
 }
 .comunity section .art img{
     height: 250px;
@@ -70,7 +69,7 @@
         width: 80%;
     }
     .comunity section .art{
-        max-width: 900px
+        
     }
 }
 

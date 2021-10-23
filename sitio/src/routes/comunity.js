@@ -5,6 +5,8 @@ const upload = require('../middleware/comunityMulter')
 /* GET home page. */
 
 router.get('/',comunity);
-router.post('/add',upload.single('comunity') ,add)
+router.post('/',upload.single('comunity') ,add)
 
 module.exports = router;
+
+
