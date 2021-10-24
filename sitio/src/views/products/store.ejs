@@ -35,9 +35,12 @@
                                     <p class="off">
                                         <%=product.discount + '% OFF'%>
                                     </p>
-                                <% } %> 
-                                <p class="precio">$<%= product.price %>
-                                </p>
+                                    <p class="precio">$<%= product.price %> menos $<%= product.discount>0 ? product.price*product.discount/100  : null %>
+                                    </p>
+                                <% } else { %>
+                                    <p class="precio">$<%= product.price %></p> 
+                                
+                                <% } %>
                             </div>
                         </article>
                 <% }) %>

@@ -17,12 +17,12 @@
 
                     <div class="div_container">
                         <% products.forEach(product=> { %>
-                            <% if (product.statusId ===2 ) { %>
+                            <% if (product.statusId === 2 ) { %>
                                 <article class="art">
                                     <!-- INTENTAR PONERLO EN PARTIALS -->
-                                    <!-- href="/products/detail/<%= product.id %>" -->
+                                    <!-- href="/products/detail/<%= product.id%>" -->
                                     <div class="div_img">
-                                        <a href="/products/detail/<%= product.id %>">
+                                        <a href="/products/detail/<%= product.id%>">
                                             <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
                                         </a>
                                         <p class="name">
@@ -34,15 +34,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="div_price">
-                                        <% if (product.discount>0) { %>
-                                            <p class="off">
-                                                <%=product.discount + '% OFF'%>
-                                            </p>
-                                        <% } %> 
-                                        <p class="precio">$<%= product.price %> - $<%= product.discount>0 ? product.price*product.discount/100  : null %>
-                                        </p>
-                                    </div>
+                                    
                                 </article>
                             <% } %>
                         <% }) %>
