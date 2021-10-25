@@ -14,7 +14,7 @@ const registerValidation = require("../validations/registerValidation")
 
 /* GET users listing. */
 router.get('/profile/:id', loginCheck, profile);
-router.put('/profile/:id', profileEdit);
+router.put('/profile/:id', uploadUser.single('avatar'),profileEdit);
 
 router.get('/login', login);
 router.post('/login',loginValidation, processLogin);
