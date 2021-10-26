@@ -90,6 +90,7 @@ module.exports = {
                 req.session.userLogin = {
                     id: user.id,
                     firstName: user.firstName,
+                    lastName: user.lastName,
                     avatar: user.avatar,
                     rol: user.rol
                 }
@@ -99,7 +100,8 @@ module.exports = {
     }else{
         return res.render('users/register',{
             title : 'Register',
-            errors : errors.mapped()
+            errors : errors.mapped(),
+            old: req.body
         })
     }
     },

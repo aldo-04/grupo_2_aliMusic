@@ -5,62 +5,70 @@
     <%- include('../partials/header') %> 
     <%- include('../partials/sidebar') %> 
     <main>
-       <div class="box-product">
-             
-            <div class="product">
-                <div class="img">
-                    <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>"  alt="<%= product.name + product.model %> ">
-                    <a href="">
-                        <i class="far fa-star"></i>
-                    </a>
-                </div>
-                <div class="contain">
-                    <div class="name">
-                        <i class="fas fa-angle-double-left"></i>
-                        <h2><%= product.name %> </h2>
-                            <i class="fas fa-angle-double-right"></i>
+            <div class="box-product">
+                <div class="product">
+                    <div class="second-img">
+                        <% if (product.images.length != 0 ) { %>
+                            <% for( let i = 1; i < product.images.length; i++ ) { %>
+                                <img class="img-2" src="/images/articulos/<%= product.images[i].image %>"  alt="<%= product.name + product.model %> ">
+                            <% } %>
+                        <% } %>
                     </div>
-                    <div class="descripcion">
-                        
-                        <p>$ <%= product.price %> </p>
-                    
-                        <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
+                    <div class="img">
+                        <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>"  alt="<%= product.name + product.model %> ">
+                        <a href="">
+                            <i class="far fa-star"></i>
+                        </a>
+                    </div>
+                    <div class="contain">
+                        <div class="name">
+                            <i class="fas fa-angle-double-left"></i>
+                            <h2><%= product.name %> </h2>
+                                <i class="fas fa-angle-double-right"></i>
+                        </div>
+                        <div class="descripcion">
                             
-                            <a href="">
-                                <button class="fas fa-shopping-cart" type="submit">Comprar</button>
+                            <p>$ <%= product.price %> </p>
+                        
+                            <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
                                 
-                            </a>
-                        </form>
-           
-                        <div class="cant">
-                            <button type="button">-</button>
-                            <span>01</span>
-                            <button type="button">+</button>
-                            <p>Cantidad</p>
+                                <a href="">
+                                    <button class="fas fa-shopping-cart" type="submit">Comprar</button>
+                                    
+                                </a>
+                            </form>
+               
+                            <div class="cant">
+                                <button type="button">-</button>
+                                <span>01</span>
+                                <button type="button">+</button>
+                                <p>Cantidad</p>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
-                
+                <div class="detalles">
+                    <h3>Detalles del producto</h3>
+                    <p><%= product.description %> </p>
+                </div>
             </div>
-            <div class="detalles">
-                <h3>Detalles del producto</h3>
-                <p><%= product.description %> </p>
-            </div>
-        </div>
             
         <section class="relacionados">
             <h2>Productos relacionados</h2>
-            <% products.forEach(producto => { %>
+            <% products.forEach(product => { %>
 
                 <article>
-                    <a href="/products/detail/<%= producto.id %>">
+                    <a href="/products/detail/<%= product.id %>">
                         <div class="imageContain">
                             <i class="far fa-star"></i><img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
                         </div>
                         <div>
-                            <p><%= producto.name %> </p>
-                            <p>$ <%= producto.price %> </p>
-                            <input type="button" value="Agregar al carrito">
+                            <p><%= product.name %> </p>
+                            <p>$ <%= product.price %> </p>
+                            <a href="/products/detail/<%= product.id %>" class="detail">
+                                Ver más
+                            </a>
                         </div>
                     </a>
             </article>
