@@ -79,6 +79,12 @@ footer .div_grid2 .div_terminos ul li{
     footer .div_grid2{
         height: 25vh;
     }
+    footer .div_grid2 li{
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        place-content: center;
+    }
     footer .div_grid2 .div_terminos{
         height: 100%;
     }
