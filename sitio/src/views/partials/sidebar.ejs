@@ -5,8 +5,11 @@
             <i class='bx bx-menu' id="header-toggle_2"></i>
         </div>
         <div class="header__container">
-            <img src="/images/fotoUser/avatar_default.png" alt="" class="header__img">
-
+            <% if (locals.userLogin) { %>
+                <img src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
+            <% }else {%>
+                <img src="/images/fotoUser/avatar_default.png" alt="" class="header__img">
+                <% }%>
             <a href="/" class="header__logo">Ali Music</a>
 
             <div class="header__search">
@@ -24,7 +27,7 @@
     <div class="nav px-3" id="navbar">
         <nav class="nav__container">
             <div>
-                <a href="#" class="nav__link nav__logo">
+                <a href="/" class="nav__link nav__logo">
                     <i class='bx bxs-disc nav__icon' ></i>
                     <span class="nav__logo-name">Ali Music</span>
                 </a>

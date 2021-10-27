@@ -28,7 +28,7 @@ router.get('/add', loginCheck, add);
 router.post('/add', uploadProduct.array('image'), loginCheck ,store);
 
 router.get('/edit/:id', loginCheck, edit);
-router.put('/edit/:id', uploadProduct.array("image"), loginCheck, update);
+router.put('/edit/:id', uploadProduct.array("avatar"), loginCheck, update);
 
 router.delete('/delete/:id', destroy);
 
