@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %> 
-<body class="edit">
+<%- include('../partials/headBootstrap') %> 
+<body >
     <%- include('../partials/sidebar') %> 
 
-    <body class="edit">
-
             <main>
+                    <form action="/users/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <div class="container mb-5 mt-5">
+                            <div >
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Datos personales</h5>
+                                        <div class="form-group">
+                                            <label for="name">Nombre del producto:</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Precio:</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastName" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Descuento:</label>
+                                            <input type="text" class="form-control" id="email" name="email" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Password">Categorias:</label>
+                                            <select class='form-control' name="" id="">
+                                                <option value="<%= product.category.id %>" hidden selected>
+                                                    <%= product.category.category %>
+                                                </option>
+                                                <% categories.forEach(category=> { %> 
+                                                    <option value="<%= category.id %>">
+                                                        <%= capitalizarPrimeraLetra(category.category) %>
+                                                    </option>
+                                                    <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class='description form-group'>
+                                            <label for="description"> Descipción:</label>
+                                            <textarea class="form-control" name="description" id="description" cols="30"
+                                                rows="10"><%= product.description %> </textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <% if (product.images.length != 0) { %>
+                                                <% product.images.forEach(image => { %>
+                                                    <img src="/images/articulos/<%=image.image%>" alt="" width="80px">
+                                                <% }) %>  
+                                            <% } %> 
+                                            <input class="img-input" type="file" name="avatar" id="avatar">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Editar</button>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </form> 
+            <!-- </div>
                 <form action="/users/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <section class="section-add">
                         <div class="box-form">
@@ -59,6 +108,9 @@
 
 
                 </form>
+                <form action="/users/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    
+                </form> -->
             </main>
             <%- include('../partials/footer') %> 
 

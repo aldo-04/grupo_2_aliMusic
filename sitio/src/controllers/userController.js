@@ -90,6 +90,7 @@ module.exports = {
                 req.session.userLogin = {
                     id: user.id,
                     firstName: user.firstName,
+                    lastName: user.lastName,
                     avatar: user.avatar,
                     rol: user.rol
                 }
@@ -99,7 +100,8 @@ module.exports = {
     }else{
         return res.render('users/register',{
             title : 'Register',
-            errors : errors.mapped()
+            errors : errors.mapped(),
+            old: req.body
         })
     }
     },
@@ -115,19 +117,20 @@ module.exports = {
     },
     profileEdit: (req, res) => {
         const {firstName, lastName, number, email, password, newPassword, avatar} = req.body
+        console.log(req.body)
         db.User.update(
             {
                 firstName: firstName.trim(),
                 lastName: lastName.trim(),
                 number: number,
                 email: email.trim(),
-                password: newPassword.isEmpty() ? bcrypt.hashSync(password.trim(),10) : bcrypt.hashSync(newPassword.trim(),10),
+                password: newPassword == '' ? bcrypt.hashSync(password.trim(),10) : bcrypt.hashSync(newPassword.trim(),10),
                 avatar: req.file ? req.file.filename : avatar
             },
             {
                 where: {id: req.session.userLogin.id}
             }
-        )   .then(() => res.redirect('/users/profile')).catch(error => console.log(error))
+        )   .then(() => res.redirect('/users/profile/'+req.session.userLogin.id)).catch(error => console.log(error))
     },
     add: (req, res) => {
         db.Category.findAll({

@@ -39,3 +39,14 @@
     padding: 5px 10px;
     color: var(--color-a-fav)
 }
+
+/*css profile prueba*/
+body.user main div form div.img{
+    display:flex;
+
+}
+
+body.user main div form div.img img{
+    width : 50%
+    
+}

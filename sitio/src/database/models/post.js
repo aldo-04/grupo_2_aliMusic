@@ -11,10 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Post.belongsTo(models.User)
-      Post.hasMany(models.Type,{
-        as : 'types'
-      })
+      /* Post.belongsTo(models.User,{
+        as: 'user',
+        foreignKey: 'userNameId',
+      }
+        )
+      Post.belongsTo(models.Type,{
+        as : 'type',
+        foreignKey : 'typeId'
+      }) */
     }
   };
   Post.init({
