@@ -1,42 +1,24 @@
 /*========== GOOGLE FONTS ==========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*========== VARIABLES CSS ==========*/
 :root {
   --header-height: 3.5rem;
   --nav-width: 219px;
-
-  /*========== Colors ==========*/
   --first-color: #ffffff;
   --first-color-light: #F4F0FA;
   --title-color: #ffffff;
-  --text-color: #b7b7b7;
+  --text-color: #000000;
   --text-color-light: #b7b7b7;
   --body-color: #F9F6FD;
   --container-color: #11101d;
-
-  /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
   --smaller-font-size: .75rem;
-
-  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-
-  /*========== z index ==========*/
   --z-fixed: 100;
 }
-
-/* @media screen and (min-width: 1024px) {
-  :root {
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-} */
-
 /*========== HEADER ==========*/
 .header {
   position: fixed;
@@ -64,8 +46,8 @@
 
 .header__logo {
   color: var(--title-color);
-  font-weight: var(--font-medium);
   display: none;
+  font-weight: var(--font-medium);
 }
 
 .header__search {
@@ -73,6 +55,10 @@
   padding: .40rem .75rem;
   background-color: var(--first-color-light);
   border-radius: .25rem;
+}
+
+.header__toggle_2 {
+  display: none;
 }
 
 .header__input {
@@ -109,6 +95,7 @@
   box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
   z-index: var(--z-fixed);
   transition: .4s;
+  width: 150px;
 }
 
 .nav__container {
@@ -138,6 +125,7 @@
 
 .nav__list {
   row-gap: 2.5rem;
+  padding-top: 30px;
 }
 
 .nav__items {
@@ -152,9 +140,8 @@
 }
 
 .nav__link {
-  display: flex;
   align-items: center;
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .nav__link:hover {
@@ -179,7 +166,7 @@
 /* Dropdown */
 .nav__dropdown {
   overflow: hidden;
-  max-height: 21px;
+  max-height: 30px;
   transition: .4s ease-in-out;
 }
 
@@ -196,7 +183,7 @@
 }
 
 .nav__dropdown-item {
-  font-size: var(--smaller-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
 }
@@ -250,6 +237,16 @@
     width: 300px;
     padding: .55rem .75rem;
   }
+  .header__toggle_2{
+    display: block;
+    position: absolute;
+    font-size: 2.2rem;
+    display: block;
+    color: var(--title-color);
+    cursor: pointer;
+    top: 23%;
+    left: 2%;
+  }
   .header__toggle {
     display: none;
   }
@@ -261,18 +258,25 @@
     height: 40px;
     order: 1;
   }
-  
+  a.header__logo {
+    font-size: 30px;
+  }
+
   .nav {
     left: 0;
     padding: 1.2rem 1.5rem 0;
-    width: 68px; /* Reduced navbar */
+    width: 100px; /* Reduced navbar */
     opacity: 0;
   }
   .nav__items {
-    row-gap: 1.7rem;
+    padding-top: 50px;
+    row-gap: 2rem;
   }
   .nav__icon {
     font-size: 1.3rem;
+  }
+  .nav__link{
+    font-size: 27px
   }
 
   /* Element opacity */
@@ -282,6 +286,7 @@
   .nav__dropdown-icon {
     opacity: 0;
     transition: .3s;
+    font-size: 21px;
   }
   
   
