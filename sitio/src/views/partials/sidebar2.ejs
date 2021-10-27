@@ -1,0 +1,94 @@
+<header>
+    <div class="i_sidebar">
+        <i class="fas fa-bars" id="btn2"></i>
+    </div>
+    <div class="logo_header">
+        <p>ALI MUSIC</p>
+    </div>
+</header>
+
+
+<div class="sidebar">
+    <div class="logo_content">
+        <a href="/">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <div class="logo_name"><p>Ali Music</p></div>
+            </div>
+        </a>
+        <i class="fas fa-bars" id="btn"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <i class="fas fa-search" id="fa-search"></i>
+            <input type="text" placeholder="Search...">
+        </li>
+        <!-- SIN LOGIN -->
+        <li><a href="/"><i class="fas fa-home"></i><p>Inicio</p></a></li>
+        <li><a href="/products"><i class="fas fa-money-bill-alt"></i><p>Tienda</p></a></li>
+        <li><a href="/about"><i class="fas fa-id-card"></i><p>Sobre Nosotros</p></a></li>
+        <li><a href="/comunity"><i class="fas fa-guitar"></i><p>Comunidad</p></a></li>
+
+        <% if (!locals.userLogin) { %>
+            <li><a href="/users/register"><i class="fas fa-save"></i><p>Register</p></a></li>
+            <li><a href="/users/login"><i class="fas fa-sign-in-alt"></i><p>Acceder</p></a></li>
+        <% } else{%>
+            <!-- CON LOGIN -->
+            <li><a href="/products/cart"><i class="fas fa-shopping-cart"></i><p>Carrito</p></a></li>
+            <li><a href="/users/profile/<%= locals.userLogin.id %>"><i class="fas fa-id-card"></i><p>Perfil</p></a></li>
+            <li><a href="/users/add"><i class="fas fa-id-card"></i><p>Agregar</p></a></li>
+            <% if (locals.userLogin.rol === 1) { %>
+                <!-- ADMIN -->
+                <li><a href="/admin/add"><i class="fas fa-id-card"></i><p>Add Admin</p></a></li>
+                <li><a href="/admin"><i class="far fa-star"></i><p>Admin</p></a></li>
+            <% } %>
+            <li><a href="/users/logout"><i class="fas fa-sign-in-alt"></i><p>Cerrar sesion</p></a></li>
+        <% }%>
+        
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <% if (locals.userLogin) { %> <!-- Cambiar por req.session cuando este configurado -->
+                    <a href="/users/profile/<%= locals.userLogin.id %>">
+                        <img src="/images/fotoUser/<%= locals.userLogin.avatar %>" alt="">
+                    </a>
+                    <div class="name_job">
+                        <a href="/users/profile/<%= locals.userLogin.id %>" class="name"><p><%= locals.userLogin.firstName +' '+ locals.userLogin.lastName %> </p></a>
+                        <!-- <div class="job"><p>Web Designer</p></div> -->
+                    </div>
+                <% } else { %>
+                    <a href="/users/login">
+                        <img src="/images/profile.jpg" alt="">
+                    </a>
+                    <div class="name_job">
+                        <a href="/users/login" class="name"><p>Iniciar sesion</p></a>
+                        <!-- <div class="job"><p>Web Designer</p></div> -->
+                    </div>
+                <% } %>
+            </div>
+            <a href="/users/logout">
+                <p><i class="fas fa-sign-out-alt" id="log_out"></i></p>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    let btn = document.querySelector('#btn');
+    let btn2 = document.querySelector('#btn2');
+    let searchBtn = document.querySelector('#fa-search');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = () =>{
+        sidebar.classList.toggle('active')
+    }
+    btn2.onclick = () =>{
+        sidebar.classList.toggle('active')
+    }
+    searchBtn.onclick = () =>{
+        sidebar.classList.toggle('active')
+    }
+    sidebar.scroll = () =>{
+        sidebar.classList.toggle('pasive')
+    }
+</script>

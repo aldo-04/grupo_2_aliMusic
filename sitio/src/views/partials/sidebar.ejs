@@ -1,94 +1,97 @@
-<header>
-    <div class="i_sidebar">
-        <i class="fas fa-bars" id="btn2"></i>
-    </div>
-    <div class="logo_header">
-        <p>ALI MUSIC</p>
-    </div>
-</header>
 
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="/images/fotoUser/avatar_default.png" alt="" class="header__img">
 
-<div class="sidebar">
-    <div class="logo_content">
-        <a href="/">
-            <div class="logo">
-                <i class="fas fa-music"></i>
-                <div class="logo_name"><p>Ali Music</p></div>
+            <a href="#" class="header__logo">Ali Music</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class='bx bx-search header__icon'></i>
             </div>
-        </a>
-        <i class="fas fa-bars" id="btn"></i>
-    </div>
-    <ul class="nav_list">
-        <li>
-            <i class="fas fa-search" id="fa-search"></i>
-            <input type="text" placeholder="Search...">
-        </li>
-        <!-- SIN LOGIN -->
-        <li><a href="/"><i class="fas fa-home"></i><p>Inicio</p></a></li>
-        <li><a href="/products"><i class="fas fa-money-bill-alt"></i><p>Tienda</p></a></li>
-        <li><a href="/about"><i class="fas fa-id-card"></i><p>Sobre Nosotros</p></a></li>
-        <li><a href="/comunity"><i class="fas fa-guitar"></i><p>Comunidad</p></a></li>
 
-        <% if (!locals.userLogin) { %>
-            <li><a href="/users/register"><i class="fas fa-save"></i><p>Register</p></a></li>
-            <li><a href="/users/login"><i class="fas fa-sign-in-alt"></i><p>Acceder</p></a></li>
-        <% } else{%>
-            <!-- CON LOGIN -->
-            <li><a href="/products/cart"><i class="fas fa-shopping-cart"></i><p>Carrito</p></a></li>
-            <li><a href="/users/profile/<%= locals.userLogin.id %>"><i class="fas fa-id-card"></i><p>Perfil</p></a></li>
-            <li><a href="/users/add"><i class="fas fa-id-card"></i><p>Agregar</p></a></li>
-            <% if (locals.userLogin.rol === 1) { %>
-                <!-- ADMIN -->
-                <li><a href="/admin/add"><i class="fas fa-id-card"></i><p>Add Admin</p></a></li>
-                <li><a href="/admin"><i class="far fa-star"></i><p>Admin</p></a></li>
-            <% } %>
-            <li><a href="/users/logout"><i class="fas fa-sign-in-alt"></i><p>Cerrar sesion</p></a></li>
-        <% }%>
-        
-    </ul>
-    <div class="profile_content">
-        <div class="profile">
-            <div class="profile_details">
-                <% if (locals.userLogin) { %> <!-- Cambiar por req.session cuando este configurado -->
-                    <a href="/users/profile/<%= locals.userLogin.id %>">
-                        <img src="/images/fotoUser/<%= locals.userLogin.avatar %>" alt="">
-                    </a>
-                    <div class="name_job">
-                        <a href="/users/profile/<%= locals.userLogin.id %>" class="name"><p><%= locals.userLogin.firstName +' '+ locals.userLogin.lastName %> </p></a>
-                        <!-- <div class="job"><p>Web Designer</p></div> -->
-                    </div>
-                <% } else { %>
-                    <a href="/users/login">
-                        <img src="/images/profile.jpg" alt="">
-                    </a>
-                    <div class="name_job">
-                        <a href="/users/login" class="name"><p>Iniciar sesion</p></a>
-                        <!-- <div class="job"><p>Web Designer</p></div> -->
-                    </div>
-                <% } %>
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
             </div>
-            <a href="/users/logout">
-                <p><i class="fas fa-sign-out-alt" id="log_out"></i></p>
-            </a>
         </div>
-    </div>
-</div>
-<script>
-    let btn = document.querySelector('#btn');
-    let btn2 = document.querySelector('#btn2');
-    let searchBtn = document.querySelector('#fa-search');
-    let sidebar = document.querySelector('.sidebar');
+    </header>
 
-    btn.onclick = () =>{
-        sidebar.classList.toggle('active')
-    }
-    btn2.onclick = () =>{
-        sidebar.classList.toggle('active')
-    }
-    searchBtn.onclick = () =>{
-        sidebar.classList.toggle('active')
-    }
-    sidebar.scroll = () =>{
-        sidebar.classList.toggle('pasive')
-    }
-</script>
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <i class='bx bxs-disc nav__icon' ></i>
+                    <span class="nav__logo-name">Ali Music</span>
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+
+                        <a href="/" class="nav__link active">
+                            <span class="nav__name">Inicio</span>
+                        </a>
+                        <a href="/products" class="nav__link active">
+                            <span class="nav__name">Tienda</span>
+                        </a>
+                        <a href="/comunity" class="nav__link active">
+                            <span class="nav__name">Comunidad</span>
+                        </a>
+                        <a href="/about" class="nav__link active">
+                            <span class="nav__name">Sobre nosotras</span>
+                        </a>
+                        
+                        <% if (!locals.userLogin) { %>
+                            <a href="/users/register" class="nav__link active">
+                                <span class="nav__name">Registrarse</span>
+                            </a>
+                            <a href="/users/login" class="nav__link active">
+                                <span class="nav__name">Acceder</span>
+                            </a>
+                        
+                        
+                        <% } else{%>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <span class="nav__name">Profile</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="/users/profile/<%= locals.userLogin.id %>" class="nav__dropdown-item">Perfil</a>
+                                        <a href="/products/cart" class="nav__dropdown-item">Carrito</a>
+                                        <a href="/users/add" class="nav__dropdown-item">Agregar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% if (locals.userLogin.rol === 1) { %>
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <span class="nav__name">Admin</span>
+                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                    </a>
+        
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="/admin" class="nav__dropdown-item">Listado</a>
+                                            <a href="/admin/add" class="nav__dropdown-item">Add</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }} %>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <a href="/users/logout" class="nav__link nav__logout">
+                <i class='bx bx-log-out nav__icon' ></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+    <!--========== MAIN JS ==========-->
+    <script src="/js/sidebar.js"></script>
