@@ -10,11 +10,23 @@ module.exports = {
       },
       cartProductId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references : {
+          model : {
+            tableName : 'Products',
+          },
+          key : 'id'
+        }
       },
       cartUserId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references : {
+          model : {
+            tableName : 'Users',
+          },
+          key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,
