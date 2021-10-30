@@ -90,7 +90,7 @@ body.add section.section-add{
 .edit main form section .box-form input{
     border: 1px solid;
     padding: 5px;
-    font-size: 10px;
+/*     font-size: 10px; */
     border-radius: 5px;
 }
 .edit main form section .box-form textarea,

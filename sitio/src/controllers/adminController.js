@@ -71,6 +71,20 @@ module.exports = {
                     return res.redirect('/admin')
                 })
                 .catch(error => console.log(error))
+        }else{
+            db.Category.findAll({
+                order : [
+                    ['category','ASC']
+                ]
+            })
+                .then(categories => res.render('admin/add', {
+                    title: 'add product',
+                    categories,
+                    capitalizarPrimeraLetra,
+                    old: req.body,
+                    errors: errors.mapped()
+                }))
+                .catch(error => console.log(error))
         }
     },
     edit: (req, res) => {
@@ -94,6 +108,8 @@ module.exports = {
         .catch(err=>{console.log(err)})
     },
     update: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
          const {name,description, price, discount, category} = req.body;
          db.Product.update(
             {
@@ -128,7 +144,28 @@ module.exports = {
                     return res.redirect('/admin')
                 })
                 .catch(error => console.log(error))
-            })      
+            })}else{
+                let product = db.Product.findByPk(req.params.id,{
+                    include : ['images','productStates','category']
+                })
+        
+                let categories = db.Category.findAll({
+                    order : [["id","ASC"]]
+                })
+        
+                Promise.all([categories,product])
+        
+                .then(([categories,product])=>{
+                    res.render('admin/edit',{
+                        title: 'Edit product',
+                        product,
+                        categories,
+                        old: req.body,
+                        errors: errors.mapped()
+                    })
+                })
+                .catch(err=>{console.log(err)})
+            }   
         },
     destroy: (req, res) => {
             db.Product.findByPk(req.params.id,{
