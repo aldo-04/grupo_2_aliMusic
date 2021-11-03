@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
 
     $('lastName').addEventListener('focus', () => {
         if ($('lastName').value.trim() === "") {
-            $('lastName-error').innerHTML = "Solo caracter alfabetico"
+            $('lastName-errors').innerHTML = "Solo caracter alfabetico"
         }
     })
     $("lastName").addEventListener("blur", () => {
