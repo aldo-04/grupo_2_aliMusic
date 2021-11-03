@@ -127,4 +127,28 @@ window.addEventListener("load", () => {
         $('password2').classList.remove('is-invalid')
 
     })
-})
+
+    $("form-register").addEventListener('submit', event => {
+        event.preventDefault();
+        let elementsForm = $('form-register').elements;
+        let error = false;
+
+        for (let i = 0; i < elementsForm.length - 4; i++) {
+            
+            if(!elementsForm[i].value){
+                elementsForm[i].classList.add('is-invalid')
+                $('error-empty').innerHTML = "Los campos señalados son obligatorios";
+                error = true
+            }
+        }
+        for (let i = 0; i < elementsForm.length - 4; i++) {
+            
+            if(elementsForm[i].classList.contains('is-invalid')){
+                error = true
+            }
+        }
+
+        if(!error){
+            $('form-register').submit()
+        }
+})})
