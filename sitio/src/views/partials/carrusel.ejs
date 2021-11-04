@@ -1,24 +1,10 @@
-<div class="div_carrusel">
-    <ul class="slider">
-        <li id="slide1">
-          <img src="/images/carrusel.jpg" alt="Carrusel-guitarra-electroAcustica">
-        </li>
-        <li id="slide2">
-            <img src="/images/carrusel2.jpg" alt="Carrusel-guitarra-electroAcustica">
-        </li>
-        <li id="slide3">
-            <img src="/images/carrusel3.jpg" alt="Carrusel-guitarra-electroAcustica">
-        </li>
-      </ul>
-      <ul class="menu">
-        <li>
-          <a href="#slide1">1</a>
-        </li>
-        <li>
-          <a href="#slide2">2</a>
-        </li>
-         <li>
-          <a href="#slide3">3</a>
-        </li>
-      </ul>
+<div class="slider-container">
+    <div class="slider-content">
+        <% products.forEach(product=> { %>
+                <a class="slider-single" href="/products/detail/<%= product.id%>">
+                    <img class="slider-single-image" src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
+                    <h1 class="slider-single-title"><%= product.name %></h1>
+                </a>
+        <% }) %>
+    </div>
 </div>

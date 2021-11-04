@@ -18,6 +18,7 @@
 .admin table th,
 .admin table td{
     background-color: #fff;
+    padding: 0.3rem;
 }
 .admin table tbody tr td{
     height: 100px;
@@ -41,6 +42,7 @@
     padding: 5px 10px;
     color: var(--color-a-fav)
 }
+
 
 /* ADD */
 body.edit section.section-add,

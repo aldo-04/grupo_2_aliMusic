@@ -19,7 +19,8 @@ module.exports = {
             name,
             description,
             media: 'https://www.youtube.com/embed/'+ youtubeLink(media),
-            type: 'iframe'
+            type: 'iframe',
+            image: 1
         }
         posts.push(newPost)
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'comunity.json'), JSON.stringify(posts, null, 2), 'utf-8')
