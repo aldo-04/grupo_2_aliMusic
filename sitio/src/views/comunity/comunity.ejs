@@ -13,11 +13,18 @@
             <div class="div_publicar">
                 <form action="/comunity" method="POST" enctype="multipart/form-data">
 
-                    <input type="text" name="name" placeholder="Titulo" >
-                    <input type="text" name="description" placeholder="Descripcion" >
-                    <input type="text" name="media"placeholder="link" >
-                    <input type="file" name="image" >
-
+                    <div class="div_text">
+                        <input type="text" name="name" placeholder="Titulo" >
+                        <input type="text" name="media"placeholder="link" >
+                    </div>
+                    
+                    <div class="div_description">
+                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                    </div>
+                    
+                    <div class="div_file">
+                        <input type="file" name="image" >
+                    </div>
                     <button type="submit">Publicar</button>
                 
                 </form>
