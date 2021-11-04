@@ -238,7 +238,7 @@ module.exports = {
                         db.ImageProduct.bulkCreate(images,{validate: true, updateOnDuplicate: ["productId"] })
                             .then( () => console.log('imagenes guardadas satisfactoriamente'))
                     }
-                    return res.redirect('/admin')
+                    return res.redirect('/users/profile/'+req.session.userLogin.id)
                 })
                 .catch(error => console.log(error))
             })}else{
@@ -253,7 +253,7 @@ module.exports = {
                 Promise.all([categories,product])
         
                 .then(([categories,product])=>{
-                    res.render('admin/edit',{
+                    res.render('users/edit',{
                         title: 'Edit product',
                         product,
                         categories,

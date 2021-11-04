@@ -106,6 +106,14 @@ body.add section.section-add{
 .add main form .box-button button{
     padding: 5px 15px;
 }
+.edit main form section .box-form span.error,
+.add main form section .box-form span.error{
+    color: rgb(255, 0, 0);
+    background-color: black;
+    margin-top: 1%;
+    width: fit-content;
+}
+
 
 @media (min-width: 425px){
 

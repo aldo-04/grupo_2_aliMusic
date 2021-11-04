@@ -9,28 +9,50 @@
             <section class="section-add">
                 <div class="box-form">
                     <label for="name" >Nombre del producto:</label>
-                    <input type="text" name="name" id="name" placeholder="Nombre del producto">
+                    <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%=locals.old && old.name ? old.name : null%>">
+                    <span class="error"></span>
+                    <% if (locals.errors && errors.name) { %>
+                        <span class="errores"><%= errors.name.msg %> </span>
+                    <% } %>
                 </div>
                 <div class="box-form">
                     <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" placeholder="Precio del producto">
+                    <input type="number" name="price" id="price" placeholder="Precio del producto" value="<%=locals.old && old.price ? old.price : null%>">
+                    <span class="error"></span>
+                    <% if (locals.errors && errors.price) { %>
+                        <span class="errores"><%= errors.price.msg %></span>
+                    <% } %>
                 </div>
                 <div class="box-form">
                     <label for="discount">Descuento:</label>
-                    <input type="number" name="discount" id="discount" placeholder="Descuento">
+                    <input type="number" name="discount" id="discount" placeholder="Descuento" value="<%=locals.old && old.discount ? old.discount : null%>">
+                    <span class="error"></span>
+                    <% if (locals.errors && errors.discount) { %>
+                        <span class="errores"><%= errors.discount.msg %></span>
+                    <% } %>
                 </div>
                 <div class="box-form">
                     <label for="category">Categorias: </label>
                     <select name="category" id="category">
-                        <option value="" hidden selected>Seleccione el categoria</option>
+                        <option value="" hidden selected>Seleccione una categoria</option>
                       <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%= capitalizarPrimeraLetra(category.category) %></option>
+                        <option value="<%= category.id %>"<% if (locals.old && old.category) { %>
+                            <%= category.id == old.category ? "selected": null %>
+                        <% } %> ><%= capitalizarPrimeraLetra(category.category) %></option>
                       <% }) %>
                     </select>
+                    <span class="error"></span>
+                    <% if (locals.errors && errors.category) { %>
+                        <span class="errores"><%= errors.category.msg %></span>
+                    <% } %>
                 </div>
                 <div class="box-form">
                     <label for="description"> Descipción:</label>
-                    <textarea name="description" id="description" cols="30" rows="10"></textarea> 
+                    <textarea name="description" id="description" cols="30" rows="10"><%=locals.old && old.description ? old.description : null%></textarea> 
+                    <span class="error"></span>
+                    <% if (locals.errors && errors.description) { %>
+                        <span class="errores"><%= errors.description.msg %></span>
+                    <% } %>
                 </div>
                 <div class="img-subir">
                     <label for="image">Agregar imagen:</label>
@@ -45,6 +67,7 @@
         </form>
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/addProduct.js"></script>
     
 </body>
 </html>
