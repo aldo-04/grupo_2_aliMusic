@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
     <body class="login">
-        <%- include('../partials/sidebar') %> 
+        <%- include('../partials/sidebar') %>
             <main class="login">
                 <div class="v">
                     <a href="/">volver</a>
                 </div>
                 <h4>Ingresar a <br>ALI MUSIC</h4>
-             <form action="" method="POST"> 
+                <form action="" method="POST">
                     <section class="datos">
                         <div class="box-form">
-                            <input type="email" name="email" placeholder="email">
-                            <span class="text-danger small span"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                            <input type="email" name="email" id="email" placeholder="email">
+                            <div class="login-alert"> <small class="text-danger small">
+                                    <%= locals.errors && errors.email ? errors.email.msg : null %>
+                                </small>
+                                <small id="email-Errors"></small>
+                            </div>
                         </div>
                         <div class="box-form">
                             <input type="password" name="password" id="password" placeholder="contraseña">
-                            <span class="text-danger small span "><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
+                            <div class="login-alert">
+                                <small class="text-danger small">
+                                    <%= locals.errors && errors.password ? errors.password.msg : null %>
+                                </small>
+                                <small id="password-Errors"></small>
+                            </div>
+
                         </div>
 
                         <div class="box-remember">
@@ -49,6 +59,8 @@
                 </form>
             </main>
             <%- include('../partials/footer') %>
+                <script src="/js/login.js"></script>
+
     </body>
 
 </html>
