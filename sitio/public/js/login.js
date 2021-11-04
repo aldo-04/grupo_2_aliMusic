@@ -10,6 +10,20 @@ window.addEventListener("load", () => {
     
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
+    const emailVerify = async (email) => {
+        try {
+            let response = await fetch(window.origin + '/api/emails');
+            let result = await response.json()
+    
+            return result.data.includes(email)
+                   
+    
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
+
     $("email").addEventListener('blur', () => {
         switch (true) {
             case !$("email").value.trim():
