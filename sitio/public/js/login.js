@@ -10,6 +10,8 @@ window.addEventListener("load", () => {
     
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
+
+
     $("email").addEventListener('blur', () => {
         switch (true) {
             case !$("email").value.trim():

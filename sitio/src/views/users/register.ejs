@@ -28,9 +28,9 @@
                 </div>
 
                 <div>
-                    <input class="form-control <%= locals.errors && errors.number ? "is-invalid" : null %>" type="number" name="number" value="<%= locals.old && old.number ? old.number : null %>" placeholder="Tu numero" >
-                    <small>  <%= locals.errors && errors.number ? errors.number.msg : null %> </small>
-                    <span id ="firstName-msg" class ="alert-info">
+                    <input class="form-control <%= locals.errors && errors.userName ? "is-invalid" : null %>" type="text" name="userName" id= "userName" value="<%= locals.old && old.userName ? old.userName : null %>" placeholder="Nombre de usuario" >
+                    <small id ="userName-errors">  <%= locals.errors && errors.userName ? errors.userName.msg : null %> </small>
+                    <span id ="userName-msg" class ="alert-info">
 
                 </div>
 
@@ -57,21 +57,21 @@
                 <span id ="error-empty"></span>
             </div>
 
-            <div class="redes">
-                <div>
-                    <input type="button" value="Ingresa con Google"><i class="fab fa-google"></i>
-                </div>
-                <div>
-                    <input type="button" value="Ingresa con Facebook"><i class="fab fa-facebook"></i>
-                </div>
-            </div>
-
             <div class="buttons">
                 <input type="submit" value="Crear" class="crear">
                 <input type="reset" value="Borrar">
             </div>
 
         </form>
+
+        <div class="redes">
+            <div>
+                <input type="button" value="Ingresa con Google"><i class="fab fa-google"></i>
+            </div>
+            <div>
+                <input type="button" value="Ingresa con Facebook"><i class="fab fa-facebook"></i>
+            </div>
+        </div>
     </main>
     <%- include('../partials/footer') %> 
     <script src="/js/register.js"></script>
