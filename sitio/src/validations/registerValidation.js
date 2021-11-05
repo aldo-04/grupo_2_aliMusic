@@ -5,7 +5,7 @@ module.exports = [
 
     check("lastName").notEmpty().withMessage("Debes indicar tu apellido").bail(),
 
-    check("number").isMobilePhone().withMessage("Debes indicar un numero de telefono valido").bail(),
+    check("userName").notEmpty().withMessage("Debes indicar un usuario").bail(),
 
     check("email").isEmail().withMessage("debes ingresar un email").notEmpty().withMessage("Debes indicar tu email").bail(),
 

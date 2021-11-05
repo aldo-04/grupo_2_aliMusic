@@ -53,6 +53,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/comunity', comunityRouter);
 app.use('/admin', adminRouter);
+app.use('/apis',require('./routes/apis'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

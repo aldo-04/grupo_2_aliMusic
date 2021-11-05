@@ -75,13 +75,13 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
-        const{firstName,lastName,email,number,password}=req.body
+        const{userName,firstName,lastName,email,password}=req.body
         db.User.create({
-            userName : 'sherlock',
+            userName : userName.trim(),
             firstName : firstName.trim(),
             lastName : lastName.trim(),
             email: email.trim(),
-            number: +number,
+            number: null,
             password: bcrypt.hashSync(password.trim(),10),
             rol: 2,
             avatar: req.file ? req.file.filename : 'avatar_default.png',
@@ -130,7 +130,17 @@ module.exports = {
             {
                 where: {id: req.session.userLogin.id}
             }
-        )   .then(() => res.redirect('/users/profile/'+req.session.userLogin.id)).catch(error => console.log(error))
+        )   .then(() =>{
+            user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    avatar: user.avatar,
+                    rol: user.rol
+                    }}
+            return res.redirect('/users/profile/'+req.session.userLogin.id)
+            }).catch(error => console.log(error))
     },
     add: (req, res) => {
         db.Category.findAll({

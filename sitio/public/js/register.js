@@ -6,6 +6,19 @@ let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\�
 
 let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
+const emailVerify = async (email) => {
+    try {
+        let response = await fetch(window.origin + '/apis/emails');
+        let result = await response.json()
+
+        return result.data.includes(email)
+               
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 window.addEventListener("load", () => {
     console.log("Ali music");
     $('firstName').addEventListener('focus', () => {
@@ -75,6 +88,38 @@ window.addEventListener("load", () => {
         $("lastName-msg").innerText = null
     })
 
+    $('userName').addEventListener('focus', () => {
+        if ($('userName').value.trim() === "") {
+            $('userName-error').innerHTML = "Solo caracter alfabetico"
+        }
+    })
+    $("userName").addEventListener("blur", () => {
+        switch (true) {
+            case !$("userName").value.trim():
+                $("userName-errors").innerText = "El nombre es obligatorio"
+                $("userName").classList.add("is-invalid")
+                break;
+            case $('userName').value.trim().length < 3 || $('userName').value.trim().length > 50:
+                $('userName-errors').innerText = "Entre 3 y 50 caracteres"
+                $('userName').classList.add('is-invalid')
+                break;
+            case !regExLetter.test($('userName').value.trim()):
+                $('userName-errors').innerText = "Solo caracter alfabetico"
+                $('userName').classList.add('is-invalid')
+                break;
+
+
+            default: $("userName").classList.remove("is-invalid")
+                $("userName").classList.add("is-valid")
+                $("userName-errors").innerText = null
+                break;
+        }
+    })
+    $("userName").addEventListener("change", () => {
+        $("userName").classList.remove("is-invalid")
+        $("userName-errors").innerText = null
+        $("userName-msg").innerText = null
+    })
 
     $('email').addEventListener('blur', async () => {
 
@@ -133,18 +178,20 @@ window.addEventListener("load", () => {
         let elementsForm = $('form-register').elements;
         let error = false;
 
-        for (let i = 0; i < elementsForm.length - 4; i++) {
+        for (let i = 0; i < elementsForm.length - 2; i++) {
             
             if(!elementsForm[i].value){
                 elementsForm[i].classList.add('is-invalid')
                 $('error-empty').innerHTML = "Los campos señalados son obligatorios";
                 error = true
+                console.log(elementsForm[i].value);
             }
         }
-        for (let i = 0; i < elementsForm.length - 4; i++) {
+        for (let i = 0; i < elementsForm.length - 2; i++) {
             
             if(elementsForm[i].classList.contains('is-invalid')){
                 error = true
+                console.log('2'+elementsForm);
             }
         }
 
