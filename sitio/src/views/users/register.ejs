@@ -6,7 +6,7 @@
     <main>
 
         <h1>Nuevo registro</h1>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" id="form-register" enctype="multipart/form-data">
             <div class="avatar">
                 <p>Foto de perfil</p>
                 <label for="avatar"><i class="far fa-user-circle"></i></label>
@@ -15,43 +15,46 @@
 
             <div class="datos">
                 <div>
-                    <input type="text" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>" placeholder="Escribe tu nombre">
-                    <span> <%= locals.errors && errors.firstName ? errors.firstName.msg : null %> </span>
+                    <input class="form-control <%= locals.errors && errors.firstName ? "is-invalid" : null %>" type="text" name="firstName" id ="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>" placeholder="Escribe tu nombre">
+                    <small id ="firstName-errors"> <%= locals.errors && errors.firstName ? errors.firstName.msg : null %> </small></span>
+                    <span id ="firstName-msg" class ="alert-info">
                 </div>
 
                 <div>
-                    <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>" placeholder="Escribe tu apellido" >
-                    <span> <%= locals.errors && errors.lastName ? errors.lastName.msg : null %> </span>
+                    <input class="form-control <%= locals.errors && errors.lastName ? "is-invalid" : null %>" type="text" name="lastName" id ="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>" placeholder="Escribe tu apellido" >
+                    <small id ="lastName-errors"> <%= locals.errors && errors.lastName ? errors.lastName.msg : null %> </small>
+                    <span id ="lastName-msg" class ="alert-info">
+
                 </div>
 
                 <div>
-                    <input type="number" name="number" value="<%= locals.old && old.number ? old.number : null %>" placeholder="Tu numero" >
-                    <span> <%= locals.errors && errors.number ? errors.number.msg : null %> </span>
+                    <input class="form-control <%= locals.errors && errors.userName ? "is-invalid" : null %>" type="text" name="userName" id= "userName" value="<%= locals.old && old.userName ? old.userName : null %>" placeholder="Nombre de usuario" >
+                    <small id ="userName-errors">  <%= locals.errors && errors.userName ? errors.userName.msg : null %> </small>
+                    <span id ="userName-msg" class ="alert-info">
+
                 </div>
 
                 <div>
-                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : null %>" placeholder="Ingresa tu correo" >
-                    <span> <%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                    <input class="form-control <%= locals.errors && errors.email ? "is-invalid" : null %>" type="email" name="email" id ="email" value="<%= locals.old && old.email ? old.email : null %>" placeholder="Ingresa tu correo" >
+                    <small id ="email-errors"> <%= locals.errors && errors.email ? errors.email.msg : null %> </small>
+                    <span id ="email-msg" class ="alert-info">
+
                 </div>
 
                 <div>
-                    <input type="password" name="password" placeholder="Contraseña" >
-                    <span> <%= locals.errors && errors.password ? errors.password.msg : null %> </span>
+                    <input class="form-control <%= locals.errors && errors.password ? "is-invalid" : null %>" type="password" name="password" id ="password" placeholder="Contraseña" >
+                    <small id ="password-errors"> <%= locals.errors && errors.password ? errors.password.msg : null %> </small>
+                    <span id ="pasword-msg" class ="alert-info">
+
                 </div>
 
                 <div>
-                    <input type="password" name="password2" placeholder="Repite tu contraseña" >
-                    <span> <%= locals.errors && errors.password2 ? errors.password2.msg : null %> </span>
-                </div>
-            </div>
+                    <input class="form-control <%= locals.errors && errors.password2 ? "is-invalid" : null %>" type="password" name="password2" id ="password2" placeholder="Repite tu contraseña" >
+                    <small id ="password2-errors"> <%= locals.errors && errors.password2 ? errors.password2.msg : null %> </small>
+                    <span id ="firstName-msg" class ="alert-info">
 
-            <div class="redes">
-                <div>
-                    <input type="button" value="Ingresa con Google"><i class="fab fa-google"></i>
                 </div>
-                <div>
-                    <input type="button" value="Ingresa con Facebook"><i class="fab fa-facebook"></i>
-                </div>
+                <span id ="error-empty"></span>
             </div>
 
             <div class="buttons">
@@ -60,7 +63,17 @@
             </div>
 
         </form>
+
+        <div class="redes">
+            <div>
+                <input type="button" value="Ingresa con Google"><i class="fab fa-google"></i>
+            </div>
+            <div>
+                <input type="button" value="Ingresa con Facebook"><i class="fab fa-facebook"></i>
+            </div>
+        </div>
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/register.js"></script>
 </body>
 </html>
