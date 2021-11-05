@@ -8,295 +8,251 @@
         "producto": 2
     },
     {
-        "image": "art-1629762992088.jpg",
+        "image": "BajoSquierAffinity.png",
         "producto": 3
     },
     {
-        "image": "art-1629248009248.jpg",
-        "producto": 4
-    },
-    {
-        "image": "art-1629248176739.jpg",
-        "producto": 5
-    },
-    {
-        "image": "art-1629762706020.jpg",
-        "producto": 6
-    },
-    {
-        "image": "art-1629762825697.webp",
-        "producto": 7
-    },
-    {
-        "image": "art-1629762925965.jpg",
-        "producto": 8
-    },
-    {
-        "image": "art-1629763078176.jpg",
-        "producto": 9
-    },
-    {
-        "image": "art-1629763272284.webp",
-        "producto": 10
-    },
-    {
-        "image": "art-1629763427293.webp",
-        "producto": 11
-    },
-    {
-        "image": "art-1629763655655.webp",
-        "producto": 12
-    },
-    {
-        "image": "art-1629406461144.jpg",
-        "producto": 13
-    },
-    {
-        "image": "BajoSquierAffinity.png",
-        "producto": 14
-    },
-    {
         "image": "BajoSquierAffinity2.png",
-        "producto": 14
+        "producto": 3
     },
     {
         "image": "BajoIbanezTmb100BkTalman.png",
-        "producto": 15
+        "producto": 4
     },
     {
         "image": "BajoIbanezTmb100BkTalman2.png",
-        "producto": 15
+        "producto": 4
     },
     {
         "image": "BajoIbanezTmb100BkTalman3.png",
-        "producto": 15
+        "producto": 4
     },
     {
         "image": "BajoYamahaTrbx505BbBrickBurst.png",
-        "producto": 16
+        "producto": 5
     },
     {
         "image": "BajoYamahaTrbx505BbBrickBurst2.png",
-        "producto": 16
+        "producto": 5
     },
     {
         "image": "BajoYamahaTrbx505BbBrickBurst3.png",
-        "producto": 16
+        "producto": 5
     },
     {
         "image": "ViolaMarcaVendoma.png",
-        "producto": 17
+        "producto": 6
     },
     {
         "image": "ViolaMarcaVendoma2.png",
-        "producto": 17
+        "producto": 6
     },
     {
         "image": "UkeleleDeMaderaSoprano.png",
-        "producto": 18
+        "producto": 7
     },
     {
         "image": "UkeleleDeMaderaSoprano2.png",
-        "producto": 18
+        "producto": 7
     },
     {
         "image": "UkeleleDeMaderaSoprano3.png",
-        "producto": 18
+        "producto": 7
     },
     {
         "image": "AcordeónHohnerBravoIi48Black26Teclas.png",
-        "producto": 19
+        "producto": 8
     },
     {
         "image": "AcordeónHohnerBravoIi48Black26Teclas2.png",
-        "producto": 19
+        "producto": 8
     },
     {
         "image": "ArmónicaLeeOskarDiatónica.png",
-        "producto": 20
+        "producto": 9
     },
     {
         "image": "ArmónicaLeeOskarDiatónica2.png",
-        "producto": 20
+        "producto": 9
     },
     {
         "image": "ArmonicaSuzuki1072Folkmaster10HoleDiatonica.png", 
-        "producto": 21
+        "producto": 10
     },
     {
         "image": "ArmonicaSuzuki1072Folkmaster10HoleDiatonica2.png",
-        "producto": 21
+        "producto": 10
     },
     {
         "image": "SaxoAltoEvolutionVintageParquer.png",
-        "producto": 22
+        "producto": 11
     },
     {
         "image": "SaxoAltoEvolutionVintageParquer2.png",
-        "producto": 22
+        "producto": 11
     },
     {
         "image": "SaxoTenorCodaCts.png",
-        "producto": 23
+        "producto": 12
     },
     {
         "image": "SaxoTenorCodaCts2.png", 
-        "producto": 23
+        "producto": 12
     },
     {
         "image": "SaxoTenorCodaCts3.png",
-        "producto": 23
+        "producto": 12
     },
     {
         "image": "TrompetaBbKnight.png",
-        "producto": 24
+        "producto": 13
     },
     {
         "image": "TrompetaBbKnight2.png",
-        "producto": 24
+        "producto": 13
     },
     {
         "image": "TrompetaBbKnight3.png",
-        "producto": 24
+        "producto": 13
     },
     {
         "image": "BateriaAcústicaParquerShadow5Cpos.png",
-        "producto": 25
+        "producto": 14
     },
     {
         "image": "TamaRm52kh4RhythmMateBateria.png",
-        "producto": 26
+        "producto": 15
     },
     {
         "image": "PearlRoadshowBateria5Cuerpos.png",
-        "producto": 27
+        "producto": 16
     },
     {
         "image": "TimbaletaPintadaPiePlatillo.png",
-        "producto": 28
+        "producto": 17
     },
     {
         "image": "TimbaletaAceroPyp_percusion.png",
-        "producto":  29
+        "producto":  18
     },
     {
         "image": "TecladomusicalGadnicT04-61teclas.png",
-        "producto": 30
+        "producto": 19
     },
     {
         "image": "TecladomusicalGadnicT04-61teclas2.png",
-        "producto": 30
+        "producto": 19
     },
     {
         "image": "PianoVerticalAcusticoKawaiNd-21Nuevo.png",
-        "producto": 31
+        "producto": 20
     },
     {
         "image": "PianoVerticalAcusticoKawaiNd-21Nuevo2.png",
-        "producto": 31
+        "producto": 20
     },
     {
         "image": "SintetizadorBehringerTd-3BuAzulAnalógicoDe16Voces.png",
-        "producto": 32
+        "producto": 21
     },
     {
         "image": "SintetizadorBehringerTd-3BuAzulAnalógicoDe16Voces2.png",
-        "producto": 32
+        "producto": 21
     },
     {
         "image": "SoporteParaMicrófonoBrazoEstudioCondenserProfesional.png",
-        "producto": 33
+        "producto": 22
     },
     {
         "image": "SoporteParaMicrófonoBrazoEstudioCondenserProfesional2.png",
-        "producto": 33
+        "producto": 22
     },
     {
         "image": "PieMicrófonoJirafaTripode.png",
-        "producto": 34
+        "producto": 23
     },
     {
         "image": "PieMicrófonoJirafaTripode2.png",
-        "producto": 34
+        "producto": 23
     },
     {
         "image": "PieMicrófonoJirafaTripode3.png",
-        "producto": 34
+        "producto": 23
     },
     {
         "image": "VarillaYamahaParaLimpieza.png",
-        "producto": 35
+        "producto": 24
     },
     {
         "image": "ComboBafle.png",
-        "producto": 36
+        "producto": 25
     },
     {
         "image": "ComboBafle2.png",
-        "producto": 36
+        "producto": 25
     },
     {
         "image": "ComboBafle3.png",
-        "producto": 36
+        "producto": 25
     },
     {
         "image": "ComboBafle4.png",
-        "producto": 36
+        "producto": 25
     },
     {
         "image": "escudoAcustico.png",
-        "producto": 37
+        "producto": 26
     },
     {
         "image": "escudoAcustico2.png",
-        "producto": 37
+        "producto": 26
     },
     {
         "image": "escudoAcustico3.png",
-        "producto": 37
+        "producto": 26
     },
     {
         "image": "pack10puas.png",
-        "producto": 38
+        "producto": 27
     },
     {
         "image": "puasStagg.png",
-        "producto": 39
+        "producto": 28
     },
     {
         "image": "OnaxproPod4ConsolaSonido.png",
-        "producto": 40
+        "producto": 29
     },
     {
         "image": "OnaxproPod4ConsolaSonido2.png",
-        "producto": 40
+        "producto": 29
     },
     {
         "image": "OnaxproPod4ConsolaSonido3.png",
-        "producto": 40
+        "producto": 29
     },
     {
         "image": "PresonusErisE3.5MonitoresEstudio.png",
-        "producto": 41
+        "producto": 30
     },
     {
         "image": "PresonusErisE3.5MonitoresEstudio2.png",
-        "producto": 41
+        "producto": 30
     },
     {
         "image": "InterfacedeaudioFocusriteScarlett.png",
-        "producto": 42
+        "producto": 31
     },
     {
         "image": "InterfacedeaudioFocusriteScarlett2.png",
-        "producto": 42
+        "producto": 31
     },
     {
         "image": "panelAcustico.png",
-        "producto": 43
+        "producto": 32
     },
     {
         "image": "panelAcustico2.png",
-        "producto": 43
+        "producto": 32
     }
 ]

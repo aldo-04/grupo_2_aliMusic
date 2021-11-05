@@ -1,42 +1,32 @@
 [
   {
-    "id": 1,
-    "name": "Lucas",
+    "userName": "Sherlock",
+    "firstName": "Lucas",
     "lastName": "Diaz Mouhsen",
     "email": "lucasmouhsen@gmail.com",
-    "numero": 1131890767,
+    "number": 1131890767,
     "password": "$2a$10$y4ZJtUJ20Z2AU7VfeTvYi.ty1My08LIiAM4LaZ0M72ZHsznhP9Tve",
-    "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "avatar_default.png",
+    "rol": 1
   },
   {
-    "id": 2,
-    "name": "Aldo",
+    "userName": "Sherlock",
+    "firstName": "Aldo",
     "lastName": "Orden",
     "email": "aldoorder@gmail.com",
-    "numero": 123456789,
+    "number": 123456789,
     "password": "$2a$10$odhKeE.f6PnWATH4vHdLTO6ozLhJ9LR4kHw0IObtLTWSNkoM7r5K2",
-    "rol": "user",
-    "avatar": "avatar_default.png"
+    "avatar": "avatar_default.png",
+    "rol": 1
   },
   {
-    "id": 3,
-    "name": "lucas",
-    "lastName": "diaz",
-    "email": "lucas@gmail.com",
-    "number": null,
-    "password": "$2a$10$SHrUPA2VOruLfO.cSvWGbeevbGjeX3RBOY0ASApyGnNDWIXQXzWHG",
-    "rol": "user",
-    "avatar": "avatar_default.png"
-  },
-  {
-    "id": 4,
-    "name": "aldo",
+    "userName": "Sherlock",
+    "firstName": "aldo",
     "lastName": "orden",
     "email": "aldo@gmail.com",
-    "number": null,
+    "number": 1131890767,
     "password": "$2a$10$xEayb5s2tF7YNVB6swkjG.7PBpL1C9nIL5Vbk8347eKpL90Xddi5S",
-    "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "avatar_default.png",
+    "rol": 1
   }
 ]

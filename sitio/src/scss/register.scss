@@ -42,9 +42,13 @@
     padding: 10px;
     width: 100%;
 }
-
-.register main div.datos span{
+.register main div.datos small{
     color : red
+}
+.register main div.datos span{
+    color : red;
+    background-color: transparent;
+
 }
 
 .register main div.redes{
