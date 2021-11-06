@@ -4,40 +4,6 @@
 <body class="user">
     <%- include('../partials/sidebar') %> 
     <main>
-        <!-- <div>
-            <form action="/users/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
-                <div >
-                   <div class="img"><img src="/images/fotoUser/<%= user.avatar %>" alt="avatar"></div> 
-                    <label class="img-perfil" for="avatar">Imagen De Perfil</label>
-                    <input class="img-input" type="file" name="avatar" id="avatar">
-                </div>
-    
-                <div >
-                    <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>">
-                </div>
-                <div >
-                    <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">
-                </div>
-                <div >
-                    <input type="number" name="number" id="number" value="<%= user.number %>">
-                </div>
-                <div >
-                    <input type="email" name="email" id="email" value="<%= user.email %>" readonly >
-                </div>
-    
-                <div >
-                    <input type="password" name="password" id="password">
-                </div>
-                <div >
-                    <input type="Password" name="newPassword" id="newPassword" value="">
-                </div>
-    
-
-                <div>
-                    <button type="submit">Editar</button>
-                    <button type="reset">Cancelar</button>
-                </div> --> -->
-    
             <div class="mb-5 ">
                 <form class="form" action="/users/profile/<%= locals.userLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                     <div class="container">
@@ -54,8 +20,16 @@
                                         <input type="text" class="form-control" id="lastname" name="lastName" value="<%- user.lastName %>" >
                                     </div>
                                     <div class="form-group">
+                                        <label for="userName">Nombre de usuario</label>
+                                        <input type="text" class="form-control" id="userName" name="userName" value="<%- user.userName %>">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" name="email" value="<%- user.email %>" readonly>
+                                        <input type="email" class="form-control" id="email" name="email" value="<%- user.email %>" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="number">Numero</label>
+                                        <input type="number" class="form-control" id="number" name="number" value="<%- user.number %>">
                                     </div>
                                     <div class="form-group">
                                         <label for="Password">Contraseña</label>

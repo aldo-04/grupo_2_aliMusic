@@ -17,10 +17,12 @@
     flex-direction: column;
     align-items: center;
     margin: 5%;
-    color: #fff
+    color: #fff;
+
 }
 
 .register main div.avatar i{
+    font-size: 60px;
     color: #fff;
     padding: 15px;
 }
@@ -40,9 +42,13 @@
     padding: 10px;
     width: 100%;
 }
-
-.register main div.datos span{
+.register main div.datos small{
     color : red
+}
+.register main div.datos span{
+    color : red;
+    background-color: transparent;
+
 }
 
 .register main div.redes{

@@ -26,7 +26,7 @@
                                 </thead>
                                 <tbody>
                                     <% products.forEach(product => { %>
-                                        <tr role="  ">
+                                        <tr role="">
                                             <td role="cell"><%= product.id %></td>
                                             <td role="cell" class="td_img" ><img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto"></td>
                                             <td role="cell"><%= product.name %></td>

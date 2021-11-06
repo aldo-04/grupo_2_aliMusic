@@ -70,6 +70,11 @@
   margin-top: 10px;
   align-items: center; }
 
+.login main div.login-alert {
+  color: red;
+  display: flex;
+  flex-direction: column; }
+
 .login main div.box-enlace button {
   width: 260px;
   height: 30px;
