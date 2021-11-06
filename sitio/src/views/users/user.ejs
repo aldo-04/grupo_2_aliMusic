@@ -119,41 +119,12 @@
                                         </tr>
                                     <% }) %>
                                 </tbody>
-                            </table>
-                        
+                            </table>    
+                        </div>
+                    </div>    
+                </div>        
+            </div>   
         </div>
-        <!-- <div class="contain">
-            <table role="table">
-                <thead role="rowgroup">
-                  <tr role="row">
-                    <th role="columnheader">Id</th>
-                    <th role="columnheader">Imagen</th>
-                    <th role="columnheader">Nombre</th>
-                    <th role="columnheader" class="oculto">Precio</th>
-                    <th role="columnheader" class="oculto">Estado</th>
-                    <th role="columnheader">Acciones</th>
-                  </tr>
-                </thead>
-                <tbody role="rowgroup">
-                    <% products.forEach(product => { %>
-                        <tr role="  ">
-                            <td role="cell"><%= product.id %></td>
-                            <td role="cell" class="td_img" ><img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto"></td>
-                            <td role="cell"><%= product.name %></td>
-                            <td role="cell" class="oculto">$ <%= product.price %></td>
-                            <td role="cell" class="oculto"><%= product.productStates.state %></td>
-                            <td role="cell" class="td_botton">
-                                <button><a href="/users/edit/<%= product.id %>"><i class="fas fa-edit"></i></a></button>
-                                <form action="/users/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button type='submit'><i class="fas fa-trash"></i></button>
-                                </form>
-                            </td>
-                        </tr>
-                    <% }) %>
-                  
-                </tbody>
-            </table>
-        </div> -->
     </main>
     <%- include('../partials/footer') %> 
 </body>

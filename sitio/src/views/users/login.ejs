@@ -47,19 +47,20 @@
                         <button type="submit">Acceder</button>
                     </div>
                     <div class="box-enlace">
-                        <button type="submit" i class="fab fa-google"></i>Ingresar con Google</button>
-                        <button type="submit" i class="fab fa-facebook"></i>Ingresar con Facebook</button>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                     </div>
                     <div class="no-tienes-cuenta">
                         <p>No tienes cuenta aun:
                             <a href="/users/register">Registrate</a>
                         </p>
                     </div>
+                    
 
                 </form>
-            </main>
+            </main> 
             <%- include('../partials/footer') %>
-                <script src="/js/login.js"></script>
+            <script src="/js/googleLogin.js"></script>  
+            <script src="/js/login.js"></script>
 
     </body>
 

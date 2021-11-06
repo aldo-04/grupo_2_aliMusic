@@ -18,6 +18,7 @@
 .admin table th,
 .admin table td{
     background-color: #fff;
+    padding: 0.3rem;
 }
 .admin table tbody tr td{
     height: 100px;

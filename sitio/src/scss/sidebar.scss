@@ -1,6 +1,7 @@
 /*========== GOOGLE FONTS ==========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+
 :root {
   --header-height: 3.5rem;
   --nav-width: 219px;
@@ -20,17 +21,17 @@
   --z-fixed: 100;
 }
 /*========== HEADER ==========*/
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: var(--container-color);
   box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
   padding: 0 1rem;
   z-index: var(--z-fixed);
 }
-
 .header__container {
   display: flex;
   align-items: center;
@@ -232,7 +233,7 @@
     padding: 0 3rem 0 6rem;
   }
   .header__container {
-    height: calc(var(--header-height) + .5rem);
+    height: calc(var(--header-height) + 2rem);
   }
   .header__search {
     width: 300px;

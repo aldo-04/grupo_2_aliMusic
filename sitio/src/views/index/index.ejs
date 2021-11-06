@@ -3,15 +3,15 @@
 <%- include('../partials/head') %>
 
     <body class="home">
-        <%- include('../partials/sidebar') %> 
             <main>
-                <%- include('../partials/carrusel') %>
+                <%- include('../partials/sidebar') %> 
 
                 <div class="div_banner_carrusel">
                     <img class="img1" src="https://64.media.tumblr.com/19e8abf3850bb1e19f855d20974e46cb/tumblr_nxiz26LujO1ripa0eo1_1280.jpg"></img>
                     <img class="img2" src="https://media.discordapp.net/attachments/740042309311266836/886357794838687764/80015630253175.58f6a15c28de4.gif?width=965&height=676" alt="">
                     
                 </div>
+                <%- include('../partials/carrusel') %>
 
                 <section class="novedades">
 
@@ -46,6 +46,8 @@
                 </div>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/js/carrusel.js"></script>
+            
     </body>
 
 </html>

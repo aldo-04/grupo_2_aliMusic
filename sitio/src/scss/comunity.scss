@@ -1,0 +1,90 @@
+.comunity main{
+    margin-top: 65px;
+    .container-main{
+        width: 95%;
+        margin: 20px auto;
+        color: var(--color-header);
+        background-color: #fff;
+        padding: 10px;
+        .div_publicar{
+            margin-bottom: 20px;
+            border-radius: 3px;
+            padding: 10px 0;
+            form {
+                div{
+                    margin-bottom: 15px;
+                }
+                .div_text {
+                    display: grid;
+                    justify-content: space-around;
+                    grid-template-columns: 45% 45%;
+                    grid-template-rows: auto auto;
+                    .comunity .div_publicar input{
+                        text-indent: 3px;
+                    }
+                }
+                .div_description{
+                    
+                }
+                .div_file{
+
+                }
+                text-align: center; 
+            }
+        }
+        .div_filtrar{
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            font-size: 11px;
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .section_post .art{
+            background-color: #fff;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            h4{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-bottom: 1px solid #696969;
+            }
+            iframe{
+                width: 100%;
+                height: 50vh;
+            }
+            img{
+                height: 250px;
+                object-fit: contain;
+            }
+            .div_p{
+                font-size: 11px;
+                padding: 10px;
+                background-color: #c6c6c6;
+            }
+        }
+    }
+    
+}
+@media (min-width: 425px){
+    .comunity main{
+        margin-top: 90px;
+    .container-main{
+        width: 90%
+        }
+    }
+}
+@media (min-width: 769px){
+    .comunity .container-main{
+        width: 80%;
+    }
+    .comunity .div_publicar{
+        align-items: center;
+        justify-content: space-around;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+}
+
