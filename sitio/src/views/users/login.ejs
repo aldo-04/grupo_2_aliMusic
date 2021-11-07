@@ -46,17 +46,15 @@
                     <div class="box-button">
                         <button type="submit">Acceder</button>
                     </div>
-                    <div class="box-enlace">
-                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                    </div>
                     <div class="no-tienes-cuenta">
                         <p>No tienes cuenta aun:
                             <a href="/users/register">Registrate</a>
                         </p>
                     </div>
-                    
-
                 </form>
+                <div class="box-enlace">
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">Ingresar</div>
+                </div>
             </main> 
             <%- include('../partials/footer') %>
             <script src="/js/googleLogin.js"></script>  
