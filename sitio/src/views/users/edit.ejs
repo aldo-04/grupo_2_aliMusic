@@ -37,13 +37,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="category">Categorias:</label>
-                                            <select class='form-control' name="" id="">
-                                                <option value="<%= product.category.id %>" hidden selected>
-                                                    <%= product.category.category %>
-                                                </option>
-                                                <% categories.forEach(category=> { %> 
-                                                    <option value="<%= category.id %>">
-                                                        <%= capitalizarPrimeraLetra(category.category) %>
+                                            <select class='form-control' name="category" id="category">
+                                                <% categories.forEach(categoria=> { %> 
+                                                    <option value="<%= categoria.id %>" <%= categoria.id === product.category.id ? "selected" : null%>>
+                                                        <%= capitalizarPrimeraLetra(categoria.category) %>
                                                     </option>
                                                     <% }) %>
                                             </select>

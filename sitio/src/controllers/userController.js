@@ -161,22 +161,20 @@ module.exports = {
         if (errors.isEmpty()){
             const {name, price, discount,category,description } = req.body
             const status = 1
-            
             db.Product.create(
                 {
                     name: name.trim(),
+                    description: description.trim(),
                     price,
                     discount,
-                    categoryId: category,
-                    description: description.trim(),
                     fav: 0,
                     sold: 0,
                     cart: 0,
                     userId: req.session.userLogin.id,
+                    categoryId: category,
                     statusId: status
                 }
-            )
-                .then(product => {
+            ).then(product => {
                     console.log(product)
                     if (req.files.length != 0) {
                         let images = req.files.map(image =>{
@@ -215,16 +213,16 @@ module.exports = {
         .catch(err=>{console.log(err)})
     },
     update: (req, res) => {
-           let errors = validationResult(req);
+        let errors = validationResult(req);
         if (errors.isEmpty()){
          const {name,description, price, discount, category} = req.body;
          db.Product.update(
             {
                 name: name.trim(),
+                description: description.trim(),
                 price,
                 discount,
                 categoryId: category,
-                description: description.trim(),
             },
             {
                 where: {id:req.params.id}
