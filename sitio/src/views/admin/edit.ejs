@@ -10,36 +10,52 @@
                     <div >
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Datos personales</h5>
+                                <h5 class="card-title"><%= product.name %></h5>
                                 <div class="form-group">
                                     <label for="name">Nombre del producto:</label>
-                                    <input type="text" class="form-control" id="firstName" name="firstName" >
+                                    <input type="text" class="form-control" id="name" name="name" value="<%=locals.old && old.name ? old.name : product.name %>">
+                                    <span class="error"></span>
+                                    <% if (locals.errors && errors.name) { %>
+                                        <span class="errores"><%= errors.name.msg %> </span>
+                                    <% } %>
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastname">Precio:</label>
-                                    <input type="text" class="form-control" id="lastname" name="lastName" >
+                                    <label for="price">Precio:</label>
+                                    <input type="number" class="form-control" id="price" name="price" value="<%=locals.old && old.price ? old.price : product.price %>">
+                                    <span class="error"></span>
+                                    <% if (locals.errors && errors.price) { %>
+                                        <span class="errores"><%= errors.price.msg %> </span>
+                                    <% } %>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Descuento:</label>
-                                    <input type="text" class="form-control" id="email" name="email" >
+                                    <label for="discount">Descuento:</label>
+                                    <input type="number" class="form-control" id="discount" name="discount" value="<%=locals.old && old.discount ? old.discount : product.discount %>">
+                                    <span class="error"></span>
+                                    <% if (locals.errors && errors.discount) { %>
+                                        <span class="errores"><%= errors.discount.msg %> </span>
+                                    <% } %>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Password">Categorias:</label>
-                                    <select class='form-control' name="" id="">
-                                        <option value="<%= product.category.id %>" hidden selected>
-                                            <%= product.category.category %>
-                                        </option>
-                                        <% categories.forEach(category=> { %> 
-                                            <option value="<%= category.id %>">
-                                                <%= capitalizarPrimeraLetra(category.category) %>
+                                    <label for="category">Categorias:</label>
+                                    <select class='form-control' name="category" id="category">
+                                        <% categories.forEach(categoria=> { %> 
+                                            <option value="<%= categoria.id %>" <%= categoria.id === product.category.id ? "selected" : null%>>
+                                                <%= capitalizarPrimeraLetra(categoria.category) %>
                                             </option>
                                             <% }) %>
                                     </select>
+                                    <span class="error"></span>
+                                    <% if (locals.errors && errors.category) { %>
+                                        <span class="errores"><%= errors.category.msg %> </span>
+                                    <% } %>
                                 </div>
                                 <div class='description form-group'>
                                     <label for="description"> Descipción:</label>
-                                    <textarea class="form-control" name="description" id="description" cols="30"
-                                        rows="10"><%= product.description %> </textarea>
+                                    <textarea class="form-control" name="description" id="description" cols="30"rows="10"><%=locals.old && old.description ? old.description : product.description %> </textarea>
+                                    <span class="error"></span>
+                                    <% if (locals.errors && errors.description) { %>
+                                        <span class="errores"><%= errors.description.msg %> </span>
+                                    <% } %>
                                 </div>
                                 <div class="form-group">
                                     <% if (product.images.length != 0) { %>
@@ -47,7 +63,7 @@
                                             <img src="/images/articulos/<%=image.image%>" alt="" width="80px">
                                         <% }) %>  
                                     <% } %> 
-                                    <input class="img-input" type="file" name="avatar" id="avatar">
+                                    <input class="img-input" type="file" name="image" id="image">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Editar</button>
                             </div>
@@ -57,6 +73,7 @@
             </form> 
     </main>
             <%- include('../partials/footer') %> 
+            <script src="/js/addProduct.js"></script>
 
     </body>
 

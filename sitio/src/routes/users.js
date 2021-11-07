@@ -7,8 +7,7 @@ const multer = require('multer');
 const path = require('path')
 const uploadUser = require('../middleware/fotoUserMulter')
 const uploadProduct = require('../middleware/fotoProductMulter')
-
-
+const productValidation = require('../validations/productValidation')
 const registerValidation = require("../validations/registerValidation")
 
 
@@ -25,10 +24,10 @@ router.post('/register',uploadUser.single('avatar'), registerValidation ,procces
 router.get('/logout', logout);
 
 router.get('/add', loginCheck, add);
-router.post('/add', uploadProduct.array('image'), loginCheck ,store);
+router.post('/add', uploadProduct.array('image'), loginCheck, productValidation,store);
 
 router.get('/edit/:id', loginCheck, edit);
-router.put('/edit/:id', uploadProduct.array("avatar"), loginCheck, update);
+router.put('/edit/:id', uploadProduct.array("avatar"), loginCheck, productValidation, update);
 
 router.delete('/delete/:id', destroy);
 
