@@ -24,17 +24,17 @@
   color: var(--color-header); }
 
 .store main .div_container {
-  height: 100%;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff; }
+  height: 100%; }
 
 .store main .div_container .art {
   background-color: var(--color-art);
   position: relative;
-  background-color: transparent;
   height: 89.9vh;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff; }
+  border: 1px solid #fff;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 15px; }
 
 .store main .div_container .art .div_img {
   width: 100%;
