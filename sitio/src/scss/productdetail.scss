@@ -10,8 +10,7 @@
 }
 
 .details main{
-    width:88%;
-    margin:10px auto;
+    margin:80px auto;
 }
 
 .details main div.caja-con-imagenes {
@@ -36,10 +35,14 @@
 .details main div.box-product{
     margin: 15% auto; /* MARGIN SACADO EN DeSKTOP */
     background-color: #01020e1a; /* nueva imagen */
-    width: 77%;
+    width: 90%;
     font-size: 20px;
     box-shadow: 0px 0px 8px 0px;
     border-radius: 8px;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.05);
 }
 .details main div.box-product a{
     color: var(--color-h1);
@@ -64,7 +67,7 @@
 }
 
 .details main div.img img{
-    /* width: 100%; */
+    width: 100%;
     height: 75vh;
     object-fit: contain;
     border-radius: 8px 8px 0px 0px;
@@ -127,13 +130,15 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* background-color: #fff; */
     flex-direction: column;
-    border-radius: 8px;
     box-shadow: 0px 0px 8px 0px;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.05);
 }
 
-.details main section.relacionados h2{
+.details main h2.product_rel{
     background-color: var(--color-h1-rgba);
     padding: 15px;
     text-align: center;
@@ -192,7 +197,7 @@
     text-align: center;
     color: white;
     padding: 4px;
-    width: 20%;
+    width: 100px;
     background-color: #0b0b0d00;
     border: 1px solid #eee;
     border-radius: 20px;
@@ -228,7 +233,7 @@
     .details main div.box-product{
         /* margin: 15% auto; */ /* MARGIN SACADO EN DeSKTOP */
         background-color: #01020e1a; /* nueva imagen */
-        width: 90%;
+        width: 80%;
         font-size: 20px;
         box-shadow: 0px 0px 8px 0px;
         border-radius: 8px;
@@ -249,6 +254,13 @@
     .details main div.descripcion div.cant{
         width: 100%;
     }
+    .details main section.relacionados{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .details main section.relacionados article{
+        margin: 10px auto;
+    }
 }
 
 @media (min-width:769px) {
@@ -257,7 +269,9 @@
         width:100%;
         margin-top:50px
     }
-    
+    .details main div.box-product{
+        width: 75%; 
+    }
     
     .details main section.relacionados{
         width:75%;
