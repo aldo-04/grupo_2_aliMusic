@@ -40,10 +40,11 @@
                                         <input type="password" class="form-control" id="newPassword" name="newPassword" >
                                     </div>
                                     <div class="form-group">
-                                        <img class="img-circle" src="/images/fotoUser/<%- user.avatar %>" alt="avatar" width="20%">
+                                            <div id="img-preview"></div>
+                                            <img class="img-circle" src="/images/fotoUser/<%- user.avatar %>" alt="avatar" width="20%">
                                     </div>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="validatedCustomFile" name="avatar">
+                                        <input type="file" class="custom-file-input" id="validatedCustomFile" name="avatar" onchange="readURL(this)">
                                         <label class="custom-file-label" for="validatedCustomFile">Seleccione avatar</label>
                                       </div>
                                    <!--  <div class="form-group">
@@ -101,5 +102,6 @@
         </div>
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/user.js"></script>
 </body>
 </html>

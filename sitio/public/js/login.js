@@ -74,7 +74,6 @@ window.addEventListener("load", () => {
             $('form-login').submit()
         }
     })
-    /* convertir input tipo password en text */
     $("show-pass").addEventListener('click', () => {
         if ($("show-pass").checked) {
             $("password").type = "text"

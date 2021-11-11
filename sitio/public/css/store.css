@@ -43,14 +43,14 @@
   background-color: transparent; }
 
 .store main section .art .div_img img {
-  max-height: 45%;
+  max-height: 70%;
   width: 90%;
   position: absolute;
   object-fit: contain;
   background-color: transparent;
   align-self: center;
-  left: 5%;
-  top: 35%; }
+  left: 2%;
+  top: 16%; }
 
 .store main .div_container .art .name {
   position: absolute;
