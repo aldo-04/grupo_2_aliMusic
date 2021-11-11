@@ -103,4 +103,4 @@
 
 ### Sprint 6
 
-*
+* El sprint 6 fue el mas complicado de todos ya que era base de datos y no hicimos un buen diagrama, lo que nos relentizo todo, pero igualmente lo pudimos terminar aunque fuera de tiempo, el problema de nuestro grupo es la falta de tiempo que tenemos, pero en cuanto nos ponemos a hacer las cosas sale todo muy bien.
