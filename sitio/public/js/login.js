@@ -71,7 +71,11 @@ window.addEventListener("load", () => {
         }
 
         if(!error){
+            /* $('form-login').load(function () {
+                $(".loader").fadeOut("slow");
+              });  */  
             $('form-login').submit()
+             
         }
     })
     $("show-pass").addEventListener('click', () => {

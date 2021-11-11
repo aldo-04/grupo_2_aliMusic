@@ -10,70 +10,71 @@
                         <p>Presione Un boton para publicar</a>
 
                         <div class="button_post">
-                            <button id="open">
-                                Youtube
+                            <button id="openYoutube">
+                                Subir desde Youtube
                             </button>
-                            <button id="open">
-                                Video
+                            <button id="openVideo">
+                                Subir Video/Imagen
                             </button>
-                            <button id="open">
-                                Texto
+                            <button id="openText">
+                                Subir Solo Texto
                             </button>
                         </div>
-                            <div id="modal_container" class="modal-container">
-                                <div class="div_publicar">
+                        <div id="modal_youtube" class="modal-youtube">
 
-                                <div class="youtube">
-                                    <form action="/comunity" method="POST" enctype="multipart/form-data">
-                                        <div class="div_text">
-                                            <input type="text" name="name" placeholder="Titulo">
-                                        </div>
-
-                                        <div class="div_link">
-                                            <input type="text" name="media" placeholder="link">
-                                        </div>
-
-                                        <div class="div_description">
-                                            <textarea name="description" id="description" cols="30" rows="10"
-                                                placeholder="Descripcion"></textarea>
-                                        </div>
-                                        <button type="submit">Publicar</button>
-                                        <button id="close">Cerrar</button>
-                                    </form>
-                                </div>
-
-                                <div class="video">
-                                    <form action="/comunity" method="POST" enctype="multipart/form-data"></form>
+                            <div id="youtube">
+                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
                                     <div class="div_text">
-                                        <input type="text" name="name" placeholder="Titulo">
+                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                    </div>
+
+                                    <div class="div_link">
+                                        <input class="input_text" type="text" name="media" placeholder="link">
+                                    </div>
+
+                                    <div class="div_description">
+                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
+                                            placeholder="Descripcion"></textarea>
+                                    </div>
+                                    <button class="button-submit" type="submit">Publicar</button>
+                                </form>
+                                <button class="button-close" id="closeYoutube">Cerrar</button>
+                            </div>
+                        </div>
+                        <div id="modal_video" class="modal-video">
+                            <div id="video">
+                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
+                                    <div class="div_text">
+                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
                                     </div>
                                     <div class="div_file">
                                         <input type="file" name="image">
                                     </div>
                                     <div class="div_description">
-                                        <textarea name="description" id="description" cols="30" rows="10"
+                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
                                             placeholder="Descripcion"></textarea>
                                     </div>
-                                    <button type="submit">Publicar</button>
-                                    <button id="close">Cerrar</button>
-                                    </form>
-                                </div>
-                                <div class="text">
-                                    <form action="/comunity" method="POST" enctype="multipart/form-data"></form>
-                                    <div class="div_text">
-                                        <input type="text" name="name" placeholder="Titulo">
-                                    </div>
-                                    <div class="div_description">
-                                        <textarea name="description" id="description" cols="30" rows="10"
-                                            placeholder="Descripcion"></textarea>
-                                    </div>
-                                    <button type="submit">Publicar</button>
-                                    <button id="close">Cerrar</button>
-                                    </form>
-                                </div>
-
+                                    <button class="button-submit" type="submit">Publicar</button>
+                                </form>
+                                <button class="button-close" id="closeVideo">Cerrar</button>
                             </div>
                         </div>
+                        <div id="modal_text" class="modal-text">
+                            <div id="text">
+                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
+                                    <div class="div_text">
+                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                    </div>
+                                    <div class="div_description">
+                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
+                                            placeholder="Descripcion"></textarea>
+                                    </div>
+                                    <button class="button-submit" type="submit">Publicar</button>
+                                </form>
+                                <button class="button-close" id="closeText">Cerrar</button>
+                            </div>
+                        </div>
+
                         <div class="div_filtrar">
                             <a href=""><i class="fas fa-guitar"></i> Mejores</a>
                             <a href=""><i class="fas fa-hashtag"></i> Destacado</a>
@@ -121,8 +122,9 @@
                     </div>
 
                 </main>
+
                 <%- include('../partials/footer') %>
-                <script src="/js/comunity.js"></script>
+                    <script src="/js/comunity.js"></script>
     </body>
 
 </html>
