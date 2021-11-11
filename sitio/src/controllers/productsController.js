@@ -73,7 +73,7 @@ module.exports = {
             }
         ).then(product =>{
             let producto = product
-            product.cart = 1
+            producto.cart = 1
             db.Cart.create(
                 {
                     cartProductId: 1,

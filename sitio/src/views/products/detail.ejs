@@ -30,14 +30,17 @@
                             
                             <p>$ <%= product.price %> </p>
                         
-                            <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
+                            <% if (locals.userLogin) { %>
+                                <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
                                 
-                                <a href="">
-                                    <button class="fas fa-shopping-cart" type="submit">Comprar</button>
-                                    
-                                </a>
-                            </form>
-               
+                                    <a href="">
+                                        <button class="fas fa-shopping-cart" type="submit">Comprar</button>
+                                        
+                                    </a>
+                                </form>
+                            <% }else{ %>
+                                <span class="span">Tienes que estar logeado para comprar</span>
+                            <% } %>
                             <div class="cant">
                                 <button type="button">-</button>
                                 <span>01</span>

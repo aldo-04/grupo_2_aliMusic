@@ -26,7 +26,7 @@ module.exports = {
         unique: true,
       },
       number: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
       },
       password: {
         type: Sequelize.STRING(250),
