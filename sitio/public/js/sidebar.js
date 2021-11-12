@@ -1,7 +1,7 @@
 ScrollReveal().reveal('.art');
-/* $(window).load(function () {
+$(window).load(function () {
     $(".loader").fadeOut("slow");
-  }); */
+  });
 
 /*==================== SHOW NAVBAR ====================*/
 const showMenu = (headerToggle, navbarId) =>{

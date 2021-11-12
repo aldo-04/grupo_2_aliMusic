@@ -1,30 +1,31 @@
 .comunity main{
     margin-top: 65px;
-    .container-main{
-        width: 95%;
-        margin: 20px auto;
-        color: var(--color-header);
-        background-color: #fff;
-        padding: 10px;
-        .button_post{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
+    .container-body{
+        .container-main{
+            width: 95%;
             margin: 20px auto;
-            align-items: center;
-            button {
-                opacity: 1;  
-                background-color: #47a386;
-                border: 0;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                color: #fff;
-                font-size: 14px;
-                padding: 10px 25px;
-                width: 50%;
+            color: var(--color-header);
+            background-color: #fff;
+            padding: 10px;
+            .button_post{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                margin: 20px auto;
+                align-items: center;
+                button {
+                    opacity: 1;  
+                    background-color: #47a386;
+                    border: 0;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 10px 25px;
+                    width: 50%;
+                }
             }
-        }
 
         .modal-text,
         .modal-video,
@@ -129,17 +130,26 @@
             img{
                 height: 250px;
                 object-fit: contain;
-            }
-            .div_p{
-                font-size: 11px;
+            }.div_p1{
                 padding: 10px;
                 background-color: #c6c6c6;
+                .div_p2{
+                    border: 0.5px solid #fff;
+                    font-size: 16px;
+                    padding: 20px 10px;
+                }
             }
+            
         }
+    }
+    .container-aside{
+        display: none;
+    }
     }
     
 }
 @media (min-width: 425px){
+    
     .comunity main{
         margin-top: 110px;
     .container-main{
@@ -148,6 +158,15 @@
     }
     .button_post{
         flex-direction: row !important;
+    }
+    .container-body{
+        display: grid;
+        grid-template-columns: 63% 20%;
+        justify-content: center;
+        .container-aside{
+            display: block;
+            background-color: #fff;
+        }
     }
 }
 @media (min-width: 769px){
