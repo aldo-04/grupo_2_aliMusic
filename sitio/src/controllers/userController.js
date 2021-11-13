@@ -122,9 +122,9 @@ module.exports = {
             {
                 firstName: firstName.trim(),
                 lastName: lastName.trim(),
-                number: number,
+                number: number ? number : null,
                 email: email.trim(),
-                password: newPassword == '' ? bcrypt.hashSync(password.trim(),10) : bcrypt.hashSync(newPassword.trim(),10),
+                password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(),10) : null ,
                 avatar: req.file ? req.file.filename : avatar
             },
             {

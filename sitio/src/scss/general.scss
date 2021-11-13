@@ -38,7 +38,7 @@ main{
     width: 100%;
     height: 100%;
     z-index: 10;
-    background: url('/images/background.gif') 50% 50% no-repeat rgba($color: #000000, $alpha: .7);
+    background: url('/images/background.gif') 50% 50% no-repeat rgba($color: #fff, $alpha: .7);
 }
 :root{
     --color-background: #fff;
