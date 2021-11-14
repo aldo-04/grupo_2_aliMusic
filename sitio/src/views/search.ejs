@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/headBootstrap') %> 
+<body class="search">
+    <%- include('./partials/sidebar') %> 
+    <main>
+        <section>
+            <h1>Productos que contienen <span class="buscado"><%= buscado %></span></h1>
+                <div class="filtros">
+                    <select name="category" id="busqueda">
+                        <% categories.forEach(category => { %>
+                        <option id="selected" value="<%= category.category %>"><%= category.category %></option>
+                        <% }) %>
+                    </select>
+                </div>
+            <% products.forEach(product=> { %>
+                <div class="div_container" id="divArt">
+                    <article class="art">
+                            <div class="div_img">
+                                <a href="/products/detail/<%= product.id %>">
+                                    <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
+                                </a>
+                                <p class="name" id="names"><%= product.name %></p>
+                                <div class="box_description">
+                                    <p class="description">
+                                        <%= product.description %> 
+                                    </p>
+                                    <span id="category"><%= product.category.category %></span>
+                                </div>
+                                    <a class="a_buy" href="/products/detail/<%= product.id %>">Comprar</a>
+                            </div>
+                            <div class="div_price">
+                                <% if (product.discount>0) { %>
+                                    <p class="off">
+                                        <%=product.discount + '% OFF'%>
+                                    </p>
+                                    <p class="precio">$<%= product.price %> menos $<%= product.discount>0 ? product.price*product.discount/100  : null %>
+                                    </p>
+                                <% } else { %>
+                                    <p class="precio">$<%= product.price %></p>
+                                <% } %>
+                            </div>
+                    </article>
+                </div>
+            <% }) %>
+           
+        </section>
+        
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="/js/search.js"></script> 
+</body>
+</html>
