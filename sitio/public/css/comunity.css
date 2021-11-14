@@ -6,21 +6,114 @@
     color: var(--color-header);
     background-color: #fff;
     padding: 10px; }
-    .comunity main .container-main .div_publicar {
-      margin-bottom: 20px;
-      border-radius: 3px;
-      padding: 10px 0; }
-      .comunity main .container-main .div_publicar form {
-        text-align: center; }
-        .comunity main .container-main .div_publicar form div {
-          margin-bottom: 15px; }
-        .comunity main .container-main .div_publicar form .div_text {
-          display: grid;
-          justify-content: space-around;
-          grid-template-columns: 45% 45%;
-          grid-template-rows: auto auto; }
-          .comunity main .container-main .div_publicar form .div_text .comunity .div_publicar input {
-            text-indent: 3px; }
+    .comunity main .container-main .button_post {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      margin: 20px auto;
+      align-items: center; }
+      .comunity main .container-main .button_post button {
+        opacity: 1;
+        background-color: #47a386;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 25px;
+        width: 50%; }
+    .comunity main .container-main .modal-text,
+    .comunity main .container-main .modal-video,
+    .comunity main .container-main .modal-youtube {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      pointer-events: none;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: opacity 0.3s ease;
+      z-index: 99; }
+      .comunity main .container-main .modal-text .button-submit,
+      .comunity main .container-main .modal-video .button-submit,
+      .comunity main .container-main .modal-youtube .button-submit {
+        width: 30%;
+        background-color: #47a386;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 25px;
+        position: absolute;
+        bottom: 7%;
+        right: 10%; }
+      .comunity main .container-main .modal-text #video,
+      .comunity main .container-main .modal-text #youtube,
+      .comunity main .container-main .modal-text #text,
+      .comunity main .container-main .modal-video #video,
+      .comunity main .container-main .modal-video #youtube,
+      .comunity main .container-main .modal-video #text,
+      .comunity main .container-main .modal-youtube #video,
+      .comunity main .container-main .modal-youtube #youtube,
+      .comunity main .container-main .modal-youtube #text {
+        position: relative;
+        background-color: #fff;
+        width: 600px;
+        max-width: 95%;
+        max-height: 75%;
+        padding: 30px 5%;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding-bottom: 100px; }
+        .comunity main .container-main .modal-text #video .button-close,
+        .comunity main .container-main .modal-text #youtube .button-close,
+        .comunity main .container-main .modal-text #text .button-close,
+        .comunity main .container-main .modal-video #video .button-close,
+        .comunity main .container-main .modal-video #youtube .button-close,
+        .comunity main .container-main .modal-video #text .button-close,
+        .comunity main .container-main .modal-youtube #video .button-close,
+        .comunity main .container-main .modal-youtube #youtube .button-close,
+        .comunity main .container-main .modal-youtube #text .button-close {
+          width: 30%;
+          background-color: #47a386;
+          border: 0;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          color: #fff;
+          font-size: 14px;
+          padding: 10px 25px;
+          position: absolute;
+          bottom: 7%;
+          left: 10%; }
+      .comunity main .container-main .modal-text .form-comunity,
+      .comunity main .container-main .modal-video .form-comunity,
+      .comunity main .container-main .modal-youtube .form-comunity {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px; }
+        .comunity main .container-main .modal-text .form-comunity .input_text,
+        .comunity main .container-main .modal-video .form-comunity .input_text,
+        .comunity main .container-main .modal-youtube .form-comunity .input_text {
+          height: 30px;
+          width: 90%;
+          text-indent: 5px; }
+        .comunity main .container-main .modal-text .form-comunity .input_textarea,
+        .comunity main .container-main .modal-video .form-comunity .input_textarea,
+        .comunity main .container-main .modal-youtube .form-comunity .input_textarea {
+          height: 50%;
+          width: 90%;
+          padding: 10px; }
+    .comunity main .container-main .show {
+      pointer-events: auto;
+      opacity: 1; }
     .comunity main .container-main .div_filtrar {
       background-color: #fff;
       margin-bottom: 20px;
@@ -51,9 +144,11 @@
 
 @media (min-width: 425px) {
   .comunity main {
-    margin-top: 90px; }
+    margin-top: 110px; }
     .comunity main .container-main {
-      width: 90%; } }
+      width: 90%; }
+  .button_post {
+    flex-direction: row !important; } }
 
 @media (min-width: 769px) {
   .comunity .container-main {
@@ -62,4 +157,10 @@
     align-items: center;
     justify-content: space-around;
     grid-template-columns: auto auto;
-    grid-template-rows: auto; } }
+    grid-template-rows: auto; }
+  .button-submit {
+    width: 20%;
+    right: 20%; }
+  .button-close {
+    width: 20%;
+    left: 20%; } }

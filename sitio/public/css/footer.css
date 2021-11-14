@@ -14,7 +14,7 @@ footer a:hover {
 
 footer .div_grid {
   display: grid;
-  grid-template-rows: auto auto 50px;
+  grid-template-rows: auto 50px;
   height: 60%;
   border: 1px solid #fff;
   margin: 1px; }

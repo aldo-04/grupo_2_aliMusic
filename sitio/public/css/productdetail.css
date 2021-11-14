@@ -2,7 +2,7 @@
 .details {
   background-color: var(--color-background); }
 
-.details h2, .details p, .details h3, .details span {
+.details h2, .details p, .details h3 {
   color: #fff; }
 
 .details main {
@@ -85,6 +85,10 @@
   border-radius: 112px;
   padding: 4px;
   height: 26px; }
+
+.span {
+  color: #bb0000;
+  text-align: center; }
 
 .details main div.descripcion a {
   display: flex;

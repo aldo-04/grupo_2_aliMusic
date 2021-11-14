@@ -1,4 +1,6 @@
 
+    <!--========== LOADING ==========-->
+    <!-- <div class="loader"></div> -->
     <!--========== HEADER ==========-->
     <header class="header">
         <div class="header__toggle_2">
@@ -7,9 +9,7 @@
         <div class="header__container">
             <% if (locals.userLogin) { %>
                 <img src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
-            <% }else {%>
-                <img src="/images/fotoUser/avatar_default.png" alt="" class="header__img">
-                <% }%>
+            <% } %>
             <a href="/" class="header__logo">Ali Music</a>
 
             <div class="header__search">

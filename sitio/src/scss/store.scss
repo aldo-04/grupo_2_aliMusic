@@ -37,7 +37,7 @@
     border: 1px solid #fff;
     border-radius: 15px;
     backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgba(0, 0, 0, 0.4); 
     margin-bottom: 15px;
 }
 .store main .div_container .art .div_img{
@@ -47,14 +47,14 @@
     background-color: transparent;
 }
 .store main section .art .div_img img{
-    max-height: 45%;
+    max-height: 70%;
     width: 90%;
     position: absolute;
     object-fit: contain;
     background-color: transparent;
     align-self: center;
-    left: 5%;
-    top: 35%;
+    left: 2%;
+    top: 16%;
 }
 .store main .div_container .art .name{
     position: absolute;
@@ -198,9 +198,12 @@
         margin-bottom: 30px;
     }
     .store main .div_container{  
-        grid-template-columns: 23% 23% 23% 23%;
         max-width: 1000px;
         margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        gap: 30px;
     }
     .store main .div_container .art .div_price .off{
         font-size: 16px;

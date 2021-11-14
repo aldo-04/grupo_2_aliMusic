@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
     let regExLetter = /^[A-Z]+$/i;
 
     let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
-    
+
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
 
@@ -47,5 +47,43 @@ window.addEventListener("load", () => {
                 break;
         }
     }
-)
+    )
+    $("form-login").addEventListener('submit', event => {
+        event.preventDefault();
+        let elementsForm = $('form-login').elements;
+        let error = false;
+
+        for (let i = 0; i < elementsForm.length - 2; i++) {
+            
+            if(!elementsForm[i].value){
+                elementsForm[i].classList.add('is-invalid')
+                $('error-empty').innerHTML = "Los campos señalados son obligatorios";
+                error = true
+                console.log(elementsForm[i].value);
+            }
+        }
+        for (let i = 0; i < elementsForm.length - 2; i++) {
+            
+            if(elementsForm[i].classList.contains('is-invalid')){
+                error = true
+                console.log('2'+elementsForm);
+            }
+        }
+
+        if(!error){
+            /* $('form-login').load(function () {
+                $(".loader").fadeOut("slow");
+              });  */  
+            $('form-login').submit()
+             
+        }
+    })
+    $("show-pass").addEventListener('click', () => {
+        if ($("show-pass").checked) {
+            $("password").type = "text"
+        } else {
+            $("password").type = "password"
+        }
+    }
+    )
 })
