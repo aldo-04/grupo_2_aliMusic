@@ -4,7 +4,7 @@
 <body>
     <%- include('../partials/sidebar') %> 
     <main>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data" id="form">
             <div class="container mb-5 mt-5">
                     <div class="card">
                         <div class="card-body">
@@ -59,7 +59,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="image">Agregar imagen:</label>
-                                <input class="img-input"  type="file" name="image" id="image" multiple>
+                                <input class="img-input" type="file" name="image" id="image" multiple>
+                                <span class="error text-danger"></span>
+                                <% if (locals.errors && errors.image) { %>
+                                    <span class="errores"><%= errors.image.msg %> </span>
+                                <% } %>
                             </div>
                             <button type="submit" class="btn btn-primary">Agregar</button>
                         </div>
