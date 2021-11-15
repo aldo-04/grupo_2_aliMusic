@@ -13,7 +13,6 @@ module.exports = {
     index: async (req, res) => {
         let products
         if(req.query.search && !req.query.price){
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> REQ SEARCH SOLOOOO")
             products = await db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
@@ -24,7 +23,6 @@ module.exports = {
                 }
             })
         }else if(req.query.price && !req.query.search){
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TOMO EL REQ PRIICCCEEE")
             products = await db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
@@ -33,7 +31,6 @@ module.exports = {
                 order: [ ["price","ASC"] ],
             })
         }else if(req.query.price && req.query.search){
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tomo LOS DOOOOS")
             products = await db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
@@ -46,7 +43,6 @@ module.exports = {
                 order: [ ["price","ASC"] ],
             })
         }else{
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Tomo NINGUNOOOOOO")
             products = await db.Product.findAll({
                 include : ['images','productStates',"category"]
             })

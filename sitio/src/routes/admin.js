@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path')
 const adminCheck = require('../middleware/adminCheck')
 const productValidation = require('../validations/productValidation')
+const loginCheck = require('../middleware/loginCheck');
 
 const storage = multer.diskStorage({
     destination : (req,file,cb) =>{
@@ -17,13 +18,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-router.get('/', adminCheck, index)
-router.get('/add', adminCheck, add);
+router.get('/', adminCheck, loginCheck, index)
+router.get('/add', adminCheck, loginCheck, add);
 router.post('/add', upload.array('image'), productValidation ,store);
 
-router.get('/edit/:id', adminCheck, edit);
+router.get('/edit/:id', adminCheck, loginCheck, edit);
 router.put('/edit/:id', upload.array("image"), productValidation ,update);
 
-router.delete('/delete/:id', destroy);
+router.delete('/delete/:id', loginCheck, destroy);
 
 module.exports = router;

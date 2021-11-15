@@ -11,8 +11,7 @@ const localUser = require('./middleware/localUser');
 
 
 //middlewares
-const recordame = require('./Middleware/cookie');
-const loginCheck = require('./Middleware/loginCheck');
+const recordame = require('./middleware/cookie');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

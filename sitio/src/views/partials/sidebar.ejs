@@ -7,9 +7,6 @@
             <i class='bx bx-menu' id="header-toggle_2"></i>
         </div>
         <div class="header__container">
-            <% if (locals.userLogin) { %>
-                <img src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
-            <% } %>
             <a href="/" class="header__logo">Ali Music</a>
 
             <div class="header__search">
@@ -18,7 +15,13 @@
                 </form>
                 <i class='bx bx-search header__icon'></i>
             </div>
-
+            
+            <% if (locals.userLogin) { %>
+                <a href="/">
+                     <img src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
+                </a>
+             <% } %>
+             
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
             </div>
