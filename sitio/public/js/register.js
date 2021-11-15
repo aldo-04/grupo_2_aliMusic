@@ -96,7 +96,7 @@ window.addEventListener("load", () => {
     $("userName").addEventListener("blur", () => {
         switch (true) {
             case !$("userName").value.trim():
-                $("userName-errors").innerText = "El nombre es obligatorio"
+                $("userName-errors").innerText = "El nombre de usuario es obligatorio"
                 $("userName").classList.add("is-invalid")
                 break;
             case $('userName').value.trim().length < 3 || $('userName').value.trim().length > 50:
@@ -183,6 +183,18 @@ window.addEventListener("load", () => {
             if(!elementsForm[i].value){
                 elementsForm[i].classList.add('is-invalid')
                 $('error-empty').innerHTML = "Los campos señalados son obligatorios";
+                $('password-errors').innerText = "La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres"
+                $('password').classList.add('is-invalid')
+                $('password2-errors').innerText = "Debes ingresar una contraseña"
+                $('password2').classList.add('is-invalid')
+                $('email-errors').innerText = "Tiene que ser un email válido"
+                $('email').classList.add('is-invalid')
+                $("userName-errors").innerText = "El nombre es obligatorio"
+                $("userName").classList.add("is-invalid")
+                $("lastName-errors").innerText = "El apellido es obligatorio"
+                $("lastName").classList.add("is-invalid")
+                $("firstName-errors").innerText = "El nombre es obligatorio"
+                $("firstName").classList.add("is-invalid")
                 error = true
                 console.log(elementsForm[i].value);
             }
