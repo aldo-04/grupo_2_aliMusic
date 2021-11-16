@@ -39,7 +39,7 @@ module.exports = {
         .then(([categories,products]) => {
             
             res.render("search",{
-                buscado:req.query.search,
+                old : req.query,
                 categories,
                 products,
                 title : "Busqueda"

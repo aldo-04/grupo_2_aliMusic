@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-.search main .div_container .art{
+.search main .div_container .product{
     width: 60%;
     position: relative;
     height: 92.9vh;
@@ -43,13 +43,13 @@
     background: rgba(255, 255, 255, 0.05);
     margin: 28px auto;
 }
-.search main .div_container .art .div_img{
+.search main .div_container .product .div_img{
     width: 100%;
     height: 80vh;
     position: relative;
     background-color: transparent;
 }
-.search main section .art .div_img img{
+.search main section .product .div_img img{
     max-height: 45%;
     width: 90%;
     position: absolute;
@@ -59,7 +59,7 @@
     left: 5%;
     top: 35%;
 }
-.search main .div_container .art .name{
+.search main .div_container .product .name{
     position: absolute;
     color: #fff;
     left: 4%;
@@ -67,20 +67,20 @@
     font-size: 26px;
     text-transform: uppercase;
 }
-.search main .div_container .art .box_description{
+.search main .div_container .product .box_description{
     position: absolute;
     left: 4%;
     top: 40%;
     width: 125px;
     display: none;
 }
-.search main .div_container .art .description{
+.search main .div_container .product .description{
     position: absolute;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
 }
-.search main .div_container .art .a_buy{
+.search main .div_container .product .a_buy{
     position: absolute;
     color: #fff;
     left: 40%;
@@ -89,18 +89,18 @@
     border-radius: 8px;
     padding: 4px;
 }
-.search main .div_container .art .div_price{
+.search main .div_container .product .div_price{
     border-top: 1px solid #fff;
     padding-top: 15px;
     margin-top: 15px;
     display: flex;
     justify-content: space-evenly
 }
-.search main .div_container .art .div_price .off{
+.search main .div_container .product .div_price .off{
     font-size: 10px;
     color: #fff;
 }
-.search main .div_container .art .div_price .precio{
+.search main .div_container .product .div_price .precio{
     font-size: 12px;
     color: #fff;
 }
@@ -205,10 +205,10 @@
         max-width: 1000px;
         margin: 0 auto;
     }
-    .search main .div_container .art .div_price .off{
+    .search main .div_container .product .div_price .off{
         font-size: 16px;
     }
-    .search main .div_container .art .div_price .precio{
+    .search main .div_container .product .div_price .precio{
         font-size: 20px;
     }
     .search   main .descuentos{

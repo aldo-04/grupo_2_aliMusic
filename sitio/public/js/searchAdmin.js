@@ -5,13 +5,21 @@ let menor = document.querySelector("#menor")// boton para ordenar por precio de 
 let price = document.getElementById("price")// input para filtrar hasta una cantidad de precio
 let restart = document.getElementById("restart")// borra todos los filtros
 
-let search= new URLSearchParams(window.location.search,window.location.price)// agarro lo que fue buscado que llega por query
+let search= new URLSearchParams(window.location.search)// agarro lo que fue buscado que llega por query
 
 window.addEventListener("load", ()=>{
 
      mayor.addEventListener("click", async ()=>{
-        let response = await fetch(window.origin + `/apis/orderPriceDesc?search=${search.get("search")}&price=${search.get("price")}`)
-        let products = await response.json()
+         console.log("clickeaste el mayor")
+        let products
+         if(search.has("search") == false){
+            let response = await fetch(window.origin + `/apis/orderPriceDesc`)
+             products = await response.json()
+         }else{
+            let response = await fetch(window.origin + `/apis/orderPriceDesc?search=${search.get("search")}&price=${search.get("price")}`)
+            products = await response.json()
+         }
+        
         console.log(products)
         table.innerHTML = null
 
@@ -39,9 +47,15 @@ window.addEventListener("load", ()=>{
 
      menor.addEventListener("click", async ()=>{
         console.log("clickeaste")
+        let products
+        if(search.has("search") == false){
+            let response = await fetch(window.origin + `/apis/orderPrice`)
+            products = await response.json()
+        }else{
         let response = await fetch(window.origin + `/apis/orderPrice?search=${search.get("search")}&price=${search.get("price")}`)
-        let products = await response.json()
-
+        products = await response.json()
+        }
+        console.log(products)
         table.innerHTML = null
 
         products.data.forEach(product => {

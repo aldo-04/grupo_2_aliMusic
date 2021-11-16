@@ -5,16 +5,38 @@
     <%- include('./partials/sidebar') %> 
     <main>
         <section>
-                <div class="filtros">
-                    <select name="category" id="busqueda">
-                        <% categories.forEach(category => { %>
-                        <option id="selected" value="<%= category.category %>"><%= category.category %></option>
-                        <% }) %>
-                    </select>
+                <h5 class="filtrar" id="filtrar">Filtrar y Ordenar <i class="fas fa-filter"></i></h4>
+                <div class="filtros displayNone" id="filtros">
+                        <div class="boton">
+                            <button id="restart"><i class="fas fa-undo"></i></button>
+                        </div>
+                    <form action="" method="get" id="formPrice">
+                        <div class="select">
+                            <select name="category" id="busqueda">
+                                <option value="all" >Todas las categorias</option>
+                                <% categories.forEach(category => { %>
+                                <option value="<%=category.category%>" <%=old.category && old.category == category.category ? "selected" : null%>><%= category.category %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <input type="number" name="price" id="price" placeholder="Precios hasta..." value="<%= old.price ? old.price : null %>"><!-- filtro por cuanto precio -->
+
+                    </form>
+                    <div class="filtrosPrice">
+                        <div>
+                            <label for="menor">Mas barato a mas caro</label>
+                            <input type="radio" name="orden" id="menor">
+                        </div><!-- ordeno de mas caro a mas barato -->
+                        <div>
+                            <label for="mayor">Mas caro a mas barato</label>
+                            <input type="radio" name="orden" id="mayor">
+                        </div><!-- ordeno de mas barato a mas caro -->
+                    </div>
                 </div>
+            <div class="div_container" id="divArt">
             <% products.forEach(product=> { %>
-                <div class="div_container" id="divArt">
-                    <article class="art">
+                    <article class="product" id="product">
+                        
                             <div class="div_img">
                                 <a href="/products/detail/<%= product.id %>">
                                     <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto">
@@ -24,7 +46,7 @@
                                     <p class="description">
                                         <%= product.description %> 
                                     </p>
-                                    <span id="category"><%= product.category.category %></span>
+                                    <p id="category"><%= product.category.category %></p>
                                 </div>
                                     <a class="a_buy" href="/products/detail/<%= product.id %>">Comprar</a>
                             </div>
@@ -40,9 +62,8 @@
                                 <% } %>
                             </div>
                     </article>
-                </div>
             <% }) %>
-           
+        </div>
         </section>
         
     </main>

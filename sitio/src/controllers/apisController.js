@@ -52,6 +52,7 @@ module.exports = {
         try {
             if(req.query.search){
                 if(req.query.price){
+                    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA CON PRICE Y SEARCH")
                     products = await db.Product.findAll({
                         include : ['images','productStates',"category"],
                         where : {
@@ -61,6 +62,7 @@ module.exports = {
                         order: [ ["price","DESC"] ],
                     })
                 }else{
+                    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA SI NO HAY PRICE")
                     products = await db.Product.findAll({
                         include : ['images','productStates',"category"],
                         where : {
@@ -70,7 +72,8 @@ module.exports = {
                     })
                 }
             }else if(req.query.price){
-                    products = await db.Product.findAll({
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA SI NO HAY SEARCH")
+                products = await db.Product.findAll({
                         include : ['images','productStates',"category"],
                         where : {
                              price : { [Op.lte] : req.query.price } 
@@ -99,17 +102,18 @@ module.exports = {
     orderPrice: async (req,res)=> {
         let products
         try {
-            if(req.query.search){
-                if(req.query.price){
-                    products = await db.Product.findAll({
-                        include : ['images','productStates',"category"],
-                        where : {
-                            [Op.or] : [{name : {[Op.substring] : req.query.search }},{description : {[Op.substring] : req.query.search }}],
-                            [Op.and] : {price : { [Op.lte] : req.query.price }}
-                        },
-                        order: [ ["price","ASC"] ],
-                    })
-                }else{
+            if(req.query.price && req.query.search){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA CON PRICE Y SEARCH")
+                products = await db.Product.findAll({
+                    include : ['images','productStates',"category"],
+                    where : {
+                        [Op.or] : [{name : {[Op.substring] : req.query.search }},{description : {[Op.substring] : req.query.search }}],
+                        [Op.and] : {price : { [Op.lte] : req.query.price }}
+                    },
+                    order: [ ["price","ASC"] ],
+                })
+            }else if(req.query.search){
+                    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA SI NO HAY PRICE")
                     products = await db.Product.findAll({
                         include : ['images','productStates',"category"],
                         where : {
@@ -117,9 +121,9 @@ module.exports = {
                         },
                         order: [ ["price","ASC"] ],
                     })
-                }
             }else if(req.query.price){
-                    products = await db.Product.findAll({
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AGARRA SI NO HAY SEARCH")
+                products = await db.Product.findAll({
                         include : ['images','productStates',"category"],
                         where : {
                              price : { [Op.lte] : req.query.price } 
@@ -127,6 +131,7 @@ module.exports = {
                         order: [ ["price","ASC"] ],
                     })
             }else{
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>NO AGARRA NINGUNO")
                 products = await db.Product.findAll({
                     include : ['images','productStates',"category"],
                     order: [ ["price","ASC"] ],
@@ -148,6 +153,7 @@ module.exports = {
         let products
         try {
             if(req.query.search && !req.query.price){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> REQ SEARCH SOLOOOO")
                 products = await db.Product.findAll({
                     include : ['images','productStates',"category"],
                     where : {
@@ -158,6 +164,7 @@ module.exports = {
                     }
                 })
             }else if(req.query.price && !req.query.search){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TOMO EL REQ PRIICCCEEE")
                 products = await db.Product.findAll({
                     include : ['images','productStates',"category"],
                     where : {
@@ -166,6 +173,7 @@ module.exports = {
                     order: [ ["price","ASC"] ],
                 })
             }else if(req.query.price && req.query.search){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tomo LOS DOOOOS")
                 products = await db.Product.findAll({
                     include : ['images','productStates',"category"],
                     where : {
@@ -178,6 +186,59 @@ module.exports = {
                     order: [ ["price","ASC"] ],
                 })
             }else{
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Tomo NINGUNOOOOOO")
+                products = await db.Product.findAll({
+                    include : ['images','productStates',"category"]
+                })
+            }
+            return res.status(200).json({
+                meta: {
+                    link: getUrl(req),
+                    total: products.length
+                },
+                data: products
+            })
+        } catch (error) {
+            console.log(error)
+            throwError(res, error)
+        }
+    },
+    filterPriceUser : async (req, res) => {
+        let products
+        try {
+            if(req.query.search && !req.query.price){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> REQ SEARCH SOLOOOO")
+                products = await db.Product.findAll({
+                    include : ['images','productStates',"category"],
+                    where : {
+                        [Op.or] : [
+                            { name : { [Op.substring] : req.query.search } },
+                            { description : { [Op.substring] : req.query.search } }
+                        ]
+                    }
+                })
+            }else if(req.query.price && !req.query.search){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TOMO EL REQ PRIICCCEEE")
+                products = await db.Product.findAll({
+                    include : ['images','productStates',"category"],
+                    where : {
+                         price : { [Op.lte] : req.query.price } 
+                        }
+                })
+            }else if(req.query.price && req.query.search){
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tomo LOS DOOOOS")
+                products = await db.Product.findAll({
+                    include : ['images','productStates',"category"],
+                    where : {
+                        [Op.or] : [
+                            { name : { [Op.substring] : req.query.search }},
+                            { description : { [Op.substring] : req.query.search }},
+                        ],
+                        [Op.and] : { price : { [Op.lte] : req.query.price } }
+                    }
+                })
+            }else{
+                console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Tomo NINGUNOOOOOO")
                 products = await db.Product.findAll({
                     include : ['images','productStates',"category"]
                 })
