@@ -141,14 +141,14 @@ window.addEventListener("load", () => {
     })
     
     $('password').addEventListener('blur',() => {
-        if(!regExPass.test($('password').value)){
+        /* if(!regExPass.test($('password').value)){
             $('password-errors').innerText = "La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres"
             $('password').classList.add('is-invalid')
         }else{
             $('password-errors').innerText = null
             $('password').classList.remove('is-invalid')
             $('password').classList.add('is-valid')
-        }
+        } */
     })
     $('password').addEventListener('focus',()=> {
         $('password').classList.remove('is-invalid')

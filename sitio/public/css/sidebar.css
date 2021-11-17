@@ -1,15 +1,16 @@
 /*========== GOOGLE FONTS ==========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
-  --header-height: 3.5rem;
+  --header-height: 3rem;
   --nav-width: 219px;
-  --first-color: #ffffff;
+  --first-color: #000000;
   --first-color-light: #F4F0FA;
-  --title-color: #ffffff;
+  --title-color: #000000;
   --text-color: #000000;
-  --text-color-light: #b7b7b7;
-  --body-color: #F9F6FD;
-  --container-color: #11101d;
+  --text-color-light: #000000;
+  --body-color: #000000;
+  --container-color: #F9F6FD;
+  /* --container-color: #11101d; */
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
@@ -25,7 +26,6 @@
   left: 0;
   width: 100vw;
   background-color: var(--container-color);
-  box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
   padding: 0 1rem;
   z-index: var(--z-fixed); }
 
@@ -50,7 +50,8 @@
   display: flex;
   padding: .40rem .75rem;
   background-color: var(--first-color-light);
-  border-radius: .25rem; }
+  border-radius: .25rem;
+  align-items: center; }
 
 .header__toggle_2 {
   display: none; }
@@ -163,40 +164,35 @@
   color: var(--text-color); }
 
 .nav__dropdown-item:hover {
-  color: var(--first-color); }
+  color: #11101d; }
 
 .nav__dropdown-icon {
   margin-left: auto;
   transition: .4s; }
 
-/* Show dropdown collapse */
 .nav__dropdown:hover {
   max-height: 100rem; }
 
-/* Rotate icon arrow */
 .nav__dropdown:hover .nav__dropdown-icon {
   transform: rotate(180deg); }
 
-/*===== Show menu =====*/
 .show-menu {
   left: 0; }
 
-/*===== Active link =====*/
 .active {
   color: var(--first-color); }
 
-/* ========== MEDIA QUERIES ==========*/
-/* For small devices reduce search*/
-/* @media screen and (max-width: 320px) {
-  .header__search {
-    width: 70%;
-  }
-} */
 @media screen and (min-width: 768px) {
   .header {
-    padding: 0 3rem 0 6rem; }
+    padding: 0 3rem 0 6rem;
+    transition: .4s all; }
+  .header:hover {
+    background-color: #ffffff; }
+    .header:hover .header__toggle_2 i,
+    .header:hover .header__container a {
+      color: #000000; }
   .header__container {
-    height: calc(var(--header-height) + 2rem); }
+    height: calc(var(--header-height) + 1rem); }
   .header__search {
     width: 300px;
     padding: .55rem .75rem; }
@@ -205,9 +201,9 @@
     position: absolute;
     font-size: 2.2rem;
     display: block;
-    color: var(--title-color);
+    color: var(--first-color-light);
     cursor: pointer;
-    top: 23%;
+    top: 17%;
     left: 2%; }
   .header__toggle {
     display: none; }
