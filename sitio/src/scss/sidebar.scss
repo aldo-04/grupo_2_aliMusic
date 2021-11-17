@@ -57,6 +57,11 @@
   padding: .40rem .75rem;
   background-color: var(--first-color-light);
   border-radius: .25rem;
+  justify-content: space-around;
+}
+
+.header__search form {
+  width: 80%;
 }
 
 .header__toggle_2 {

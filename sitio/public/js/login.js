@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
                 $("email-Errors").innerHTML = 'El campo email es obligatorio'
                 $("email").classList.add('is-invalid')
                 break;
-            case !regExEmail.test($("#email").value):
+            case !regExEmail.test($("email").value):
                 $("email-Errors").innerHTML = 'Debe ingresar un email válido'
                 $("email").classList.add('is-invalid')
                 break
@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
                 $("password-Errors").innerHTML = 'El campo contraseña es obligatorio'
                 $("password").classList.add('is-invalid')
                 break;
-            case !regExPass.test($("#password").value):
+            case !regExPass.test($("password").value):
                 $("password-Errors").innerHTML = 'Debe ingresar una contraseña válida'
                 $("password").classList.add('is-invalid')
                 break
@@ -71,11 +71,8 @@ window.addEventListener("load", () => {
         }
 
         if(!error){
-            /* $('form-login').load(function () {
-                $(".loader").fadeOut("slow");
-              });  */  
             $('form-login').submit()
-             
+
         }
     })
     $("show-pass").addEventListener('click', () => {

@@ -50,7 +50,11 @@
   display: flex;
   padding: .40rem .75rem;
   background-color: var(--first-color-light);
-  border-radius: .25rem; }
+  border-radius: .25rem;
+  justify-content: space-around;}
+
+.header__search form {
+  width: 80%;}
 
 .header__toggle_2 {
   display: none; }
@@ -192,7 +196,7 @@
     width: 70%;
   }
 } */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header {
     padding: 0 3rem 0 6rem; }
   .header__container {

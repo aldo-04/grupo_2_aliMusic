@@ -1,15 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var {profile, profileEdit, login, register,proccesRegister ,fav, processLogin, logout, add, store, edit, update, destroy} = require('../controllers/userController')
-const loginValidation = require('../validations/loginValidation');
-const loginCheck = require("../Middleware/loginCheck");
+
 const multer = require('multer');
 const path = require('path')
+
+var {profile, profileEdit, login, register,proccesRegister ,fav, processLogin, logout, add, store, edit, update, destroy} = require('../controllers/userController')
+
 const uploadUser = require('../middleware/fotoUserMulter')
 const uploadProduct = require('../middleware/fotoProductMulter')
+const loginCheck = require("../middleware/loginCheck");
+
 const productValidation = require('../validations/productValidation')
 const registerValidation = require("../validations/registerValidation")
-
+const loginValidation = require('../validations/loginValidation');
 
 /* GET users listing. */
 router.get('/profile/:id', loginCheck, profile);
@@ -27,9 +30,9 @@ router.get('/add', loginCheck, add);
 router.post('/add', uploadProduct.array('image'), loginCheck, productValidation,store);
 
 router.get('/edit/:id', loginCheck, edit);
-router.put('/edit/:id', uploadProduct.array("avatar"), loginCheck, productValidation, update);
+router.put('/edit/:id', uploadProduct.array("image"), loginCheck, productValidation, update);
 
-router.delete('/delete/:id', destroy);
+router.delete('/delete/:id', loginCheck, destroy);
 
 router.get('fav', loginCheck, fav);
 
