@@ -10,7 +10,9 @@
             <a href="/" class="header__logo">Ali Music</a>
 
             <div class="header__search">
-                <input type="search" placeholder="Buscar" class="header__input">
+                <form action="/search" method="get" id="inputSearch">
+                    <input type="search" placeholder="Buscar" class="header__input" name="search" id="inputSearchValue">
+                </form>
                 <i class='bx bx-search header__icon'></i>
             </div>
             <% if (locals.userLogin) { %>
@@ -101,3 +103,6 @@
             <% } %>
         </nav>
     </div>
+    <!-- Script para el search -->
+    <script src="/js/preventDefaultSearch.js"></script>
+    <!-- Script para el search -->

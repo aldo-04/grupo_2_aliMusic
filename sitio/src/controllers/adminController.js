@@ -5,20 +5,59 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', '
 const categories = require('../data/categories.json');
 const capitalizarPrimeraLetra = require('../utils/capitalizeOneLetter.js');
 const db = require('../database/models')
+const {Op} = require('sequelize');
 const queryInterface = db.sequelize.getQueryInterface();
 
 
 module.exports = {
-    index: (req, res) => {
-        db.Product.findAll({
-            include : ['images','productStates']
-        })
-        .then(products =>{
-            res.render('admin/index',{
-                title: 'admin',
-                products
+    index: async (req, res) => {
+        let products
+        if(req.query.search && !req.query.price){
+            products = await db.Product.findAll({
+                include : ['images','productStates',"category"],
+                where : {
+                    [Op.or] : [
+                        { name : { [Op.substring] : req.query.search } },
+                        { description : { [Op.substring] : req.query.search } }
+                    ]
+                }
             })
-        })
+        }else if(req.query.price && !req.query.search){
+            products = await db.Product.findAll({
+                include : ['images','productStates',"category"],
+                where : {
+                     price : { [Op.lte] : req.query.price } 
+                    },
+                order: [ ["price","ASC"] ],
+            })
+        }else if(req.query.price && req.query.search){
+            products = await db.Product.findAll({
+                include : ['images','productStates',"category"],
+                where : {
+                    [Op.or] : [
+                        { name : { [Op.substring] : req.query.search }},
+                        { description : { [Op.substring] : req.query.search }},
+                    ],
+                    [Op.and] : { price : { [Op.lte] : req.query.price } }
+                },
+                order: [ ["price","ASC"] ],
+            })
+        }else{
+            products = await db.Product.findAll({
+                include : ['images','productStates',"category"]
+            })
+        }
+                        
+        let categories = db.Category.findAll()
+        Promise.all([products,categories])
+            .then(([products,categories]) => {
+                return res.render('admin/index',{
+                    title : "Administracion",
+                    products,
+                    categories,
+                    old : req.query
+                })
+            })
         .catch(err=>console.log(err))
     },
     add: (req, res) => {
