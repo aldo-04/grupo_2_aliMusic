@@ -10,10 +10,10 @@ const queryInterface = db.sequelize.getQueryInterface();
 
 
 module.exports = {
-    index: async (req, res) => {
+    index:  (req, res) => {
         let products
         if(req.query.search && !req.query.price){
-            products = await db.Product.findAll({
+            products =  db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
                     [Op.or] : [
@@ -23,7 +23,7 @@ module.exports = {
                 }
             })
         }else if(req.query.price && !req.query.search){
-            products = await db.Product.findAll({
+            products =  db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
                      price : { [Op.lte] : req.query.price } 
@@ -31,7 +31,7 @@ module.exports = {
                 order: [ ["price","ASC"] ],
             })
         }else if(req.query.price && req.query.search){
-            products = await db.Product.findAll({
+            products =  db.Product.findAll({
                 include : ['images','productStates',"category"],
                 where : {
                     [Op.or] : [
@@ -43,7 +43,7 @@ module.exports = {
                 order: [ ["price","ASC"] ],
             })
         }else{
-            products = await db.Product.findAll({
+            products =  db.Product.findAll({
                 include : ['images','productStates',"category"]
             })
         }

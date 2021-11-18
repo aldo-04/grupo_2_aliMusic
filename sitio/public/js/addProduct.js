@@ -63,11 +63,10 @@ window.addEventListener("load",()=>{
         image.files.length == 0 ? span[5].innerHTML = "Tenes que subir una imagen" : null
 
         for (let i = 0; i < image.files.length; i++) {
-            if (!image.files[i].name.toLowerCase().endsWith(".jpg") || !image.files[i].name.toLowerCase().endsWith(".png") || !image.files[i].name.toLowerCase().endsWith(".webp")) {
-                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
-                break
-            }else{
+            if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
                 span[5].innerHTML = null
+            }else{
+                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
             } 
         }
         
@@ -120,13 +119,13 @@ window.addEventListener("load",()=>{
         // AL ENVIAR FORMULARIO ERRORES DE IMAGENES
         image.files.length == 0 ? span[5].innerHTML = "Tenes que subir una imagen" : null
         for (let i = 0; i < image.files.length; i++) {
-            if (!image.files[i].name.toLowerCase().endsWith(".jpg") || !image.files[i].name.toLowerCase().endsWith(".png") || !image.files[i].name.toLowerCase().endsWith(".webp")) {
-                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
-                break
-            }else{
+            if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
                 span[5].innerHTML = null
+            }else{
+                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
             } 
         }
+        
         
         let erroresActivos = []
         span.forEach(error =>{ 
@@ -136,6 +135,6 @@ window.addEventListener("load",()=>{
             }
         })
         console.log(erroresActivos)
-        erroresActivos.length != 0 ? e.preventDefault() : e.submit()
+        erroresActivos.length != 0 ? e.preventDefault() : form1.submit()
     })
 })
