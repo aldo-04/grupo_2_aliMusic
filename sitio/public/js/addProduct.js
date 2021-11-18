@@ -1,4 +1,4 @@
-    let form = document.querySelector("#form")
+    let form1 = document.getElementById("form1")
     let span = document.querySelectorAll(".error")
     let name = document.querySelector("input#name")
     let price = document.querySelector("input#price")
@@ -73,7 +73,7 @@ window.addEventListener("load",()=>{
         
     })
 
-    form.addEventListener("submit",e=>{
+    form1.addEventListener("submit",e=>{
         e.preventDefault()
         // AL ENVIAR FORMULARIO ERRORES DE NOMBRE
         if (name.value.length <= 0) {

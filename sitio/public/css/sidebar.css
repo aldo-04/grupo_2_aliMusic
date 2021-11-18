@@ -194,7 +194,6 @@
   .header__container {
     height: calc(var(--header-height) + 1rem); }
   .header__search {
-    width: 300px;
     padding: .55rem .75rem; }
   .header__toggle_2 {
     display: block;

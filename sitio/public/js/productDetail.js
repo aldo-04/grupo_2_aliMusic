@@ -10,6 +10,5 @@ window.addEventListener("load", ()=>{
     })
     star.addEventListener("click",(e)=>{
         star.classList.toggle("star")
-        
     })
 })
