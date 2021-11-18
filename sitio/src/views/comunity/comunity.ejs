@@ -6,119 +6,191 @@
         <%- include('../partials/header') %>
             <%- include('../partials/sidebar') %>
                 <main>
-                    <div class="container-main">
-                        <p>Presione Un boton para publicar</a>
-
-                        <div class="button_post">
-                            <button id="openYoutube">
-                                Subir desde Youtube
-                            </button>
-                            <button id="openVideo">
-                                Subir Video/Imagen
-                            </button>
-                            <button id="openText">
-                                Subir Solo Texto
-                            </button>
-                        </div>
-                        <div id="modal_youtube" class="modal-youtube">
-
-                            <div id="youtube">
-                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
-                                    <div class="div_text">
-                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
-                                    </div>
-
-                                    <div class="div_link">
-                                        <input class="input_text" type="text" name="media" placeholder="link">
-                                    </div>
-
-                                    <div class="div_description">
-                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
-                                            placeholder="Descripcion"></textarea>
-                                    </div>
-                                    <button class="button-submit" type="submit">Publicar</button>
-                                </form>
-                                <button class="button-close" id="closeYoutube">Cerrar</button>
+                    <div class="container-body">
+                        <div class="container-main">
+                            <div class="button-text-container">
+                                <p class="button-text">Presione Un boton para publicar</a>
                             </div>
-                        </div>
-                        <div id="modal_video" class="modal-video">
-                            <div id="video">
-                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
-                                    <div class="div_text">
-                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
-                                    </div>
-                                    <div class="div_file">
-                                        <input type="file" name="image">
-                                    </div>
-                                    <div class="div_description">
-                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
-                                            placeholder="Descripcion"></textarea>
-                                    </div>
-                                    <button class="button-submit" type="submit">Publicar</button>
-                                </form>
-                                <button class="button-close" id="closeVideo">Cerrar</button>
+                        
+                            <div class="button_post">
+                                <button id="openYoutube">
+                                    Subir desde Youtube
+                                </button>
+                                <button id="openVideo">
+                                    Subir Video/Imagen
+                                </button>
+                                <button id="openText">
+                                    Subir Solo Texto
+                                </button>
                             </div>
-                        </div>
-                        <div id="modal_text" class="modal-text">
-                            <div id="text">
-                                <form class="form-comunity" action="/comunity" method="POST" enctype="multipart/form-data">
-                                    <div class="div_text">
-                                        <input class="input_text" type="text" name="name" placeholder="Titulo">
-                                    </div>
-                                    <div class="div_description">
-                                        <textarea class="input_textarea" name="description" id="description" cols="30" rows="10"
-                                            placeholder="Descripcion"></textarea>
-                                    </div>
-                                    <button class="button-submit" type="submit">Publicar</button>
-                                </form>
-                                <button class="button-close" id="closeText">Cerrar</button>
+                            <div id="modal_youtube" class="modal-youtube">
+                        
+                                <div id="youtube">
+                                    <form class="form-comunity" action="/comunity" method="POST"
+                                        enctype="multipart/form-data">
+                                        <div class="div_text">
+                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                        </div>
+                        
+                                        <div class="div_link">
+                                            <input class="input_text" type="text" name="media" placeholder="link">
+                                        </div>
+                        
+                                        <div class="div_description">
+                                            <textarea class="input_textarea" name="description" id="description" cols="30"
+                                                rows="10" placeholder="Descripcion"></textarea>
+                                        </div>
+                                        <button class="button-submit" type="submit">Publicar</button>
+                                    </form>
+                                    <button class="button-close" id="closeYoutube">Cerrar</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="div_filtrar">
-                            <a href=""><i class="fas fa-guitar"></i> Mejores</a>
-                            <a href=""><i class="fas fa-hashtag"></i> Destacado</a>
-                            <a href=""><i class="fas fa-tags"></i> Nuevo</a>
-                            <a href=""><i class="fas fa-tags"></i> Mas votado</a>
-                        </div>
-                        <section class="section_post">
-                            <% posts.forEach(post=> { %>
-                                <% if (post.type==="iframe" ) { %>
-                                    <article class="art">
-                                        <h4>
-                                            <%= post.postName %>
-                                        </h4>
-                                        <iframe src="<%= post.media %>"></iframe>
-                                        <% if (post.description !=="" ) { %>
-                                            <div class="div_p">
-                                                <%= post.description %>
-                                            </div>
-                                            <% } %>
-                                    </article>
-                                    <% } else if (post.type==="image" ) { %>
+                            <div id="modal_video" class="modal-video">
+                                <div id="video">
+                                    <form class="form-comunity" action="/comunity" method="POST"
+                                        enctype="multipart/form-data">
+                                        <div class="div_text">
+                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                        </div>
+                                        <div class="div_file">
+                                            <input type="file" name="image">
+                                        </div>
+                                        <div class="div_description">
+                                            <textarea class="input_textarea" name="description" id="description" cols="30"
+                                                rows="10" placeholder="Descripcion"></textarea>
+                                        </div>
+                                        <button class="button-submit" type="submit">Publicar</button>
+                                    </form>
+                                    <button class="button-close" id="closeVideo">Cerrar</button>
+                                </div>
+                            </div>
+                            <div id="modal_text" class="modal-text">
+                                <div id="text">
+                                    <form class="form-comunity" action="/comunity" method="POST"
+                                        enctype="multipart/form-data">
+                                        <div class="div_text">
+                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                        </div>
+                                        <div class="div_description">
+                                            <textarea class="input_textarea" name="description" id="description" cols="30"
+                                                rows="10" placeholder="Descripcion"></textarea>
+                                        </div>
+                                        <button class="button-submit" type="submit">Publicar</button>
+                                    </form>
+                                    <button class="button-close" id="closeText">Cerrar</button>
+                                </div>
+                            </div>
+                        
+                            <div class="div_filtrar">
+                                <a href=""><i class="fas fa-guitar"></i> Mejores</a>
+                                <a href=""><i class="fas fa-hashtag"></i> Destacado</a>
+                                <a href=""><i class="fas fa-tags"></i> Nuevo</a>
+                                <a href=""><i class="fas fa-tags"></i> Mas votado</a>
+                            </div>
+                            <section class="section_post">
+                                <% posts.forEach(post=> { %>
+                                    <% if (post.type==="iframe" ) { %>
                                         <article class="art">
                                             <h4>
                                                 <%= post.postName %>
                                             </h4>
-                                            <img src="/images/comunity/<%= post.media %>" width="100%">
+                                            <iframe src="<%= post.media %>"></iframe>
                                             <% if (post.description !=="" ) { %>
-                                                <div class="div_p">
-                                                    <%= post.description %>
+                                                <div class="div_p1">
+                                                    <div class="div_p2">
+                                                        <%= post.description %>
+                                                    </div>
                                                 </div>
                                                 <% } %>
                                         </article>
-                                        <% } else { %>
+                                        <% } else if (post.type==="image" ) { %>
                                             <article class="art">
                                                 <h4>
                                                     <%= post.postName %>
                                                 </h4>
-                                                <div class="div_p">
-                                                    <%= post.description %>
-                                                </div>
+                                                <img src="/images/comunity/<%= post.media %>" width="100%">
+                                                <% if (post.description !=="" ) { %>
+                                                    <div class="div_p1">
+                                                        <div class="div_p2">
+                                                            <%= post.description %>
+                                                        </div>
+                                                    </div>
+                                                    <% } %>
                                             </article>
-                                            <% } %>
-                                                <% }) %>
-                        </section>
+                                            <% } else { %>
+                                                <article class="art">
+                                                    <h4>
+                                                        <%= post.postName %>
+                                                    </h4>
+                                                    <div class="div_p1">
+                                                        <div class="div_p2">
+                                                            <%= post.description %>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <% } %>
+                                                    <% }) %>
+                            </section>
+                        </div >
+                        <div class="container-aside">
+                            <div class="aside-content">
+                                <div class="div_aside">
+                                    <div class="div_aside-tittle">
+                                        <h3>Categorias</h3>
+                                    </div>
+                                    <ul class="div_aside-ul">
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="div_aside">
+                                    <div class="div_aside-tittle">
+                                        <h3>Top</h3>
+                                    </div>
+                                    <ul class="div_aside-ul">
+                                        <li>Passenger</li>
+                                        <li>Ed sheeran</li>
+                                        <li>Passenger</li>
+                                        <li>Ed sheeran</li>
+                                        <li>Passenger</li>
+                                        <li>Ed sheeran</li>
+                                        <li>Passenger</li>
+                                        <li>Ed sheeran</li>
+                                    </ul>
+                                </div>
+                                <div class="div_aside">
+                                    <div class="div_aside-tittle">
+                                        <h3>Categorias</h3>
+                                    </div>
+                                    <ul class="div_aside-ul">
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        <li>musica</li>
+                                        <li>youtube</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="div_aside">
+                                    <div class="div_aside-tittle">
+                                        <h3>lorem</h3>
+                                    </div>
+                                    <ul class="div_aside-ul">
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus laboriosam veritatis, voluptatem voluptatum velit fugit illo quia voluptate unde iste deserunt quis accusamus alias? Hic sint exercitationem omnis temporibus velit.</li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
                     </div>
 
                 </main>

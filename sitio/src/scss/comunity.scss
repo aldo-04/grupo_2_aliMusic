@@ -1,31 +1,47 @@
 .comunity main{
     margin-top: 65px;
-    .container-main{
-        width: 95%;
-        margin: 20px auto;
-        color: var(--color-header);
-        background-color: #fff;
-        padding: 10px;
-        .button_post{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
+    .container-body{
+        .container-main{
+            width: 95%;
+            color: var(--color-header);
+            background-color: #fff;
+            padding: 10px;
             margin: 20px auto;
-            align-items: center;
-            button {
-                opacity: 1;  
+            border-radius: 7px;
+            .button-text-container{
                 background-color: #47a386;
-                border: 0;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                color: #fff;
-                font-size: 14px;
-                padding: 10px 25px;
-                width: 50%;
-            }
-        }
+                border-radius: 7px;
+                padding: 10px;
 
+                .button-text{
+                    border: 1px solid #fff ;
+                    padding: 10px 25px;
+                    border-radius: 7px;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 21px;
+                }
+            }
+            .button_post{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                margin: 20px auto;
+                align-items: center;
+                button {
+                    opacity: 1;  
+                    background-color: #FFC9A1;
+                    border: 0;
+                    border-radius: 7px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    font-size: 14px;
+                    padding: 10px 25px;
+                    width: 85%;
+                    color: #4f4f4f;
+                    font-weight: 600;
+                }
+            }
         .modal-text,
         .modal-video,
         .modal-youtube {
@@ -43,17 +59,19 @@
             transition: opacity 0.3s ease;
             z-index: 99;
             .button-submit {
-                width: 30%;
-                background-color: #47a386;
-                border: 0;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                color: #fff;
-                font-size: 14px;
-                padding: 10px 25px;
                 position: absolute;
+                font-weight: 600;
+                background-color: #FFC9A1;
+                color: #4f4f4f;
+                border: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                width: 30%;
+                padding: 10px 25px;
                 bottom: 7%;
                 right: 10%;
+                font-size: 14px;
+                font-weight: 600;
             }
             #video,
             #youtube,
@@ -63,18 +81,19 @@
                 width: 600px;
                 max-width: 95%;
                 max-height: 75%;
-                padding: 30px 5%;
+                padding: 5%;
                 border-radius: 5px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                 text-align: center;
                 padding-bottom: 100px;
                 .button-close {
                     width: 30%;
-                    background-color: #47a386;
+                    background-color: #FFC9A1;
+                    color: #4f4f4f;
+                    font-weight: 600;
                     border: 0;
                     border-radius: 5px;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                    color: #fff;
                     font-size: 14px;
                     padding: 10px 25px;
                     position: absolute;
@@ -99,6 +118,7 @@
                 }
             }
         }
+
             .show {
                 pointer-events: auto;
                 opacity: 1;
@@ -125,29 +145,79 @@
             iframe{
                 width: 100%;
                 height: 50vh;
+                border-radius: 7px;
             }
             img{
                 height: 250px;
                 object-fit: contain;
-            }
-            .div_p{
-                font-size: 11px;
+            }.div_p1{
                 padding: 10px;
-                background-color: #c6c6c6;
+                background-color: #47a386;
+                border-radius: 7px;
+                .div_p2{
+                    border: 0.5px solid #fff;
+                    font-size: 16px;
+                    padding: 20px 10px;
+                    color: #fff;
+                }
             }
+            
         }
+    }
+    .container-aside{
+        display: none;
+    }
     }
     
 }
 @media (min-width: 425px){
+    
     .comunity main{
         margin-top: 110px;
     .container-main{
-        width: 90%
+        width: 90%;
         }
     }
     .button_post{
         flex-direction: row !important;
+    }
+    .container-body{
+        display: grid;
+        grid-template-columns: 63% 20%;
+        justify-content: center;
+        .container-aside{
+            display: block !important;
+            .aside-content{
+                background-color: #fff;
+                color: var(--color-header);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px 0;
+                padding: 30px 10px;
+                gap: 30px;
+                width: 100%;
+                border-radius: 7px;
+                .div_aside{
+                    background-color: #47a386;
+                    width: 100%;
+                    padding: 15px 20px;
+                    border-radius: 7px;
+                    color: #fff;
+                    .div_aside-tittle{
+                        border-radius: 7px;
+                        border: 1px solid #fff;
+                        padding: 5px 10px;
+                        margin-bottom: 10px;
+                    }
+                    ul{
+                        border-radius: 7px;
+                        border: 1px solid #fff;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
     }
 }
 @media (min-width: 769px){

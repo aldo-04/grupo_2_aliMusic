@@ -21,7 +21,7 @@ module.exports = [
                     return Promise.reject('El email ya se encuentra registrado')
                 }
             })
-
+           
     }).isEmail().withMessage("Debes ingresar un email valido").bail(),
 
     check("password").notEmpty().withMessage("Debes indicar tu contraseña").isLength({ max: 20, min: 6 }).withMessage("Tu contraseña debe tener minimo 6 caracteres y maximo 20").matches(regExPass).withMessage('lkhbjasdkhjadskhbasdkhasdkhbasd').bail(),
@@ -33,3 +33,8 @@ module.exports = [
         return false
     }).withMessage("Las contraseñas deben coincidir")
 ]
+/* if (!regExPass.test.password) {
+            return Promise.reject('NO ES VALIDO')
+        }else{
+            Promise.resolve()
+        } */
