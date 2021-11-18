@@ -58,6 +58,11 @@
   background-color: var(--first-color-light);
   border-radius: .25rem;
   align-items: center;
+  justify-content: space-around;
+}
+
+.header__search form {
+  width: 80%;
 }
 
 .header__toggle_2 {

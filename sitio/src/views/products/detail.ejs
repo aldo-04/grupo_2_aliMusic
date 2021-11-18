@@ -10,15 +10,13 @@
                     <div class="second-img">
                         <% if (product.images.length != 0 ) { %>
                             <% for( let i = 1; i < product.images.length; i++ ) { %>
-                                <img class="img-2" src="/images/articulos/<%= product.images[i].image %>"  alt="<%= product.name + product.model %> ">
+                                <img class="img-2" src="/images/articulos/<%= product.images[i].image %>"  alt="<%= product.name + product.model %>" id="images">
                             <% } %>
                         <% } %>
                     </div>
                     <div class="img">
-                        <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>"  alt="<%= product.name + product.model %> ">
-                        <a href="">
-                            <i class="far fa-star"></i>
-                        </a>
+                        <img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>"  alt="<%= product.name + product.model %>" id="firstImage">
+                        <i id="star" class="far fa-star"></i>
                     </div>
                     <div class="contain">
                         <div class="name">
@@ -81,5 +79,6 @@
         </section>
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/productDetail.js"></script>
 </body>
 </html>

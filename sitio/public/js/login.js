@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
 
         if(!error){
             $('form-login').submit()
-             
+
         }
     })
     $("show-pass").addEventListener('click', () => {
