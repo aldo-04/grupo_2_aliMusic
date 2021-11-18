@@ -14,25 +14,25 @@
                                         <div class="form-group">
                                             <label for="name">Nombre del producto:</label>
                                             <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
-                                            <span class="error"></span>
+                                            <span class="error text-danger"></span>
                                             <% if (locals.errors && errors.name) { %>
-                                                <span class="error"><%= errors.name.msg %> </span>
+                                                <span class="error text-danger"><%= errors.name.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
                                             <label for="price">Precio:</label>
                                             <input type="text" class="form-control" id="price" name="price" value="<%= product.price %>">
-                                            <span class="error"></span>
+                                            <span class="error text-danger"></span>
                                             <% if (locals.errors && errors.price) { %>
-                                                <span class="error"><%= errors.price.msg %> </span>
+                                                <span class="error text-danger"><%= errors.price.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
                                             <label for="discount">Descuento:</label>
                                             <input type="text" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
-                                            <span class="error"></span>
+                                            <span class="error text-danger"></span>
                                             <% if (locals.errors && errors.discount) { %>
-                                                <span class="error"><%= errors.discount.msg %> </span>
+                                                <span class="error text-danger"><%= errors.discount.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
@@ -44,18 +44,18 @@
                                                     </option>
                                                     <% }) %>
                                             </select>
-                                            <span class="error"></span>
+                                            <span class="error text-danger"></span>
                                             <% if (locals.errors && errors.category) { %>
-                                                <span class="error"><%= errors.category.msg %> </span>
+                                                <span class="error text-danger"><%= errors.category.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class='description form-group'>
                                             <label for="description"> Descipción:</label>
                                             <textarea class="form-control" name="description" id="description" cols="30"
                                                 rows="10"><%= product.description %> </textarea>
-                                                <span class="error"></span>
+                                                <span class="error text-danger"></span>
                                                 <% if (locals.errors && errors.description) { %>
-                                                    <span class="error"><%= errors.description.msg %> </span>
+                                                    <span class="error text-danger"><%= errors.description.msg %> </span>
                                                 <% } %>
                                         </div>
                                         <div class="form-group">
