@@ -16,7 +16,7 @@
                                             <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
                                             <span class="error"></span>
                                             <% if (locals.errors && errors.name) { %>
-                                                <span class="errores"><%= errors.name.msg %> </span>
+                                                <span class="error"><%= errors.name.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
@@ -24,7 +24,7 @@
                                             <input type="text" class="form-control" id="price" name="price" value="<%= product.price %>">
                                             <span class="error"></span>
                                             <% if (locals.errors && errors.price) { %>
-                                                <span class="errores"><%= errors.price.msg %> </span>
+                                                <span class="error"><%= errors.price.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
@@ -32,7 +32,7 @@
                                             <input type="text" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
                                             <span class="error"></span>
                                             <% if (locals.errors && errors.discount) { %>
-                                                <span class="errores"><%= errors.discount.msg %> </span>
+                                                <span class="error"><%= errors.discount.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class="form-group">
@@ -46,7 +46,7 @@
                                             </select>
                                             <span class="error"></span>
                                             <% if (locals.errors && errors.category) { %>
-                                                <span class="errores"><%= errors.category.msg %> </span>
+                                                <span class="error"><%= errors.category.msg %> </span>
                                             <% } %>
                                         </div>
                                         <div class='description form-group'>
@@ -55,7 +55,7 @@
                                                 rows="10"><%= product.description %> </textarea>
                                                 <span class="error"></span>
                                                 <% if (locals.errors && errors.description) { %>
-                                                    <span class="errores"><%= errors.description.msg %> </span>
+                                                    <span class="error"><%= errors.description.msg %> </span>
                                                 <% } %>
                                         </div>
                                         <div class="form-group">
@@ -69,7 +69,7 @@
                                         <button type="submit" class="btn btn-primary">Editar</button>
                                         <span class="error text-danger"></span>
                                         <% if (locals.errors && errors.image) { %>
-                                            <span class="errores text-danger"><%= errors.image.msg %> </span>
+                                            <span class="error text-danger"><%= errors.image.msg %> </span>
                                         <% } %>
                                     </div>
                                 </div>

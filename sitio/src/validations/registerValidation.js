@@ -24,7 +24,7 @@ module.exports = [
            
     }).isEmail().withMessage("Debes ingresar un email valido").bail(),
 
-    check("password").notEmpty().withMessage("Debes indicar tu contraseña").isLength({ max: 20, min: 6 }).withMessage("Tu contraseña debe tener minimo 6 caracteres y maximo 20").matches(regExPass).withMessage('lkhbjasdkhjadskhbasdkhasdkhbasd').bail(),
+    check("password").notEmpty().withMessage("Debes indicar tu contraseña").isLength({ max: 20, min: 6 }).withMessage("Tu contraseña debe tener minimo 6 caracteres y maximo 20").matches(regExPass).withMessage('La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres').bail(),
     
     check("password2").notEmpty().withMessage("Debes repetir tu contraseña").custom((value, { req }) => {
         if (value == req.body.password) {
