@@ -1,6 +1,6 @@
 let form1 = document.getElementById("form2")
 let span = document.querySelectorAll(".error")
-let name = document.querySelector("input#name")
+let nombre = document.querySelector("input#name")
 let price = document.querySelector("input#price")
 let discount = document.querySelector("input#discount")
 let category = document.querySelector("#category")
@@ -9,14 +9,14 @@ let image = document.getElementById("image")
 
 window.addEventListener("load",()=>{
 
-name.addEventListener("input",()=>{
-    if (name.value.length <= 0) {
+nombre.addEventListener("input",()=>{
+    if (nombre.value.length <= 0) {
         span[0].innerHTML = "Debes indicar el nombre del producto"
-        name.classList.add("is-invalid")
+        nombre.classList.add("is-invalid")
     }else{
         span[0].innerHTML = ""
-        name.classList.remove("is-invalid")
-        name.classList.add("is-valid")
+        nombre.classList.remove("is-invalid")
+        nombre.classList.add("is-valid")
     }
 })
 price.addEventListener("input",()=>{
@@ -59,26 +59,28 @@ description.addEventListener("input",()=>{
     }
 })
 
-/* image.addEventListener("change",()=>{
-    image.files.length == 0 ? span[5].innerHTML = "Tenes que subir una imagen" : null
-
-    for (let i = 0; i < image.files.length; i++) {
-        if (!image.files[i].name.toLowerCase().endsWith(".jpg") || !image.files[i].name.toLowerCase().endsWith(".png") || !image.files[i].name.toLowerCase().endsWith(".webp")) {
-            span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
-            break
-        }else{
-            span[5].innerHTML = null
-        } 
-    }
+image.addEventListener("change",()=>{
+    console.log(image)
     
-}) */
+        for (let i = 0; i < image.files.length; i++) {
+            if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
+                span[5].innerHTML = null
+            }else{
+                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
+            } 
+        }
+        if(image.files.length == 0){
+            span[5].innerHTML = null
+        }
+    
+})
 
 form1.addEventListener("submit",e=>{
     e.preventDefault()
     // AL ENVIAR FORMULARIO ERRORES DE NOMBRE
-    if (name.value.length <= 0) {
+    if (nombre.value.length <= 0) {
         span[0].innerHTML = "Debes indicar el nombre del producto"
-        name.classList.add("is-invalid")
+        nombre.classList.add("is-invalid")
     }else{
         span[0].innerHTML = ""
     }
@@ -118,15 +120,16 @@ form1.addEventListener("submit",e=>{
         description.classList.add("is-valid")
     }
     // AL ENVIAR FORMULARIO ERRORES DE IMAGENES
-    /* image.files.length == 0 ? span[5].innerHTML = "Tenes que subir una imagen" : null
     for (let i = 0; i < image.files.length; i++) {
-        if (!image.files[i].name.toLowerCase().endsWith(".jpg") || !image.files[i].name.toLowerCase().endsWith(".png") || !image.files[i].name.toLowerCase().endsWith(".webp")) {
-            span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
-            break
-        }else{
+        if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
             span[5].innerHTML = null
+        }else{
+            span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
         } 
-    } */
+    }
+    if(image.files.length == 0){
+        span[5].innerHTML = null
+    }
     
     let erroresActivos = []
     span.forEach(error =>{ 

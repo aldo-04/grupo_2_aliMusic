@@ -8,5 +8,4 @@ module.exports=[
 
     check("category").notEmpty().withMessage("Por favor selecciona una categoria").bail(),
     check("description").notEmpty().withMessage("Debes dar una descripción del producto").isLength({min:10}).withMessage("La descripción debe tener minimo 10 caracteres").bail(),
-    check("image").notEmpty().withMessage("Debes subir una imagen")
 ]

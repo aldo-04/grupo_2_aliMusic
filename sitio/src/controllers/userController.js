@@ -190,6 +190,20 @@ module.exports = {
                     return res.redirect('/users/profile/'+ req.session.userLogin.id)
                 })
                 .catch(error => console.log(error))
+        }else{
+            db.Category.findAll({
+                order : [
+                    ['category','ASC']
+                ]
+            })
+                .then(categories => res.render('admin/add', {
+                    title: 'add product',
+                    categories,
+                    capitalizarPrimeraLetra,
+                    old: req.body,
+                    errors: errors.mapped()
+                }))
+                .catch(error => console.log(error))
         }
     },
     edit: (req, res) => {

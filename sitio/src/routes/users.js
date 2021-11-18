@@ -11,6 +11,7 @@ const uploadProduct = require('../middleware/fotoProductMulter')
 const loginCheck = require("../middleware/loginCheck");
 
 const productValidation = require('../validations/productValidation')
+const editProductValidation = require('../validations/editProductValidation')
 const registerValidation = require("../validations/registerValidation")
 const loginValidation = require('../validations/loginValidation');
 
@@ -30,7 +31,7 @@ router.get('/add', loginCheck, add);
 router.post('/add', uploadProduct.array('image'), loginCheck, productValidation,store);
 
 router.get('/edit/:id', loginCheck, edit);
-router.put('/edit/:id', uploadProduct.array("image"), loginCheck, productValidation, update);
+router.put('/edit/:id', uploadProduct.array("image"), loginCheck, editProductValidation, update);
 
 router.delete('/delete/:id', loginCheck, destroy);
 
