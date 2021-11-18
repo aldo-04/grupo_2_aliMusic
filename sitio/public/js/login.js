@@ -75,8 +75,8 @@ window.addEventListener("load", () => {
 
         }
     })
-    $("show-pass").addEventListener('click', () => {
-        if ($("show-pass").checked) {
+    $("recordar").addEventListener('click', () => {
+        if ($("recordar").checked) {
             $("password").type = "text"
         } else {
             $("password").type = "password"
