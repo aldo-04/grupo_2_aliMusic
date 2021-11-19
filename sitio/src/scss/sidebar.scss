@@ -90,6 +90,9 @@
 .header__toggle {
   color: var(--title-color);
   cursor: pointer;
+  i{
+    color: #fff;
+  }
 }
 
 /*========== NAV ==========*/

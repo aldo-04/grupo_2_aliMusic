@@ -33,17 +33,20 @@
 } */
 .home main section{
     color: var(--color-header);
+    background-color: #fff;
+    
 }
 .home main .div_container{
     height: 100%;
-    border-top: 1px solid #fff;
 }
-/* .home main .div_container .art{
+
+.home main .div_container .art{
     background-color: var(--color-art);
     position: relative;
     background-color: transparent;
     height: 90vh;
-    border-bottom: 1px solid #fff;
+    background-color: #070707;
+    border: 5px solid #fff;
 }
 .home main .div_container .art .div_img{
     width: 100%;
@@ -57,8 +60,9 @@
     object-fit: contain;
     background-color: transparent;
     align-self: center;
-    left: 42%;
+    left: 10%;
     top: 30%;
+    width: 88%;
 }
 .home main .div_container .art .name{
     position: absolute;
@@ -69,34 +73,6 @@
     text-transform: uppercase;
     width: 100px;
 }
-.home main .div_container .art .box_description{
-    position: absolute;
-    left: 4%;
-    top: 40%;
-    width: 125px;
-}
-.home main .div_container .art .description{
-    position: absolute;
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.home main .div_container .art .div_price{
-    border-top: 1px solid #fff;
-    padding-top: 11px;
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly
-}
-.home main .div_container .art .div_price .off{
-    font-size: 10px;
-    color: #fff;
-}
-.home main .div_container .art .div_price .precio{
-    font-size: 16px;
-    color: #fff;
-} */
-
 
 @media (min-width: 425px) {
     .home main .div_carrusel{
@@ -208,37 +184,23 @@
         font-size: 40px;
         width: 200px;
     }
-    .home main .div_container .art .description{
-        font-size: 25px;
-    }
-    .home main .div_container .art .div_price .off{
-        font-size: 27px;
-    }
-    /* 
-    .home main .div_container .art .div_price .precio{
-        font-size: 29px;
-    }
     .home main section{
-        width: 80%;
-        padding: 40px 10px;
-        margin: 20px auto;
-        box-shadow: 0px 0px 8px 0px;
     }
     .home h1{
         margin: 0 auto;
         margin-bottom: 30px;
     }
     .home main .div_container{  
-        grid-template-columns: 23% 23% 23% 23%;
-        max-width: 1000px;
-        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
+        border-top: 1px solid #fff;
+        .art{
+            height: 70vh;
+            .div_img{
+                height: 70vh;
+            }
+        }
     }
-    .home main .div_container .art .div_price .off{
-        font-size: 12px;
-    }
-    .home main .div_container .art .div_price .precio{
-        font-size: 14px;
-    }
-    .home main .descuentos{
-    padding-bottom: 50px; */
 }

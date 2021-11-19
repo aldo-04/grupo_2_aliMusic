@@ -16,6 +16,7 @@ Slider
 }
 .slider {
     height: 100%;
+
     overflow: hidden;
     & .item & img {
     transform: translateX(-50%) scale(1.4);
@@ -68,9 +69,12 @@ border-radius: 50%;
 }
 
 @media (min-width: 769px) {
+    .slider {
+        height: 51vw;
+    }
     .slideshow {
         position: relative;
-        height: 80vh;
+        height: 51vw;
         z-index: 1;
         .img1{
             display: none;

@@ -99,5 +99,15 @@ footer .div_grid2 .div_terminos ul li{
     header .i_sidebar #btn2{
         font-size: 25px;
     }
+    footer .div_grid{
+        display:grid;
+        grid-template-columns: auto 100px;
+        
+        .div_redes{ 
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto !important; 
+        }
+    }
 }
 

@@ -8,7 +8,9 @@
     margin: 20px auto;
     border-radius: 7px; }
     .comunity main .container-body .container-main .button-text-container {
-      background-color: #47a386;
+      /* 
+                background-color: #47a386; */
+      background-color: #262626;
       border-radius: 7px;
       padding: 10px; }
       .comunity main .container-body .container-main .button-text-container .button-text {
@@ -17,7 +19,8 @@
         border-radius: 7px;
         text-align: center;
         font-weight: 600;
-        font-size: 21px; }
+        font-size: 21px;
+        color: #fff; }
     .comunity main .container-body .container-main .button_post {
       display: flex;
       flex-direction: column;
@@ -27,15 +30,16 @@
       align-items: center; }
       .comunity main .container-body .container-main .button_post button {
         opacity: 1;
-        background-color: #FFC9A1;
+        background-color: #ebebeb;
         border: 0;
         border-radius: 7px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         font-size: 14px;
         padding: 10px 25px;
         width: 85%;
         color: #4f4f4f;
-        font-weight: 600; }
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        border: 1px solid #000; }
     .comunity main .container-body .container-main .modal-text,
     .comunity main .container-body .container-main .modal-video,
     .comunity main .container-body .container-main .modal-youtube {
@@ -57,17 +61,17 @@
       .comunity main .container-body .container-main .modal-youtube .button-submit {
         position: absolute;
         font-weight: 600;
-        background-color: #FFC9A1;
+        background-color: #ebebeb;
         color: #4f4f4f;
-        border: 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         width: 30%;
         padding: 10px 25px;
         bottom: 7%;
         right: 10%;
         font-size: 14px;
-        font-weight: 600; }
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        border: 1px solid #000; }
       .comunity main .container-body .container-main .modal-text #video,
       .comunity main .container-body .container-main .modal-text #youtube,
       .comunity main .container-body .container-main .modal-text #text,
@@ -97,17 +101,17 @@
         .comunity main .container-body .container-main .modal-youtube #youtube .button-close,
         .comunity main .container-body .container-main .modal-youtube #text .button-close {
           width: 30%;
-          background-color: #FFC9A1;
+          background-color: #ebebeb;
           color: #4f4f4f;
           font-weight: 600;
-          border: 0;
           border-radius: 5px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           font-size: 14px;
           padding: 10px 25px;
           position: absolute;
           bottom: 7%;
-          left: 10%; }
+          left: 10%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          border: 1px solid #000; }
       .comunity main .container-body .container-main .modal-text .form-comunity,
       .comunity main .container-body .container-main .modal-video .form-comunity,
       .comunity main .container-body .container-main .modal-youtube .form-comunity {
@@ -156,7 +160,7 @@
         object-fit: contain; }
       .comunity main .container-body .container-main .section_post .art .div_p1 {
         padding: 10px;
-        background-color: #47a386;
+        background-color: #262626;
         border-radius: 7px; }
         .comunity main .container-body .container-main .section_post .art .div_p1 .div_p2 {
           border: 0.5px solid #fff;
@@ -191,7 +195,7 @@
         width: 100%;
         border-radius: 7px; }
         .container-body .container-aside .aside-content .div_aside {
-          background-color: #47a386;
+          background-color: #262626;
           width: 100%;
           padding: 15px 20px;
           border-radius: 7px;
@@ -219,4 +223,7 @@
     right: 20%; }
   .button-close {
     width: 20%;
-    left: 20%; } }
+    left: 20%; }
+  .section_post .art img {
+    height: 400px !important;
+    object-fit: contain; } }

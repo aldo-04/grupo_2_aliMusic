@@ -8,8 +8,9 @@
             padding: 10px;
             margin: 20px auto;
             border-radius: 7px;
-            .button-text-container{
-                background-color: #47a386;
+            .button-text-container{/* 
+                background-color: #47a386; */
+                background-color: #262626;
                 border-radius: 7px;
                 padding: 10px;
 
@@ -20,6 +21,7 @@
                     text-align: center;
                     font-weight: 600;
                     font-size: 21px;
+                    color: #fff;
                 }
             }
             .button_post{
@@ -31,15 +33,16 @@
                 align-items: center;
                 button {
                     opacity: 1;  
-                    background-color: #FFC9A1;
+                    background-color: #ebebeb;
                     border: 0;
                     border-radius: 7px;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                     font-size: 14px;
                     padding: 10px 25px;
                     width: 85%;
                     color: #4f4f4f;
                     font-weight: 600;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                    border: 1px solid #000;
                 }
             }
         .modal-text,
@@ -61,10 +64,8 @@
             .button-submit {
                 position: absolute;
                 font-weight: 600;
-                background-color: #FFC9A1;
+                background-color: #ebebeb;
                 color: #4f4f4f;
-                border: 0;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 width: 30%;
                 padding: 10px 25px;
@@ -72,6 +73,8 @@
                 right: 10%;
                 font-size: 14px;
                 font-weight: 600;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                border: 1px solid #000;
             }
             #video,
             #youtube,
@@ -88,17 +91,17 @@
                 padding-bottom: 100px;
                 .button-close {
                     width: 30%;
-                    background-color: #FFC9A1;
+                    background-color: #ebebeb;
                     color: #4f4f4f;
                     font-weight: 600;
-                    border: 0;
                     border-radius: 5px;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                     font-size: 14px;
                     padding: 10px 25px;
                     position: absolute;
                     bottom: 7%;
                     left: 10%;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                    border: 1px solid #000;
                 }
             }
             .form-comunity{
@@ -152,7 +155,7 @@
                 object-fit: contain;
             }.div_p1{
                 padding: 10px;
-                background-color: #47a386;
+                background-color: #262626;
                 border-radius: 7px;
                 .div_p2{
                     border: 0.5px solid #fff;
@@ -199,7 +202,7 @@
                 width: 100%;
                 border-radius: 7px;
                 .div_aside{
-                    background-color: #47a386;
+                    background-color: #262626;
                     width: 100%;
                     padding: 15px 20px;
                     border-radius: 7px;
@@ -238,5 +241,10 @@
         width: 20%;
         left: 20%;
     }
+    .section_post .art img{
+        height: 400px !important;
+        object-fit: contain;
+    }
+
 }
 

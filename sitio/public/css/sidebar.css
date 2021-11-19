@@ -51,7 +51,11 @@
   padding: .40rem .75rem;
   background-color: var(--first-color-light);
   border-radius: .25rem;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-around; }
+
+.header__search form {
+  width: 80%; }
 
 .header__toggle_2 {
   display: none; }
@@ -74,6 +78,8 @@
 .header__toggle {
   color: var(--title-color);
   cursor: pointer; }
+  .header__toggle i {
+    color: #fff; }
 
 /*========== NAV ==========*/
 .nav {
@@ -194,6 +200,7 @@
   .header__container {
     height: calc(var(--header-height) + 1rem); }
   .header__search {
+    width: 300px;
     padding: .55rem .75rem; }
   .header__toggle_2 {
     display: block;

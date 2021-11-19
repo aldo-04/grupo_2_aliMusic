@@ -55,9 +55,11 @@ Arrows
     opacity: 1; }
 
 @media (min-width: 769px) {
+  .slider {
+    height: 51vw; }
   .slideshow {
     position: relative;
-    height: 90vh;
+    height: 51vw;
     z-index: 1; }
     .slideshow .img1 {
       display: none; }
