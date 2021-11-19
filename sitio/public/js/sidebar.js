@@ -14,6 +14,20 @@ const showMenu = (headerToggle, navbarId) =>{
         })
     }
 }
+/* ver header al scrolling */
+const headerScroll = () =>{
+    const header = document.getElementById('header'),
+    headerHeight = header.offsetHeight
+    window.addEventListener('scroll', ()=>{
+        if(window.scrollY > headerHeight){
+            header.classList.add('header-white')
+        }else{
+            header.classList.remove('header-white')
+        }
+    })
+}
+
+headerScroll()
 showMenu('header-toggle','navbar')
 
 const linkColor = document.querySelectorAll('.nav__link')

@@ -29,6 +29,14 @@
   padding: 0 1rem;
   z-index: var(--z-fixed); }
 
+.header-white {
+  background-color: #fff !important; }
+  .header-white .header__logo,
+  .header-white .header__toggle_2 {
+    color: #000 !important; }
+  .header-white .header__toggle i {
+    color: #000 !important; }
+
 .header__container {
   display: flex;
   align-items: center;

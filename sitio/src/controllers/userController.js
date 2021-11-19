@@ -116,6 +116,7 @@ module.exports = {
         })
     },
     profileEdit: (req, res) => {
+        const pass = res.locals.userLogin.password
         const {firstName, lastName, number, email, password, newPassword, avatar} = req.body
         console.log(req.body)
         db.User.update(
@@ -124,7 +125,7 @@ module.exports = {
                 lastName: lastName.trim(),
                 number: number ? number : null,
                 email: email.trim(),
-                password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(),10) : null ,
+                password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(),10) : pass ,
                 avatar: req.file ? req.file.filename : avatar
             },
             {
