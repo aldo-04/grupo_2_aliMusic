@@ -1,6 +1,7 @@
 $time: 500ms;
 $delay: $time/2;
 $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
+
 @keyframes heartbeat {
   0% {
     transform: scale(0);
@@ -19,7 +20,8 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
   }
 }
 .home .slider-container {
-    background-color: #deb887;
+    /* background-color: #deb887; */
+    background-color: #272727;
     position: relative;
     margin: 0 auto;
     height: 90vh;

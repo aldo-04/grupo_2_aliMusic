@@ -52,13 +52,13 @@
                                             <td id="category" style="display:none"><%= product.category.category %></td>
                                             <td role="cell"><%= product.id %></td>
                                             <td role="cell" class="td_img" ><img src="/images/articulos/<%= product.images.length != 0 ? product.images[0].image : null %>" alt="producto"></td>
-                                            <td role="cell"><%= product.name %></td>
+                                            <td role="cell" id="data-name"><%= product.name %></td>
                                             <td role="cell" class="oculto">$ <%= product.price %></td>
                                             <td role="cell" class="oculto"><%= product.productStates.state %></td>
                                             <td role="cell" class="td_botton">
                                                 <button><a href="/admin/edit/<%= product.id %>"><i class="fas fa-edit"></i></a></button>
-                                                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                                    <button type='submit'><i class="fas fa-trash"></i></button>
+                                                <form id="form-delete" action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                                    <button id="delete" type='submit'><i class="fas fa-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -73,6 +73,5 @@
     </main>
     <%- include('../partials/footer') %> 
     <script src="/js/searchAdmin.js"></script> 
-
 </body>
 </html>
