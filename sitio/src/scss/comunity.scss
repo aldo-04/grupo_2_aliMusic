@@ -182,10 +182,10 @@
         width: 90%;
         }
     }
-    .button_post{
+    .comunity .button_post{
         flex-direction: row !important;
     }
-    .container-body{
+    .comunity .container-body{
         display: grid;
         grid-template-columns: 63% 20%;
         justify-content: center;
@@ -240,14 +240,14 @@
         grid-template-rows: auto;
     }
 
-    .button-submit {
+    .comunity .button-submit {
         width: 20%;
         right: 20%;
     } .button-close {
         width: 20%;
         left: 20%;
     }
-    .section_post .art img{
+    .comunity .section_post .art img{
         height: 400px !important;
         object-fit: contain;
     }

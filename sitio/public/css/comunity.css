@@ -176,15 +176,15 @@
     margin-top: 110px; }
     .comunity main .container-main {
       width: 90%; }
-  .button_post {
+  .comunity .button_post {
     flex-direction: row !important; }
-  .container-body {
+  .comunity .container-body {
     display: grid;
     grid-template-columns: 63% 20%;
     justify-content: center; }
-    .container-body .container-aside {
+    .comunity .container-body .container-aside {
       display: block !important; }
-      .container-body .container-aside .aside-content {
+      .comunity .container-body .container-aside .aside-content {
         background-color: #fff;
         color: var(--color-header);
         display: flex;
@@ -195,22 +195,22 @@
         gap: 30px;
         width: 100%;
         border-radius: 7px; }
-        .container-body .container-aside .aside-content .aside-banner {
+        .comunity .container-body .container-aside .aside-content .aside-banner {
           width: 90%;
           text-align: center;
           border: 1px solid #262626; }
-        .container-body .container-aside .aside-content .div_aside {
+        .comunity .container-body .container-aside .aside-content .div_aside {
           background-color: #262626;
           width: 100%;
           padding: 15px 20px;
           border-radius: 7px;
           color: #fff; }
-          .container-body .container-aside .aside-content .div_aside .div_aside-tittle {
+          .comunity .container-body .container-aside .aside-content .div_aside .div_aside-tittle {
             border-radius: 7px;
             border: 1px solid #fff;
             padding: 5px 10px;
             margin-bottom: 10px; }
-          .container-body .container-aside .aside-content .div_aside ul {
+          .comunity .container-body .container-aside .aside-content .div_aside ul {
             border-radius: 7px;
             border: 1px solid #fff;
             padding: 5px 10px; } }
@@ -223,12 +223,12 @@
     justify-content: space-around;
     grid-template-columns: auto auto;
     grid-template-rows: auto; }
-  .button-submit {
+  .comunity .button-submit {
     width: 20%;
     right: 20%; }
   .button-close {
     width: 20%;
     left: 20%; }
-  .section_post .art img {
+  .comunity .section_post .art img {
     height: 400px !important;
     object-fit: contain; } }
