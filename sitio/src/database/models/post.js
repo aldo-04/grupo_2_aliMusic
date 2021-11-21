@@ -21,11 +21,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Post.init({
+    userId: DataTypes.INTEGER,
     postName: DataTypes.STRING,
+    iframe: DataTypes.STRING,
     image: DataTypes.STRING,
     video: DataTypes.STRING,
     description: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
     typeId: DataTypes.INTEGER
   }, {
     sequelize,

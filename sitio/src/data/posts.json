@@ -1,37 +1,47 @@
 [
-2{
-22"autor": "Lucas Diaz Mouhsen",
-22"name": "Passenger Fall Away",
-22"media": "https://www.youtube.com/embed/Q-ChG3jlgoc",
-22"description": "Written by Mike Rosenberg\r\nPerformed by Mike Rosenberg & Stu Larsen\r\nRecorded by Chris Vallejo\r\nMixed by Chris Vallejo\r\nEdited & Graded by Nic Minns",
-22"type": "iframe"
-2},
-2{
-22"autor": "Lucas Diaz Mouhsen",
-22"name": "All out 80s",
-22"media": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4UtSsGT1Sbe",
-22"description": "",
-22"type": "iframe"
-2},
-2{
-22"autor": "Lucas Diaz Mouhsen",
-22"name": "Artists helping artists",
-22"media": "",
-22"description": "Hi everyone! I am working with an independent band and we thought it would be super beneficial to develop instagram support groups for fellow artists.These instagram support groups would be a way for fellow artists to support, engage, and promote each others content! When ever someone in the group makes a post, just send it to the group message via instagram where members can like, comment, repost or share the post. Such an easy and great way to support each other.If interested in joining a group, just comment with the instagram account you’d like to join with or send me a DM.Thank you:)",
-22"type": "text"
-2},
-2{
-22"autor": "Lucas Diaz Mouhsen",
-22"name": "Freshly varnished and hard to photograph",
-22"media": "guitar-classic.jpg",
-22"description": "lorem ipsum dolor sit amet, consectetur adipiscing",
-22"type": "image"
-2},
-2{
-22"autor": "Lucas Diaz Mouhsen",
-22"name": "asdasdsa",
-22"description": "asdasgw",
-22"media": "https://www.youtube.com/embed/v4pi1LxuDHc",
-22"type": "iframe"
-2}
+  {
+    "userNameId": 1,
+    "postName": "Passenger Fall Away",
+    "iframe": "https://www.youtube.com/embed/Q-ChG3jlgoc",
+    "image": null,
+    "video": null,
+    "description": "Written by Mike Rosenberg\r\nPerformed by Mike Rosenberg & Stu Larsen\r\nRecorded by Chris Vallejo\r\nMixed by Chris Vallejo\r\nEdited & Graded by Nic Minns",
+    "typeId": 2
+  },
+  {
+    "userNameId": 1,
+    "postName": "All out 80s",
+    "iframe": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4UtSsGT1Sbe",
+    "image": null,
+    "video": null,
+    "description": "hola",
+    "typeId": 2
+  },
+  {
+    "userNameId": 1,
+    "postName": "Esta no es mi guitarra",
+    "iframe": null,
+    "image": "com-1637453923429.jpg",
+    "video": null,
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing",
+    "typeId": 3
+  },
+  {
+    "userNameId": 1,
+    "postName": "asdasdsa",
+    "iframe": "https://www.youtube.com/embed/v4pi1LxuDHc",
+    "image": null,
+    "video": null,
+    "description": "asdasgw",
+    "typeId": 2
+  },
+  {
+    "userNameId": 1,
+    "postName": "Ed Sheeran",
+    "iframe": "https://www.youtube.com/embed/FwoJkxtmCjw",
+    "image": null,
+    "video": null,
+    "description": "Nueva cancion de ed sheeran",
+    "typeId": 2
+  }
 ]

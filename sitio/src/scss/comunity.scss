@@ -169,6 +169,7 @@
     }
     .container-aside{
         display: none;
+        align-self: baseline;
     }
     }
     
@@ -201,6 +202,11 @@
                 gap: 30px;
                 width: 100%;
                 border-radius: 7px;
+                .aside-banner{
+                    width: 90%;
+                    text-align: center;
+                    border: 1px solid #262626;
+                }
                 .div_aside{
                     background-color: #262626;
                     width: 100%;

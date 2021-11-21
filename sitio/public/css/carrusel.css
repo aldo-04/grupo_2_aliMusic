@@ -11,7 +11,8 @@
     transform: scale(1); } }
 
 .home .slider-container {
-  background-color: #deb887;
+  /* background-color: #deb887; */
+  background-color: #f8f9fa;
   position: relative;
   margin: 0 auto;
   height: 90vh; }

@@ -1,5 +1,5 @@
 'use strict';
-let types = ["text","iframe","image"]
+let types = ["text","iframe","image","video"]
 
 function datos(){
   for(let i = 0; i < types.length; i++) {

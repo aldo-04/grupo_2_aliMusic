@@ -8,20 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      postName: {
-        type: Sequelize.STRING(250),
-        allowNull: false,
-      },
-      image: {
-        type: Sequelize.STRING(100)
-      },
-      video: {
-        type: Sequelize.STRING(100)
-      },
-      description: {
-        type: Sequelize.STRING(500)
-      },
-      userNameId: {
+      userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references : {
@@ -30,6 +17,23 @@ module.exports = {
           },
           key : 'id'
         }
+      },
+      postName: {
+        type: Sequelize.STRING(250),
+        allowNull: false,
+      },
+      iframe: {
+        type: Sequelize.STRING(100)
+      },
+      image: {
+        type: Sequelize.STRING(100)
+      },
+      video: {
+        type: Sequelize.STRING(100)
+      },
+      description: {
+        type: Sequelize.STRING(500),
+        allowNull: false,
       },
       typeId: {
         type: Sequelize.INTEGER,

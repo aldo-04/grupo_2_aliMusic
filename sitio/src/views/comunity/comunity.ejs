@@ -26,19 +26,18 @@
                             <div id="modal_youtube" class="modal-youtube">
                         
                                 <div id="youtube">
-                                    <form class="form-comunity" action="/comunity" method="POST"
-                                        enctype="multipart/form-data">
+                                    <form class="form-comunity" action="/comunity" method="POST">
                                         <div class="div_text">
-                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                            <input class="input_text" type="text" name="postName" placeholder="Ingrese Titulo">
                                         </div>
                         
                                         <div class="div_link">
-                                            <input class="input_text" type="text" name="media" placeholder="link">
+                                            <input class="input_text" type="text" name="iframe" placeholder="Ingrese link">
                                         </div>
                         
                                         <div class="div_description">
                                             <textarea class="input_textarea" name="description" id="description" cols="30"
-                                                rows="10" placeholder="Descripcion"></textarea>
+                                                rows="10" placeholder="Ingrese Descripcion"></textarea>
                                         </div>
                                         <button class="button-submit" type="submit">Publicar</button>
                                     </form>
@@ -47,10 +46,10 @@
                             </div>
                             <div id="modal_video" class="modal-video">
                                 <div id="video">
-                                    <form class="form-comunity" action="/comunity" method="POST"
+                                    <form class="form-comunity" action="/comunity/addImage" method="POST"
                                         enctype="multipart/form-data">
                                         <div class="div_text">
-                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                            <input class="input_text" type="text" name="postName" placeholder="Titulo">
                                         </div>
                                         <div class="div_file">
                                             <input type="file" name="image">
@@ -66,10 +65,10 @@
                             </div>
                             <div id="modal_text" class="modal-text">
                                 <div id="text">
-                                    <form class="form-comunity" action="/comunity" method="POST"
+                                    <form class="form-comunity" action="/comunity/addDescription" method="POST"
                                         enctype="multipart/form-data">
                                         <div class="div_text">
-                                            <input class="input_text" type="text" name="name" placeholder="Titulo">
+                                            <input class="input_text" type="text" name="postName" placeholder="Titulo">
                                         </div>
                                         <div class="div_description">
                                             <textarea class="input_textarea" name="description" id="description" cols="30"
@@ -81,43 +80,51 @@
                                 </div>
                             </div>
                         
-                            <div class="div_filtrar">
+                            <!-- <div class="div_filtrar">
                                 <a href=""><i class="fas fa-guitar"></i> Mejores</a>
                                 <a href=""><i class="fas fa-hashtag"></i> Destacado</a>
                                 <a href=""><i class="fas fa-tags"></i> Nuevo</a>
                                 <a href=""><i class="fas fa-tags"></i> Mas votado</a>
-                            </div>
+                            </div> -->
                             <section class="section_post">
                                 <% posts.forEach(post=> { %>
-                                    <% if (post.type==="iframe" ) { %>
+                                    <% if (post.typeId == 2 ) { %>
                                         <article class="art">
                                             <h4>
                                                 <%= post.postName %>
                                             </h4>
-                                            <iframe src="<%= post.media %>"></iframe>
-                                            <% if (post.description !=="" ) { %>
+                                            <iframe src="<%= post.iframe %>"></iframe>
                                                 <div class="div_p1">
                                                     <div class="div_p2">
                                                         <%= post.description %>
                                                     </div>
                                                 </div>
-                                                <% } %>
                                         </article>
-                                        <% } else if (post.type==="image" ) { %>
+                                        <% } else if (post.typeId=== 3 ) { %>
                                             <article class="art">
                                                 <h4>
                                                     <%= post.postName %>
                                                 </h4>
-                                                <img src="/images/comunity/<%= post.media %>" width="100%">
-                                                <% if (post.description !=="" ) { %>
+                                                <img src="/images/comunity/<%= post.image %>" width="100%">
                                                     <div class="div_p1">
                                                         <div class="div_p2">
                                                             <%= post.description %>
                                                         </div>
                                                     </div>
-                                                    <% } %>
                                             </article>
-                                            <% } else { %>
+                                            <% } else if (post.typeId=== 4 ) { %>
+                                                    <article class="art">
+                                                        <h4>
+                                                            <%= post.postName %>
+                                                        </h4>
+                                                        <video src="/images/comunity/<%= post.video %>" width="100%" controls></video>
+                                                            <div class="div_p1">
+                                                                <div class="div_p2">
+                                                                    <%= post.description %>
+                                                                </div>
+                                                            </div>
+                                                    </article>
+                                                    <% } else { %>
                                                 <article class="art">
                                                     <h4>
                                                         <%= post.postName %>
@@ -134,21 +141,8 @@
                         </div >
                         <div class="container-aside">
                             <div class="aside-content">
-                                <div class="div_aside">
-                                    <div class="div_aside-tittle">
-                                        <h3>Categorias</h3>
-                                    </div>
-                                    <ul class="div_aside-ul">
-                                        <li>musica</li>
-                                        <li>youtube</li>
-                                        <li>musica</li>
-                                        <li>youtube</li>
-                                        <li>musica</li>
-                                        <li>youtube</li>
-                                        <li>musica</li>
-                                        <li>youtube</li>
-                                        
-                                    </ul>
+                                <div class="aside-banner">
+                                    <img src="/images/banner_comunidad.gif" alt="">
                                 </div>
                                 <div class="div_aside">
                                     <div class="div_aside-tittle">
