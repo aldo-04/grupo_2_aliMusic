@@ -6,7 +6,6 @@
 
     <body class="cart">
 
-        <%- include('../partials/header') %>
         <%- include('../partials/sidebar') %> 
             <main>
 
@@ -29,7 +28,7 @@
                             </form>
                 </section>
                 <div class="box-button">
-                    <button type="submit">Continuar</button>
+                    <button class="button" type="submit">Continuar</button>
                 </div>
                 <h2>Informacion de Pago</h2>
                 <section class="pago">
@@ -51,8 +50,9 @@
                         <input type="number" name="numero de tarjeta" id="numero de tarjeta"
                             placeholder="numero de tarjeta">
                         <div class="box-card">
-                            <button type="submit" i class="fab fa-cc-visa"></i></button>
-                            <button type="submit" i class="fab fa-cc-mastercard"></i></button>
+                            <button type="submit" class="button"><i class="fab fa-cc-visa"></i></button>
+                            
+                            <button type="submit" class="button"><i class="fab fa-cc-mastercard"></i></button>
                         </div>
                         <select name="numero de cuotas" id="numero de cuotas">
                             <option value="" selected hidden>Numero de cuotas</option>
@@ -96,7 +96,7 @@
                     </div>
                     <a href="/">
                         <div class="button-final">
-                            <button type="submit">Finalizar Compra</button>
+                            <button class="button" type="submit">Finalizar Compra</button>
                         </div>
                     </a>
                 </section>

@@ -6,6 +6,18 @@
     height: auto;
     border-radius: 100%; }
 
+.user .button {
+  background-color: #ebebeb;
+  border: 0;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 10px 25px;
+  color: #4f4f4f;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #000;
+  margin: 15px; }
+
 .user div.contain {
   overflow-x: auto; }
 

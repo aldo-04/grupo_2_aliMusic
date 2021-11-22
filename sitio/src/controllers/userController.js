@@ -1,4 +1,4 @@
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs")
@@ -12,31 +12,31 @@ module.exports = {
     profile: (req, res) => {
         let user = db.User.findByPk(req.session.userLogin.id)
         let products = db.Product.findAll({
-            include: ['images','productStates'],
+            include: ['images', 'productStates'],
             where: {
                 userId: req.session.userLogin.id
             }
         })
-            Promise.all([user, products])
-                .then(([user, products]) => {
-                    res.render('users/user',{
-                            title: req.session.userLogin.firstName,
-                            user,
-                            products
-                        })
+        Promise.all([user, products])
+            .then(([user, products]) => {
+                res.render('users/user', {
+                    title: req.session.userLogin.firstName,
+                    user,
+                    products
                 })
-            
-        
+            })
+
+
     },
-    login : (req,res) => res.render('users/login',{
+    login: (req, res) => res.render('users/login', {
         title: 'login'
     }),
-    processLogin : (req,res) => {
+    processLogin: (req, res) => {
         let errors = validationResult(req);
         /* console.log(req.body);
         console.log(errors) */
         if (errors.isEmpty()) {
-            const{email, recordar} = req.body
+            const { email, recordar } = req.body
             db.User.findOne({
                 where: {
                     email
@@ -44,80 +44,80 @@ module.exports = {
             })
                 .then(user => {
                     req.session.userLogin = {
-                        id : user.id,
-                        firstName : user.firstName,
-                        lastName : user.lastName,
-                        avatar : user.avatar,
-                        rol : user.rol
+                        id: user.id,
+                        firstName: user.firstName,
+                        lastName: user.lastName,
+                        avatar: user.avatar,
+                        rol: user.rol
                     }
                     console.log(req.session.userLogin)
                     if (recordar) {
-                        res.cookie("recordarme", req.session.userLogin, {maxAge:1000 * 60})
+                        res.cookie("recordarme", req.session.userLogin, { maxAge: 1000 * 60 })
                     }
                     return res.redirect('/')
                 })
                 .catch(error => console.log(error))
-            
-        }else{
-            return  res.render('users/login',{
-                title:'Login',
+
+        } else {
+            return res.render('users/login', {
+                title: 'Login',
                 errors: errors.mapped()
             })
         }
-        
+
     },
     register: (req, res) => {
-        res.render('users/register',{
+        res.render('users/register', {
             title: 'register'
         })
     },
-    proccesRegister:(req,res)=>{
+    proccesRegister: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
 
-        const{userName,firstName,lastName,email,password}=req.body
-        db.User.create({
-            userName : userName.trim(),
-            firstName : firstName.trim(),
-            lastName : lastName.trim(),
-            email: email.trim(),
-            number: null,
-            password: bcrypt.hashSync(password.trim(),10),
-            rol: 2,
-            avatar: req.file ? req.file.filename : 'avatar_default.png',
-        })
-            .then(user => {
-                req.session.userLogin = {
-                    id: user.id,
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    avatar: user.avatar,
-                    rol: user.rol
-                }
-                return res.redirect('/')
+            const { userName, firstName, lastName, email, password } = req.body
+            db.User.create({
+                userName: userName.trim(),
+                firstName: firstName.trim(),
+                lastName: lastName.trim(),
+                email: email.trim(),
+                number: null,
+                password: bcrypt.hashSync(password.trim(), 10),
+                rol: 2,
+                avatar: req.file ? req.file.filename : 'avatar_default.png',
             })
-            .catch(error => console.log(error))
-    }else{
-        return res.render('users/register',{
-            title : 'Register',
-            errors : errors.mapped(),
-            old: req.body
-        })
-    }
+                .then(user => {
+                    req.session.userLogin = {
+                        id: user.id,
+                        firstName: user.firstName,
+                        lastName: user.lastName,
+                        avatar: user.avatar,
+                        rol: user.rol
+                    }
+                    return res.redirect('/')
+                })
+                .catch(error => console.log(error))
+        } else {
+            return res.render('users/register', {
+                title: 'Register',
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
     },
     logout: (req, res) => {
         req.session.destroy();
-        res.cookie("recordarme", null, {MaxAge: -1});
+        res.cookie("recordarme", null, { MaxAge: -1 });
         res.redirect('/')
     },
     fav: (req, res) => {
-        res.render('users/fav',{
-            title: 'fav' 
+        res.render('users/fav', {
+            title: 'fav'
         })
     },
     profileEdit: (req, res) => {
         const pass = res.locals.userLogin.password
-        const {firstName, lastName, number, email, password, newPassword, avatar} = req.body
+        const { firstName, lastName, number, email, password, newPassword, avatar } = req.body
         console.log(req.body)
         db.User.update(
             {
@@ -125,28 +125,27 @@ module.exports = {
                 lastName: lastName.trim(),
                 number: number ? number : null,
                 email: email.trim(),
-                password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(),10) : pass ,
+                password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(), 10) : pass,
                 avatar: req.file ? req.file.filename : avatar
             },
             {
-                where: {id: req.session.userLogin.id}
+                where: { id: req.session.userLogin.id }
             }
-        )   .then(() =>{
-            user => {
-                req.session.userLogin = {
-                    id: user.id,
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    avatar: user.avatar,
-                    rol: user.rol
-                    }}
-            return res.redirect('/users/profile/'+req.session.userLogin.id)
-            }).catch(error => console.log(error))
+        ).then(user => {
+            req.session.userLogin = {
+                id: user.id,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                avatar: avatar,
+                rol: user.rol
+            }
+        }).catch(error => console.log(error))
+        return res.redirect('/users/profile/' + req.session.userLogin.id)
     },
     add: (req, res) => {
         db.Category.findAll({
-            order : [
-                ['category','ASC']
+            order: [
+                ['category', 'ASC']
             ]
         })
             .then(categories => res.render('users/add', {
@@ -155,12 +154,12 @@ module.exports = {
                 capitalizarPrimeraLetra,
             }))
             .catch(error => console.log(error))
-        
+
     },
     store: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()){
-            const {name, price, discount,category,description } = req.body
+        if (errors.isEmpty()) {
+            const { name, price, discount, category, description } = req.body
             const status = 1
             db.Product.create(
                 {
@@ -176,25 +175,25 @@ module.exports = {
                     statusId: status
                 }
             ).then(product => {
-                    console.log(product)
-                    if (req.files.length != 0) {
-                        let images = req.files.map(image =>{
-                            let item = {
-                                image: image.filename,
-                                productId: product.id
-                            }
-                            return item
-                        })
-                        db.ImageProduct.bulkCreate(images,{validate: true})
-                            .then( () => console.log('imagenes guardadas satisfactoriamente'))
-                    }
-                    return res.redirect('/users/profile/'+ req.session.userLogin.id)
-                })
+                console.log(product)
+                if (req.files.length != 0) {
+                    let images = req.files.map(image => {
+                        let item = {
+                            image: image.filename,
+                            productId: product.id
+                        }
+                        return item
+                    })
+                    db.ImageProduct.bulkCreate(images, { validate: true })
+                        .then(() => console.log('imagenes guardadas satisfactoriamente'))
+                }
+                return res.redirect('/users/profile/' + req.session.userLogin.id)
+            })
                 .catch(error => console.log(error))
-        }else{
+        } else {
             db.Category.findAll({
-                order : [
-                    ['category','ASC']
+                order: [
+                    ['category', 'ASC']
                 ]
             })
                 .then(categories => res.render('admin/add', {
@@ -208,75 +207,76 @@ module.exports = {
         }
     },
     edit: (req, res) => {
-        let product = db.Product.findByPk(req.params.id,{
-            include : ['images','productStates','category']
+        let product = db.Product.findByPk(req.params.id, {
+            include: ['images', 'productStates', 'category']
         })
 
         let categories = db.Category.findAll({
-            order : [["id","ASC"]]
+            order: [["id", "ASC"]]
         })
 
-        Promise.all([categories,product])
+        Promise.all([categories, product])
 
-        .then(([categories,product])=>{
-            res.render('users/edit',{
-                title: 'Edit product',
-                product,
-                categories
+            .then(([categories, product]) => {
+                res.render('users/edit', {
+                    title: 'Edit product',
+                    product,
+                    categories
+                })
             })
-        })
-        .catch(err=>{console.log(err)})
+            .catch(err => { console.log(err) })
     },
     update: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()){
-         const {name,description, price, discount, category} = req.body;
-         db.Product.update(
-            {
-                name: name.trim(),
-                description: description.trim(),
-                price,
-                discount,
-                categoryId: category,
-            },
-            {
-                where: {id:req.params.id}
-            }
-        )   .then(()=>{
-                db.ImageProduct.findByPk(req.params.id,{
-                    include : ['product']
+        if (errors.isEmpty()) {
+            const { name, description, price, discount, category } = req.body;
+            db.Product.update(
+                {
+                    name: name.trim(),
+                    description: description.trim(),
+                    price,
+                    discount,
+                    categoryId: category,
+                },
+                {
+                    where: { id: req.params.id }
+                }
+            ).then(() => {
+                db.ImageProduct.findByPk(req.params.id, {
+                    include: ['product']
                 })
-                .then(async () => {
-                    if (req.files.length != 0) {
-                        let images = req.files.map(image =>{
-                            let item = {
-                                image: image.filename,
+                    .then(async () => {
+                        if (req.files.length != 0) {
+                            let images = req.files.map(image => {
+                                let item = {
+                                    image: image.filename,
+                                    productId: req.params.id
+                                }
+                                return item
+                            })
+                            await queryInterface.bulkDelete('imageproducts', {
                                 productId: req.params.id
-                            }
-                            return item
-                        })
-                        await queryInterface.bulkDelete('imageproducts', {
-                            productId : req.params.id
-                        });
-                        db.ImageProduct.bulkCreate(images,{validate: true, updateOnDuplicate: ["productId"] })
-                            .then( () => console.log('imagenes guardadas satisfactoriamente'))
-                    }
-                    return res.redirect('/users/profile/'+req.session.userLogin.id)
-                })
-                .catch(error => console.log(error))
-            })}else{
-                let product = db.Product.findByPk(req.params.id,{
-                    include : ['images','productStates','category']
-                })
-        
-                let categories = db.Category.findAll({
-                    order : [["id","ASC"]]
-                })
-        
-                Promise.all([categories,product])
-        
-                .then(([categories,product])=>{
-                    res.render('users/edit',{
+                            });
+                            db.ImageProduct.bulkCreate(images, { validate: true, updateOnDuplicate: ["productId"] })
+                                .then(() => console.log('imagenes guardadas satisfactoriamente'))
+                        }
+                        return res.redirect('/users/profile/' + req.session.userLogin.id)
+                    })
+                    .catch(error => console.log(error))
+            })
+        } else {
+            let product = db.Product.findByPk(req.params.id, {
+                include: ['images', 'productStates', 'category']
+            })
+
+            let categories = db.Category.findAll({
+                order: [["id", "ASC"]]
+            })
+
+            Promise.all([categories, product])
+
+                .then(([categories, product]) => {
+                    res.render('users/edit', {
                         title: 'Edit product',
                         product,
                         categories,
@@ -284,17 +284,17 @@ module.exports = {
                         errors: errors.mapped()
                     })
                 })
-                .catch(err=>{console.log(err)})
-            }   
-       },
-       destroy: (req, res) => {
-        db.Product.findByPk(req.params.id,{
+                .catch(err => { console.log(err) })
+        }
+    },
+    destroy: (req, res) => {
+        db.Product.findByPk(req.params.id, {
             include: ['images']
         })
             .then(() => {
                 db.ImageProduct.destroy({
                     where: {
-                        productId: +req.params.id 
+                        productId: +req.params.id
                     }
                 })
                 db.Product.destroy({
@@ -302,7 +302,7 @@ module.exports = {
                         id: +req.params.id
                     }
                 })
-                return res.redirect('/users/profile/'+req.session.userLogin.id)
+                return res.redirect('/users/profile/' + req.session.userLogin.id)
             })
-},
+    },
 }

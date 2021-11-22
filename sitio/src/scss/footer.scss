@@ -42,21 +42,6 @@ footer .div_grid .div_redes{
     text-align: center;
     .instagram{
         font-size: 22px;
-        border-radius: 10px;
-        i{
-            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-            border-bottom-left-radius: 8px;
-            border-top-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-            border-top-right-radius: 8px;
-            display: flex;
-            align-content: center;
-            flex-wrap: wrap;
-            text-align: center;
-            margin: 0 auto;
-            height: 20px;
-            width: 20px;
-        }
     }
     .facebook{
         font-size: 22px;
@@ -89,20 +74,6 @@ footer .div_grid2 .div_terminos ul li{
 
 /* Modal contact */
 footer{
-    a#openContact{
-        font-size: 16px;
-        color: #fff;
-    }
-    button#closeContact,
-    button.submitContact {
-        background-color: #47a386;
-        border: 0;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        color: #fff;
-        font-size: 16px;
-        padding: 8px 20px;  
-    }
     .modal-contact {
         display: flex;
         background-color: rgba(0, 0, 0, 0.3);

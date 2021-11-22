@@ -75,12 +75,8 @@
 
 .store main .div_container .art .a_buy {
   position: absolute;
-  color: #fff;
-  left: 40%;
-  bottom: 0%;
-  border: 1px solid #fff;
-  border-radius: 8px;
-  padding: 4px; }
+  left: 30%;
+  bottom: 0%; }
 
 .store main .div_container .art .div_price {
   border-top: 1px solid #fff;
@@ -173,6 +169,8 @@
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
     gap: 30px; }
+    .store main .div_container .art .a_buy {
+      left: 32%; }
   .store main .div_container .art .div_price .off {
     font-size: 16px; }
   .store main .div_container .art .div_price .precio {

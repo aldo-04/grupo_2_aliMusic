@@ -1,3 +1,4 @@
+/* background-color: #47a386; */
 .comunity main {
   margin-top: 65px; }
   .comunity main .container-body .container-main {
@@ -8,8 +9,6 @@
     margin: 20px auto;
     border-radius: 7px; }
     .comunity main .container-body .container-main .button-text-container {
-      /* 
-                background-color: #47a386; */
       background-color: #262626;
       border-radius: 7px;
       padding: 10px; }

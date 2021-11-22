@@ -26,7 +26,13 @@ const headerScroll = () =>{
         }
     })
 }
+/* imagen de perfil en tiempo real */
+/* const imgProfile = () =>{
+    const imgProfile = document.getElementById('img-profile')
+    imgProfile.setAttribute("src","/images/fotoUser/avatar_default.png"); 
 
+}
+imgProfile() */
 headerScroll()
 showMenu('header-toggle','navbar')
 

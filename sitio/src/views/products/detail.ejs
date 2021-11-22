@@ -2,7 +2,6 @@
 <html lang="es">
     <%- include('../partials/head') %> 
 <body class="details">
-    <%- include('../partials/header') %> 
     <%- include('../partials/sidebar') %> 
     <main>
             <div class="box-product">
@@ -32,7 +31,7 @@
                                 <form action="/products/cart/<%= product.id %>?_method=PUT" method="POST">
                                 
                                     <a href="">
-                                        <button class="fas fa-shopping-cart" type="submit">Comprar</button>
+                                        <button class=" button" type="submit">Comprar</button>
                                         
                                     </a>
                                 </form>

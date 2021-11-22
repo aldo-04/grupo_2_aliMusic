@@ -3,7 +3,6 @@
 <%- include('../partials/head') %>
 
     <body class="comunity">
-        <%- include('../partials/header') %>
             <%- include('../partials/sidebar') %>
                 <main>
                     <div class="container-body">
@@ -14,7 +13,7 @@
                         
                             <div class="button_post">
                                 <button id="openYoutube">
-                                    Subir desde Youtube
+                                    Subir desde Youtube/Spotify
                                 </button>
                                 <button id="openVideo">
                                     Subir Video/Imagen
@@ -49,7 +48,7 @@
                                     <form class="form-comunity" action="/comunity/addImage" method="POST"
                                         enctype="multipart/form-data">
                                         <div class="div_text">
-                                            <input class="input_text" type="text" name="postName" placeholder="Titulo">
+                                            <input class="input_text" type="text" name="postName" placeholder="Ingrese Titulo">
                                         </div>
                                         <div class="div_file">
                                             <input type="file" name="image">
@@ -65,10 +64,9 @@
                             </div>
                             <div id="modal_text" class="modal-text">
                                 <div id="text">
-                                    <form class="form-comunity" action="/comunity/addDescription" method="POST"
-                                        enctype="multipart/form-data">
+                                    <form class="form-comunity" action="/comunity/addDescription" method="POST">
                                         <div class="div_text">
-                                            <input class="input_text" type="text" name="postName" placeholder="Titulo">
+                                            <input class="input_text" type="text" name="postName" placeholder="Ingrese Titulo">
                                         </div>
                                         <div class="div_description">
                                             <textarea class="input_textarea" name="description" id="description" cols="30"

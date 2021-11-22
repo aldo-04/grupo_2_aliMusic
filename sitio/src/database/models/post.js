@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     iframe: DataTypes.STRING,
     image: DataTypes.STRING,
     video: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.STRING(1000),
     typeId: DataTypes.INTEGER
   }, {
     sequelize,

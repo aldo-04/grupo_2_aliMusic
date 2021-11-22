@@ -2,7 +2,7 @@
 const path = require('path');
 const posts = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'comunity.json'), 'utf-8'));*/
 const db = require('../database/models')
-const {youtubeLink, spotifyLink} = require('../utils/convertirLinkYt');
+const { youtubeLink, spotifyLink } = require('../utils/convertirLinkYt');
 
 module.exports = {
     comunity: (req, res) => {
@@ -31,7 +31,7 @@ module.exports = {
             userId: 1,
             postName: postName,
             /* iframe: 'https://www.youtube.com/embed/' + youtubeLink(iframe), */
-            iframe: iframe2.find(element => element == 'youtube') ? 'https://www.youtube.com/embed/' + youtubeLink(iframe) : 'https://open.spotify.com/embed/playlist/' + spotifyLink(iframe) ,
+            iframe: iframe2.find(element => element == 'youtube') ? 'https://www.youtube.com/embed/' + youtubeLink(iframe) : 'https://open.spotify.com/embed/playlist/' + spotifyLink(iframe),
             image: null,
             video: null,
             description: description.trim(),
@@ -43,7 +43,7 @@ module.exports = {
             })
     },
     addDescription: (req, res) => {
-        const { description } = req.body
+        const { postName, description } = req.body
         const newPost = {
             userId: 1,
             postName: postName.trim(),

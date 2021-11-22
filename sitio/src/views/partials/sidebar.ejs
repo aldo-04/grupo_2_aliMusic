@@ -16,8 +16,9 @@
                 <i class='bx bx-search header__icon'></i>
             </div>
             <% if (locals.userLogin) { %>
-               <a href="/">
-                    <img src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
+               <a href="/users/profile/<%= locals.userLogin.id %>">
+                    <!-- <img id="img-profile"  alt="" class="header__img"> -->
+                    <img id="img-profile" src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
                </a>
             <% } %>
 
