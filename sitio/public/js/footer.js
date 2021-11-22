@@ -26,10 +26,10 @@ window.addEventListener("load", () => {
                 'Accept': 'application/json'
             }
         }).then(response => {
-            status.innerHTML = "Thanks for your submission!";
+            status.innerHTML = "Gracias por contactarnos";
             form.reset()
         }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            status.innerHTML = "Oops! a habido un error con su formulario";
         });
     }
     form.addEventListener("submit", handleSubmit)

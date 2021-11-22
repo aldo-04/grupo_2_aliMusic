@@ -13,7 +13,7 @@ function datos () {
       cart: 0,
       userId: 1,
       categoryId: productos[i].category,
-      statusId: 1,
+      statusId: productos[i].statusId,
       createdAt: new Date,
       updatedAt: new Date
     }

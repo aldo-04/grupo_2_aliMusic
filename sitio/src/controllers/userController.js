@@ -117,29 +117,32 @@ module.exports = {
     },
     profileEdit: (req, res) => {
         const pass = res.locals.userLogin.password
-        const { firstName, lastName, number, email, password, newPassword, avatar } = req.body
+        const { firstName, lastName, number, password, newPassword, avatar } = req.body
         console.log(req.body)
         db.User.update(
             {
                 firstName: firstName.trim(),
                 lastName: lastName.trim(),
                 number: number ? number : null,
-                email: email.trim(),
                 password: newPassword != "" && password != "" ? bcrypt.hashSync(newPassword.trim(), 10) : pass,
                 avatar: req.file ? req.file.filename : avatar
             },
             {
                 where: { id: req.session.userLogin.id }
             }
-        ).then(user => {
-            req.session.userLogin = {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName,
-                avatar: avatar,
-                rol: user.rol
-            }
-        }).catch(error => console.log(error))
+        )
+        db.User.findOne({
+            where: { id: req.params.id }
+        })
+            .then(() => {
+                res.locals.userLogin = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    avatar: req.file ? req.file.filename : avatar,
+                }
+                console.log(res.locals.userLogin);
+            })
+            .catch(error => console.log(error))
         return res.redirect('/users/profile/' + req.session.userLogin.id)
     },
     add: (req, res) => {

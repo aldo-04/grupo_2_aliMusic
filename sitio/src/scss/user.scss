@@ -1,3 +1,9 @@
+.user .display{
+    display: block;
+}
+.user .none{
+    display: none;
+}
 .user #img-preview{
     margin-top: 15px;
     img{
@@ -7,7 +13,7 @@
        border-radius: 100%;
    }
 }
-.user .button{  
+.user .form .button{  
     background-color: #ebebeb;
     border: 0;
     border-radius: 7px;
@@ -69,4 +75,52 @@ body.user main div form div.img{
 body.user main div form div.img img{
     width : 50%
     
+}
+/* Modal contact */
+.user{
+    .modal-delete {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.3);
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        pointer-events: none;
+        opacity: 0;  
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        transition: opacity 0.3s ease;
+        z-index: 9;
+    }
+    .show {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .model {
+        background-color: #fff;
+        width: 90%;
+        height: 50%;
+        max-width: 100%;
+        padding: 10px 50px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .submitDelete{
+            background-color: #ff0000;
+            color: #fff;
+        }
+    }
+}
+@media (min-width: 769px) {
+    .user .model {
+        height: 30%;
+        width: 30%;
+    }
 }

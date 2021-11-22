@@ -63,10 +63,10 @@ image.addEventListener("change",()=>{
     console.log(image)
     
         for (let i = 0; i < image.files.length; i++) {
-            if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
+            if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp") || image.files[i].name.toLowerCase().endsWith(".jpeg")) {
                 span[5].innerHTML = null
             }else{
-                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
+                span[5].innerHTML = "Las imagenes tienen que ser formato jpg, jpeg, png o webp"
             } 
         }
         if(image.files.length == 0){
@@ -121,10 +121,10 @@ form1.addEventListener("submit",e=>{
     }
     // AL ENVIAR FORMULARIO ERRORES DE IMAGENES
     for (let i = 0; i < image.files.length; i++) {
-        if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp")) {
+        if (image.files[i].name.toLowerCase().endsWith(".jpg") || image.files[i].name.toLowerCase().endsWith(".png") || image.files[i].name.toLowerCase().endsWith(".webp") || image.files[i].name.toLowerCase().endsWith(".jpeg")) {
             span[5].innerHTML = null
         }else{
-            span[5].innerHTML = "Las imagenes tienen que ser formato jpg, png o webp"
+            span[5].innerHTML = "Las imagenes tienen que ser formato jpg, jpeg, png o webp"
         } 
     }
     if(image.files.length == 0){

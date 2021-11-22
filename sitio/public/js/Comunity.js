@@ -1,4 +1,3 @@
-
 window.addEventListener("load", (event) => {
   /* Youtube */
   const openYoutube = document.getElementById('openYoutube');

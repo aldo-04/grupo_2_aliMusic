@@ -29,7 +29,7 @@ module.exports = {
         let iframe2 = iframe.split('.')
         const newPost = {
             userId: 1,
-            postName: postName,
+            postName: postName.trim(),
             /* iframe: 'https://www.youtube.com/embed/' + youtubeLink(iframe), */
             iframe: iframe2.find(element => element == 'youtube') ? 'https://www.youtube.com/embed/' + youtubeLink(iframe) : 'https://open.spotify.com/embed/playlist/' + spotifyLink(iframe),
             image: null,

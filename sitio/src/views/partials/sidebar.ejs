@@ -18,7 +18,7 @@
             <% if (locals.userLogin) { %>
                <a href="/users/profile/<%= locals.userLogin.id %>">
                     <!-- <img id="img-profile"  alt="" class="header__img"> -->
-                    <img id="img-profile" src="/images/fotoUser/<%- locals.userLogin.avatar %>" alt="" class="header__img">
+                    <img id="img-profile" src="/images/fotoUser/<%= locals.userLogin.avatar %>" alt="" class="header__img">
                </a>
             <% } %>
 
