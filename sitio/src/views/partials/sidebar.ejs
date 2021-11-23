@@ -15,12 +15,11 @@
                 </form>
                 <i class='bx bx-search header__icon'></i>
             </div>
-            <% if (locals.userLogin) { %>
+            <!-- <% if (locals.userLogin) { %>
                <a href="/users/profile/<%= locals.userLogin.id %>">
-                    <!-- <img id="img-profile"  alt="" class="header__img"> -->
                     <img id="img-profile" src="/images/fotoUser/<%= locals.userLogin.avatar %>" alt="" class="header__img">
                </a>
-            <% } %>
+            <% } %> -->
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -65,7 +64,7 @@
                         <% } else{%>
                             <div class="nav__dropdown">
                                 <a href="#" class="nav__link">
-                                    <span class="nav__name">Perfil</span>
+                                    <span class="nav__name">Usuario</span>
                                     <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                                 </a>
                                 <div class="nav__dropdown-collapse">
