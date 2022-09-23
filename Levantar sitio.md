@@ -1,0 +1,10 @@
+- ir a rama develop
+- Cd sitio
+- npm install
+- Cambiar nombre de archivo .env.example a .env y completarlos con sus datos
+- npm install --save-dev sequelize-cli
+- sequelize db:create
+- sequelize db:migrate
+- sequelize db:seed:all
+- npm start
+- http://localhost:3000
